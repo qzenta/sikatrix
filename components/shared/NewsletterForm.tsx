@@ -37,7 +37,7 @@ export default function NewsletterForm() {
     return (
       <div className="flex items-center justify-center gap-2 text-sm text-white">
         <CheckCircle size={16} className="text-accent-light flex-shrink-0" />
-        <span>You&apos;re subscribed — check your inbox for a confirmation.</span>
+        <span>You&apos;re subscribed. Check your inbox for a confirmation.</span>
       </div>
     );
   }

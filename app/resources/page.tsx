@@ -21,7 +21,7 @@ export default function ResourcesPage() {
       <PageHero
         label="Resources"
         title="Tax & Accounting Insights for South African Businesses"
-        subtitle="Free, practical articles written by qualified accountants. No jargon, no filler — just guidance you can act on."
+        subtitle="Free, practical articles written by qualified accountants. No jargon, no filler. Just guidance you can act on."
         crumbs={[{ label: "Resources" }]}
         bgImage="https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=1600&auto=format&fit=crop&q=60"
       />
@@ -72,8 +72,19 @@ export default function ResourcesPage() {
                   Read article <ArrowRight size={13} />
                 </span>
               </div>
-              <div className="sm:w-1/3 rounded-lg bg-gradient-to-br from-brand-50 to-brand/10 flex items-center justify-center min-h-32">
-                <span className="text-4xl">📊</span>
+              <div className="sm:w-1/3 rounded-lg overflow-hidden min-h-32 bg-brand-50">
+                {post.image ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="w-full h-full object-cover min-h-32"
+                  />
+                ) : (
+                  <div className="w-full min-h-32 h-full bg-gradient-to-br from-brand to-brand/70 flex items-center justify-center">
+                    <span className="text-4xl opacity-60">📊</span>
+                  </div>
+                )}
               </div>
             </Link>
           ))}

@@ -35,7 +35,7 @@ export default function HomePage() {
       <TestimonialsGrid />
 
       {/* Blog preview */}
-      <section className="py-12 md:py-16 bg-slate-50">
+      <section className="py-12 md:py-16 bg-neutral-100">
         <div className="container-page">
           <div className="flex items-end justify-between mb-10">
             <div>

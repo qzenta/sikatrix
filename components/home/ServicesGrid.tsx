@@ -12,7 +12,7 @@ const ICON_MAP: Record<string, React.ElementType> = {
 
 export default function ServicesGrid() {
   return (
-    <section className="py-12 md:py-16 bg-slate-50">
+    <section className="py-12 md:py-16 bg-neutral-100">
       <div className="container-page">
         <div className="text-center mb-12">
           <span className="section-label">What We Do</span>
@@ -20,7 +20,7 @@ export default function ServicesGrid() {
             Full-spectrum accounting & compliance services
           </h2>
           <p className="section-subtitle mt-3 mx-auto">
-            Everything a South African business needs — tax, bookkeeping, payroll, and more —
+            Everything a South African business needs: tax, bookkeeping, payroll and compliance,
             delivered by qualified professionals on modern cloud platforms.
           </p>
         </div>

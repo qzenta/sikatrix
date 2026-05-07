@@ -18,7 +18,7 @@ const FAQS = [
     items: [
       {
         q: "How do I get started with Sikatrix?",
-        a: "Simply book a free 30-minute consultation — by phone, video call, or at our Alberton office. We'll assess your business needs, identify any compliance gaps, and recommend the right service package. There's no obligation and no fee for the initial consultation.",
+        a: "Simply book a free 30-minute consultation by phone, video call, or at our Alberton office. We will assess your business needs, identify any compliance gaps, and recommend the right service package. There is no obligation and no fee for the initial consultation.",
       },
       {
         q: "Do I need to come to your office in person?",
@@ -26,7 +26,7 @@ const FAQS = [
       },
       {
         q: "What size businesses do you work with?",
-        a: "We work with sole proprietors, small and medium businesses (SMEs), professional practices, NGOs, and property investors. We don't have a minimum turnover requirement — if you need professional accounting and tax services, we can help.",
+        a: "We work with sole proprietors, small and medium businesses (SMEs), professional practices, NGOs, and property investors. We do not have a minimum turnover requirement. If you need professional accounting and tax services, we can help.",
       },
       {
         q: "How long does it take to onboard a new client?",
@@ -47,7 +47,7 @@ const FAQS = [
       },
       {
         q: "Do you offer fixed-fee packages or only hourly billing?",
-        a: "We prefer fixed monthly retainers for ongoing work — it's more predictable for you and aligns our incentives with yours. For once-off projects we provide a fixed quote upfront. We don't use hourly billing for most services.",
+        a: "We prefer fixed monthly retainers for ongoing work, which is more predictable for you and aligns our incentives with yours. For once-off projects we provide a fixed quote upfront. We do not use hourly billing for most services.",
       },
       {
         q: "Can you help me if I'm behind on my tax returns or bookkeeping?",
@@ -64,11 +64,11 @@ const FAQS = [
       },
       {
         q: "Can you help if SARS has sent me a query or audit notice?",
-        a: "Yes. We handle SARS queries, verifications, and audits for our clients. If you've received a letter from SARS requesting information or disputing an assessment, contact us as soon as possible — the earlier we get involved, the more options you have.",
+        a: "Yes. We handle SARS queries, verifications, and audits for our clients. If you have received a letter from SARS requesting information or disputing an assessment, contact us as soon as possible. The earlier we get involved, the more options you have.",
       },
       {
         q: "When do I need to register for VAT?",
-        a: "You must register for VAT once your taxable turnover has exceeded — or is expected to exceed — R1 million in any 12-month period. Voluntary registration is possible from R50,000. We handle VAT registrations and submissions for our clients and can advise on whether voluntary registration makes sense for your business.",
+        a: "You must register for VAT once your taxable turnover has exceeded R1 million in any 12-month period, or is expected to do so. Voluntary registration is possible from R50,000. We handle VAT registrations and submissions for our clients and can advise on whether voluntary registration makes sense for your business.",
       },
       {
         q: "Do I need to register for provisional tax?",
@@ -85,7 +85,7 @@ const FAQS = [
     items: [
       {
         q: "What accounting software do you use?",
-        a: "We work primarily with QuickBooks Online, Xero, and Sage Business Cloud — the three leading cloud platforms in South Africa. We also use Draftworx for financial statements, SimplePay for payroll, and Syft Analytics for management reporting. We'll recommend the right platform based on your business size and complexity.",
+        a: "We work primarily with QuickBooks Online, Xero, and Sage Business Cloud, the three leading cloud platforms in South Africa. We also use Draftworx for financial statements, SimplePay for payroll, and Syft Analytics for management reporting. We will recommend the right platform based on your business size and complexity.",
       },
       {
         q: "I'm currently on paper or spreadsheets — can you migrate me to cloud?",
@@ -93,7 +93,7 @@ const FAQS = [
       },
       {
         q: "Will I have access to my own financial data?",
-        a: "Always. Your accounting data belongs to you. You'll have your own login and full access to your books at any time. We work alongside your access — we never lock you out of your own records.",
+        a: "Always. Your accounting data belongs to you. You will have your own login and full access to your books at any time. We work alongside your access and will never lock you out of your own records.",
       },
     ],
   },
@@ -106,7 +106,7 @@ const FAQS = [
       },
       {
         q: "How do I send you my documents?",
-        a: "For ongoing clients, documents flow automatically through your cloud accounting platform — bank feeds pull transactions directly, and you can photograph and upload receipts from your phone. For once-off submissions, we accept documents via secure email or a shared cloud folder. We never ask you to post physical documents.",
+        a: "For ongoing clients, documents flow automatically through your cloud accounting platform. Bank feeds pull transactions directly, and you can photograph and upload receipts from your phone. For once-off submissions, we accept documents via secure email or a shared cloud folder. We never ask you to post physical documents.",
       },
       {
         q: "What happens if I want to switch to a different accountant later?",

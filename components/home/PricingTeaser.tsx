@@ -26,7 +26,7 @@ const TEASERS = [
 
 export default function PricingTeaser() {
   return (
-    <section className="py-14 bg-white border-y border-neutral-100">
+    <section className="py-14 bg-white">
       <div className="container-page">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
           <div>
@@ -56,7 +56,7 @@ export default function PricingTeaser() {
 
         <div className="mt-6 flex flex-col sm:flex-row items-center gap-3">
           <Link href="/contact" className="btn-primary text-sm">
-            Get a custom quote — it's free
+            Get a free, custom quote
           </Link>
           <Link href="/pricing" className="sm:hidden btn-ghost text-sm text-brand">
             Full pricing guide →

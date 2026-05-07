@@ -5,9 +5,9 @@ import { CheckCircle, Download, Loader2 } from "lucide-react";
 
 const CHECKLIST_ITEMS = [
   "Income Tax Return (ITR12 / ITR14)",
-  "Provisional Tax (IRP6) — 2 submissions per year",
-  "VAT Returns (VAT201) — monthly or bi-monthly",
-  "PAYE / EMP201 — monthly payroll taxes",
+  "Provisional Tax (IRP6): 2 submissions per year",
+  "VAT Returns (VAT201): monthly or bi-monthly",
+  "PAYE / EMP201: monthly payroll taxes",
   "Annual Employer Reconciliation (EMP501)",
   "CIPC Annual Return",
   "UIF and SDL declarations",

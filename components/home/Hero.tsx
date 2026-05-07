@@ -61,7 +61,7 @@ const SLIDES = [
     tag: "SARS Registered Tax Practitioner",
     heading: "Tax Compliance,",
     highlight: "Handled for You",
-    body: "From provisional tax submissions to VAT returns and SARS dispute resolution — every deadline met, every time.",
+    body: "From provisional tax to VAT returns and SARS disputes. Every deadline met, every time.",
     points: [
       "ITR12 & ITR14 returns filed on time",
       "Provisional tax calculated & submitted",
@@ -73,7 +73,7 @@ const SLIDES = [
     tag: "QuickBooks · Xero · Sage",
     heading: "Real-Time Financials,",
     highlight: "Anywhere",
-    body: "Cloud accounting setup, migration, and ongoing management — so you always know where your business stands.",
+    body: "Cloud accounting setup, migration, and ongoing support. You will always know exactly where your business stands.",
     points: [
       "Setup & migration managed end-to-end",
       "Bank feeds, reconciliations & management accounts",
@@ -137,7 +137,7 @@ export default function Hero() {
       {/* Accent glow */}
       <div className="absolute -top-40 -right-40 w-[520px] h-[520px] bg-brand-light/20 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="container-page relative py-20 md:py-28 lg:py-32">
+      <div className="container-page relative py-14 md:py-20 lg:py-24">
         {/* Slide content */}
         <div
           className="max-w-2xl transition-opacity duration-400 ease-in-out"

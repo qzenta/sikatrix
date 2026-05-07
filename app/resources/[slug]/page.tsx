@@ -5,6 +5,16 @@ import { Calendar, Clock, ArrowRight, ArrowLeft, Tag } from "lucide-react";
 import CTABlock from "@/components/shared/CTABlock";
 import { BLOG_POSTS, SERVICES, LOCATIONS } from "@/lib/site";
 
+// Deliberate internal backlinking: each article links to its most relevant services
+const ARTICLE_SERVICE_MAP: Record<string, string[]> = {
+  "sars-provisional-tax-guide-2025":    ["tax-services", "bookkeeping", "cloud-accounting"],
+  "small-business-bookkeeping-mistakes": ["bookkeeping", "cloud-accounting", "tax-services"],
+  "cloud-accounting-vs-desktop":         ["cloud-accounting", "bookkeeping", "annual-financial-statements"],
+  "registering-a-company-cipc-guide":    ["company-secretarial", "tax-services", "bookkeeping"],
+  "paye-uif-sdl-explained":             ["payroll", "tax-services", "bookkeeping"],
+  "vat-registration-when-and-how":       ["tax-services", "bookkeeping", "annual-financial-statements"],
+};
+
 const ARTICLE_CONTENT: Record<string, string[]> = {
   "sars-provisional-tax-guide-2025": [
     "Provisional tax is one of the most misunderstood obligations for South African business owners. If you earn income that isn't subject to employees' tax (PAYE), or you earn more than R30,000 per year from sources other than your main salary, you're likely a provisional taxpayer.",
@@ -205,6 +215,8 @@ export default async function BlogPostPage({
   const content = ARTICLE_CONTENT[slug];
   const related = BLOG_POSTS.filter((p) => p.slug !== slug && p.category === post.category).slice(0, 3);
   const otherPosts = BLOG_POSTS.filter((p) => p.slug !== slug).slice(0, 3);
+  const relatedServiceSlugs = ARTICLE_SERVICE_MAP[slug] ?? SERVICES.slice(0, 3).map((s) => s.slug);
+  const relatedServices = relatedServiceSlugs.map((s) => SERVICES.find((sv) => sv.slug === s)).filter(Boolean);
 
   return (
     <>
@@ -281,11 +293,11 @@ export default async function BlogPostPage({
                 </Link>
               </div>
 
-              {/* Internal links */}
+              {/* Internal links — topic-specific service backlinking */}
               <div className="mt-8 pt-8 border-t border-neutral-200">
                 <h3 className="text-sm font-semibold text-neutral-900 mb-4">Related services</h3>
                 <div className="flex flex-wrap gap-2">
-                  {SERVICES.slice(0, 4).map((s) => (
+                  {relatedServices.map((s) => s && (
                     <Link
                       key={s.slug}
                       href={`/services/${s.slug}`}

@@ -12,24 +12,24 @@ const STEPS = [
   {
     number: "03",
     title: "We Handle the Numbers",
-    desc: "Monthly bookkeeping, payroll, VAT returns, PAYE — your obligations are managed on time, every time, with no surprises.",
+    desc: "Monthly bookkeeping, payroll, VAT returns and PAYE. Your obligations are managed on time, every time, with no surprises.",
   },
   {
     number: "04",
     title: "You Get Clarity & Growth",
-    desc: "Monthly management accounts, tax planning advice, and a dedicated accountant who knows your business — so you can make better decisions.",
+    desc: "Monthly management accounts, tax planning advice, and a dedicated accountant who knows your business. Fewer surprises, better decisions.",
   },
 ];
 
 export default function HowItWorks() {
   return (
-    <section className="py-12 md:py-16 bg-neutral-50">
+    <section className="py-12 md:py-16 bg-white">
       <div className="container-page">
         <div className="text-center mb-12">
           <span className="section-label">How It Works</span>
           <h2 className="section-title mt-2">Simple, structured, and transparent</h2>
           <p className="section-subtitle mt-3 mx-auto">
-            From first contact to monthly management accounts — a clear process designed around your business.
+            From first contact to monthly management accounts. A clear process designed around your business.
           </p>
         </div>
 

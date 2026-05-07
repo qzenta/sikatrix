@@ -8,7 +8,19 @@ import {
 } from "lucide-react";
 import PageHero from "@/components/shared/PageHero";
 import CTABlock from "@/components/shared/CTABlock";
-import { SERVICES, LOCATIONS } from "@/lib/site";
+import { SERVICES, LOCATIONS, BLOG_POSTS } from "@/lib/site";
+
+// Deliberate backlinking: service pages link to their most relevant articles
+const SERVICE_ARTICLE_MAP: Record<string, string[]> = {
+  "annual-financial-statements": ["registering-a-company-cipc-guide", "small-business-bookkeeping-mistakes"],
+  "tax-services":                ["sars-provisional-tax-guide-2025", "vat-registration-when-and-how"],
+  "bookkeeping":                 ["small-business-bookkeeping-mistakes", "cloud-accounting-vs-desktop"],
+  "payroll":                     ["paye-uif-sdl-explained"],
+  "cloud-accounting":            ["cloud-accounting-vs-desktop", "small-business-bookkeeping-mistakes"],
+  "company-secretarial":         ["registering-a-company-cipc-guide"],
+  "business-permit-support":     ["registering-a-company-cipc-guide"],
+  "import-export-license":       [],
+};
 
 const ICON_MAP: Record<string, React.ElementType> = {
   FileText, Receipt, BookOpen, Users, Cloud, Briefcase, ShieldCheck, Globe,
@@ -245,6 +257,8 @@ export default async function ServicePage({
   };
 
   const otherServices = SERVICES.filter((s) => s.slug !== slug).slice(0, 4);
+  const relatedArticleSlugs = SERVICE_ARTICLE_MAP[slug] ?? [];
+  const relatedArticles = relatedArticleSlugs.map((a) => BLOG_POSTS.find((p) => p.slug === a)).filter(Boolean);
 
   return (
     <>
@@ -358,6 +372,37 @@ export default async function ServicePage({
           </div>
         </div>
       </section>
+
+      {/* Related reading — backlink to matching resources articles */}
+      {relatedArticles.length > 0 && (
+        <section className="py-10 bg-white border-t border-neutral-100">
+          <div className="container-page">
+            <span className="section-label">Related Reading</span>
+            <h2 className="text-sm font-semibold text-neutral-900 mt-2 mb-5">
+              Guides you may find useful
+            </h2>
+            <div className="grid sm:grid-cols-2 gap-4 max-w-2xl">
+              {relatedArticles.map((article) => article && (
+                <Link
+                  key={article.slug}
+                  href={`/resources/${article.slug}`}
+                  className="card p-5 group"
+                >
+                  <span className="text-2xs font-semibold uppercase tracking-widest text-accent block mb-1">
+                    {article.category}
+                  </span>
+                  <p className="text-xs font-semibold text-neutral-800 group-hover:text-brand transition-colors leading-snug mb-2">
+                    {article.title}
+                  </p>
+                  <span className="inline-flex items-center gap-1 text-2xs text-brand font-medium">
+                    Read guide <ArrowRight size={10} />
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="py-14 bg-neutral-50">
         <div className="container-page">

@@ -164,7 +164,7 @@ export default function Footer() {
                 <img
                   src={m.logo}
                   alt={m.name}
-                  style={{ height: 32, width: "auto", maxWidth: 90, objectFit: "contain", filter: "brightness(0) invert(1)", opacity: 0.55 }}
+                  style={{ height: 32, width: "auto", maxWidth: 90, objectFit: "contain", filter: "grayscale(1) invert(1)", opacity: 0.6 }}
                 />
               </div>
             ))}

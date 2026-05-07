@@ -4,12 +4,12 @@ import { LOCATIONS } from "@/lib/site";
 
 export default function LocationHighlights() {
   return (
-    <section className="py-12 md:py-16 bg-white" style={{ background: "linear-gradient(135deg, #ffffff 0%, #eef2ff 100%)" }}>
+    <section className="py-12 md:py-16 bg-neutral-100">
       <div className="container-page">
         <div className="mb-12">
           <span className="section-label">Our Locations</span>
           <h2 className="section-title mt-2">
-            Serving Gauteng businesses — in person and online
+            Serving Gauteng businesses, in person and online
           </h2>
           <p className="section-subtitle mt-3">
             Headquartered in Alberton with clients across Greater Johannesburg. Cloud-based delivery

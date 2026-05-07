@@ -229,26 +229,29 @@ export const BLOG_POSTS = [
     readTime: "6 min read",
     date: "2025-03-12",
     featured: true,
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=700&auto=format&fit=crop&q=60",
   },
   {
     slug: "small-business-bookkeeping-mistakes",
     title: "7 Bookkeeping Mistakes That Cost South African SMEs Thousands",
     category: "Bookkeeping",
     excerpt:
-      "From mixing personal and business accounts to ignoring VAT — discover the most common bookkeeping errors and how to fix them before SARS does.",
+      "From mixing personal and business accounts to ignoring VAT. Discover the most common bookkeeping errors and how to fix them before SARS does.",
     readTime: "5 min read",
     date: "2025-02-18",
     featured: false,
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700&auto=format&fit=crop&q=60",
   },
   {
     slug: "cloud-accounting-vs-desktop",
     title: "Cloud Accounting vs Desktop Software: What's Right for Your Business?",
     category: "Bookkeeping",
     excerpt:
-      "QuickBooks Online, Xero, and Sage compared against desktop alternatives — we break down costs, access, and compliance implications.",
+      "QuickBooks Online, Xero, and Sage compared against desktop alternatives. We break down costs, access, and compliance implications.",
     readTime: "4 min read",
     date: "2025-01-29",
     featured: false,
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=700&auto=format&fit=crop&q=60",
   },
   {
     slug: "registering-a-company-cipc-guide",
@@ -259,16 +262,18 @@ export const BLOG_POSTS = [
     readTime: "7 min read",
     date: "2024-12-10",
     featured: false,
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=700&auto=format&fit=crop&q=60",
   },
   {
     slug: "paye-uif-sdl-explained",
     title: "PAYE, UIF, and SDL Explained: A Guide for First-Time Employers",
     category: "SARS Compliance",
     excerpt:
-      "If you're hiring your first employee, these three obligations kick in immediately. Here's exactly what they mean and how to stay compliant.",
+      "When you hire your first employee, these three obligations kick in immediately. Here is exactly what they mean and how to stay compliant.",
     readTime: "5 min read",
     date: "2024-11-05",
     featured: false,
+    image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=700&auto=format&fit=crop&q=60",
   },
   {
     slug: "vat-registration-when-and-how",
@@ -279,5 +284,6 @@ export const BLOG_POSTS = [
     readTime: "6 min read",
     date: "2024-10-22",
     featured: false,
+    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=700&auto=format&fit=crop&q=60",
   },
 ];
