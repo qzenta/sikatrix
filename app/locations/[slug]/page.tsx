@@ -22,7 +22,7 @@ export async function generateMetadata({
   const loc = LOCATION_DETAILS.find((l) => l.slug === slug);
   if (!loc) return {};
   return {
-    title: loc.metaTitle,
+    title: { absolute: loc.metaTitle },
     description: loc.metaDescription,
     alternates: { canonical: `${SITE.url}/locations/${slug}` },
   };

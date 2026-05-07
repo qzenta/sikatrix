@@ -14,7 +14,7 @@ export function buildMetadata({
 }): Metadata {
   const url = `${SITE.url}${path}`;
   return {
-    title: `${title} | ${SITE.name}`,
+    title: { absolute: `${title} | ${SITE.name}` },
     description,
     metadataBase: new URL(SITE.url),
     alternates: { canonical: url },
@@ -67,10 +67,14 @@ export function buildLocalBusinessSchema(locationName?: string) {
       },
     ],
     hasCredential: SITE.certifications,
-    areaServed: {
-      "@type": "State",
-      name: "Gauteng",
-    },
+    areaServed: [
+      { "@type": "City", name: "Alberton", containedInPlace: { "@type": "State", name: "Gauteng" } },
+      { "@type": "City", name: "Johannesburg", containedInPlace: { "@type": "State", name: "Gauteng" } },
+      { "@type": "City", name: "Sandton", containedInPlace: { "@type": "State", name: "Gauteng" } },
+      { "@type": "City", name: "Randburg", containedInPlace: { "@type": "State", name: "Gauteng" } },
+      { "@type": "City", name: "Vereeniging", containedInPlace: { "@type": "State", name: "Gauteng" } },
+      { "@type": "City", name: "Germiston", containedInPlace: { "@type": "State", name: "Gauteng" } },
+    ],
     priceRange: "$$",
     currenciesAccepted: "ZAR",
     paymentAccepted: "Cash, EFT, Credit Card",

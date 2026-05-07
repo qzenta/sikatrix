@@ -26,8 +26,9 @@ const ICON_MAP: Record<string, React.ElementType> = {
   FileText, Receipt, BookOpen, Users, Cloud, Briefcase, ShieldCheck, Globe,
 };
 
-const SERVICE_DETAILS: Record<string, { benefits: string[]; faqs: { q: string; a: string }[] }> = {
+const SERVICE_DETAILS: Record<string, { outcome: string; benefits: string[]; faqs: { q: string; a: string }[] }> = {
   "annual-financial-statements": {
+    outcome: "After your first engagement, you'll have a fully compliant, signed set of financial statements — ready for your bank, your funders, or your CIPC filing — delivered within 15 business days of receiving complete records.",
     benefits: [
       "IFRS for SMEs compliant statements prepared accurately",
       "Meet statutory filing deadlines with CIPC",
@@ -52,6 +53,7 @@ const SERVICE_DETAILS: Record<string, { benefits: string[]; faqs: { q: string; a
     ],
   },
   "tax-services": {
+    outcome: "After your first filing season with us, you'll have zero outstanding SARS correspondence, a record of every submission with confirmation, and a written tax plan to reduce next year's liability.",
     benefits: [
       "ITR12 (individual) and ITR14 (company) returns filed",
       "Provisional tax (IRP6) calculated and submitted on time",
@@ -76,6 +78,7 @@ const SERVICE_DETAILS: Record<string, { benefits: string[]; faqs: { q: string; a
     ],
   },
   "bookkeeping": {
+    outcome: "Within 30 days of onboarding, your books are current, your bank is reconciled, and you're receiving monthly management accounts within 10 days of every month-end. No more guessing where your business stands.",
     benefits: [
       "Monthly bank reconciliations — no surprises at year-end",
       "Creditors and debtors ledgers maintained",
@@ -100,6 +103,7 @@ const SERVICE_DETAILS: Record<string, { benefits: string[]; faqs: { q: string; a
     ],
   },
   "payroll": {
+    outcome: "From your first payroll run, your team receives accurate payslips on time, your EMP201 is submitted before the 7th of every month, and you carry zero SARS payroll penalties.",
     benefits: [
       "Monthly payslips for all employees",
       "EMP201 (PAYE/UIF/SDL) submitted to SARS monthly",
@@ -124,6 +128,7 @@ const SERVICE_DETAILS: Record<string, { benefits: string[]; faqs: { q: string; a
     ],
   },
   "cloud-accounting": {
+    outcome: "Within 5 business days of setup, you have live financial data on any device, bank feeds importing automatically, and a clean chart of accounts your accountant and your team can actually use.",
     benefits: [
       "Real-time financial data accessible from any device",
       "Setup and migration from your existing system",
@@ -148,6 +153,7 @@ const SERVICE_DETAILS: Record<string, { benefits: string[]; faqs: { q: string; a
     ],
   },
   "company-secretarial": {
+    outcome: "Your company is registered, in good standing with CIPC, and compliant with annual return obligations — so you never risk deregistration or the cost of reinstatement.",
     benefits: [
       "CIPC company registration (Pty Ltd, NPC, CC)",
       "Annual return filings to CIPC",
@@ -172,6 +178,7 @@ const SERVICE_DETAILS: Record<string, { benefits: string[]; faqs: { q: string; a
     ],
   },
   "business-permit-support": {
+    outcome: "We prepare a complete, compliant financial documentation package for your permit or visa application — so your submission arrives correct the first time and you avoid costly re-submissions or delays.",
     benefits: [
       "Work permit applications with full financial documentation",
       "Business and corporate visa financial viability reports",
@@ -197,6 +204,7 @@ const SERVICE_DETAILS: Record<string, { benefits: string[]; faqs: { q: string; a
     ],
   },
   "import-export-license": {
+    outcome: "Your SARS customs registration is in place within 15 business days of a complete application, so your trading activities can commence without regulatory delays.",
     benefits: [
       "Full SARS customs registration process managed",
       "Import license and/or export license secured",
@@ -235,7 +243,7 @@ export async function generateMetadata({
   const service = SERVICES.find((s) => s.slug === slug);
   if (!service) return {};
   return {
-    title: `${service.title} | Sikatrix Business Accountants`,
+    title: { absolute: `${service.title} | Sikatrix Business Accountants` },
     description: service.description,
     alternates: { canonical: `https://sikatrix.com/services/${slug}` },
   };
@@ -260,8 +268,24 @@ export default async function ServicePage({
   const relatedArticleSlugs = SERVICE_ARTICLE_MAP[slug] ?? [];
   const relatedArticles = relatedArticleSlugs.map((a) => BLOG_POSTS.find((p) => p.slug === a)).filter(Boolean);
 
+  const faqSchema = details.faqs.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: details.faqs.map(({ q, a }) => ({
+      "@type": "Question",
+      name: q,
+      acceptedAnswer: { "@type": "Answer", text: a },
+    })),
+  } : null;
+
   return (
     <>
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
       <PageHero
         label="Service"
         title={service.title}
@@ -281,9 +305,14 @@ export default async function ServicePage({
             <div className="grid lg:grid-cols-2 gap-12 items-start">
               <div>
                 <span className="section-label">What's Included</span>
-                <h2 className="section-title mt-2 mb-6">
+                <h2 className="section-title mt-2 mb-4">
                   What you get with our {service.shortTitle} service
                 </h2>
+                {details.outcome && (
+                  <p className="text-sm text-neutral-600 leading-relaxed mb-6 p-4 bg-brand-50 rounded-lg border-l-4 border-brand">
+                    {details.outcome}
+                  </p>
+                )}
                 <ul className="space-y-3">
                   {details.benefits.map((b) => (
                     <li key={b} className="flex gap-3 text-sm text-neutral-700">

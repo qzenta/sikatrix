@@ -8,7 +8,7 @@ import CTABlock from "@/components/shared/CTABlock";
 import { INDUSTRIES } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Industries We Serve | Sikatrix Business Accountants",
+  title: { absolute: "Industries We Serve | Sikatrix Business Accountants" },
   description:
     "From medical practices to NGOs, property investors to startups — Sikatrix provides sector-specific accounting and tax services across South Africa.",
   alternates: { canonical: "https://sikatrix.com/industries" },

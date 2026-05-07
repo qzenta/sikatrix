@@ -169,7 +169,7 @@ export async function generateMetadata({
   const post = BLOG_POSTS.find((p) => p.slug === slug);
   if (!post) return {};
   return {
-    title: `${post.title} | Sikatrix Resources`,
+    title: { absolute: `${post.title} | Sikatrix Resources` },
     description: post.excerpt,
     alternates: { canonical: `https://sikatrix.com/resources/${slug}` },
   };
@@ -218,8 +218,37 @@ export default async function BlogPostPage({
   const relatedServiceSlugs = ARTICLE_SERVICE_MAP[slug] ?? SERVICES.slice(0, 3).map((s) => s.slug);
   const relatedServices = relatedServiceSlugs.map((s) => SERVICES.find((sv) => sv.slug === s)).filter(Boolean);
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+    dateModified: post.date,
+    author: {
+      "@type": "Person",
+      name: "Daniel [Surname]",
+      jobTitle: "SAIPA Professional Accountant (SA)",
+      worksFor: {
+        "@type": "AccountingService",
+        name: "Sikatrix Business Accountants",
+        url: "https://sikatrix.com",
+      },
+    },
+    publisher: {
+      "@type": "AccountingService",
+      name: "Sikatrix Business Accountants",
+      url: "https://sikatrix.com",
+    },
+    url: `https://sikatrix.com/resources/${slug}`,
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       {/* Hero */}
       <section className="bg-brand-dark py-12 md:py-16">
         <div className="container-page">
@@ -242,7 +271,7 @@ export default async function BlogPostPage({
           <h1 className="text-2xl sm:text-3xl font-semibold text-white leading-snug mb-4 max-w-3xl text-balance">
             {post.title}
           </h1>
-          <div className="flex items-center gap-2 text-xs text-brand-100">
+          <div className="flex items-center gap-2 text-xs text-brand-100 flex-wrap">
             <Calendar size={11} />
             Published{" "}
             {new Date(post.date).toLocaleDateString("en-ZA", {
@@ -250,7 +279,8 @@ export default async function BlogPostPage({
               month: "long",
               year: "numeric",
             })}
-            <span>· Sikatrix Business Accountants</span>
+            <span className="opacity-40">·</span>
+            <span>By Daniel [Surname], SAIPA Professional Accountant (SA)</span>
           </div>
         </div>
       </section>

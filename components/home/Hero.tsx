@@ -1,44 +1,14 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { ArrowRight, Phone, ChevronLeft, ChevronRight, CheckCircle } from "lucide-react";
 import { SITE } from "@/lib/site";
 
-function StatCounter({ raw, label }: { raw: string; label: string }) {
-  const num = parseInt(raw.replace(/\D/g, ""), 10);
-  const suffix = raw.replace(/[0-9]/g, "");
-  const [count, setCount] = useState(0);
-  const [started, setStarted] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) { setStarted(true); obs.disconnect(); } },
-      { threshold: 0.5 }
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, []);
-
-  useEffect(() => {
-    if (!started) return;
-    const duration = 1800;
-    const startTime = performance.now();
-    const tick = (now: number) => {
-      const progress = Math.min((now - startTime) / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      setCount(Math.round(eased * num));
-      if (progress < 1) requestAnimationFrame(tick);
-    };
-    requestAnimationFrame(tick);
-  }, [started, num]);
-
+function StatDisplay({ value, label }: { value: string; label: string }) {
   return (
-    <div ref={ref} className="text-center">
-      <div className="text-xl font-semibold text-accent-light">{count}{suffix}</div>
+    <div className="text-center">
+      <div className="text-xl font-semibold text-accent-light">{value}</div>
       <div className="text-xs text-brand-100 mt-0.5">{label}</div>
     </div>
   );
@@ -47,9 +17,9 @@ function StatCounter({ raw, label }: { raw: string; label: string }) {
 const SLIDES = [
   {
     tag: "Alberton · Johannesburg · Gauteng",
-    heading: "Accounting That Works",
-    highlight: "for Your World",
-    body: "A modern, cloud-based accounting and compliance partner for South African SMEs. Professional. Responsive. Transparent.",
+    heading: "The accountant Alberton's",
+    highlight: "businesses call first",
+    body: "SAIPA-registered accountants and SARS Tax Practitioners with 10+ years in practice. Fixed-fee quotes. Same-day responses. No year-end surprises.",
     points: [
       "SAIPA Registered Professional Accountant",
       "SARS Registered Tax Practitioner",
@@ -170,13 +140,22 @@ export default function Hero() {
               Book Free Consultation
               <ArrowRight size={14} />
             </Link>
-            <a
-              href={`tel:${SITE.phoneRaw}`}
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md border border-white/25 text-white font-semibold text-sm hover:bg-white/10 transition-colors"
-            >
-              <Phone size={14} />
-              {SITE.phone}
-            </a>
+            {current === 0 ? (
+              <Link
+                href="/pricing"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md border border-white/25 text-white font-semibold text-sm hover:bg-white/10 transition-colors"
+              >
+                View pricing <ArrowRight size={14} />
+              </Link>
+            ) : (
+              <a
+                href={`tel:${SITE.phoneRaw}`}
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md border border-white/25 text-white font-semibold text-sm hover:bg-white/10 transition-colors"
+              >
+                <Phone size={14} />
+                {SITE.phone}
+              </a>
+            )}
           </div>
         </div>
 
@@ -223,7 +202,7 @@ export default function Hero() {
         <div className="container-page py-5">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             {STATS.map((s) => (
-              <StatCounter key={s.label} raw={s.value} label={s.label} />
+              <StatDisplay key={s.label} value={s.value} label={s.label} />
             ))}
           </div>
         </div>

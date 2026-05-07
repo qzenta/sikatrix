@@ -77,8 +77,7 @@ export default function Header() {
         <div className="container-page flex justify-between items-center">
           <span className="text-brand-100 flex items-center gap-2">
             <span className="inline-block w-1.5 h-1.5 rounded-full bg-accent-light animate-pulse" />
-            <span>New client offer:</span>
-            <span className="text-accent-light font-semibold">30% discount on your first 3 months</span>
+            <span>Fixed-fee quote within one business day — no surprises, no hourly billing.</span>
             <span className="opacity-40">·</span>
             <Link href="/contact" className="underline underline-offset-2 hover:text-accent-light transition-colors">
               Book free consultation →

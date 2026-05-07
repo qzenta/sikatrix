@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CheckCircle, Award, Users, Clock, Shield } from "lucide-react";
+import { CheckCircle, Award, Users, Clock, Shield, BadgeCheck } from "lucide-react";
 import PageHero from "@/components/shared/PageHero";
 import CTABlock from "@/components/shared/CTABlock";
 import TrustBar from "@/components/home/TrustBar";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "About Sikatrix Business Accountants | SAIPA-Registered, Alberton",
+  title: { absolute: "About Sikatrix Business Accountants | SAIPA-Registered, Alberton" },
   description:
     "Learn about Sikatrix Business Accountants — SAIPA-registered professionals with 10+ years serving SMEs, startups, and NGOs across Gauteng.",
   alternates: { canonical: "https://sikatrix.com/about" },
@@ -16,23 +16,23 @@ export const metadata: Metadata = {
 const VALUES = [
   {
     icon: Shield,
-    title: "Professional Integrity",
-    desc: "SAIPA-registered and SARS-compliant. We hold ourselves to the highest professional standards.",
+    title: "Written quote before we start",
+    desc: "Every engagement begins with a fixed-fee quote in writing. You know the exact cost before we touch a single transaction.",
   },
   {
     icon: Clock,
-    title: "Responsive Service",
-    desc: "Real accountants who answer their phones. No call centres, no runarounds.",
+    title: "Same-day response, always",
+    desc: "We respond to client queries the same business day. No queues, no call centres — a direct line to the accountant who knows your file.",
   },
   {
     icon: Users,
-    title: "Client-First Approach",
-    desc: "We build long-term partnerships, not transactional relationships. Your success is our success.",
+    title: "Reviewed before it leaves our desk",
+    desc: "Every set of financial statements and every SARS submission is reviewed against a quality checklist before delivery. Confirmation sent to you every time.",
   },
   {
     icon: Award,
-    title: "Continuous Development",
-    desc: "We stay current with SARS changes, IFRS updates, and cloud technology so you don't have to.",
+    title: "Current on every SARS change",
+    desc: "We track SARS legislative updates, IFRS amendments, and cloud platform changes so your compliance never lags behind the law.",
   },
 ];
 
@@ -41,8 +41,8 @@ export default function AboutPage() {
     <>
       <PageHero
         label="About Us"
-        title="Qualified Accountants Who Actually Know Your Business"
-        subtitle="Founded on the belief that small and medium businesses deserve the same quality of financial advice as large corporations — without the large price tag."
+        title="Qualified. Local. Personally Accountable."
+        subtitle="10+ years in practice, 148+ businesses served across Gauteng. One accountant who knows your file — not a rotating team."
         bgImage="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1600&auto=format&fit=crop&q=60"
         crumbs={[{ label: "About" }]}
       />
@@ -94,6 +94,47 @@ export default function AboutPage() {
                   <div className="text-xs text-neutral-400 mt-0.5">{stat.sub}</div>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Meet the Accountant */}
+      <section className="py-14 bg-neutral-50 border-t border-neutral-200">
+        <div className="container-page">
+          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-4xl mx-auto">
+            {/* Photo placeholder — replace with a professional headshot */}
+            <div className="flex justify-center lg:justify-start">
+              <div className="w-56 h-56 rounded-2xl bg-brand-50 border-2 border-brand/20 flex flex-col items-center justify-center text-center p-6">
+                <div className="w-20 h-20 rounded-full bg-brand flex items-center justify-center mb-3">
+                  <span className="text-white text-3xl font-bold">D</span>
+                </div>
+                <p className="text-xs text-neutral-400 mt-1">Replace with professional headshot</p>
+              </div>
+            </div>
+            <div>
+              <span className="section-label">Who You're Working With</span>
+              <h2 className="section-title mt-2 mb-4">Daniel [Surname]</h2>
+              <div className="flex flex-wrap gap-2 mb-5">
+                <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand bg-brand-50 px-3 py-1 rounded-full">
+                  <BadgeCheck size={12} /> SAIPA Professional Accountant (SA)
+                </span>
+                <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand bg-brand-50 px-3 py-1 rounded-full">
+                  <BadgeCheck size={12} /> SARS Registered Tax Practitioner
+                </span>
+              </div>
+              <div className="space-y-3 text-sm text-neutral-600 leading-relaxed">
+                <p>
+                  With over 10 years in public practice, Daniel founded Sikatrix Business Accountants
+                  on a straightforward belief: South African SMEs deserve qualified advice, delivered
+                  directly — not filtered through juniors or outsourced offshore.
+                </p>
+                <p>
+                  Every client engagement is personally overseen. When you work with Sikatrix, you
+                  deal with the same accountant from onboarding through to year-end — someone who
+                  knows your business, your industry, and your compliance history.
+                </p>
+              </div>
             </div>
           </div>
         </div>

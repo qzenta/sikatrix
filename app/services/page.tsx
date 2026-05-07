@@ -9,7 +9,7 @@ import CTABlock from "@/components/shared/CTABlock";
 import { SERVICES } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Accounting & Tax Services | Sikatrix Business Accountants",
+  title: { absolute: "Accounting & Tax Services | Sikatrix Business Accountants" },
   description:
     "Full-spectrum accounting services: annual financial statements, tax returns, bookkeeping, payroll, cloud accounting, company secretarial, and business rescue.",
   alternates: { canonical: "https://sikatrix.com/services" },

@@ -13,7 +13,7 @@ import Link from "next/link";
 import { ArrowRight, Calendar } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Accountants in Alberton | Sikatrix Business Accountants",
+  title: { absolute: "Accountants in Alberton | Sikatrix Business Accountants" },
   description:
     "SAIPA-registered accountants and SARS Tax Practitioners serving SMEs, startups and NGOs across Alberton, Johannesburg and Gauteng. Cloud accounting, tax, payroll and compliance.",
   alternates: { canonical: "https://sikatrix.com" },

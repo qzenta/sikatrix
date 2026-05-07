@@ -6,7 +6,7 @@ import CTABlock from "@/components/shared/CTABlock";
 import { LOCATIONS, SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Locations | Accountants Across Gauteng | Sikatrix",
+  title: { absolute: "Locations | Accountants Across Gauteng | Sikatrix Business Accountants" },
   description:
     "Sikatrix Business Accountants serves Alberton (HQ), Johannesburg, Sandton, Randburg, and Vereeniging. Cloud-based delivery means we work with you anywhere.",
   alternates: { canonical: "https://sikatrix.com/locations" },
