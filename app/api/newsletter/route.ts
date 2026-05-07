@@ -1,8 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
+// Initialised inside handler — build succeeds without RESEND_API_KEY present.
 const NOTIFY_TO = "info@sikatrix.com";
 const FROM = "Sikatrix Business Accountants <noreply@sikatrix.com>";
 
@@ -270,6 +269,8 @@ function newsletterWelcomeHtml(name: string) {
 // ── Route handler ─────────────────────────────────────────────────────────────
 
 export async function POST(req: NextRequest) {
+  const resend = new Resend(process.env.RESEND_API_KEY);
+
   if (!req.headers.get("content-type")?.includes("application/json")) {
     return NextResponse.json({ error: "Invalid request." }, { status: 400 });
   }
