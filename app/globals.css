@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply font-sans text-neutral-800 bg-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight text-neutral-900;
+  }
+
+  a {
+    @apply transition-colors duration-150;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-md
+           bg-accent text-white font-semibold text-sm
+           hover:bg-accent-dark transition-colors duration-150 shadow-sm;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-md
+           bg-brand text-white font-semibold text-sm
+           hover:bg-brand-dark transition-colors duration-150 shadow-sm;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-md
+           border border-brand text-brand font-semibold text-sm
+           hover:bg-brand hover:text-white transition-colors duration-150;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md
+           text-neutral-600 font-medium text-sm
+           hover:bg-neutral-100 transition-colors duration-150;
+  }
+
+  .section-label {
+    @apply text-xs font-semibold uppercase tracking-widest text-accent;
+  }
+
+  .section-title {
+    @apply text-2xl sm:text-3xl font-semibold text-neutral-900 leading-snug;
+  }
+
+  .section-subtitle {
+    @apply text-base text-neutral-500 leading-relaxed max-w-xl;
+  }
+
+  .card {
+    @apply bg-white rounded-xl border border-neutral-200 shadow-card
+           hover:shadow-card-hover transition-shadow duration-200;
+  }
+
+  .container-page {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .prose-page {
+    @apply prose prose-slate max-w-none
+           prose-headings:font-semibold prose-headings:tracking-tight
+           prose-a:text-brand prose-a:no-underline hover:prose-a:underline;
+  }
+
+  .divider {
+    @apply border-t border-neutral-200;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-33.333%); }
+}
