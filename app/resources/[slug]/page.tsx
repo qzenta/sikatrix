@@ -161,6 +161,7 @@ export async function generateMetadata({
   return {
     title: `${post.title} | Sikatrix Resources`,
     description: post.excerpt,
+    alternates: { canonical: `https://sikatrix.com/resources/${slug}` },
   };
 }
 

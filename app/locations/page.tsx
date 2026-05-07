@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Locations | Accountants Across Gauteng | Sikatrix",
   description:
     "Sikatrix Business Accountants serves Alberton (HQ), Johannesburg, Sandton, Randburg, and Vereeniging. Cloud-based delivery means we work with you anywhere.",
+  alternates: { canonical: "https://sikatrix.com/locations" },
 };
 
 export default function LocationsPage() {
