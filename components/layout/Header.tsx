@@ -36,6 +36,7 @@ const NAV_ITEMS: NavItem[] = [
     })),
   },
   { label: "Resources", href: "/resources" },
+  { label: "Pricing", href: "/pricing" },
   { label: "Contact", href: "/contact" },
 ];
 

@@ -3,6 +3,7 @@ import Hero from "@/components/home/Hero";
 import TrustBar from "@/components/home/TrustBar";
 import ServicesGrid from "@/components/home/ServicesGrid";
 import HowItWorks from "@/components/home/HowItWorks";
+import PricingTeaser from "@/components/home/PricingTeaser";
 import LocationHighlights from "@/components/home/LocationHighlights";
 import LeadMagnet from "@/components/home/LeadMagnet";
 import TestimonialsGrid from "@/components/shared/TestimonialsGrid";
@@ -28,6 +29,7 @@ export default function HomePage() {
       <TrustBar />
       <ServicesGrid />
       <HowItWorks />
+      <PricingTeaser />
       <LocationHighlights />
       <LeadMagnet />
       <TestimonialsGrid />

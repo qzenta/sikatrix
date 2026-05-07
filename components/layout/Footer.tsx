@@ -77,6 +77,7 @@ export default function Footer() {
             {[
               { label: "Home", href: "/" },
               { label: "About Us", href: "/about" },
+              { label: "Pricing", href: "/pricing" },
               { label: "Industries", href: "/industries" },
               { label: "Resources", href: "/resources" },
               { label: "FAQ", href: "/faq" },
@@ -152,23 +153,18 @@ export default function Footer() {
           <span className="text-2xs font-semibold uppercase tracking-widest text-neutral-600 flex-shrink-0">
             Professional Memberships
           </span>
-          <div className="flex flex-wrap items-center gap-5">
+          <div className="flex flex-wrap items-center gap-6">
             {[
               { name: "SAIPA — Registered Professional Accountant", logo: "/partners/saipa.png" },
               { name: "IBASA — Member",                             logo: "/partners/ibasa.png" },
               { name: "SARS — Registered Tax Practitioner",         logo: "/partners/sars.png"  },
             ].map((m) => (
-              <div
-                key={m.name}
-                title={m.name}
-                className="flex items-center justify-center rounded border border-neutral-800 bg-neutral-900/60 px-3 py-2"
-                style={{ width: 100, height: 44 }}
-              >
+              <div key={m.name} title={m.name} className="flex items-center justify-center" style={{ height: 36 }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={m.logo}
                   alt={m.name}
-                  style={{ width: 80, height: 36, objectFit: "contain", filter: "brightness(0.85) grayscale(0.15)" }}
+                  style={{ height: 32, width: "auto", maxWidth: 90, objectFit: "contain", filter: "brightness(0) invert(1)", opacity: 0.55 }}
                 />
               </div>
             ))}
