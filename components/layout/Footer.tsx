@@ -186,6 +186,9 @@ export default function Footer() {
             <Link href="/popia" className="hover:text-neutral-400 transition-colors">
               POPIA Notice
             </Link>
+            <Link href="/cookie-policy" className="hover:text-neutral-400 transition-colors">
+              Cookie Policy
+            </Link>
           </div>
         </div>
       </div>

@@ -286,4 +286,26 @@ export const BLOG_POSTS = [
     featured: false,
     image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=700&auto=format&fit=crop&q=60",
   },
+  {
+    slug: "sars-efiling-business-registration",
+    title: "How to Register Your Business Profile on SARS eFiling",
+    category: "SARS Compliance",
+    excerpt:
+      "A step-by-step guide to setting up your company on SARS eFiling — from registering the responsible representative to activating the correct tax types and linking your bank account.",
+    readTime: "7 min read",
+    date: "2025-05-07",
+    featured: false,
+    image: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=700&auto=format&fit=crop&q=60",
+  },
+  {
+    slug: "how-to-submit-company-tax-return-itr14",
+    title: "How to Submit a Company Tax Return (ITR14) on SARS eFiling",
+    category: "Tax",
+    excerpt:
+      "A practical walkthrough for directors and financial managers: what the ITR14 requires, when it is due, how to complete it on eFiling, and the most common errors that trigger SARS audits.",
+    readTime: "8 min read",
+    date: "2025-04-22",
+    featured: false,
+    image: "https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=700&auto=format&fit=crop&q=60",
+  },
 ];

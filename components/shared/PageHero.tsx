@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
+import { SITE } from "@/lib/site";
 
 interface Crumb {
   label: string;
@@ -53,7 +54,26 @@ export default function PageHero({
       <div className="container-page relative">
         {/* Breadcrumb */}
         {crumbs && crumbs.length > 0 && (
-          <nav className="flex items-center gap-1.5 mb-4 text-xs text-brand-100">
+          <>
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "BreadcrumbList",
+                  itemListElement: [
+                    { "@type": "ListItem", position: 1, name: "Home", item: SITE.url },
+                    ...crumbs.map((c, i) => ({
+                      "@type": "ListItem",
+                      position: i + 2,
+                      name: c.label,
+                      ...(c.href ? { item: `${SITE.url}${c.href}` } : {}),
+                    })),
+                  ],
+                }),
+              }}
+            />
+          <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 mb-4 text-xs text-brand-100">
             <Link href="/" className="hover:text-white transition-colors">
               Home
             </Link>
@@ -70,6 +90,7 @@ export default function PageHero({
               </span>
             ))}
           </nav>
+          </>
         )}
 
         <div className="max-w-2xl">

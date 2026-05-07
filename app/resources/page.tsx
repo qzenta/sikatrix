@@ -92,30 +92,48 @@ export default function ResourcesPage() {
           {/* Article grid */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {BLOG_POSTS.filter((p) => !p.featured).map((post) => (
-              <Link key={post.slug} href={`/resources/${post.slug}`} className="card p-6 group">
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="text-2xs font-semibold uppercase tracking-widest text-accent">
-                    {post.category}
-                  </span>
-                  <span className="text-neutral-200">·</span>
-                  <span className="text-2xs text-neutral-400">{post.readTime}</span>
+              <Link key={post.slug} href={`/resources/${post.slug}`} className="card overflow-hidden group">
+                {/* Thumbnail */}
+                <div className="h-44 bg-brand-50 overflow-hidden">
+                  {post.image ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gradient-to-br from-brand to-brand/70 flex items-center justify-center">
+                      <span className="text-4xl opacity-40">📊</span>
+                    </div>
+                  )}
                 </div>
-                <h2 className="text-sm font-semibold text-neutral-900 leading-snug mb-2 group-hover:text-brand transition-colors">
-                  {post.title}
-                </h2>
-                <p className="text-xs text-neutral-500 leading-relaxed mb-4">{post.excerpt}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-2xs text-neutral-400 flex items-center gap-1">
-                    <Calendar size={9} />
-                    {new Date(post.date).toLocaleDateString("en-ZA", {
-                      day: "numeric",
-                      month: "short",
-                      year: "numeric",
-                    })}
-                  </span>
-                  <span className="text-xs text-brand flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                    Read <ArrowRight size={10} />
-                  </span>
+                {/* Text */}
+                <div className="p-6">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-2xs font-semibold uppercase tracking-widest text-accent">
+                      {post.category}
+                    </span>
+                    <span className="text-neutral-200">·</span>
+                    <span className="text-2xs text-neutral-400">{post.readTime}</span>
+                  </div>
+                  <h2 className="text-sm font-semibold text-neutral-900 leading-snug mb-2 group-hover:text-brand transition-colors">
+                    {post.title}
+                  </h2>
+                  <p className="text-xs text-neutral-500 leading-relaxed mb-4">{post.excerpt}</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-2xs text-neutral-400 flex items-center gap-1">
+                      <Calendar size={9} />
+                      {new Date(post.date).toLocaleDateString("en-ZA", {
+                        day: "numeric",
+                        month: "short",
+                        year: "numeric",
+                      })}
+                    </span>
+                    <span className="text-xs text-brand flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                      Read <ArrowRight size={10} />
+                    </span>
+                  </div>
                 </div>
               </Link>
             ))}

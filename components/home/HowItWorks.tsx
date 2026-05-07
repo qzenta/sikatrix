@@ -12,12 +12,12 @@ const STEPS = [
   {
     number: "03",
     title: "We Handle the Numbers",
-    desc: "Monthly bookkeeping, payroll, VAT returns and PAYE. Your obligations are managed on time, every time, with no surprises.",
+    desc: "Monthly bookkeeping, payroll, VAT returns and PAYE. Every deadline met, every submission filed — you focus on your business.",
   },
   {
     number: "04",
     title: "You Get Clarity & Growth",
-    desc: "Monthly management accounts, tax planning advice, and a dedicated accountant who knows your business. Fewer surprises, better decisions.",
+    desc: "Monthly management accounts, tax planning advice, and one accountant who knows your file. Clear numbers, confident decisions.",
   },
 ];
 

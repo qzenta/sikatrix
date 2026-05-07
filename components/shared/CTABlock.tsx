@@ -12,8 +12,8 @@ interface CTABlockProps {
 }
 
 export default function CTABlock({
-  title = "Ready to take control of your finances?",
-  subtitle = "Book a free consultation with a SAIPA-registered accountant today.",
+  title = "Talk to a SAIPA-registered accountant today",
+  subtitle = "Book a free 30-minute consultation. No obligation — just straight answers about your compliance and tax position.",
   primaryLabel = "Book Free Consultation",
   primaryHref = "/contact",
   variant = "brand",

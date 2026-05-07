@@ -94,10 +94,11 @@ export default function LeadMagnet() {
                 <form onSubmit={handleSubmit} className="space-y-3">
                   <input type="text" name="_trap" className="hidden" tabIndex={-1} autoComplete="off" />
                   <div>
-                    <label className="block text-xs font-medium text-neutral-700 mb-1">
+                    <label htmlFor="lead-name" className="block text-xs font-medium text-neutral-700 mb-1">
                       Your name
                     </label>
                     <input
+                      id="lead-name"
                       type="text"
                       value={name}
                       onChange={(e) => setName(e.target.value)}
@@ -106,10 +107,11 @@ export default function LeadMagnet() {
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-medium text-neutral-700 mb-1">
+                    <label htmlFor="lead-email" className="block text-xs font-medium text-neutral-700 mb-1">
                       Business email
                     </label>
                     <input
+                      id="lead-email"
                       type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}

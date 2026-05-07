@@ -20,8 +20,8 @@ export default function ServicesGrid() {
             Full-spectrum accounting & compliance services
           </h2>
           <p className="section-subtitle mt-3 mx-auto">
-            Everything a South African business needs: tax, bookkeeping, payroll and compliance,
-            delivered by qualified professionals on modern cloud platforms.
+            SAIPA-registered accountants handling tax, bookkeeping, payroll, and company compliance
+            — so you stay legal, minimise your tax burden, and get back to running your business.
           </p>
         </div>
 

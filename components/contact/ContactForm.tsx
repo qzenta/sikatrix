@@ -143,10 +143,11 @@ export default function ContactForm() {
 
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-xs font-medium text-neutral-700 mb-1.5">
+                    <label htmlFor="cf-name" className="block text-xs font-medium text-neutral-700 mb-1.5">
                       Full Name <span className="text-red-500">*</span>
                     </label>
                     <input
+                      id="cf-name"
                       type="text"
                       name="name"
                       value={form.name}
@@ -157,10 +158,11 @@ export default function ContactForm() {
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-medium text-neutral-700 mb-1.5">
+                    <label htmlFor="cf-email" className="block text-xs font-medium text-neutral-700 mb-1.5">
                       Business Email <span className="text-red-500">*</span>
                     </label>
                     <input
+                      id="cf-email"
                       type="email"
                       name="email"
                       value={form.email}
@@ -174,10 +176,11 @@ export default function ContactForm() {
 
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-xs font-medium text-neutral-700 mb-1.5">
+                    <label htmlFor="cf-phone" className="block text-xs font-medium text-neutral-700 mb-1.5">
                       Phone Number
                     </label>
                     <input
+                      id="cf-phone"
                       type="tel"
                       name="phone"
                       value={form.phone}
@@ -187,10 +190,11 @@ export default function ContactForm() {
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-medium text-neutral-700 mb-1.5">
+                    <label htmlFor="cf-company" className="block text-xs font-medium text-neutral-700 mb-1.5">
                       Company Name
                     </label>
                     <input
+                      id="cf-company"
                       type="text"
                       name="company"
                       value={form.company}
@@ -202,10 +206,11 @@ export default function ContactForm() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-medium text-neutral-700 mb-1.5">
+                  <label htmlFor="cf-service" className="block text-xs font-medium text-neutral-700 mb-1.5">
                     Service Required
                   </label>
                   <select
+                    id="cf-service"
                     name="service"
                     value={form.service}
                     onChange={handleChange}
@@ -221,10 +226,11 @@ export default function ContactForm() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-medium text-neutral-700 mb-1.5">
+                  <label htmlFor="cf-message" className="block text-xs font-medium text-neutral-700 mb-1.5">
                     Tell us about your business <span className="text-red-500">*</span>
                   </label>
                   <textarea
+                    id="cf-message"
                     name="message"
                     value={form.message}
                     onChange={handleChange}
