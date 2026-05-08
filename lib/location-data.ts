@@ -242,4 +242,41 @@ export const LOCATION_DETAILS: LocationDetail[] = [
     nearbyLocations: ["alberton", "johannesburg", "vereeniging"],
     schemaCity: "Germiston",
   },
+  {
+    slug: "boksburg",
+    name: "Boksburg",
+    province: "Gauteng",
+    isHQ: false,
+    metaTitle: "Accountants in Boksburg | Sikatrix Business Accountants",
+    metaDescription:
+      "Professional accounting, bookkeeping, payroll and tax services for Boksburg businesses. SAIPA-registered accountants and SARS Tax Practitioners serving the East Rand. Cloud-based delivery from our Alberton office.",
+    headline: "Professional Accounting & Tax Services in Boksburg",
+    intro:
+      "Boksburg sits at the commercial and logistical heart of Ekurhuleni — and its businesses deserve accounting partners who understand the pace of the East Rand. Sikatrix brings SAIPA-registered accounting expertise to Boksburg SMEs through a modern, cloud-based delivery model.",
+    bodyParagraphs: [
+      "Boksburg is more than a suburb — it's a logistics corridor, a retail powerhouse, and a quietly thriving industrial hub. Businesses along the N12 and around the East Rand Mall precinct operate in a high-velocity environment where cash flow management, payroll accuracy, and SARS compliance are non-negotiable. That's precisely where Sikatrix adds value.",
+      "Our proximity to Boksburg — just minutes across Ekurhuleni from our Alberton office — means we're genuinely local. But our cloud-first infrastructure means we deliver the same quality of service whether your business is in Trichardt Road or tucked into one of Boksburg's growing light-industrial estates.",
+      "The stretch from Boksburg North through to Jet Park has become one of the East Rand's most active warehousing and distribution corridors, with OR Tambo International Airport drawing logistics companies and import/export operators to the area. We handle the import/export licensing and customs-related compliance requirements that come with operating in this space.",
+      "For owner-managed businesses — the retail outlets, transport companies, professional practices, and auto-trade dealerships that define Boksburg's commercial character — we offer practical, affordable accounting support without the bureaucracy of a large firm.",
+    ],
+    keyServices: [
+      "Monthly Bookkeeping & Bank Reconciliation",
+      "Payroll Processing & EMP201 Submissions",
+      "Company & Individual Tax Returns (ITR12, ITR14)",
+      "Annual Financial Statements",
+      "VAT Registration & VAT201 Returns",
+      "CIPC Company Registration & Annual Returns",
+      "Import/Export License Applications",
+      "Cloud Accounting Setup (QuickBooks / Xero / Sage)",
+    ],
+    localContext:
+      "Boksburg's position adjacent to OR Tambo International Airport drives strong demand for import/export licensing, freight-related payroll, and corporate tax compliance. The area's large retail and automotive sectors add VAT compliance and multi-employee payroll to the mix — all services Sikatrix handles with experience.",
+    testimonial: {
+      name: "Lindiwe M.",
+      role: "Owner, East Rand Distribution — Boksburg",
+      body: "We were dealing with a SARS backlog and chaotic bookkeeping when we found Sikatrix. Within three months they had everything reconciled, our EMP201s current, and our books in order. Worth every cent.",
+    },
+    nearbyLocations: ["germiston", "alberton", "johannesburg"],
+    schemaCity: "Boksburg",
+  },
 ];

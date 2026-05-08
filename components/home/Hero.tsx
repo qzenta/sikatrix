@@ -107,7 +107,7 @@ export default function Hero() {
       {/* Accent glow */}
       <div className="absolute -top-40 -right-40 w-[520px] h-[520px] bg-brand-light/20 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="container-page relative py-14 md:py-20 lg:py-24">
+      <div className="container-page relative py-10 md:py-14 lg:py-18">
         {/* Slide content */}
         <div
           className="max-w-2xl transition-opacity duration-400 ease-in-out"

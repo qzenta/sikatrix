@@ -175,7 +175,7 @@ export default function Footer() {
       {/* Legal bar */}
       <div className="border-t border-neutral-800">
         <div className="container-page py-4 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-neutral-600">
-          <span>© {year} Sikatrix Business Accountants. All rights reserved.</span>
+          <span>© {year} Sikatrix. All rights reserved.</span>
           <div className="flex flex-wrap gap-4">
             <Link href="/privacy-policy" className="hover:text-neutral-400 transition-colors">
               Privacy Policy

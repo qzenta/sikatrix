@@ -175,6 +175,15 @@ export const LOCATIONS = [
       "Sikatrix serves Germiston's growing business community with professional bookkeeping, payroll, tax compliance, and cloud accounting — all delivered via a modern, responsive cloud-based model.",
     keywords: ["accountants in Germiston", "tax practitioner Germiston", "bookkeeping Germiston"],
   },
+  {
+    slug: "boksburg",
+    name: "Boksburg",
+    isHQ: false,
+    headline: "Accounting & Tax Services for Boksburg Businesses",
+    intro:
+      "From the East Rand Mall precinct to Boksburg's busy industrial zones — Sikatrix delivers cloud-based bookkeeping, payroll, and tax compliance to businesses that run at Ekurhuleni's pace.",
+    keywords: ["accountants in Boksburg", "tax practitioner Boksburg", "bookkeeping Boksburg"],
+  },
 ];
 
 export const INDUSTRIES = [
@@ -219,93 +228,5 @@ export const TESTIMONIALS = [
   },
 ];
 
-export const BLOG_POSTS = [
-  {
-    slug: "sars-provisional-tax-guide-2025",
-    title: "SARS Provisional Tax: A Complete Guide for South African Business Owners",
-    category: "Tax",
-    excerpt:
-      "Understand who must register for provisional tax, how to calculate your estimate, and critical submission deadlines to avoid SARS penalties.",
-    readTime: "6 min read",
-    date: "2025-03-12",
-    featured: true,
-    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=700&auto=format&fit=crop&q=60",
-  },
-  {
-    slug: "small-business-bookkeeping-mistakes",
-    title: "7 Bookkeeping Mistakes That Cost South African SMEs Thousands",
-    category: "Bookkeeping",
-    excerpt:
-      "From mixing personal and business accounts to ignoring VAT. Discover the most common bookkeeping errors and how to fix them before SARS does.",
-    readTime: "5 min read",
-    date: "2025-02-18",
-    featured: false,
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700&auto=format&fit=crop&q=60",
-  },
-  {
-    slug: "cloud-accounting-vs-desktop",
-    title: "Cloud Accounting vs Desktop Software: What's Right for Your Business?",
-    category: "Bookkeeping",
-    excerpt:
-      "QuickBooks Online, Xero, and Sage compared against desktop alternatives. We break down costs, access, and compliance implications.",
-    readTime: "4 min read",
-    date: "2025-01-29",
-    featured: false,
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=700&auto=format&fit=crop&q=60",
-  },
-  {
-    slug: "registering-a-company-cipc-guide",
-    title: "How to Register a Company in South Africa: CIPC Step-by-Step",
-    category: "Business Growth",
-    excerpt:
-      "A practical walkthrough of the CIPC registration process, choosing a legal entity, and the first compliance steps after incorporation.",
-    readTime: "7 min read",
-    date: "2024-12-10",
-    featured: false,
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=700&auto=format&fit=crop&q=60",
-  },
-  {
-    slug: "paye-uif-sdl-explained",
-    title: "PAYE, UIF, and SDL Explained: A Guide for First-Time Employers",
-    category: "SARS Compliance",
-    excerpt:
-      "When you hire your first employee, these three obligations kick in immediately. Here is exactly what they mean and how to stay compliant.",
-    readTime: "5 min read",
-    date: "2024-11-05",
-    featured: false,
-    image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=700&auto=format&fit=crop&q=60",
-  },
-  {
-    slug: "vat-registration-when-and-how",
-    title: "VAT Registration in South Africa: When You Must Register and How",
-    category: "SARS Compliance",
-    excerpt:
-      "The R1 million threshold, voluntary registration benefits, and a step-by-step guide to registering for VAT with SARS eFiling.",
-    readTime: "6 min read",
-    date: "2024-10-22",
-    featured: false,
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=700&auto=format&fit=crop&q=60",
-  },
-  {
-    slug: "sars-efiling-business-registration",
-    title: "How to Register Your Business Profile on SARS eFiling",
-    category: "SARS Compliance",
-    excerpt:
-      "A step-by-step guide to setting up your company on SARS eFiling — from registering the responsible representative to activating the correct tax types and linking your bank account.",
-    readTime: "7 min read",
-    date: "2025-05-07",
-    featured: false,
-    image: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=700&auto=format&fit=crop&q=60",
-  },
-  {
-    slug: "how-to-submit-company-tax-return-itr14",
-    title: "How to Submit a Company Tax Return (ITR14) on SARS eFiling",
-    category: "Tax",
-    excerpt:
-      "A practical walkthrough for directors and financial managers: what the ITR14 requires, when it is due, how to complete it on eFiling, and the most common errors that trigger SARS audits.",
-    readTime: "8 min read",
-    date: "2025-04-22",
-    featured: false,
-    image: "https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=700&auto=format&fit=crop&q=60",
-  },
-];
+// Blog posts are now managed in content/posts/*.md and served via lib/blog.ts.
+// Use getAllPosts() / getBlogPostsCompat() from lib/blog.ts wherever blog data is needed.

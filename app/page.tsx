@@ -8,7 +8,7 @@ import LocationHighlights from "@/components/home/LocationHighlights";
 import LeadMagnet from "@/components/home/LeadMagnet";
 import TestimonialsGrid from "@/components/shared/TestimonialsGrid";
 import CTABlock from "@/components/shared/CTABlock";
-import { BLOG_POSTS } from "@/lib/site";
+import { getLatestPosts } from "@/lib/blog";
 import Link from "next/link";
 import { ArrowRight, Calendar } from "lucide-react";
 
@@ -20,8 +20,7 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
-  const featuredPosts = BLOG_POSTS.filter((p) => p.featured).slice(0, 3);
-  const latestPosts = BLOG_POSTS.slice(0, 3);
+  const latestPosts = getLatestPosts(3);
 
   return (
     <>
@@ -55,11 +54,11 @@ export default function HomePage() {
                 <h3 className="text-sm font-semibold text-neutral-900 leading-snug mb-2 group-hover:text-brand transition-colors">
                   {post.title}
                 </h3>
-                <p className="text-xs text-neutral-500 leading-relaxed mb-4">{post.excerpt}</p>
+                <p className="text-xs text-neutral-500 leading-relaxed mb-4">{post.description}</p>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-1.5 text-2xs text-neutral-400">
                     <Calendar size={10} />
-                    {new Date(post.date).toLocaleDateString("en-ZA", {
+                    {new Date(post.publishDate).toLocaleDateString("en-ZA", {
                       day: "numeric",
                       month: "short",
                       year: "numeric",

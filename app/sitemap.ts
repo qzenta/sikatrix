@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
-import { SITE, SERVICES, LOCATIONS, BLOG_POSTS } from "@/lib/site";
+import { SITE, SERVICES, LOCATIONS } from "@/lib/site";
+import { getAllPosts, TOPIC_CLUSTERS } from "@/lib/blog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = SITE.url;
@@ -70,12 +71,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: l.isHQ ? 0.9 : 0.8,
   }));
 
-  const resourcePages: MetadataRoute.Sitemap = BLOG_POSTS.map((p) => ({
+  const posts = getAllPosts();
+
+  const resourcePages: MetadataRoute.Sitemap = posts.map((p) => ({
     url: `${base}/resources/${p.slug}`,
-    lastModified: new Date(p.date),
+    lastModified: new Date(p.updatedDate ?? p.publishDate),
     changeFrequency: "monthly",
     priority: 0.5,
   }));
 
-  return [...staticPages, ...servicePages, ...locationPages, ...resourcePages];
+  const categoryPages: MetadataRoute.Sitemap = Object.keys(TOPIC_CLUSTERS).map((slug) => ({
+    url: `${base}/resources/category/${slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.4,
+  }));
+
+  return [...staticPages, ...servicePages, ...locationPages, ...resourcePages, ...categoryPages];
 }

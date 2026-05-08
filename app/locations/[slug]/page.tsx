@@ -7,6 +7,7 @@ import CTABlock from "@/components/shared/CTABlock";
 import GoogleMap from "@/components/shared/GoogleMap";
 import { LOCATION_DETAILS } from "@/lib/location-data";
 import { LOCATIONS, SERVICES, SITE } from "@/lib/site";
+import { getLatestPosts } from "@/lib/blog";
 import { buildLocalBusinessSchema } from "@/lib/metadata";
 
 export async function generateStaticParams() {
@@ -39,6 +40,7 @@ export default async function LocationPage({
 
   const nearby = LOCATION_DETAILS.filter((l) => loc.nearbyLocations.includes(l.slug));
   const schema = buildLocalBusinessSchema(loc.name);
+  const latestArticles = getLatestPosts(3);
 
   return (
     <>
@@ -202,6 +204,37 @@ export default async function LocationPage({
           </div>
         </div>
       </section>
+
+      {/* Related resources */}
+      {latestArticles.length > 0 && (
+        <section className="py-12 bg-white border-t border-neutral-100">
+          <div className="container-page">
+            <span className="section-label">Resources</span>
+            <h2 className="text-sm font-semibold text-neutral-900 mt-2 mb-5">
+              Tax &amp; accounting guides for {loc.name} businesses
+            </h2>
+            <div className="grid sm:grid-cols-3 gap-4 max-w-3xl">
+              {latestArticles.map((article) => (
+                <Link
+                  key={article.slug}
+                  href={`/resources/${article.slug}`}
+                  className="card p-5 group"
+                >
+                  <span className="text-2xs font-semibold uppercase tracking-widest text-accent block mb-1">
+                    {article.category}
+                  </span>
+                  <p className="text-xs font-semibold text-neutral-800 group-hover:text-brand transition-colors leading-snug mb-2">
+                    {article.title}
+                  </p>
+                  <span className="inline-flex items-center gap-1 text-2xs text-brand font-medium">
+                    Read guide <ArrowRight size={10} />
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Nearby locations */}
       {nearby.length > 0 && (

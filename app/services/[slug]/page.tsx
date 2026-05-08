@@ -8,7 +8,8 @@ import {
 } from "lucide-react";
 import PageHero from "@/components/shared/PageHero";
 import CTABlock from "@/components/shared/CTABlock";
-import { SERVICES, LOCATIONS, BLOG_POSTS } from "@/lib/site";
+import { SERVICES, LOCATIONS } from "@/lib/site";
+import { getAllPosts } from "@/lib/blog";
 
 // Deliberate backlinking: service pages link to their most relevant articles
 const SERVICE_ARTICLE_MAP: Record<string, string[]> = {
@@ -266,7 +267,8 @@ export default async function ServicePage({
 
   const otherServices = SERVICES.filter((s) => s.slug !== slug).slice(0, 4);
   const relatedArticleSlugs = SERVICE_ARTICLE_MAP[slug] ?? [];
-  const relatedArticles = relatedArticleSlugs.map((a) => BLOG_POSTS.find((p) => p.slug === a)).filter(Boolean);
+  const allPosts = getAllPosts();
+  const relatedArticles = relatedArticleSlugs.map((a) => allPosts.find((p) => p.slug === a)).filter(Boolean);
 
   const faqSchema = details.faqs.length > 0 ? {
     "@context": "https://schema.org",
