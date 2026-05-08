@@ -4,7 +4,7 @@ import { Resend } from "resend";
 // Resend is intentionally initialised inside the handler so the build
 // succeeds even when RESEND_API_KEY is not present in the build environment.
 const NOTIFY_TO = "info@sikatrix.com";
-const FROM = "Sikatrix Website <noreply@sikatrix.com>";
+const FROM = "Sikatrix Business Accountants <info@sikatrix.com>";
 
 // ── Rate limiting ──────────────────────────────────────────────────────────────
 // In-memory; resets on cold start. Sufficient for a contact form.

@@ -3,7 +3,7 @@ import { Resend } from "resend";
 
 // Initialised inside handler — build succeeds without RESEND_API_KEY present.
 const NOTIFY_TO = "info@sikatrix.com";
-const FROM = "Sikatrix Business Accountants <noreply@sikatrix.com>";
+const FROM = "Sikatrix Business Accountants <info@sikatrix.com>";
 
 const rateMap = new Map<string, { count: number; windowStart: number }>();
 
