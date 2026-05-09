@@ -49,7 +49,7 @@ export default function AboutPage() {
       />
 
       {/* Story */}
-      <section className="py-12 md:py-16 bg-white">
+      <section className="py-12 md:py-16 bg-neutral-50">
         <div className="container-page">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -101,12 +101,12 @@ export default function AboutPage() {
       </section>
 
       {/* Meet the Accountant */}
-      <section className="py-14 bg-neutral-50 border-t border-neutral-200">
+      <section className="py-16 bg-brand-dark">
         <div className="container-page">
-          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-4xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-14 items-center max-w-4xl mx-auto">
             {/* Headshot */}
             <div className="flex justify-center lg:justify-start">
-              <div className="relative w-64 h-72 rounded-2xl overflow-hidden shadow-lg">
+              <div className="relative w-64 h-80 rounded-2xl overflow-hidden shadow-2xl ring-4 ring-white/10">
                 <Image
                   src="/about/daniel-amoah.jpg"
                   alt="Daniel Amoah — Founder, Sikatrix Business Accountants"
@@ -118,17 +118,21 @@ export default function AboutPage() {
               </div>
             </div>
             <div>
-              <span className="section-label">Who You're Working With</span>
-              <h2 className="section-title mt-2 mb-4">Daniel Amoah</h2>
-              <div className="flex flex-wrap gap-2 mb-5">
-                <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand bg-brand-50 px-3 py-1 rounded-full">
-                  <BadgeCheck size={12} /> SAIPA Professional Accountant (SA)
+              <span className="text-xs font-semibold uppercase tracking-widest text-accent-light block mb-3">
+                Who You&apos;re Working With
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-bold text-white mt-0 mb-4 leading-snug">
+                Daniel Amoah
+              </h2>
+              <div className="flex flex-wrap gap-2 mb-6">
+                <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-white bg-white/10 px-3 py-1.5 rounded-full">
+                  <BadgeCheck size={12} className="text-accent-light" /> SAIPA Professional Accountant (SA)
                 </span>
-                <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand bg-brand-50 px-3 py-1 rounded-full">
-                  <BadgeCheck size={12} /> SARS Registered Tax Practitioner
+                <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-white bg-white/10 px-3 py-1.5 rounded-full">
+                  <BadgeCheck size={12} className="text-accent-light" /> SARS Registered Tax Practitioner
                 </span>
               </div>
-              <div className="space-y-3 text-sm text-neutral-600 leading-relaxed">
+              <div className="space-y-4 text-sm text-brand-100 leading-relaxed">
                 <p>
                   With over 10 years in public practice, Daniel founded Sikatrix Business Accountants
                   on a straightforward belief: South African SMEs deserve qualified advice, delivered
@@ -146,7 +150,7 @@ export default function AboutPage() {
       </section>
 
       {/* Credentials */}
-      <section className="py-14 bg-neutral-50">
+      <section className="py-14 bg-neutral-100">
         <div className="container-page">
           <div className="text-center mb-10">
             <span className="section-label">Credentials & Partners</span>
@@ -183,20 +187,20 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="py-12 md:py-16 bg-slate-50">
+      <section className="py-12 md:py-16 bg-neutral-900">
         <div className="container-page">
           <div className="text-center mb-12">
-            <span className="section-label">Our Values</span>
-            <h2 className="section-title mt-2">How we work with every client</h2>
+            <span className="text-xs font-semibold uppercase tracking-widest text-accent-light block mb-2">Our Values</span>
+            <h2 className="text-2xl sm:text-3xl font-semibold text-white leading-snug mt-0">How we work with every client</h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {VALUES.map(({ icon: Icon, title, desc }) => (
               <div key={title} className="text-center">
-                <div className="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center mx-auto mb-4">
-                  <Icon size={20} className="text-brand" />
+                <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mx-auto mb-4">
+                  <Icon size={20} className="text-accent-light" />
                 </div>
-                <h3 className="text-sm font-semibold text-neutral-900 mb-2">{title}</h3>
-                <p className="text-xs text-neutral-500 leading-relaxed">{desc}</p>
+                <h3 className="text-sm font-semibold text-white mb-2">{title}</h3>
+                <p className="text-xs text-neutral-400 leading-relaxed">{desc}</p>
               </div>
             ))}
           </div>

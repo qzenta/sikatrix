@@ -111,15 +111,84 @@ export default function TaxCalculatorPage() {
         </div>
       </section>
 
-      {/* Calculator */}
+      {/* Calculator + Right Rail */}
       <section className="py-12 md:py-16 bg-neutral-50">
         <div className="container-page">
-          <TaxCalculator />
+          <div className="grid lg:grid-cols-3 gap-8 items-start">
+
+            {/* Left: Calculator (2/3) */}
+            <div className="lg:col-span-2">
+              <TaxCalculator />
+            </div>
+
+            {/* Right: Reference rail (1/3) */}
+            <div className="space-y-5">
+
+              {/* Key numbers */}
+              <div className="rounded-xl bg-brand-dark text-white p-5">
+                <p className="text-2xs font-semibold uppercase tracking-widest text-accent-light mb-4">
+                  2026/27 Key Numbers
+                </p>
+                <ul className="space-y-3">
+                  {[
+                    { label: "Tax-free threshold", value: "R99,000", sub: "under age 65" },
+                    { label: "Primary rebate", value: "R17,820", sub: "all taxpayers" },
+                    { label: "Top marginal rate", value: "45%", sub: "above R1,878,600" },
+                    { label: "UIF rate", value: "1%", sub: "capped at R177/month" },
+                    { label: "RA deduction cap", value: "R350,000", sub: "or 27.5% of income" },
+                    { label: "Company tax rate", value: "27%", sub: "flat — corporates only" },
+                  ].map((item) => (
+                    <li key={item.label} className="flex justify-between items-start gap-3 pb-3 border-b border-white/10 last:border-0 last:pb-0">
+                      <div>
+                        <div className="text-xs font-medium text-white">{item.label}</div>
+                        <div className="text-2xs text-brand-100">{item.sub}</div>
+                      </div>
+                      <span className="text-sm font-bold text-accent-light flex-shrink-0">{item.value}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* SARS key dates */}
+              <div className="card p-5">
+                <p className="text-2xs font-semibold uppercase tracking-widest text-accent mb-4">
+                  SARS Deadlines 2026
+                </p>
+                <ul className="space-y-3">
+                  {[
+                    { date: "31 May 2026", event: "EMP501 annual reconciliation" },
+                    { date: "25 Jun 2026", event: "VAT201 (Apr–May vendors)" },
+                    { date: "1 Jul 2026", event: "Tax season opens" },
+                    { date: "31 Aug 2026", event: "Provisional tax — 1st period" },
+                    { date: "20 Oct 2026", event: "Tax season closes (non-provisional)" },
+                    { date: "28 Feb 2027", event: "Provisional tax — 2nd period" },
+                  ].map((item) => (
+                    <li key={item.date} className="flex gap-3 items-start pb-3 border-b border-neutral-100 last:border-0 last:pb-0">
+                      <span className="text-2xs font-semibold text-brand bg-brand-50 px-2 py-0.5 rounded flex-shrink-0 mt-0.5">{item.date}</span>
+                      <span className="text-xs text-neutral-600">{item.event}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Consultation CTA */}
+              <div className="rounded-xl bg-accent p-5 text-white">
+                <p className="text-sm font-semibold mb-1">Not sure what applies to you?</p>
+                <p className="text-xs text-white/80 mb-4 leading-relaxed">
+                  Our tax practitioners handle everything — returns, provisional tax, objections, and more.
+                </p>
+                <a href="/contact" className="inline-flex items-center gap-2 bg-white text-accent text-xs font-bold px-4 py-2 rounded-lg hover:bg-white/90 transition-colors">
+                  Book free consultation →
+                </a>
+              </div>
+
+            </div>
+          </div>
         </div>
       </section>
 
       {/* ── TAX TABLES ── */}
-      <section className="py-14 bg-white border-t border-neutral-100">
+      <section className="py-14 bg-neutral-100 border-t border-neutral-200">
         <div className="container-page max-w-4xl">
           <div className="text-center mb-10">
             <span className="section-label">Reference</span>

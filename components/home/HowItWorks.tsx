@@ -23,7 +23,7 @@ const STEPS = [
 
 export default function HowItWorks() {
   return (
-    <section className="py-12 md:py-16 bg-white">
+    <section className="py-12 md:py-16 bg-neutral-50">
       <div className="container-page">
         <div className="text-center mb-12">
           <span className="section-label">How It Works</span>
