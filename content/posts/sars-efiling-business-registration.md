@@ -12,7 +12,7 @@ tags:
 featuredImage: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=1200&auto=format&fit=crop&q=60"
 featuredImageAlt: "Person completing SARS eFiling registration on a laptop at a desk"
 author:
-  name: "Sikatrix Business Accountants"
+  name: "Daniel Amoah"
   title: "SAIPA Professional Accountant (SA)"
 publishDate: "2025-05-07"
 readTime: "7 min read"
@@ -83,3 +83,14 @@ Once your company's eFiling profile is active and tax types are linked, you can:
 **Outdated contact details:** OTP verification will fail if SARS has an old mobile number on record. Update your contact details at a SARS branch or via the RAV01 form if necessary.
 
 Sikatrix Business Accountants manages eFiling registration and setup for all our new clients as part of our onboarding process. If you are registering a new company or taking over a business with a dormant eFiling profile, contact us for a free consultation.
+
+---
+
+## References & Further Reading
+
+- [SARS eFiling Portal](https://www.sars.gov.za/efilehome/) — Official SARS eFiling platform for tax registrations, returns, and payments
+- [SARS: Register as a Taxpayer](https://www.sars.gov.za/businesses-and-employers/starting-a-business/register-as-taxpayer/) — How to register your business for income tax, VAT, and PAYE
+- [CIPC: BizPortal](https://bizportal.gov.za/) — One-stop portal for company registration with automatic SARS registration
+- [SARS: Tax Compliance Status](https://www.sars.gov.za/businesses-and-employers/tax-compliance-status/) — How to verify and maintain your good standing with SARS
+
+*This article is for general information only. SARS processes and portals update regularly — [contact us](/contact) if you need assistance with eFiling registration.*

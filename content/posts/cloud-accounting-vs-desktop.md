@@ -13,7 +13,7 @@ tags:
 featuredImage: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&auto=format&fit=crop&q=60"
 featuredImageAlt: "Person working on a laptop with accounting software open"
 author:
-  name: "Sikatrix Business Accountants"
+  name: "Daniel Amoah"
   title: "SAIPA Professional Accountant (SA)"
 publishDate: "2025-01-29"
 readTime: "4 min read"
@@ -71,3 +71,14 @@ Desktop software — like older versions of Sage Pastel or QuickBooks Desktop �
 For most South African SMEs, QuickBooks Online offers the best price-to-feature ratio. Xero is excellent for businesses with international transactions. Sage Business Cloud suits larger teams and complex inventory requirements.
 
 If you're still on desktop software, migration to cloud is simpler than you think — and your accountant (including us) can manage the entire process.
+
+---
+
+## References & Further Reading
+
+- [QuickBooks South Africa](https://quickbooks.intuit.com/za/) — Cloud accounting platform for South African SMEs
+- [Xero South Africa](https://www.xero.com/za/) — Online accounting software with SARS eFiling integration
+- [Sage South Africa](https://www.sage.com/en-za/) — Accounting and payroll software for South African businesses
+- [SARS: eFiling](https://www.sars.gov.za/efilehome/) — SARS online portal for submitting VAT, PAYE, and income tax returns
+
+*This article is for general information only. [Contact us](/contact) for advice on choosing the right accounting platform for your business.*

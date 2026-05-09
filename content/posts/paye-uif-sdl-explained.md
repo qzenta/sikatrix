@@ -13,7 +13,7 @@ tags:
 featuredImage: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&auto=format&fit=crop&q=60"
 featuredImageAlt: "HR professional reviewing payroll documents on a desk"
 author:
-  name: "Sikatrix Business Accountants"
+  name: "Daniel Amoah"
   title: "SAIPA Professional Accountant (SA)"
 publishDate: "2024-11-05"
 readTime: "5 min read"
@@ -76,3 +76,14 @@ Every six months (August and February), you must also submit an EMP501 reconcili
 To register as an employer, log into SARS eFiling and complete the EMP101e registration form. You'll need your company registration number, tax reference number, banking details, and the details of at least one director or representative. SARS typically issues an employer tax reference number within 48 hours.
 
 Once registered, you can generate and submit EMP201 returns directly from eFiling or via compatible payroll software. Sikatrix Business Accountants manages the full employer registration and monthly payroll compliance process for all our clients — contact us to get set up correctly from the first payslip.
+
+---
+
+## References & Further Reading
+
+- [SARS: PAYE (Pay-As-You-Earn)](https://www.sars.gov.za/businesses-and-employers/pay-as-you-earn/) — SARS employer obligations for PAYE registration and monthly submissions
+- [Department of Employment and Labour: UIF](https://www.labour.gov.za/DocumentCenter/Pages/uif.aspx) — Official UIF legislation, contribution rates, and claim procedures
+- [SARS: SDL — Skills Development Levy](https://www.sars.gov.za/businesses-and-employers/skills-development-levy/) — SDL rates, exemptions, and payment procedures
+- [SETA — Sector Education and Training Authorities](https://www.dhet.gov.za/) — Claim back SDL contributions through SETA training grants
+
+*This article is for general information only. PAYE, UIF, and SDL rates are set annually — [contact us](/contact) to ensure your payroll remains compliant.*

@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { Calculator, ArrowRight } from "lucide-react";
 import PageHero from "@/components/shared/PageHero";
 import CTABlock from "@/components/shared/CTABlock";
 import NewsletterForm from "@/components/shared/NewsletterForm";
@@ -31,6 +33,32 @@ export default function ResourcesPage() {
         crumbs={[{ label: "Resources" }]}
         bgImage="https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=1600&auto=format&fit=crop&q=60"
       />
+
+      {/* Tools pinned section */}
+      <section className="py-10 bg-brand-dark border-b border-white/10">
+        <div className="container-page">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-6">
+            <div className="sm:flex-1">
+              <span className="text-2xs font-semibold uppercase tracking-widest text-accent-light block mb-1">Free Tool</span>
+              <h2 className="text-lg font-semibold text-white mb-1">SARS Income Tax Calculator 2026/27</h2>
+              <p className="text-sm text-brand-100">
+                Calculate your PAYE, effective tax rate, medical credits, and monthly take-home — instantly. Based on official SARS tables.
+              </p>
+            </div>
+            <div className="flex-shrink-0 flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-accent/20 flex items-center justify-center">
+                <Calculator size={18} className="text-accent-light" />
+              </div>
+              <Link
+                href="/tools/tax-calculator"
+                className="inline-flex items-center gap-2 bg-accent text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-accent-dark transition-colors"
+              >
+                Open Calculator <ArrowRight size={14} />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="py-16 md:py-20 bg-white">
         <div className="container-page">

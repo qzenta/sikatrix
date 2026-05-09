@@ -12,7 +12,7 @@ tags:
 featuredImage: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&auto=format&fit=crop&q=60"
 featuredImageAlt: "Business owner issuing a tax invoice to a client"
 author:
-  name: "Sikatrix Business Accountants"
+  name: "Daniel Amoah"
   title: "SAIPA Professional Accountant (SA)"
 publishDate: "2024-10-22"
 readTime: "6 min read"
@@ -77,3 +77,14 @@ Returns are due by the last business day of the month following the end of your 
 If SARS discovers you should have registered and did not, they will raise a VAT assessment for all periods from the date you were required to register. This includes output tax on all sales made during that period — regardless of whether you collected VAT from customers. Add penalties of up to 10% and interest, and the exposure can be substantial.
 
 If you believe you've crossed the R1 million threshold and haven't yet registered, act immediately — voluntary disclosure before SARS raises an assessment significantly reduces the penalty exposure. Sikatrix Business Accountants can assess your registration obligation and manage the registration process on your behalf.
+
+---
+
+## References & Further Reading
+
+- [SARS: Value-Added Tax (VAT)](https://www.sars.gov.za/types-of-tax/value-added-tax/) — Official SARS VAT guide including registration thresholds, returns, and rates
+- [SARS: VAT Vendor Registration](https://www.sars.gov.za/types-of-tax/value-added-tax/vat-registration/) — Step-by-step guide to registering for VAT via eFiling
+- [SARS: VAT 404 Guide](https://www.sars.gov.za/wp-content/uploads/Ops/Guides/VAT-Gd-VAT-404-Guide-for-Vendors.pdf) — Comprehensive SARS guide for VAT vendors (PDF)
+- [SARS: eFiling](https://www.sars.gov.za/efilehome/) — Submit VAT201 returns and make VAT payments online
+
+*This article is for general information only. VAT regulations are complex — consult a [registered tax practitioner](/contact) before registering or making changes to your VAT status.*

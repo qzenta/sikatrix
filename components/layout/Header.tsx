@@ -41,7 +41,21 @@ const NAV_ITEMS: NavItem[] = [
       href: `/locations/${l.slug}`,
     })),
   },
-  { label: "Resources", href: "/resources" },
+  {
+    label: "Resources",
+    href: "/resources",
+    panelLabel: "Knowledge Hub",
+    panelDesc: "Free articles, tools, and guides for South African business owners.",
+    footerLabel: "View all resources →",
+    children: [
+      { label: "All Articles", href: "/resources" },
+      { label: "Tax", href: "/resources/category/tax" },
+      { label: "SARS Compliance", href: "/resources/category/sars" },
+      { label: "Bookkeeping", href: "/resources/category/bookkeeping" },
+      { label: "Business Growth", href: "/resources/category/business-growth" },
+      { label: "⚡ Tax Calculator 2026/27", href: "/tools/tax-calculator" },
+    ],
+  },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];

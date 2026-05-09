@@ -11,7 +11,7 @@ tags:
 featuredImage: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&auto=format&fit=crop&q=60"
 featuredImageAlt: "Business owner reviewing SARS provisional tax deadlines on a calendar"
 author:
-  name: "Sikatrix Business Accountants"
+  name: "Daniel Amoah"
   title: "SAIPA Professional Accountant (SA)"
 publishDate: "2025-03-12"
 readTime: "6 min read"
@@ -66,3 +66,13 @@ The best defence is accurate record-keeping throughout the year — which is whe
 As a SARS-registered Tax Practitioner, Sikatrix Business Accountants manages provisional tax submissions for all our business clients. We calculate your estimates accurately, submit on time, and advise on any top-up required before the September window closes.
 
 If you're not sure whether you're correctly registered for provisional tax, or you've missed a submission, contact us for a free consultation.
+
+---
+
+## References & Further Reading
+
+- [SARS: Provisional Tax](https://www.sars.gov.za/types-of-tax/provisional-tax/) — Official SARS guide to provisional tax registration, payments, and penalties
+- [SARS: Tax Rates for Individuals](https://www.sars.gov.za/tax-rates/income-tax/rates-of-tax-for-individuals/) — Current year income tax brackets, rebates, and thresholds
+- [SARS: eFiling Portal](https://www.sars.gov.za/efilehome/) — Submit provisional tax returns online via SARS eFiling
+
+*This article is for general information only and does not constitute tax advice. Tax legislation changes frequently — consult a [SARS-registered tax practitioner](/contact) before acting on any information.*

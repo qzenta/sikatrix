@@ -50,6 +50,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${base}/tools/tax-calculator`,
+      lastModified: now,
+      changeFrequency: "yearly",
+      priority: 0.9,
+    },
+    {
       url: `${base}/contact`,
       lastModified: now,
       changeFrequency: "yearly",

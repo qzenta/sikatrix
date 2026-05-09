@@ -12,7 +12,7 @@ tags:
 featuredImage: "https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=1200&auto=format&fit=crop&q=60"
 featuredImageAlt: "Accountant working through financial documents and a tax computation on a desk"
 author:
-  name: "Sikatrix Business Accountants"
+  name: "Daniel Amoah"
   title: "SAIPA Professional Accountant (SA)"
 publishDate: "2025-04-22"
 readTime: "8 min read"
@@ -95,3 +95,14 @@ You have 30 business days from the date of the assessment to lodge a Notice of O
 **Misclassifying personal expenses as business deductions:** Owner-managed companies are SARS's highest-scrutiny category — entertainment, motor vehicle, and home office deductions must be defensible.
 
 Sikatrix Business Accountants prepares and submits ITR14 returns for all our corporate clients. We prepare the tax computation from your financial statements, identify all permissible deductions, and manage any SARS correspondence that arises. If you are behind on corporate tax returns or need support with an upcoming filing, contact us for a free consultation.
+
+---
+
+## References & Further Reading
+
+- [SARS: Corporate Income Tax (CIT)](https://www.sars.gov.za/types-of-tax/corporate-income-tax/) — SARS guide to company tax, ITR14 returns, and payment deadlines
+- [SARS: eFiling Portal](https://www.sars.gov.za/efilehome/) — Submit your ITR14 company tax return online
+- [SARS: Tax Rates for Companies](https://www.sars.gov.za/tax-rates/income-tax/corporate/) — Current corporate income tax rate (27%) and applicable rules
+- [CIPC: Annual Returns](https://www.cipc.co.za/index.php/manage-your-business/annual-returns/) — Companies must also file annual returns with CIPC separately from SARS
+
+*This article is for general information only. Submitting an ITR14 incorrectly can result in SARS penalties — [contact us](/contact) to have your company tax return prepared by a registered tax practitioner.*

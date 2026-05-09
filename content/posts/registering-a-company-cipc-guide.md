@@ -12,7 +12,7 @@ tags:
 featuredImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&auto=format&fit=crop&q=60"
 featuredImageAlt: "Business owner signing company registration documents at a desk"
 author:
-  name: "Sikatrix Business Accountants"
+  name: "Daniel Amoah"
   title: "SAIPA Professional Accountant (SA)"
 publishDate: "2024-12-10"
 readTime: "7 min read"
@@ -75,3 +75,14 @@ CIPC also requires annual returns, due within 30 business days of your company's
 **Missing CIPC annual returns:** Two consecutive years of non-compliance results in deregistration. Once deregistered, reinstating a company is expensive and time-consuming.
 
 If you're incorporating a company and want to get the compliance foundation right from day one, Sikatrix Business Accountants handles the full setup — including SARS registration, company secretarial obligations, and your first year of bookkeeping.
+
+---
+
+## References & Further Reading
+
+- [CIPC — Companies and Intellectual Property Commission](https://www.cipc.co.za/) — Official registration authority for South African companies
+- [CIPC: BizPortal](https://bizportal.gov.za/) — Online company registration portal (CIPC, SARS, UIF, COIDA in one step)
+- [Companies Act 71 of 2008](https://www.gov.za/documents/companies-act-71-2008) — The primary legislation governing companies in South Africa
+- [SARS: Register as a Taxpayer](https://www.sars.gov.za/businesses-and-employers/starting-a-business/register-as-taxpayer/) — Tax registration for newly incorporated companies
+
+*This article is for general information only. Company registration requirements may change — consult a [company secretarial professional](/services/company-secretarial) for guidance.*

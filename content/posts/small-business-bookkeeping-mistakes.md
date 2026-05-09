@@ -12,7 +12,7 @@ tags:
 featuredImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop&q=60"
 featuredImageAlt: "Accountant reviewing financial data on a laptop with charts visible"
 author:
-  name: "Sikatrix Business Accountants"
+  name: "Daniel Amoah"
   title: "SAIPA Professional Accountant (SA)"
 publishDate: "2025-02-18"
 readTime: "5 min read"
@@ -79,3 +79,13 @@ SARS requires you to retain financial records for 5 years. Losing invoices, bank
 Business owners who manage their own books without proper training often don't know what they don't know. The errors are invisible until they cause real damage.
 
 **Fix:** Use a qualified bookkeeper from the start. The cost is far less than fixing two years of errors — or paying SARS penalties.
+
+---
+
+## References & Further Reading
+
+- [SARS: Record-Keeping Requirements](https://www.sars.gov.za/businesses-and-employers/record-keeping/) — SARS rules on how long to retain business records (5 years)
+- [SAIPA — South African Institute of Professional Accountants](https://www.saipa.co.za/) — Professional body governing registered accountants in South Africa
+- [SARS: Tax Compliance Status](https://www.sars.gov.za/businesses-and-employers/tax-compliance-status/) — How to obtain a SARS Tax Clearance Certificate
+
+*This article is for general information only. Consult a [qualified accountant](/contact) for advice tailored to your business.*

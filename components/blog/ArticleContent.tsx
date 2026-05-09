@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { ReactNode } from "react";
 
 interface ArticleContentProps {
@@ -9,9 +10,47 @@ function slugify(text: string): string {
   return text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 }
 
+// Parse inline markdown: **bold**, [text](url)
+function parseInline(text: string): ReactNode {
+  const parts: ReactNode[] = [];
+  // Regex: match **bold** or [text](url)
+  const regex = /\*\*([^*]+)\*\*|\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g;
+  let last = 0;
+  let match: RegExpExecArray | null;
+  let key = 0;
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > last) parts.push(text.slice(last, match.index));
+    if (match[1] !== undefined) {
+      parts.push(<strong key={key++} className="text-neutral-900 font-semibold">{match[1]}</strong>);
+    } else if (match[2] !== undefined && match[3] !== undefined) {
+      const isExternal = match[3].startsWith("http");
+      parts.push(
+        isExternal ? (
+          <a key={key++} href={match[3]} target="_blank" rel="noopener noreferrer"
+            className="text-brand underline underline-offset-2 hover:text-brand-dark transition-colors">
+            {match[2]}
+          </a>
+        ) : (
+          <Link key={key++} href={match[3]} className="text-brand underline underline-offset-2 hover:text-brand-dark transition-colors">
+            {match[2]}
+          </Link>
+        )
+      );
+    }
+    last = match.index + match[0].length;
+  }
+  if (last < text.length) parts.push(text.slice(last));
+  return parts.length === 1 && typeof parts[0] === "string" ? text : <>{parts}</>;
+}
+
 function renderBlock(block: string, i: number): ReactNode {
   const trimmed = block.trim();
   if (!trimmed) return null;
+
+  // Horizontal rule
+  if (trimmed === "---") {
+    return <hr key={i} className="my-8 border-neutral-200" />;
+  }
 
   // H2 heading
   if (trimmed.startsWith("## ")) {
@@ -105,10 +144,10 @@ function renderBlock(block: string, i: number): ReactNode {
     );
   }
 
-  // Plain paragraph
+  // Plain paragraph (with inline bold + link parsing)
   return (
     <p key={i} className="text-sm text-neutral-700 leading-relaxed mb-4">
-      {trimmed}
+      {parseInline(trimmed)}
     </p>
   );
 }
