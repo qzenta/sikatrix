@@ -17,7 +17,7 @@ type NavItem = {
 
 const NAV_ITEMS: NavItem[] = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
+  { label: "Pricing", href: "/pricing" },
   {
     label: "Services",
     href: "/services",
@@ -42,7 +42,7 @@ const NAV_ITEMS: NavItem[] = [
     })),
   },
   { label: "Resources", href: "/resources" },
-  { label: "Pricing", href: "/pricing" },
+  { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
 
