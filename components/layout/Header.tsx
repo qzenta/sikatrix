@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { Menu, X, Phone, ChevronDown } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { SITE, SERVICES, LOCATIONS } from "@/lib/site";
 
 type NavChild = { label: string; href: string };
@@ -10,6 +10,8 @@ type NavItem = {
   label: string;
   href: string;
   children?: NavChild[];
+  panelLabel?: string;
+  panelDesc?: string;
   footerLabel?: string;
 };
 
@@ -19,6 +21,8 @@ const NAV_ITEMS: NavItem[] = [
   {
     label: "Services",
     href: "/services",
+    panelLabel: "Services",
+    panelDesc: "Fixed-fee accounting and tax services for South African businesses.",
     footerLabel: "View all services →",
     children: SERVICES.slice(0, 6).map((s) => ({
       label: s.shortTitle,
@@ -29,9 +33,11 @@ const NAV_ITEMS: NavItem[] = [
   {
     label: "Locations",
     href: "/locations",
+    panelLabel: "Service Areas",
+    panelDesc: "Serving clients across Gauteng and beyond.",
     footerLabel: "View all service areas →",
     children: LOCATIONS.map((l) => ({
-      label: l.isHQ ? `${l.name} — Main Office` : l.name,
+      label: l.isHQ ? `${l.name} (HQ)` : l.name,
       href: `/locations/${l.slug}`,
     })),
   },
@@ -52,7 +58,6 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Fix: cached images may not fire onLoad — check on mount
   useEffect(() => {
     const img = document.getElementById("site-logo") as HTMLImageElement | null;
     if (img && img.complete && img.naturalHeight > 0) {
@@ -67,8 +72,13 @@ export default function Header() {
     setActiveDropdown(label);
   };
   const closeDropdown = () => {
-    closeTimer.current = setTimeout(() => setActiveDropdown(null), 120);
+    closeTimer.current = setTimeout(() => setActiveDropdown(null), 150);
   };
+  const cancelClose = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+  };
+
+  const activeItem = NAV_ITEMS.find((i) => i.label === activeDropdown);
 
   return (
     <>
@@ -141,46 +151,15 @@ export default function Header() {
               item.children ? (
                 <div
                   key={item.label}
-                  className="relative"
                   onMouseEnter={() => openDropdown(item.label)}
                   onMouseLeave={closeDropdown}
                 >
                   <Link
                     href={item.href}
-                    className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-neutral-700 hover:text-brand rounded-md hover:bg-neutral-50 transition-colors"
+                    className="px-3 py-2 text-sm font-medium text-neutral-700 hover:text-brand rounded-md hover:bg-neutral-50 transition-colors inline-block"
                   >
                     {item.label}
-                    <ChevronDown size={13} className="opacity-60" />
                   </Link>
-                  {activeDropdown === item.label && (
-                    <div
-                      className="absolute top-full left-0 w-56 bg-white rounded-lg shadow-lg border border-neutral-200 py-1.5 z-50"
-                      style={{ paddingTop: "6px", marginTop: "0" }}
-                      onMouseEnter={() => openDropdown(item.label)}
-                      onMouseLeave={closeDropdown}
-                    >
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.href}
-                          href={child.href}
-                          className="block px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-50 hover:text-brand transition-colors"
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
-                      {item.footerLabel && (
-                        <>
-                          <div className="my-1 border-t border-neutral-100" />
-                          <Link
-                            href={item.href}
-                            className="block px-4 py-2 text-sm text-brand font-medium hover:bg-neutral-50 transition-colors"
-                          >
-                            {item.footerLabel}
-                          </Link>
-                        </>
-                      )}
-                    </div>
-                  )}
                 </div>
               ) : (
                 <Link
@@ -208,6 +187,59 @@ export default function Header() {
             </button>
           </div>
         </div>
+
+        {/* Mega panel */}
+        {activeItem?.children && (
+          <div
+            className="absolute top-full left-0 right-0 bg-white border-t border-neutral-100 shadow-xl z-50"
+            onMouseEnter={cancelClose}
+            onMouseLeave={closeDropdown}
+          >
+            <div className="container-page py-8">
+              <div className="flex gap-14">
+                {/* Left: label + description + CTA */}
+                <div className="w-44 flex-shrink-0 border-r border-neutral-100 pr-10">
+                  <p className="text-2xs font-semibold uppercase tracking-widest text-accent mb-2">
+                    {activeItem.panelLabel}
+                  </p>
+                  <p className="text-xs text-neutral-400 leading-relaxed mb-5">
+                    {activeItem.panelDesc}
+                  </p>
+                  <Link
+                    href={activeItem.href}
+                    onClick={() => setActiveDropdown(null)}
+                    className="text-xs font-semibold text-brand hover:text-brand-dark transition-colors"
+                  >
+                    {activeItem.footerLabel}
+                  </Link>
+                </div>
+
+                {/* Right: item grid */}
+                <div
+                  className={`flex-1 grid gap-1 ${
+                    activeItem.label === "Services"
+                      ? "grid-cols-3"
+                      : "grid-cols-4"
+                  }`}
+                >
+                  {activeItem.children.map((child) => (
+                    <Link
+                      key={child.href}
+                      href={child.href}
+                      onClick={() => setActiveDropdown(null)}
+                      className="group flex items-center gap-2.5 px-4 py-3 rounded-lg hover:bg-neutral-50 transition-colors"
+                    >
+                      <span className="w-1 h-1 rounded-full bg-accent flex-shrink-0 opacity-50 group-hover:opacity-100 transition-opacity" />
+                      <span className="text-sm text-neutral-700 group-hover:text-brand font-medium transition-colors leading-snug">
+                        {child.label}
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Mobile menu */}
         {open && (

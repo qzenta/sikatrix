@@ -7,6 +7,7 @@ import CTABlock from "@/components/shared/CTABlock";
 import ArticleContent from "@/components/blog/ArticleContent";
 import RelatedPosts from "@/components/blog/RelatedPosts";
 import SocialShare from "@/components/blog/SocialShare";
+import TableOfContents, { type TocHeading } from "@/components/blog/TableOfContents";
 import {
   getAllPosts,
   getPostBySlug,
@@ -98,6 +99,17 @@ export default async function BlogPostPage({
 
   const relatedArticles = getRelatedPosts(post);
   const articleUrl = `${SITE.url}/resources/${slug}`;
+
+  const tocHeadings: TocHeading[] = post.content
+    .split(/\n{2,}/)
+    .map((b) => b.trim())
+    .filter((b) => b.startsWith("## ") || b.startsWith("### "))
+    .map((b) => {
+      const level = b.startsWith("### ") ? 3 : 2;
+      const text = b.replace(/^#{2,3} /, "");
+      const id = text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+      return { level, text, id } as TocHeading;
+    });
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -360,7 +372,13 @@ export default async function BlogPostPage({
             </div>
 
             {/* Sidebar */}
-            <div className="lg:col-span-1 space-y-6">
+            <div className="lg:col-span-1">
+              <div className="sticky top-24 space-y-6">
+              {/* Table of Contents */}
+              {tocHeadings.length > 0 && (
+                <TableOfContents headings={tocHeadings} />
+              )}
+
               {/* Consultation CTA */}
               <div className="card p-5 bg-brand-50 border-brand/20">
                 <h3 className="text-sm font-semibold text-neutral-900 mb-2">
@@ -435,6 +453,7 @@ export default async function BlogPostPage({
                     }
                   )}
                 </div>
+              </div>
               </div>
             </div>
           </div>

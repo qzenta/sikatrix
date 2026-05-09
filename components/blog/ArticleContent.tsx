@@ -5,24 +5,30 @@ interface ArticleContentProps {
   content: string;
 }
 
+function slugify(text: string): string {
+  return text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+
 function renderBlock(block: string, i: number): ReactNode {
   const trimmed = block.trim();
   if (!trimmed) return null;
 
   // H2 heading
   if (trimmed.startsWith("## ")) {
+    const text = trimmed.replace(/^## /, "");
     return (
-      <h2 key={i} className="text-lg font-semibold text-neutral-900 mt-8 mb-3">
-        {trimmed.replace(/^## /, "")}
+      <h2 key={i} id={slugify(text)} className="text-lg font-semibold text-neutral-900 mt-8 mb-3 scroll-mt-20">
+        {text}
       </h2>
     );
   }
 
   // H3 heading
   if (trimmed.startsWith("### ")) {
+    const text = trimmed.replace(/^### /, "");
     return (
-      <h3 key={i} className="text-base font-semibold text-neutral-800 mt-6 mb-2">
-        {trimmed.replace(/^### /, "")}
+      <h3 key={i} id={slugify(text)} className="text-base font-semibold text-neutral-800 mt-6 mb-2 scroll-mt-20">
+        {text}
       </h3>
     );
   }

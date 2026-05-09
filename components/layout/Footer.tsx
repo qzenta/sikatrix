@@ -178,16 +178,16 @@ export default function Footer() {
           <span>© {year} Sikatrix. All rights reserved.</span>
           <div className="flex flex-wrap gap-4">
             <Link href="/privacy-policy" className="hover:text-neutral-400 transition-colors">
-              Privacy Policy
+              Privacy
             </Link>
             <Link href="/terms" className="hover:text-neutral-400 transition-colors">
-              Terms & Conditions
+              Terms
             </Link>
             <Link href="/popia" className="hover:text-neutral-400 transition-colors">
-              POPIA Notice
+              POPIA
             </Link>
             <Link href="/cookie-policy" className="hover:text-neutral-400 transition-colors">
-              Cookie Policy
+              Cookie
             </Link>
           </div>
         </div>

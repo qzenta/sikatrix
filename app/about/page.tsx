@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { CheckCircle, Award, Users, Clock, Shield, BadgeCheck } from "lucide-react";
 import PageHero from "@/components/shared/PageHero";
 import CTABlock from "@/components/shared/CTABlock";
@@ -103,18 +104,22 @@ export default function AboutPage() {
       <section className="py-14 bg-neutral-50 border-t border-neutral-200">
         <div className="container-page">
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-4xl mx-auto">
-            {/* Photo placeholder — replace with a professional headshot */}
+            {/* Headshot */}
             <div className="flex justify-center lg:justify-start">
-              <div className="w-56 h-56 rounded-2xl bg-brand-50 border-2 border-brand/20 flex flex-col items-center justify-center text-center p-6">
-                <div className="w-20 h-20 rounded-full bg-brand flex items-center justify-center mb-3">
-                  <span className="text-white text-3xl font-bold">D</span>
-                </div>
-                <p className="text-xs text-neutral-400 mt-1">Replace with professional headshot</p>
+              <div className="relative w-64 h-72 rounded-2xl overflow-hidden shadow-lg">
+                <Image
+                  src="/about/daniel-amoah.jpg"
+                  alt="Daniel Amoah — Founder, Sikatrix Business Accountants"
+                  fill
+                  className="object-cover object-top"
+                  sizes="256px"
+                  priority
+                />
               </div>
             </div>
             <div>
               <span className="section-label">Who You're Working With</span>
-              <h2 className="section-title mt-2 mb-4">Daniel [Surname]</h2>
+              <h2 className="section-title mt-2 mb-4">Daniel Amoah</h2>
               <div className="flex flex-wrap gap-2 mb-5">
                 <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand bg-brand-50 px-3 py-1 rounded-full">
                   <BadgeCheck size={12} /> SAIPA Professional Accountant (SA)
