@@ -42,8 +42,8 @@ const INDUSTRY_DATA: Record<string, IndustryDetail> = {
     heroTitle: "Accounting That Scales With Your Business",
     heroSubtitle: "Whether you're a sole proprietor or running a 50-person operation, we handle your compliance, books, and tax so you can focus on growth.",
     bgImage: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1600&auto=format&fit=crop&q=60",
-    contentImage: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=900&auto=format&fit=crop&q=60",
-    contentImageAlt: "Diverse South African business team reviewing monthly management accounts together",
+    contentImage: "https://images.unsplash.com/photo-1573497161161-c3e73707e25c?w=900&auto=format&fit=crop&q=60",
+    contentImageAlt: "Black South African business owner reviewing financial reports with her accountant",
     outcome: "Within 30 days of onboarding, you'll have clean, current books, a monthly management account schedule, and full visibility into your tax position. No surprises at year-end.",
     highlight: "We grow with you — from a sole proprietor startup to a 50-person team.",
     services: [
@@ -77,8 +77,8 @@ const INDUSTRY_DATA: Record<string, IndustryDetail> = {
     heroTitle: "Start Right. Stay Compliant from Day One.",
     heroSubtitle: "We handle the admin so you can focus on building your business. Company registration, SARS setup, and clean books from the moment you open.",
     bgImage: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1600&auto=format&fit=crop&q=60",
-    contentImage: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&auto=format&fit=crop&q=60",
-    contentImageAlt: "Young diverse South African entrepreneurs collaborating at a laptop to launch their new business",
+    contentImage: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&auto=format&fit=crop&q=60",
+    contentImageAlt: "Young Black South African entrepreneur working on his laptop to launch his new business",
     outcome: "By the end of your first month with us, your company is registered, SARS profiles are active, your cloud accounting is set up, and you have a compliance calendar so you never miss a deadline.",
     highlight: "Get your compliance right from day one. We've helped 40+ startups launch cleanly.",
     services: [
@@ -147,8 +147,8 @@ const INDUSTRY_DATA: Record<string, IndustryDetail> = {
     heroTitle: "Accounting Precision for Legal Practices",
     heroSubtitle: "Trust account accuracy and LSSA compliance are non-negotiable. We handle them both so your practice remains in good standing.",
     bgImage: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1600&auto=format&fit=crop&q=60",
-    contentImage: "https://images.unsplash.com/photo-1521791055366-0d553872952f?w=900&auto=format&fit=crop&q=60",
-    contentImageAlt: "South African attorney reviewing trust account documents and compliance records at a desk",
+    contentImage: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=900&auto=format&fit=crop&q=60",
+    contentImageAlt: "Black South African attorney reviewing legal documents and compliance records at her desk",
     outcome: "Your trust account reconciles to the cent every month. LSSA compliance records are in order. And your personal and practice tax returns are filed on time, every time.",
     highlight: "Trust account accuracy is non-negotiable. We handle it with precision.",
     services: [

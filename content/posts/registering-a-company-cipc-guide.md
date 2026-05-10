@@ -17,7 +17,7 @@ author:
 publishDate: "2024-12-10"
 readTime: "7 min read"
 featured: false
-topicCluster: "sme"
+topicCluster: "business-growth"
 relatedServices:
   - "company-secretarial"
   - "tax-services"

@@ -70,6 +70,16 @@ export const TOPIC_CLUSTERS: Record<
     description: "PAYE, UIF, SDL, and employer tax obligations.",
     color: "bg-purple-50 text-purple-700 border-purple-200",
   },
+  tax: {
+    label: "Tax",
+    description: "Income tax, provisional tax, Capital Gains Tax, and SARS tax planning.",
+    color: "bg-amber-50 text-amber-700 border-amber-200",
+  },
+  "business-growth": {
+    label: "Business Growth",
+    description: "Company registration, compliance, and growth strategies for South African SMEs.",
+    color: "bg-green-50 text-green-700 border-green-200",
+  },
   sme: {
     label: "SMEs",
     description: "Business growth, compliance, and finance for small businesses.",
