@@ -81,35 +81,6 @@ export default function AuthorityLinks() {
           ))}
         </div>
 
-        {/* Embed / backlink widget */}
-        <div className="mt-12 rounded-xl border border-brand/15 bg-white p-6 md:p-8">
-          <div className="flex flex-col md:flex-row md:items-start gap-6">
-            <div className="flex-1">
-              <h3 className="text-sm font-semibold text-neutral-900 mb-2">
-                Embed our free Tax Calculator on your website
-              </h3>
-              <p className="text-xs text-neutral-500 leading-relaxed mb-4">
-                If you run a South African business blog, HR platform, or directory, you can embed
-                our free 2026/27 SARS Tax Calculator on your site — at no cost. Just paste the
-                snippet below into your page.
-              </p>
-              <pre className="bg-neutral-100 rounded-lg p-4 text-xs text-neutral-700 overflow-x-auto whitespace-pre-wrap break-all">
-                {`<iframe\n  src="https://www.sikatrix.com/tools/tax-calculator"\n  width="100%"\n  height="680"\n  style="border:none;border-radius:12px;"\n  title="2026/27 SARS Tax Calculator — Sikatrix Business Accountants"\n  loading="lazy"\n></iframe>\n<p style="font-size:11px;color:#666;margin-top:4px;">\n  Powered by <a href="https://www.sikatrix.com" target="_blank">Sikatrix Business Accountants</a>\n</p>`}
-              </pre>
-            </div>
-            <div className="md:w-56 flex-shrink-0">
-              <div className="rounded-lg bg-brand/5 border border-brand/10 p-4 text-xs text-neutral-600 leading-relaxed">
-                <p className="font-semibold text-neutral-800 mb-2">Why embed it?</p>
-                <ul className="space-y-1.5">
-                  <li>✓ Free tool for your visitors</li>
-                  <li>✓ Always up-to-date SARS rates</li>
-                  <li>✓ No sign-up required</li>
-                  <li>✓ Links back to sikatrix.com</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

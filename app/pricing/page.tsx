@@ -158,7 +158,7 @@ export default function PricingPage() {
       />
 
       {/* Intro note */}
-      <section className="py-10 bg-white border-b border-neutral-100">
+      <section className="py-10 bg-neutral-50 border-t-[3px] border-accent border-b border-neutral-200">
         <div className="container-page max-w-2xl text-center">
           <p className="text-sm text-neutral-600 leading-relaxed">
             The prices below are <strong className="text-neutral-800">starting-from guides</strong> — your actual fee depends on
@@ -170,7 +170,7 @@ export default function PricingPage() {
       </section>
 
       {/* Service pricing cards */}
-      <section className="py-16 md:py-20 bg-slate-50">
+      <section className="py-16 md:py-20 bg-neutral-50">
         <div className="container-page">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {SERVICES.map((svc) => (
@@ -229,7 +229,7 @@ export default function PricingPage() {
       </section>
 
       {/* Pricing FAQs */}
-      <section className="py-14 bg-white">
+      <section className="py-14 bg-neutral-50">
         <div className="container-page max-w-2xl">
           <span className="section-label">Common questions</span>
           <h2 className="section-title mt-2 mb-8">About our fees</h2>
@@ -244,7 +244,7 @@ export default function PricingPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-slate-50">
+      <section className="py-16 bg-neutral-50">
         <div className="container-page">
           <CTABlock />
         </div>

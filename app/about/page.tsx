@@ -52,7 +52,7 @@ export default function AboutPage() {
       />
 
       {/* Story */}
-      <section className="py-12 md:py-16 bg-neutral-50">
+      <section className="py-12 md:py-16 bg-neutral-50 border-t-[3px] border-accent">
         <div className="container-page">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>

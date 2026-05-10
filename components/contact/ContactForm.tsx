@@ -87,7 +87,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="py-16 md:py-20 bg-slate-50">
+    <section className="py-16 md:py-20 bg-neutral-50 border-t-[3px] border-accent">
       <div className="container-page">
         <div className="grid lg:grid-cols-3 gap-12">
 

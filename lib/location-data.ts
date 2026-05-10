@@ -309,8 +309,8 @@ export const LOCATION_DETAILS: LocationDetail[] = [
     localContext:
       "Midrand's manufacturing corridor — encompassing plastics, packaging, food processing, and light engineering — generates strong demand for cost accounting, inventory management, payroll compliance, and import/export licensing. The area's fast-growing tech and commercial sectors add cloud accounting setup, provisional tax, and company secretarial filings to the mix. Sikatrix is experienced across all of these.",
     testimonial: {
-      name: "Sipho N.",
-      role: "MD, Nova Plastics Manufacturing — Midrand",
+      name: "Ziyanda M.",
+      role: "Manager, CK Plastics Technologies (Pty) Ltd — Midrand",
       body: "Our plastic bottle manufacturing business has a complex cost structure — raw materials, production waste, and multi-shift payroll. Sikatrix brought order to our books, got our VAT claims right first time, and now we have monthly management accounts we actually use to run the business.",
     },
     nearbyLocations: ["johannesburg", "sandton", "randburg"],

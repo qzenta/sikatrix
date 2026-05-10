@@ -63,7 +63,7 @@ export default async function CategoryPage({
         bgImage="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1600&auto=format&fit=crop&q=60"
       />
 
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-16 md:py-20 bg-neutral-50 border-t-[3px] border-accent">
         <div className="container-page">
           {/* Topic nav */}
           <div className="flex flex-wrap gap-2 mb-10">

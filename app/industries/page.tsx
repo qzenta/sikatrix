@@ -65,7 +65,7 @@ export default function IndustriesPage() {
       />
 
       {/* Grid */}
-      <section className="py-16 md:py-20 bg-brand-dark">
+      <section className="py-16 md:py-20 bg-brand-dark border-t-[3px] border-accent">
         <div className="container-page">
           <div className="text-center mb-12">
             <span className="text-xs font-semibold uppercase tracking-widest text-accent-light block mb-2">Sectors We Serve</span>

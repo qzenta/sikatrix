@@ -312,7 +312,7 @@ export default async function ServicePage({
       />
 
       {/* Sidebar + Main content */}
-      <section className="py-14 bg-white">
+      <section className="py-14 bg-neutral-50 border-t-[3px] border-accent">
         <div className="container-page">
           <div className="grid lg:grid-cols-[260px_1fr] gap-10 items-start">
 
@@ -423,7 +423,7 @@ export default async function ServicePage({
       </section>
 
       {/* Other services */}
-      <section className="py-14 bg-white">
+      <section className="py-14 bg-neutral-50">
         <div className="container-page">
           <h2 className="section-title mb-7">Other services you may need</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -451,7 +451,7 @@ export default async function ServicePage({
 
       {/* Related reading — backlink to matching resources articles */}
       {relatedArticles.length > 0 && (
-        <section className="py-10 bg-white border-t border-neutral-100">
+        <section className="py-10 bg-neutral-50 border-t border-neutral-200">
           <div className="container-page">
             <span className="section-label">Related Reading</span>
             <h2 className="text-sm font-semibold text-neutral-900 mt-2 mb-5">

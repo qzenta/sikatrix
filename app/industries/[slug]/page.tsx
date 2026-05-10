@@ -384,7 +384,7 @@ export default async function IndustryPage({
       />
 
       {/* Sidebar + main content */}
-      <section className="py-14 bg-white">
+      <section className="py-14 bg-neutral-50 border-t-[3px] border-accent">
         <div className="container-page">
           <div className="grid lg:grid-cols-[260px_1fr] gap-10 items-start">
 
@@ -539,7 +539,7 @@ export default async function IndustryPage({
         </section>
       )}
 
-      <section className="py-14 bg-white">
+      <section className="py-14 bg-neutral-50">
         <div className="container-page">
           <CTABlock />
         </div>

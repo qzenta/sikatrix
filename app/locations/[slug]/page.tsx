@@ -73,7 +73,7 @@ export default async function LocationPage({
       />
 
       {/* Main content */}
-      <section className="py-16 md:py-20">
+      <section className="py-16 md:py-20 bg-neutral-50 border-t-[3px] border-accent">
         <div className="container-page">
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Body */}
@@ -218,7 +218,7 @@ export default async function LocationPage({
 
       {/* Related resources */}
       {latestArticles.length > 0 && (
-        <section className="py-12 bg-white border-t border-neutral-100">
+        <section className="py-12 bg-neutral-50 border-t border-neutral-200">
           <div className="container-page">
             <span className="section-label">Resources</span>
             <h2 className="text-sm font-semibold text-neutral-900 mt-2 mb-5">

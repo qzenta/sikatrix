@@ -36,7 +36,7 @@ export default function ResourcesPage() {
       />
 
       {/* Tools pinned section */}
-      <section className="py-8 bg-white border-b border-neutral-100">
+      <section className="py-8 bg-neutral-50 border-t-[3px] border-accent border-b border-neutral-200">
         <div className="container-page">
           <div className="rounded-2xl bg-gradient-to-r from-brand-dark via-brand to-brand-dark p-px">
             <div className="rounded-2xl bg-gradient-to-r from-[#0a1e3d] to-[#0f2347] px-7 py-6">
@@ -71,7 +71,7 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-16 md:py-20 bg-neutral-50">
         <div className="container-page">
           <BlogListing posts={posts} />
         </div>
@@ -94,7 +94,7 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-slate-50">
+      <section className="py-16 bg-neutral-50">
         <div className="container-page">
           <CTABlock />
         </div>
