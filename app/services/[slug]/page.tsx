@@ -30,12 +30,12 @@ const ICON_MAP: Record<string, React.ElementType> = {
 const SERVICE_HERO_IMAGES: Record<string, string> = {
   "annual-financial-statements": "https://images.unsplash.com/photo-1573497161161-c3e73707e25c?w=1600&auto=format&fit=crop&q=60",
   "tax-services":                "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1600&auto=format&fit=crop&q=60",
-  "bookkeeping":                 "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?w=1600&auto=format&fit=crop&q=60",
+  "bookkeeping":                 "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1600&auto=format&fit=crop&q=60",
   "payroll":                     "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1600&auto=format&fit=crop&q=60",
-  "cloud-accounting":            "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600&auto=format&fit=crop&q=60",
-  "company-secretarial":         "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1600&auto=format&fit=crop&q=60",
-  "business-permit-support":     "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=1600&auto=format&fit=crop&q=60",
-  "import-export-license":       "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1600&auto=format&fit=crop&q=60",
+  "cloud-accounting":            "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1600&auto=format&fit=crop&q=60",
+  "company-secretarial":         "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1600&auto=format&fit=crop&q=60",
+  "business-permit-support":     "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1600&auto=format&fit=crop&q=60",
+  "import-export-license":       "https://images.unsplash.com/photo-1573497161161-c3e73707e25c?w=1600&auto=format&fit=crop&q=60",
 };
 
 const SERVICE_DETAILS: Record<string, { outcome: string; benefits: string[]; faqs: { q: string; a: string }[] }> = {

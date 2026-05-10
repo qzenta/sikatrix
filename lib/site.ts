@@ -184,6 +184,15 @@ export const LOCATIONS = [
       "From the East Rand Mall precinct to Boksburg's busy industrial zones — Sikatrix delivers cloud-based bookkeeping, payroll, and tax compliance to businesses that run at Ekurhuleni's pace.",
     keywords: ["accountants in Boksburg", "tax practitioner Boksburg", "bookkeeping Boksburg"],
   },
+  {
+    slug: "midrand",
+    name: "Midrand",
+    isHQ: false,
+    headline: "Accounting & Tax Services for Midrand Businesses",
+    intro:
+      "Midrand's strategic position between Johannesburg and Pretoria makes it one of Gauteng's fastest-growing business hubs. Sikatrix delivers professional accounting, payroll, and tax compliance to Midrand's dynamic manufacturing, tech, and commercial sectors.",
+    keywords: ["accountants in Midrand", "tax practitioner Midrand", "bookkeeping Midrand", "manufacturing accountants Midrand"],
+  },
 ];
 
 export const INDUSTRIES = [

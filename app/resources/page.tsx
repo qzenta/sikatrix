@@ -5,6 +5,7 @@ import PageHero from "@/components/shared/PageHero";
 import CTABlock from "@/components/shared/CTABlock";
 import NewsletterForm from "@/components/shared/NewsletterForm";
 import BlogListing from "@/components/blog/BlogListing";
+import AuthorityLinks from "@/components/shared/AuthorityLinks";
 import { getAllPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
@@ -31,7 +32,7 @@ export default function ResourcesPage() {
         title="Tax & Accounting Insights for South African Businesses"
         subtitle="Free, practical articles written by qualified accountants. No jargon, no filler. Just guidance you can act on."
         crumbs={[{ label: "Resources" }]}
-        bgImage="https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=1600&auto=format&fit=crop&q=60"
+        bgImage="https://images.unsplash.com/photo-1573497161161-c3e73707e25c?w=1600&auto=format&fit=crop&q=60"
       />
 
       {/* Tools pinned section */}
@@ -75,6 +76,8 @@ export default function ResourcesPage() {
           <BlogListing posts={posts} />
         </div>
       </section>
+
+      <AuthorityLinks />
 
       {/* Newsletter */}
       <section className="py-14 bg-brand-dark">

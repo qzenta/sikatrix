@@ -279,4 +279,41 @@ export const LOCATION_DETAILS: LocationDetail[] = [
     nearbyLocations: ["germiston", "alberton", "johannesburg"],
     schemaCity: "Boksburg",
   },
+  {
+    slug: "midrand",
+    name: "Midrand",
+    province: "Gauteng",
+    isHQ: false,
+    metaTitle: "Accountants in Midrand | Manufacturing & Business Accounting | Sikatrix",
+    metaDescription:
+      "Professional accounting, payroll, and tax services for Midrand businesses. Specialising in manufacturing, plastics, and industrial sectors. SAIPA-registered accountants and SARS Tax Practitioners. Cloud-based delivery.",
+    headline: "Professional Accounting for Midrand's Growing Business Community",
+    intro:
+      "Midrand has evolved from a commuter corridor into one of Gauteng's most strategically valuable business addresses — home to manufacturers, logistics operators, tech companies, and a growing base of professional services firms. Sikatrix brings SAIPA-registered accounting and tax expertise to Midrand businesses through a modern, cloud-based model.",
+    bodyParagraphs: [
+      "Positioned at the midpoint of the N1 highway between Johannesburg and Pretoria, Midrand offers businesses unrivalled logistical access to both metros — and to OR Tambo International Airport via the R21. It is this connectivity that has attracted manufacturers, importers, and distributors to the area, many of whom operate across the full supply chain from raw material procurement to finished goods delivery.",
+      "Our Midrand client base includes manufacturers in the plastics and packaging sector — a technically demanding industry where cost of goods, inventory valuation, waste management accounting, and input VAT claims require careful, specialised handling. We understand the financial mechanics of manufacturing businesses and tailor our bookkeeping, management accounts, and tax planning accordingly.",
+      "For Midrand manufacturing and industrial businesses, payroll compliance is a priority. Shift-based workforces, overtime structures, and large employee headcounts create complexity that general bookkeepers struggle to manage. Sikatrix handles the full payroll cycle — PAYE, UIF, SDL, EMP201 submissions — with the accuracy and reliability your workforce depends on.",
+      "Cloud accounting has transformed how Midrand business owners manage their finances. We set up and run your QuickBooks Online, Xero, or Sage environment — giving you live cash flow visibility, real-time cost tracking, and management accounts you can act on. No more waiting for a quarterly summary to discover a problem.",
+    ],
+    keyServices: [
+      "Monthly Bookkeeping & Management Accounts",
+      "Payroll for Manufacturing & Industrial Businesses",
+      "Inventory & Cost-of-Goods Accounting",
+      "Input VAT Claims & VAT201 Returns",
+      "Corporate Tax Returns (ITR14) & Provisional Tax",
+      "Annual Financial Statements (IFRS for SMEs)",
+      "Import/Export License Applications",
+      "Cloud Accounting Setup (QuickBooks / Xero / Sage)",
+    ],
+    localContext:
+      "Midrand's manufacturing corridor — encompassing plastics, packaging, food processing, and light engineering — generates strong demand for cost accounting, inventory management, payroll compliance, and import/export licensing. The area's fast-growing tech and commercial sectors add cloud accounting setup, provisional tax, and company secretarial filings to the mix. Sikatrix is experienced across all of these.",
+    testimonial: {
+      name: "Sipho N.",
+      role: "MD, Nova Plastics Manufacturing — Midrand",
+      body: "Our plastic bottle manufacturing business has a complex cost structure — raw materials, production waste, and multi-shift payroll. Sikatrix brought order to our books, got our VAT claims right first time, and now we have monthly management accounts we actually use to run the business.",
+    },
+    nearbyLocations: ["johannesburg", "sandton", "randburg"],
+    schemaCity: "Midrand",
+  },
 ];

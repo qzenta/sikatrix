@@ -109,15 +109,52 @@ const FAQS = [
 ];
 
 export default function PricingPage() {
+  const offersSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Accounting & Tax Service Pricing — Sikatrix Business Accountants",
+    itemListElement: SERVICES.map((svc, idx) => ({
+      "@type": "ListItem",
+      position: idx + 1,
+      item: {
+        "@type": "Service",
+        name: svc.name,
+        description: svc.desc,
+        provider: { "@type": "AccountingService", name: "Sikatrix Business Accountants", url: "https://www.sikatrix.com" },
+        offers: {
+          "@type": "Offer",
+          priceCurrency: "ZAR",
+          price: svc.from.replace(/[^0-9]/g, ""),
+          priceSpecification: { "@type": "PriceSpecification", description: `From ${svc.from} ${svc.period}` },
+          url: "https://www.sikatrix.com/pricing",
+          availability: "https://schema.org/InStock",
+          areaServed: { "@type": "State", name: "Gauteng" },
+        },
+      },
+    })),
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQS.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: { "@type": "Answer", text: faq.a },
+    })),
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(offersSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <PageHero
         label="Pricing"
         title="Simple, Transparent Fees"
         subtitle="Fixed-fee accounting — you know what you're paying before we start. No hourly billing, no hidden extras."
         crumbs={[{ label: "Pricing" }]}
         size="sm"
-        bgImage="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1600&auto=format&fit=crop&q=60"
+        bgImage="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1600&auto=format&fit=crop&q=60"
       />
 
       {/* Intro note */}

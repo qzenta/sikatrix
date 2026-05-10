@@ -11,6 +11,7 @@ import CTABlock from "@/components/shared/CTABlock";
 import { getLatestPosts } from "@/lib/blog";
 import Link from "next/link";
 import { ArrowRight, Calendar } from "lucide-react";
+import { buildWebSiteSchema, buildOrganizationSchema } from "@/lib/metadata";
 
 export const metadata: Metadata = {
   title: { absolute: "Accountants in Alberton | Sikatrix Business Accountants" },
@@ -21,9 +22,13 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   const latestPosts = getLatestPosts(3);
+  const webSiteSchema = buildWebSiteSchema();
+  const orgSchema = buildOrganizationSchema();
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
       <Hero />
       <TrustBar />
       <ServicesGrid />

@@ -1,6 +1,73 @@
 import type { Metadata } from "next";
 import { SITE } from "./site";
 
+export function buildWebSiteSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: SITE.name,
+    url: SITE.url,
+    potentialAction: {
+      "@type": "SearchAction",
+      target: { "@type": "EntryPoint", urlTemplate: `${SITE.url}/resources?q={search_term_string}` },
+      "query-input": "required name=search_term_string",
+    },
+  };
+}
+
+export function buildOrganizationSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: SITE.name,
+    url: SITE.url,
+    logo: `${SITE.url}/logo.png`,
+    telephone: SITE.phone,
+    email: SITE.email,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: SITE.address.street,
+      addressLocality: SITE.address.city,
+      addressRegion: SITE.address.province,
+      postalCode: SITE.address.postalCode,
+      addressCountry: "ZA",
+    },
+    sameAs: [
+      SITE.social.facebook,
+      SITE.social.linkedin,
+      SITE.social.twitter,
+    ],
+    foundingDate: "2014",
+    numberOfEmployees: { "@type": "QuantitativeValue", value: 5 },
+  };
+}
+
+export function buildPersonSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Daniel Amoah",
+    jobTitle: "Founder & Professional Accountant (SA)",
+    worksFor: {
+      "@type": "AccountingService",
+      name: SITE.name,
+      url: SITE.url,
+    },
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: SITE.address.city,
+      addressRegion: SITE.address.province,
+      addressCountry: "ZA",
+    },
+    hasCredential: [
+      { "@type": "EducationalOccupationalCredential", credentialCategory: "SAIPA Professional Accountant (SA)" },
+      { "@type": "EducationalOccupationalCredential", credentialCategory: "SARS Registered Tax Practitioner" },
+    ],
+    url: `${SITE.url}/about`,
+    image: `${SITE.url}/about/daniel-amoah.jpg`,
+  };
+}
+
 export function buildMetadata({
   title,
   description,
@@ -74,6 +141,8 @@ export function buildLocalBusinessSchema(locationName?: string) {
       { "@type": "City", name: "Randburg", containedInPlace: { "@type": "State", name: "Gauteng" } },
       { "@type": "City", name: "Vereeniging", containedInPlace: { "@type": "State", name: "Gauteng" } },
       { "@type": "City", name: "Germiston", containedInPlace: { "@type": "State", name: "Gauteng" } },
+      { "@type": "City", name: "Boksburg", containedInPlace: { "@type": "State", name: "Gauteng" } },
+      { "@type": "City", name: "Midrand", containedInPlace: { "@type": "State", name: "Gauteng" } },
     ],
     priceRange: "$$",
     currenciesAccepted: "ZAR",

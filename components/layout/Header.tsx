@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { SITE, SERVICES, LOCATIONS, INDUSTRIES } from "@/lib/site";
 
 type NavChild = { label: string; href: string };
@@ -74,7 +74,17 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [expandedMobile, setExpandedMobile] = useState<Set<string>>(new Set());
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const toggleMobileSubmenu = (label: string) => {
+    setExpandedMobile((prev) => {
+      const next = new Set(prev);
+      if (next.has(label)) next.delete(label);
+      else next.add(label);
+      return next;
+    });
+  };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -242,33 +252,59 @@ export default function Header() {
 
         {/* Mobile menu */}
         {open && (
-          <div className="lg:hidden border-t border-neutral-100 bg-white">
-            <nav className="container-page py-4 flex flex-col gap-0.5">
-              {NAV_ITEMS.map((item) => (
-                <div key={item.label}>
-                  <Link
-                    href={item.href}
-                    onClick={() => setOpen(false)}
-                    className="block px-3 py-2.5 text-sm font-medium text-neutral-700 hover:text-brand hover:bg-neutral-50 rounded-md transition-colors"
-                  >
-                    {item.label}
-                  </Link>
-                  {item.children && (
-                    <div className="ml-4 mb-1">
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.href}
-                          href={child.href}
-                          onClick={() => setOpen(false)}
-                          className="block px-3 py-2 text-xs text-neutral-500 hover:text-brand hover:bg-neutral-50 rounded-md transition-colors"
+          <div className="lg:hidden border-t border-neutral-100 bg-white max-h-[calc(100vh-4rem)] overflow-y-auto">
+            <nav className="container-page py-3 flex flex-col gap-0.5">
+              {NAV_ITEMS.map((item) => {
+                const isExpanded = expandedMobile.has(item.label);
+                return (
+                  <div key={item.label}>
+                    <div className="flex items-center">
+                      <Link
+                        href={item.href}
+                        onClick={() => setOpen(false)}
+                        className="flex-1 px-3 py-2.5 text-sm font-medium text-neutral-700 hover:text-brand hover:bg-neutral-50 rounded-md transition-colors"
+                      >
+                        {item.label}
+                      </Link>
+                      {item.children && (
+                        <button
+                          onClick={() => toggleMobileSubmenu(item.label)}
+                          className="p-2.5 text-neutral-400 hover:text-brand hover:bg-neutral-50 rounded-md transition-colors"
+                          aria-label={isExpanded ? `Collapse ${item.label}` : `Expand ${item.label}`}
                         >
-                          {child.label}
-                        </Link>
-                      ))}
+                          <ChevronDown
+                            size={16}
+                            className={`transition-transform duration-200 ${isExpanded ? "rotate-180" : ""}`}
+                          />
+                        </button>
+                      )}
                     </div>
-                  )}
-                </div>
-              ))}
+                    {item.children && isExpanded && (
+                      <div className="ml-3 mb-1 border-l-2 border-neutral-100 pl-3">
+                        {item.children.map((child) => (
+                          <Link
+                            key={child.href}
+                            href={child.href}
+                            onClick={() => setOpen(false)}
+                            className="block px-3 py-2 text-xs text-neutral-500 hover:text-brand hover:bg-neutral-50 rounded-md transition-colors"
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                        {item.footerLabel && (
+                          <Link
+                            href={item.href}
+                            onClick={() => setOpen(false)}
+                            className="block px-3 py-2 text-xs font-semibold text-brand hover:bg-neutral-50 rounded-md transition-colors"
+                          >
+                            {item.footerLabel}
+                          </Link>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
               <div className="mt-3 pt-3 border-t border-neutral-100">
                 <Link
                   href="/contact"

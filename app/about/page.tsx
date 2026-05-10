@@ -6,6 +6,7 @@ import PageHero from "@/components/shared/PageHero";
 import CTABlock from "@/components/shared/CTABlock";
 import TrustBar from "@/components/home/TrustBar";
 import { SITE } from "@/lib/site";
+import { buildPersonSchema } from "@/lib/metadata";
 
 export const metadata: Metadata = {
   title: { absolute: "About Sikatrix Business Accountants | SAIPA-Registered, Alberton" },
@@ -38,8 +39,10 @@ const VALUES = [
 ];
 
 export default function AboutPage() {
+  const personSchema = buildPersonSchema();
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
       <PageHero
         label="About Us"
         title="Qualified. Local. Personally Accountable."
