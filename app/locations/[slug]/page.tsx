@@ -10,6 +10,16 @@ import { LOCATIONS, SERVICES, SITE } from "@/lib/site";
 import { getLatestPosts } from "@/lib/blog";
 import { buildLocalBusinessSchema } from "@/lib/metadata";
 
+const LOCATION_HERO_IMAGES: Record<string, string> = {
+  "alberton":    "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1600&auto=format&fit=crop&q=60",
+  "johannesburg":"https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?w=1600&auto=format&fit=crop&q=60",
+  "sandton":     "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1600&auto=format&fit=crop&q=60",
+  "randburg":    "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600&auto=format&fit=crop&q=60",
+  "vereeniging": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1600&auto=format&fit=crop&q=60",
+  "germiston":   "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=1600&auto=format&fit=crop&q=60",
+  "boksburg":    "https://images.unsplash.com/photo-1573497161161-c3e73707e25c?w=1600&auto=format&fit=crop&q=60",
+};
+
 export async function generateStaticParams() {
   return LOCATIONS.map((l) => ({ slug: l.slug }));
 }
@@ -58,7 +68,7 @@ export default async function LocationPage({
           { label: loc.name },
         ]}
         cta={{ label: `Book a consultation in ${loc.name}`, href: "/contact" }}
-        bgImage="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1600&auto=format&fit=crop&q=60"
+        bgImage={LOCATION_HERO_IMAGES[slug] ?? "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1600&auto=format&fit=crop&q=60"}
       />
 
       {/* Main content */}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import {
   CheckCircle, ArrowRight,
   TrendingUp, Rocket, Stethoscope, Scale, Home, Heart, GraduationCap, Compass,
@@ -25,6 +26,8 @@ type IndustryDetail = {
   heroTitle: string;
   heroSubtitle: string;
   bgImage: string;
+  contentImage: string;
+  contentImageAlt: string;
   outcome: string;
   highlight: string;
   services: string[];
@@ -39,6 +42,8 @@ const INDUSTRY_DATA: Record<string, IndustryDetail> = {
     heroTitle: "Accounting That Scales With Your Business",
     heroSubtitle: "Whether you're a sole proprietor or running a 50-person operation, we handle your compliance, books, and tax so you can focus on growth.",
     bgImage: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1600&auto=format&fit=crop&q=60",
+    contentImage: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=900&auto=format&fit=crop&q=60",
+    contentImageAlt: "Diverse South African business team reviewing monthly management accounts together",
     outcome: "Within 30 days of onboarding, you'll have clean, current books, a monthly management account schedule, and full visibility into your tax position. No surprises at year-end.",
     highlight: "We grow with you — from a sole proprietor startup to a 50-person team.",
     services: [
@@ -72,6 +77,8 @@ const INDUSTRY_DATA: Record<string, IndustryDetail> = {
     heroTitle: "Start Right. Stay Compliant from Day One.",
     heroSubtitle: "We handle the admin so you can focus on building your business. Company registration, SARS setup, and clean books from the moment you open.",
     bgImage: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1600&auto=format&fit=crop&q=60",
+    contentImage: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&auto=format&fit=crop&q=60",
+    contentImageAlt: "Young diverse South African entrepreneurs collaborating at a laptop to launch their new business",
     outcome: "By the end of your first month with us, your company is registered, SARS profiles are active, your cloud accounting is set up, and you have a compliance calendar so you never miss a deadline.",
     highlight: "Get your compliance right from day one. We've helped 40+ startups launch cleanly.",
     services: [
@@ -105,6 +112,8 @@ const INDUSTRY_DATA: Record<string, IndustryDetail> = {
     heroTitle: "Financial Management for Healthcare Professionals",
     heroSubtitle: "We understand the unique billing environment, professional body requirements, and compliance obligations of private healthcare in South Africa.",
     bgImage: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1600&auto=format&fit=crop&q=60",
+    contentImage: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=900&auto=format&fit=crop&q=60",
+    contentImageAlt: "Diverse South African medical team discussing patient care and practice finances",
     outcome: "You'll have monthly reconciled revenue accounts, compliant payroll for clinical and administrative staff, and zero outstanding SARS obligations. Your practice runs. We handle the numbers.",
     highlight: "We understand the unique billing and compliance environment of private healthcare.",
     services: [
@@ -138,6 +147,8 @@ const INDUSTRY_DATA: Record<string, IndustryDetail> = {
     heroTitle: "Accounting Precision for Legal Practices",
     heroSubtitle: "Trust account accuracy and LSSA compliance are non-negotiable. We handle them both so your practice remains in good standing.",
     bgImage: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1600&auto=format&fit=crop&q=60",
+    contentImage: "https://images.unsplash.com/photo-1521791055366-0d553872952f?w=900&auto=format&fit=crop&q=60",
+    contentImageAlt: "South African attorney reviewing trust account documents and compliance records at a desk",
     outcome: "Your trust account reconciles to the cent every month. LSSA compliance records are in order. And your personal and practice tax returns are filed on time, every time.",
     highlight: "Trust account accuracy is non-negotiable. We handle it with precision.",
     services: [
@@ -171,6 +182,8 @@ const INDUSTRY_DATA: Record<string, IndustryDetail> = {
     heroTitle: "Maximise Your Property Returns. Minimise Your Tax.",
     heroSubtitle: "Property tax in South Africa is layered. We make sure you claim every deduction you're entitled to and structure your portfolio for maximum efficiency.",
     bgImage: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600&auto=format&fit=crop&q=60",
+    contentImage: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=900&auto=format&fit=crop&q=60",
+    contentImageAlt: "Diverse South African property investor consulting with an accountant about rental income tax",
     outcome: "After working with us, your rental income is correctly declared, every allowable deduction is claimed, and your provisional tax instalments are based on accurate projections. No overpayments, no penalties.",
     highlight: "Property tax is complex. We ensure you claim every deduction you're entitled to.",
     services: [
@@ -204,6 +217,8 @@ const INDUSTRY_DATA: Record<string, IndustryDetail> = {
     heroTitle: "Accounting That Supports Your Mission",
     heroSubtitle: "We help NGOs achieve PBO status, prepare donor-ready financial statements, and maintain the compliance records that funders and SARS require.",
     bgImage: "https://images.unsplash.com/photo-1593113598332-cd288d649433?w=1600&auto=format&fit=crop&q=60",
+    contentImage: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=900&auto=format&fit=crop&q=60",
+    contentImageAlt: "Diverse South African NGO team and community volunteers working together on a project",
     outcome: "With PBO status in place and annual accounts prepared to donor standards, your organisation is positioned to attract and retain funding. We ensure the financials never stand in the way of your mission.",
     highlight: "We've secured PBO status for multiple NPOs, unlocking tax exemptions and donor confidence.",
     services: [
@@ -237,6 +252,8 @@ const INDUSTRY_DATA: Record<string, IndustryDetail> = {
     heroTitle: "Financial Management for Private Educational Institutions",
     heroSubtitle: "Private schools have unique accounting needs: fee income recognition, bursaries, tuck shop operations, and complex payroll. We handle all of it.",
     bgImage: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1600&auto=format&fit=crop&q=60",
+    contentImage: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=900&auto=format&fit=crop&q=60",
+    contentImageAlt: "Diverse South African private school students learning in a well-equipped classroom",
     outcome: "Your school fee income is correctly accounted for, staff payroll is accurate and SARS-compliant, and your AFS meets the standards required by your governing body and the Department of Education.",
     highlight: "Education entities have unique accounting needs. We understand the sector.",
     services: [
@@ -270,6 +287,8 @@ const INDUSTRY_DATA: Record<string, IndustryDetail> = {
     heroTitle: "Accounting for Project-Based Professionals",
     heroSubtitle: "Architecture and engineering firms face unique financial challenges: WIP, project cost tracking, and professional practice compliance. We handle all of it.",
     bgImage: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1600&auto=format&fit=crop&q=60",
+    contentImage: "https://images.unsplash.com/photo-1664575602276-acd073f104c1?w=900&auto=format&fit=crop&q=60",
+    contentImageAlt: "Diverse South African architects and engineers reviewing project plans and financial schedules",
     outcome: "Your project costs are tracked correctly, WIP is accounted for on every active contract, and you receive a clear monthly picture of which projects are profitable and which need attention.",
     highlight: "We track project profitability and keep your practice financially healthy.",
     services: [
@@ -423,6 +442,17 @@ export default async function IndustryPage({
                 <p className="text-sm text-neutral-600 leading-relaxed mb-5 p-4 bg-brand-50 rounded-lg border-l-4 border-brand">
                   {data.outcome}
                 </p>
+
+                {/* Content image */}
+                <div className="relative h-52 sm:h-64 rounded-xl overflow-hidden mb-5">
+                  <Image
+                    src={data.contentImage}
+                    alt={data.contentImageAlt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 700px"
+                  />
+                </div>
 
                 <p className="text-sm italic text-brand font-medium mb-5">"{data.highlight}"</p>
 

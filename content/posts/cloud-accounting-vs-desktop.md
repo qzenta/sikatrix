@@ -10,8 +10,8 @@ tags:
   - Sage
   - software
   - SME
-featuredImage: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&auto=format&fit=crop&q=60"
-featuredImageAlt: "Person working on a laptop with accounting software open"
+featuredImage: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&auto=format&fit=crop&q=60"
+featuredImageAlt: "Diverse South African business team collaborating on cloud accounting software around a laptop"
 author:
   name: "Daniel Amoah"
   title: "SAIPA Professional Accountant (SA)"

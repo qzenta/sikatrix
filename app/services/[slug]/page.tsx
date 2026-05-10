@@ -27,6 +27,17 @@ const ICON_MAP: Record<string, React.ElementType> = {
   FileText, Receipt, BookOpen, Users, Cloud, Briefcase, ShieldCheck, Globe,
 };
 
+const SERVICE_HERO_IMAGES: Record<string, string> = {
+  "annual-financial-statements": "https://images.unsplash.com/photo-1573497161161-c3e73707e25c?w=1600&auto=format&fit=crop&q=60",
+  "tax-services":                "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1600&auto=format&fit=crop&q=60",
+  "bookkeeping":                 "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?w=1600&auto=format&fit=crop&q=60",
+  "payroll":                     "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1600&auto=format&fit=crop&q=60",
+  "cloud-accounting":            "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600&auto=format&fit=crop&q=60",
+  "company-secretarial":         "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1600&auto=format&fit=crop&q=60",
+  "business-permit-support":     "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=1600&auto=format&fit=crop&q=60",
+  "import-export-license":       "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1600&auto=format&fit=crop&q=60",
+};
+
 const SERVICE_DETAILS: Record<string, { outcome: string; benefits: string[]; faqs: { q: string; a: string }[] }> = {
   "annual-financial-statements": {
     outcome: "After your first engagement, you'll have a fully compliant, signed set of financial statements — ready for your bank, your funders, or your CIPC filing — delivered within 15 business days of receiving complete records.",
@@ -297,7 +308,7 @@ export default async function ServicePage({
           { label: service.shortTitle },
         ]}
         cta={{ label: "Book a Consultation", href: "/contact" }}
-        bgImage="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1600&auto=format&fit=crop&q=60"
+        bgImage={SERVICE_HERO_IMAGES[slug] ?? "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1600&auto=format&fit=crop&q=60"}
       />
 
       {/* Sidebar + Main content */}

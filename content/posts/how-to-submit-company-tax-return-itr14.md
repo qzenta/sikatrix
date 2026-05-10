@@ -9,8 +9,8 @@ tags:
   - eFiling
   - company-tax
   - SARS
-featuredImage: "https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=1200&auto=format&fit=crop&q=60"
-featuredImageAlt: "Accountant working through financial documents and a tax computation on a desk"
+featuredImage: "https://images.unsplash.com/photo-1573497161161-c3e73707e25c?w=1200&auto=format&fit=crop&q=60"
+featuredImageAlt: "South African accountant preparing a company tax return on a laptop at her desk"
 author:
   name: "Daniel Amoah"
   title: "SAIPA Professional Accountant (SA)"

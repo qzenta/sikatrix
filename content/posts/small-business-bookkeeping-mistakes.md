@@ -9,8 +9,8 @@ tags:
   - SME
   - accounting
   - VAT
-featuredImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop&q=60"
-featuredImageAlt: "Accountant reviewing financial data on a laptop with charts visible"
+featuredImage: "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?w=1200&auto=format&fit=crop&q=60"
+featuredImageAlt: "Diverse South African small business owner reviewing bookkeeping records with an accountant"
 author:
   name: "Daniel Amoah"
   title: "SAIPA Professional Accountant (SA)"

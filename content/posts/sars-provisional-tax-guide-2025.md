@@ -8,8 +8,8 @@ tags:
   - SARS
   - tax-planning
   - SME
-featuredImage: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&auto=format&fit=crop&q=60"
-featuredImageAlt: "Business owner reviewing SARS provisional tax deadlines on a calendar"
+featuredImage: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1200&auto=format&fit=crop&q=60"
+featuredImageAlt: "South African professional reviewing provisional tax obligations with her accountant"
 author:
   name: "Daniel Amoah"
   title: "SAIPA Professional Accountant (SA)"

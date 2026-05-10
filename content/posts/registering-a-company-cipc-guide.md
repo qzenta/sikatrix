@@ -9,8 +9,8 @@ tags:
   - Pty-Ltd
   - compliance
   - SME
-featuredImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&auto=format&fit=crop&q=60"
-featuredImageAlt: "Business owner signing company registration documents at a desk"
+featuredImage: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1200&auto=format&fit=crop&q=60"
+featuredImageAlt: "Diverse South African entrepreneurs completing company registration at a business meeting"
 author:
   name: "Daniel Amoah"
   title: "SAIPA Professional Accountant (SA)"

@@ -10,8 +10,8 @@ tags:
   - payroll
   - employer
   - SARS
-featuredImage: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&auto=format&fit=crop&q=60"
-featuredImageAlt: "HR professional reviewing payroll documents on a desk"
+featuredImage: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1200&auto=format&fit=crop&q=60"
+featuredImageAlt: "Diverse South African business team reviewing payroll and employer compliance obligations"
 author:
   name: "Daniel Amoah"
   title: "SAIPA Professional Accountant (SA)"

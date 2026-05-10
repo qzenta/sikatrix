@@ -9,8 +9,8 @@ tags:
   - registration
   - compliance
   - tax
-featuredImage: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&auto=format&fit=crop&q=60"
-featuredImageAlt: "Business owner issuing a tax invoice to a client"
+featuredImage: "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=1200&auto=format&fit=crop&q=60"
+featuredImageAlt: "South African business owner discussing VAT registration requirements with a tax professional"
 author:
   name: "Daniel Amoah"
   title: "SAIPA Professional Accountant (SA)"
