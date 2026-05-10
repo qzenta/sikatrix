@@ -27,14 +27,14 @@ relatedPosts:
   - "sars-provisional-tax-guide-2025"
 social:
   ogTitle: "7 Bookkeeping Mistakes Costing SA SMEs Thousands | Sikatrix"
-  ogDescription: "Mixing accounts, ignoring VAT, skipping reconciliations — discover the seven most expensive bookkeeping errors and how to fix them."
+  ogDescription: "Mixing accounts, ignoring VAT, skipping reconciliations: discover the seven most expensive bookkeeping errors and how to fix them."
   twitterCard: "summary_large_image"
 newsletterSegment: "bookkeeping"
 ---
 
 Bookkeeping errors don't announce themselves. They accumulate quietly until SARS sends a query, your bank declines a loan application, or you discover at year-end that you've been making decisions based on wrong numbers.
 
-Here are the seven most expensive bookkeeping mistakes we see — and how to fix them.
+Here are the seven most expensive bookkeeping mistakes we see, and how to fix them.
 
 ## 1. Mixing Personal and Business Accounts
 
@@ -78,7 +78,7 @@ SARS requires you to retain financial records for 5 years. Losing invoices, bank
 
 Business owners who manage their own books without proper training often don't know what they don't know. The errors are invisible until they cause real damage.
 
-**Fix:** Use a qualified bookkeeper from the start. The cost is far less than fixing two years of errors — or paying SARS penalties.
+**Fix:** Use a qualified bookkeeper from the start. The cost is far less than fixing two years of errors, or paying SARS penalties.
 
 ---
 

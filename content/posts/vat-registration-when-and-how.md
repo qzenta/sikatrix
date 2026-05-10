@@ -32,23 +32,23 @@ social:
 newsletterSegment: "vat"
 ---
 
-VAT (Value-Added Tax) is a consumption tax levied at 15% on the supply of most goods and services in South Africa. As a VAT vendor, you collect VAT from your customers (output tax), offset it against the VAT you paid to your suppliers (input tax), and pay the difference to SARS. Getting this right matters — and getting it wrong is expensive.
+VAT (Value-Added Tax) is a consumption tax levied at 15% on the supply of most goods and services in South Africa. As a VAT vendor, you collect VAT from your customers (output tax), offset it against the VAT you paid to your suppliers (input tax), and pay the difference to SARS. Getting this right matters, and getting it wrong is expensive.
 
-## The R1 Million Threshold — When Registration is Mandatory
+## The R1 Million Threshold: When Registration is Mandatory
 
 You are legally required to register for VAT if your taxable turnover has exceeded R1 million in any consecutive 12-month period, or if it is reasonably expected to exceed R1 million in the next 12 months. 'Taxable turnover' includes all standard-rated and zero-rated supplies, but excludes exempt supplies (such as residential rental income and certain financial services).
 
-You must apply for VAT registration within 21 days of the date your turnover first exceeds — or is expected to exceed — R1 million. Late registration results in deemed VAT liability from the date you should have registered, plus a 10% penalty on the outstanding amount.
+You must apply for VAT registration within 21 days of the date your turnover first exceeds (or is expected to exceed) R1 million. Late registration results in deemed VAT liability from the date you should have registered, plus a 10% penalty on the outstanding amount.
 
 ## Voluntary VAT Registration
 
-Businesses with taxable turnover between R50,000 and R1 million per year may apply for voluntary VAT registration. This can be advantageous if you supply other VAT-registered businesses, as they can claim the VAT you charge as an input tax credit — making your pricing more competitive.
+Businesses with taxable turnover between R50,000 and R1 million per year may apply for voluntary VAT registration. This can be advantageous if you supply other VAT-registered businesses, as they can claim the VAT you charge as an input tax credit, making your pricing more competitive.
 
 To qualify for voluntary registration, you must be able to demonstrate that you are making or intend to make taxable supplies. SARS may request supporting documentation such as signed contracts, invoices, or a business plan.
 
 Voluntary registration is not always beneficial. If most of your customers are end-consumers (not VAT vendors), adding 15% VAT to your prices makes you more expensive relative to non-registered competitors. Assess your customer base before registering voluntarily.
 
-[img]https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&auto=format&fit=crop&q=60|Business owner issuing a tax invoice to a client|Every VAT vendor must issue valid tax invoices showing their VAT registration number — SARS can disallow input claims without them
+[img]https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&auto=format&fit=crop&q=60|Business owner issuing a tax invoice to a client|Every VAT vendor must issue valid tax invoices showing their VAT registration number. SARS can disallow input claims without them
 
 ## How to Register for VAT with SARS
 
@@ -64,7 +64,7 @@ Once approved, SARS issues a VAT registration certificate and assigns you a VAT 
 
 **Input tax:** VAT you pay on your business expenses. When you purchase goods or services from another VAT vendor and receive a valid tax invoice, you can claim that VAT back from SARS.
 
-The net amount — output tax minus input tax — is what you pay to SARS (or claim as a refund if input tax exceeds output tax in a given period).
+The net amount (output tax minus input tax) is what you pay to SARS, or claim as a refund if input tax exceeds output tax in a given period.
 
 ## VAT Periods and Submission Deadlines
 
@@ -74,9 +74,9 @@ Returns are due by the last business day of the month following the end of your 
 
 ## Penalties for Failure to Register
 
-If SARS discovers you should have registered and did not, they will raise a VAT assessment for all periods from the date you were required to register. This includes output tax on all sales made during that period — regardless of whether you collected VAT from customers. Add penalties of up to 10% and interest, and the exposure can be substantial.
+If SARS discovers you should have registered and did not, they will raise a VAT assessment for all periods from the date you were required to register. This includes output tax on all sales made during that period, regardless of whether you collected VAT from customers. Add penalties of up to 10% and interest, and the exposure can be substantial.
 
-If you believe you've crossed the R1 million threshold and haven't yet registered, act immediately — voluntary disclosure before SARS raises an assessment significantly reduces the penalty exposure. Sikatrix Business Accountants can assess your registration obligation and manage the registration process on your behalf.
+If you believe you've crossed the R1 million threshold and haven't yet registered, act immediately. Voluntary disclosure before SARS raises an assessment significantly reduces the penalty exposure. Sikatrix Business Accountants can assess your registration obligation and manage the registration process on your behalf.
 
 ---
 
@@ -87,4 +87,4 @@ If you believe you've crossed the R1 million threshold and haven't yet registere
 - [SARS: VAT 404 Guide](https://www.sars.gov.za/wp-content/uploads/Ops/Guides/VAT-Gd-VAT-404-Guide-for-Vendors.pdf) — Comprehensive SARS guide for VAT vendors (PDF)
 - [SARS: eFiling](https://www.sars.gov.za/efilehome/) — Submit VAT201 returns and make VAT payments online
 
-*This article is for general information only. VAT regulations are complex — consult a [registered tax practitioner](/contact) before registering or making changes to your VAT status.*
+*This article is for general information only. VAT regulations are complex. Consult a [registered tax practitioner](/contact) before registering or making changes to your VAT status.*

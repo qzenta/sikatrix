@@ -27,12 +27,12 @@ relatedPosts:
   - "paye-uif-sdl-explained"
 social:
   ogTitle: "How to Register a Company in SA: CIPC Guide | Sikatrix"
-  ogDescription: "Step-by-step CIPC registration guide for South African entrepreneurs — choose the right entity and get compliance right from day one."
+  ogDescription: "Step-by-step CIPC registration guide for South African entrepreneurs. Choose the right entity and get compliance right from day one."
   twitterCard: "summary_large_image"
 newsletterSegment: "sme"
 ---
 
-Registering a company in South Africa is more straightforward than most people expect — but the decisions you make at incorporation have lasting legal and tax consequences. This guide walks you through the CIPC process for a Private Company (Pty Ltd), which is the most common structure for South African SMEs.
+Registering a company in South Africa is more straightforward than most people expect. The decisions you make at incorporation, however, have lasting legal and tax consequences. This guide walks you through the CIPC process for a Private Company (Pty Ltd), which is the most common structure for South African SMEs.
 
 ## Choose Your Business Structure First
 
@@ -52,7 +52,7 @@ Every company is governed by a Memorandum of Incorporation. CIPC provides a stan
 
 The standard MOI allows for flexible share structures and is accepted immediately by CIPC without additional review.
 
-[img]https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&auto=format&fit=crop&q=60|Business owner signing company registration documents at a desk|Your Memorandum of Incorporation is a binding legal document — understand what it permits before signing
+[img]https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&auto=format&fit=crop&q=60|Business owner signing company registration documents at a desk|Your Memorandum of Incorporation is a binding legal document. Understand what it permits before signing
 
 ## Step 3: Register on the CIPC Portal
 
@@ -74,7 +74,7 @@ CIPC also requires annual returns, due within 30 business days of your company's
 
 **Missing CIPC annual returns:** Two consecutive years of non-compliance results in deregistration. Once deregistered, reinstating a company is expensive and time-consuming.
 
-If you're incorporating a company and want to get the compliance foundation right from day one, Sikatrix Business Accountants handles the full setup — including SARS registration, company secretarial obligations, and your first year of bookkeeping.
+If you're incorporating a company and want to get the compliance foundation right from day one, Sikatrix Business Accountants handles the full setup, including SARS registration, company secretarial obligations, and your first year of bookkeeping.
 
 ---
 
@@ -85,4 +85,4 @@ If you're incorporating a company and want to get the compliance foundation righ
 - [Companies Act 71 of 2008](https://www.gov.za/documents/companies-act-71-2008) — The primary legislation governing companies in South Africa
 - [SARS: Register as a Taxpayer](https://www.sars.gov.za/businesses-and-employers/starting-a-business/register-as-taxpayer/) — Tax registration for newly incorporated companies
 
-*This article is for general information only. Company registration requirements may change — consult a [company secretarial professional](/services/company-secretarial) for guidance.*
+*This article is for general information only. Company registration requirements may change. Consult a [company secretarial professional](/services/company-secretarial) for guidance.*

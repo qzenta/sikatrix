@@ -37,7 +37,7 @@ Provisional tax is one of the most misunderstood obligations for South African b
 
 You must register for provisional tax if you: (1) are a company or close corporation, (2) earn income from a business or profession, (3) receive rental income, investment income, or income from a trust, or (4) earn non-employment income exceeding R30,000 per year.
 
-Employed individuals who only earn a salary don't need to register — their employer deducts PAYE. But if you have a side business, rental property, or freelance income, provisional tax likely applies to you.
+Employed individuals who only earn a salary don't need to register, as their employer deducts PAYE. But if you have a side business, rental property, or freelance income, provisional tax likely applies to you.
 
 ## The Two Submission Deadlines
 
@@ -45,9 +45,9 @@ Employed individuals who only earn a salary don't need to register — their emp
 
 **Second period (February):** Your second IRP6 is due by 28 February. By this point, you have more information about your actual year's income, so your estimate should be more accurate.
 
-There's also an optional third period (September) that allows you to top up if you've underpaid — this can help avoid interest charges.
+There's also an optional third period (September) that allows you to top up if you've underpaid, which can help avoid interest charges.
 
-[img]https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=800&auto=format&fit=crop&q=60|A calendar open on a desk beside a laptop — marking SARS provisional tax deadlines|Mark 31 August and 28 February in your calendar every year — these are the two IRP6 deadlines that cannot move
+[img]https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=800&auto=format&fit=crop&q=60|A calendar open on a desk beside a laptop, marking SARS provisional tax deadlines|Mark 31 August and 28 February in your calendar every year. These are the two IRP6 deadlines that cannot move
 
 ## How to Calculate Your Provisional Tax Estimate
 
@@ -59,7 +59,7 @@ To avoid penalties: always estimate at least equal to your basic amount, and upd
 
 Late submission carries a flat penalty of 10% of the tax liability, plus interest at the prescribed rate. Underestimation by more than 10% of actual taxable income triggers an additional 20% penalty on the shortfall.
 
-The best defence is accurate record-keeping throughout the year — which is where cloud accounting pays dividends.
+The best defence is accurate record-keeping throughout the year, and this is where cloud accounting pays dividends.
 
 ## Working with a Tax Practitioner
 
@@ -75,4 +75,4 @@ If you're not sure whether you're correctly registered for provisional tax, or y
 - [SARS: Tax Rates for Individuals](https://www.sars.gov.za/tax-rates/income-tax/rates-of-tax-for-individuals/) — Current year income tax brackets, rebates, and thresholds
 - [SARS: eFiling Portal](https://www.sars.gov.za/efilehome/) — Submit provisional tax returns online via SARS eFiling
 
-*This article is for general information only and does not constitute tax advice. Tax legislation changes frequently — consult a [SARS-registered tax practitioner](/contact) before acting on any information.*
+*This article is for general information only and does not constitute tax advice. Tax legislation changes frequently. Consult a [SARS-registered tax practitioner](/contact) before acting on any information.*

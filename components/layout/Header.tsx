@@ -92,8 +92,6 @@ export default function Header() {
     if (closeTimer.current) clearTimeout(closeTimer.current);
   };
 
-  const activeItem = NAV_ITEMS.find((i) => i.label === activeDropdown);
-
   return (
     <>
       {/* Top bar */}
@@ -165,6 +163,7 @@ export default function Header() {
               item.children ? (
                 <div
                   key={item.label}
+                  className="relative"
                   onMouseEnter={() => openDropdown(item.label)}
                   onMouseLeave={closeDropdown}
                 >
@@ -174,6 +173,35 @@ export default function Header() {
                   >
                     {item.label}
                   </Link>
+                  {activeDropdown === item.label && (
+                    <div
+                      className="absolute top-full left-0 mt-1 min-w-[190px] bg-white rounded-xl shadow-lg border border-neutral-100 py-1.5 z-50"
+                      onMouseEnter={cancelClose}
+                      onMouseLeave={closeDropdown}
+                    >
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.href}
+                          href={child.href}
+                          onClick={() => setActiveDropdown(null)}
+                          className="block px-4 py-2 text-sm text-neutral-700 hover:text-brand hover:bg-neutral-50 transition-colors"
+                        >
+                          {child.label}
+                        </Link>
+                      ))}
+                      {item.footerLabel && (
+                        <div className="border-t border-neutral-100 mt-1 pt-1">
+                          <Link
+                            href={item.href}
+                            onClick={() => setActiveDropdown(null)}
+                            className="block px-4 py-2 text-xs font-semibold text-brand hover:bg-neutral-50 transition-colors"
+                          >
+                            {item.footerLabel}
+                          </Link>
+                        </div>
+                      )}
+                    </div>
+                  )}
                 </div>
               ) : (
                 <Link
@@ -201,59 +229,6 @@ export default function Header() {
             </button>
           </div>
         </div>
-
-        {/* Mega panel */}
-        {activeItem?.children && (
-          <div
-            className="absolute top-full left-0 right-0 bg-white border-t border-neutral-100 shadow-xl z-50"
-            onMouseEnter={cancelClose}
-            onMouseLeave={closeDropdown}
-          >
-            <div className="container-page py-8">
-              <div className="flex gap-14">
-                {/* Left: label + description + CTA */}
-                <div className="w-44 flex-shrink-0 border-r border-neutral-100 pr-10">
-                  <p className="text-2xs font-semibold uppercase tracking-widest text-accent mb-2">
-                    {activeItem.panelLabel}
-                  </p>
-                  <p className="text-xs text-neutral-400 leading-relaxed mb-5">
-                    {activeItem.panelDesc}
-                  </p>
-                  <Link
-                    href={activeItem.href}
-                    onClick={() => setActiveDropdown(null)}
-                    className="text-xs font-semibold text-brand hover:text-brand-dark transition-colors"
-                  >
-                    {activeItem.footerLabel}
-                  </Link>
-                </div>
-
-                {/* Right: item grid */}
-                <div
-                  className={`flex-1 grid gap-1 ${
-                    activeItem.label === "Services"
-                      ? "grid-cols-3"
-                      : "grid-cols-4"
-                  }`}
-                >
-                  {activeItem.children.map((child) => (
-                    <Link
-                      key={child.href}
-                      href={child.href}
-                      onClick={() => setActiveDropdown(null)}
-                      className="group flex items-center gap-2.5 px-4 py-3 rounded-lg hover:bg-neutral-50 transition-colors"
-                    >
-                      <span className="w-1 h-1 rounded-full bg-accent flex-shrink-0 opacity-50 group-hover:opacity-100 transition-opacity" />
-                      <span className="text-sm text-neutral-700 group-hover:text-brand font-medium transition-colors leading-snug">
-                        {child.label}
-                      </span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
 
         {/* Mobile menu */}
         {open && (
