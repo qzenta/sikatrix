@@ -65,8 +65,13 @@ export default function IndustriesPage() {
       />
 
       {/* Grid */}
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-16 md:py-20 bg-brand-dark">
         <div className="container-page">
+          <div className="text-center mb-12">
+            <span className="text-xs font-semibold uppercase tracking-widest text-accent-light block mb-2">Sectors We Serve</span>
+            <h2 className="text-2xl sm:text-3xl font-bold text-white leading-snug">Accounting built around your industry</h2>
+            <p className="text-sm text-brand-100 mt-3 max-w-xl mx-auto">Every sector has its own compliance landscape. We know yours.</p>
+          </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-6">
             {INDUSTRIES.map((industry) => {
               const Icon = ICON_MAP[industry.icon] ?? TrendingUp;
@@ -108,10 +113,10 @@ export default function IndustriesPage() {
       </section>
 
       {/* Not listed? */}
-      <section className="py-10 bg-neutral-50 border-y border-neutral-200">
+      <section className="py-10 bg-neutral-900">
         <div className="container-page text-center">
-          <h3 className="text-base font-semibold text-neutral-900 mb-2">Don't see your industry?</h3>
-          <p className="text-sm text-neutral-500 mb-4">
+          <h3 className="text-base font-semibold text-white mb-2">Don't see your industry?</h3>
+          <p className="text-sm text-white/60 mb-4">
             We work with businesses across many sectors. If you're not sure whether we're the right fit,
             ask us — the consultation is free.
           </p>
@@ -122,7 +127,7 @@ export default function IndustriesPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-16 bg-neutral-50">
         <div className="container-page">
           <CTABlock />
         </div>

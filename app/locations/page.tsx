@@ -24,8 +24,13 @@ export default function LocationsPage() {
       />
 
       {/* Locations grid */}
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-16 md:py-20 bg-brand-dark">
         <div className="container-page">
+          <div className="text-center mb-12">
+            <span className="text-xs font-semibold uppercase tracking-widest text-accent-light block mb-2">Service Areas</span>
+            <h2 className="text-2xl sm:text-3xl font-bold text-white leading-snug">Serving Gauteng — and beyond</h2>
+            <p className="text-sm text-brand-100 mt-3 max-w-xl mx-auto">Cloud-based delivery means distance is never a barrier. Select your area to see what we do there.</p>
+          </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {LOCATIONS.map((loc) => (
               <Link
@@ -66,41 +71,55 @@ export default function LocationsPage() {
       </section>
 
       {/* Office info */}
-      <section className="py-12 bg-neutral-50 border-y border-neutral-200">
+      <section className="py-12 bg-neutral-900">
         <div className="container-page">
-          <div className="max-w-xl">
-            <span className="section-label">Main Office</span>
-            <h2 className="section-title mt-2 mb-5">Visit us in Alberton</h2>
-            <div className="space-y-3 text-sm text-neutral-600">
-              <div className="flex gap-2.5">
-                <MapPin size={15} className="text-brand mt-0.5 flex-shrink-0" />
-                <span>{SITE.address.full}</span>
+          <div className="grid lg:grid-cols-2 gap-10 items-center max-w-4xl mx-auto">
+            <div>
+              <span className="text-xs font-semibold uppercase tracking-widest text-accent-light block mb-3">Main Office</span>
+              <h2 className="text-2xl font-bold text-white mb-5">Visit us in Alberton</h2>
+              <div className="space-y-4 text-sm text-white/70">
+                <div className="flex gap-2.5">
+                  <MapPin size={15} className="text-accent-light mt-0.5 flex-shrink-0" />
+                  <span>{SITE.address.full}</span>
+                </div>
+                <div className="flex gap-2.5">
+                  <Phone size={15} className="text-accent-light mt-0.5 flex-shrink-0" />
+                  <a href={`tel:${SITE.phoneRaw}`} className="hover:text-white transition-colors">
+                    {SITE.phone}
+                  </a>
+                </div>
+                <div className="flex gap-2.5">
+                  <Mail size={15} className="text-accent-light mt-0.5 flex-shrink-0" />
+                  <a href={`mailto:${SITE.email}`} className="hover:text-white transition-colors">
+                    {SITE.email}
+                  </a>
+                </div>
               </div>
-              <div className="flex gap-2.5">
-                <Phone size={15} className="text-brand mt-0.5 flex-shrink-0" />
-                <a href={`tel:${SITE.phoneRaw}`} className="hover:text-brand transition-colors">
-                  {SITE.phone}
-                </a>
-              </div>
-              <div className="flex gap-2.5">
-                <Mail size={15} className="text-brand mt-0.5 flex-shrink-0" />
-                <a href={`mailto:${SITE.email}`} className="hover:text-brand transition-colors">
-                  {SITE.email}
-                </a>
-              </div>
+              <a
+                href="https://maps.google.com/?q=42+Hennie+Alberts+Street+Brackenhurst+Alberton+1448"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 mt-6 px-5 py-2.5 rounded-lg bg-accent hover:bg-accent-light text-white text-sm font-semibold transition-colors"
+              >
+                <MapPin size={14} />
+                Get Directions on Google Maps
+              </a>
             </div>
-            {/* Map placeholder */}
-            <div className="mt-6 rounded-xl bg-neutral-200 h-48 flex items-center justify-center text-sm text-neutral-500">
-              <div className="text-center">
-                <MapPin size={24} className="mx-auto mb-2 text-neutral-400" />
-                <p>Map — 42 Hennie Alberts Street, Brackenhurst, Alberton</p>
+            <div className="rounded-2xl overflow-hidden ring-1 ring-white/10 h-56 bg-white/5 flex items-center justify-center">
+              <div className="text-center px-6">
+                <div className="w-14 h-14 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-3">
+                  <MapPin size={24} className="text-accent-light" />
+                </div>
+                <p className="text-sm font-semibold text-white mb-1">42 Hennie Alberts Street</p>
+                <p className="text-xs text-white/50">Brackenhurst, Alberton, 1448</p>
+                <p className="text-xs text-white/40 mt-1">Mon – Fri 08:00–17:00 · Sat 08:00–13:00</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-slate-50">
+      <section className="py-16 bg-neutral-50">
         <div className="container-page">
           <CTABlock />
         </div>

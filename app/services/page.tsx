@@ -32,8 +32,13 @@ export default function ServicesPage() {
       />
 
       {/* Services grid */}
-      <section className="py-16 md:py-20 bg-slate-50">
+      <section className="py-16 md:py-20 bg-brand-dark">
         <div className="container-page">
+          <div className="text-center mb-12">
+            <span className="text-xs font-semibold uppercase tracking-widest text-accent-light block mb-2">What We Offer</span>
+            <h2 className="text-2xl sm:text-3xl font-bold text-white leading-snug">Fixed-fee services, no surprises</h2>
+            <p className="text-sm text-brand-100 mt-3 max-w-xl mx-auto">Every engagement starts with a written quote. You know the cost before we touch a single transaction.</p>
+          </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {SERVICES.map((service) => {
               const Icon = ICON_MAP[service.icon] ?? FileText;
@@ -68,19 +73,19 @@ export default function ServicesPage() {
       </section>
 
       {/* Industries teaser */}
-      <section className="py-12 bg-neutral-50 border-y border-neutral-200">
+      <section className="py-12 bg-neutral-900">
         <div className="container-page text-center">
-          <p className="text-sm text-neutral-600 mb-3">
+          <p className="text-sm text-white/70 mb-3">
             We serve clients across multiple industries — from medical practices to property investors.
           </p>
-          <Link href="/industries" className="btn-outline text-sm">
+          <Link href="/industries" className="btn-outline text-sm border-white/30 text-white hover:bg-white/10">
             View industries we serve
           </Link>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-neutral-50">
         <div className="container-page">
           <CTABlock />
         </div>

@@ -2,9 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { MapPin, Phone, Mail, Clock, CheckCircle, Loader2, MessageSquare, AlertCircle } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, CheckCircle, Loader2, MessageSquare, AlertCircle, Navigation } from "lucide-react";
 import { sendGAEvent } from "@next/third-parties/google";
-import GoogleMap from "@/components/shared/GoogleMap";
 import { SITE } from "@/lib/site";
 
 const SERVICES_LIST = [
@@ -355,13 +354,23 @@ export default function ContactForm() {
               </div>
             </a>
 
-            {/* Map */}
-            <GoogleMap
-              query="42 Hennie Alberts Street, Brackenhurst, Alberton, 1448, South Africa"
-              zoom={16}
-              height="h-48"
-              title="Sikatrix Business Accountants — Alberton office"
-            />
+            {/* Directions card */}
+            <a
+              href="https://maps.google.com/?q=42+Hennie+Alberts+Street+Brackenhurst+Alberton+1448"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 p-5 rounded-xl bg-brand-dark hover:bg-brand transition-colors group"
+            >
+              <div className="w-11 h-11 rounded-lg bg-accent/20 flex items-center justify-center flex-shrink-0 group-hover:bg-accent/30 transition-colors">
+                <Navigation size={18} className="text-accent-light" />
+              </div>
+              <div>
+                <div className="text-sm font-semibold text-white">Get Directions</div>
+                <div className="text-xs text-white/60 leading-snug mt-0.5">
+                  42 Hennie Alberts St, Brackenhurst<br />Alberton, 1448
+                </div>
+              </div>
+            </a>
 
             {/* Key services quick links */}
             <div className="card p-5">
