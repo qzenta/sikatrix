@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: { absolute: "About Sikatrix Business Accountants | SAIPA-Registered, Alberton" },
   description:
     "Learn about Sikatrix Business Accountants — SAIPA-registered professionals with 10+ years serving SMEs, startups, and NGOs across Gauteng.",
-  alternates: { canonical: "https://sikatrix.com/about" },
+  alternates: { canonical: "https://www.sikatrix.com/about" },
 };
 
 const VALUES = [

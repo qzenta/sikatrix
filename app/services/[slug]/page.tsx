@@ -246,7 +246,7 @@ export async function generateMetadata({
   return {
     title: { absolute: `${service.title} | Sikatrix Business Accountants` },
     description: service.description,
-    alternates: { canonical: `https://sikatrix.com/services/${slug}` },
+    alternates: { canonical: `https://www.sikatrix.com/services/${slug}` },
   };
 }
 

@@ -4,7 +4,7 @@ export const SITE = {
   tagline: "Accounting That Works for Your World",
   description:
     "SAIPA-registered accountants and SARS Tax Practitioners serving SMEs, startups, and NGOs across South Africa. Cloud-based accounting, tax, payroll and compliance.",
-  url: "https://sikatrix.com",
+  url: "https://www.sikatrix.com",
   email: "info@sikatrix.com",
   phone: "(011) 867-2550",
   phoneRaw: "+27118672550",

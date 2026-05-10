@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: { absolute: "SARS Income Tax Calculator 2026/27 | Free Tool | Sikatrix" },
   description:
     "Free South African income tax calculator for the 2026/27 tax year. Instantly calculate your PAYE, effective tax rate, medical credits, and net take-home pay. Based on official SARS tax tables.",
-  alternates: { canonical: "https://sikatrix.com/tools/tax-calculator" },
+  alternates: { canonical: "https://www.sikatrix.com/tools/tax-calculator" },
   openGraph: {
     title: "SARS Income Tax Calculator 2026/27 | Sikatrix",
     description:

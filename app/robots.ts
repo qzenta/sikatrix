@@ -8,11 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: [
         "/api/",
-        "/privacy-policy",
-        "/terms",
-        "/cookie-policy",
-        "/popia",
-        // Legacy WordPress paths — should never be indexed
         "/wp-admin/",
         "/wp-content/",
         "/wp-includes/",

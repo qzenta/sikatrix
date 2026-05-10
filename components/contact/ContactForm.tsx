@@ -276,6 +276,27 @@ export default function ContactForm() {
 
           {/* Sidebar */}
           <div className="space-y-6">
+
+            {/* Calendly — book a call */}
+            <div className="rounded-xl bg-brand-dark p-6 text-white">
+              <div className="flex items-center gap-2 mb-1">
+                <span className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />
+                <span className="text-xs font-semibold uppercase tracking-wider text-accent">Book a Call</span>
+              </div>
+              <h3 className="text-base font-semibold mb-1">Free 15-Minute Discovery Call</h3>
+              <p className="text-sm text-white/70 mb-4">
+                Pick a time that suits you. No obligation — just a quick chat about your accounting needs.
+              </p>
+              <a
+                href="https://calendly.com/onukpa/15min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full text-center text-sm font-semibold px-4 py-2.5 rounded-lg bg-accent hover:bg-accent-light text-white transition-colors"
+              >
+                Choose a Time →
+              </a>
+            </div>
+
             {/* Contact details */}
             <div className="card p-6">
               <h3 className="text-sm font-semibold text-neutral-900 mb-4">Contact Details</h3>

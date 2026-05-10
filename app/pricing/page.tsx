@@ -6,10 +6,10 @@ import CTABlock from "@/components/shared/CTABlock";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: { absolute: "Accounting & Tax Fees | Transparent Pricing | Sikatrix Business Accountants" },
+  title: { absolute: "Transparent Accounting & Tax Pricing | Sikatrix Business Accountants" },
   description:
     "Simple, fixed-fee pricing for bookkeeping, payroll, annual financial statements, and tax services. No surprises — get a custom quote tailored to your business.",
-  alternates: { canonical: "https://sikatrix.com/pricing" },
+  alternates: { canonical: "https://www.sikatrix.com/pricing" },
 };
 
 const SERVICES = [

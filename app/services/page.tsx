@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: { absolute: "Accounting & Tax Services | Sikatrix Business Accountants" },
   description:
     "Full-spectrum accounting services: annual financial statements, tax returns, bookkeeping, payroll, cloud accounting, company secretarial, and business rescue.",
-  alternates: { canonical: "https://sikatrix.com/services" },
+  alternates: { canonical: "https://www.sikatrix.com/services" },
 };
 
 const ICON_MAP: Record<string, React.ElementType> = {

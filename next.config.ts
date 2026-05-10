@@ -7,15 +7,30 @@ const nextConfig: NextConfig = {
     ],
   },
   async headers() {
+    const csp = [
+      "default-src 'self'",
+      "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://*.google-analytics.com",
+      "style-src 'self' 'unsafe-inline'",
+      "img-src 'self' data: blob: https://images.unsplash.com https://*.google-analytics.com https://*.googletagmanager.com",
+      "font-src 'self'",
+      "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://region1.google-analytics.com https://hook.eu2.make.com",
+      "frame-src 'none'",
+      "object-src 'none'",
+      "base-uri 'self'",
+      "form-action 'self'",
+    ].join("; ");
+
     return [
       {
         source: "/(.*)",
         headers: [
-          { key: "X-Content-Type-Options",  value: "nosniff" },
-          { key: "X-Frame-Options",         value: "SAMEORIGIN" },
-          { key: "X-XSS-Protection",        value: "1; mode=block" },
-          { key: "Referrer-Policy",         value: "strict-origin-when-cross-origin" },
-          { key: "Permissions-Policy",      value: "camera=(), microphone=(), geolocation=(self), payment=()" },
+          { key: "X-Content-Type-Options",       value: "nosniff" },
+          { key: "X-Frame-Options",               value: "SAMEORIGIN" },
+          { key: "X-XSS-Protection",              value: "1; mode=block" },
+          { key: "Referrer-Policy",               value: "strict-origin-when-cross-origin" },
+          { key: "Permissions-Policy",            value: "camera=(), microphone=(), geolocation=(self), payment=()" },
+          { key: "Strict-Transport-Security",     value: "max-age=63072000; includeSubDomains; preload" },
+          { key: "Content-Security-Policy",       value: csp },
         ],
       },
     ];
@@ -42,16 +57,9 @@ const nextConfig: NextConfig = {
       { source: "/services.html", destination: "/services", permanent: true },
       { source: "/faq.html", destination: "/faq", permanent: true },
 
-      // ── WordPress admin / system paths (redirect to home, not 404) ────
-      { source: "/wp-admin", destination: "/", permanent: true },
-      { source: "/wp-admin/:path*", destination: "/", permanent: true },
-      { source: "/wp-login.php", destination: "/", permanent: true },
-      { source: "/wp-register.php", destination: "/", permanent: true },
-      { source: "/wp-content/:path*", destination: "/", permanent: true },
-      { source: "/wp-includes/:path*", destination: "/", permanent: true },
+      // /feed → resources (middleware handles wp-admin/login/xmlrpc/etc with 410)
       { source: "/feed", destination: "/resources", permanent: true },
       { source: "/feed/:path*", destination: "/resources", permanent: true },
-      { source: "/xmlrpc.php", destination: "/", permanent: true },
     ];
   },
 };

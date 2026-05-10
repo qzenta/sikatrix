@@ -3,10 +3,10 @@ import PageHero from "@/components/shared/PageHero";
 import ContactForm from "@/components/contact/ContactForm";
 
 export const metadata: Metadata = {
-  title: { absolute: "Contact Us | Book a Free Consultation | Sikatrix Business Accountants" },
+  title: { absolute: "Book a Free Consultation | Sikatrix Business Accountants" },
   description:
-    "Book a free 30-minute accounting consultation with Sikatrix. We serve businesses across Alberton, Johannesburg, and Gauteng. Respond within one business day.",
-  alternates: { canonical: "https://sikatrix.com/contact" },
+    "Book a free 30-minute consultation with Sikatrix. Serving businesses across Alberton, Johannesburg, and Gauteng. Response within one business day.",
+  alternates: { canonical: "https://www.sikatrix.com/contact" },
 };
 
 export default function ContactPage() {

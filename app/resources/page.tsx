@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: { absolute: "Tax & Accounting Resources | Sikatrix Business Accountants" },
   description:
     "Free guides, articles, and practical advice on SARS compliance, bookkeeping, tax, and business finance — written for South African business owners.",
-  alternates: { canonical: "https://sikatrix.com/resources" },
+  alternates: { canonical: "https://www.sikatrix.com/resources" },
   openGraph: {
     title: "Tax & Accounting Resources | Sikatrix Business Accountants",
     description:

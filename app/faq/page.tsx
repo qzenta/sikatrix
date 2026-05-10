@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: { absolute: "Frequently Asked Questions | Sikatrix Business Accountants" },
   description:
     "Answers to the most common questions about our accounting, tax, and bookkeeping services — pricing, process, cloud software, SARS compliance, and more.",
-  alternates: { canonical: "https://sikatrix.com/faq" },
+  alternates: { canonical: "https://www.sikatrix.com/faq" },
 };
 
 const FAQS = [
