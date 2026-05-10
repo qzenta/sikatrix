@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { Menu, X, Phone } from "lucide-react";
-import { SITE, SERVICES, LOCATIONS } from "@/lib/site";
+import { SITE, SERVICES, LOCATIONS, INDUSTRIES } from "@/lib/site";
 
 type NavChild = { label: string; href: string };
 type NavItem = {
@@ -29,7 +29,17 @@ const NAV_ITEMS: NavItem[] = [
       href: `/services/${s.slug}`,
     })),
   },
-  { label: "Industries", href: "/industries" },
+  {
+    label: "Industries",
+    href: "/industries",
+    panelLabel: "Industries",
+    panelDesc: "Sector-specific accounting and tax expertise for South African businesses.",
+    footerLabel: "View all industries →",
+    children: INDUSTRIES.map((i) => ({
+      label: i.shortTitle,
+      href: `/industries/${i.slug}`,
+    })),
+  },
   {
     label: "Locations",
     href: "/locations",

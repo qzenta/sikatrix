@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import { SITE, SERVICES, LOCATIONS } from "@/lib/site";
+import { SITE, SERVICES, LOCATIONS, INDUSTRIES } from "@/lib/site";
 import { getAllPosts, TOPIC_CLUSTERS } from "@/lib/blog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -70,6 +70,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  const industryPages: MetadataRoute.Sitemap = INDUSTRIES.map((i) => ({
+    url: `${base}/industries/${i.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
   const locationPages: MetadataRoute.Sitemap = LOCATIONS.map((l) => ({
     url: `${base}/locations/${l.slug}`,
     lastModified: now,
@@ -93,5 +100,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.4,
   }));
 
-  return [...staticPages, ...servicePages, ...locationPages, ...resourcePages, ...categoryPages];
+  return [...staticPages, ...servicePages, ...industryPages, ...locationPages, ...resourcePages, ...categoryPages];
 }

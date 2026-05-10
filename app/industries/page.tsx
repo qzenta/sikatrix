@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import {
-  TrendingUp, Rocket, Stethoscope, Scale, Home, Heart, GraduationCap, Compass
+  TrendingUp, Rocket, Stethoscope, Scale, Home, Heart, GraduationCap, Compass, ArrowRight
 } from "lucide-react";
 import PageHero from "@/components/shared/PageHero";
 import CTABlock from "@/components/shared/CTABlock";
@@ -72,20 +72,20 @@ export default function IndustriesPage() {
               const Icon = ICON_MAP[industry.icon] ?? TrendingUp;
               const detail = INDUSTRY_DETAIL[industry.name];
               return (
-                <div key={industry.name} className="card p-7">
+                <Link key={industry.slug} href={`/industries/${industry.slug}`} className="card p-7 group">
                   <div className="flex items-start gap-4 mb-4">
-                    <div className="w-11 h-11 rounded-lg bg-brand-50 flex items-center justify-center flex-shrink-0">
-                      <Icon size={19} className="text-brand" />
+                    <div className="w-11 h-11 rounded-lg bg-brand-50 flex items-center justify-center flex-shrink-0 group-hover:bg-brand transition-colors">
+                      <Icon size={19} className="text-brand group-hover:text-white transition-colors" />
                     </div>
                     <div>
-                      <h2 className="text-sm font-semibold text-neutral-900 mb-1">{industry.name}</h2>
+                      <h2 className="text-sm font-semibold text-neutral-900 mb-1 group-hover:text-brand transition-colors">{industry.name}</h2>
                       <p className="text-xs text-neutral-500">{industry.desc}</p>
                     </div>
                   </div>
                   {detail && (
                     <>
                       <p className="text-xs text-brand font-medium mb-3 italic">"{detail.highlight}"</p>
-                      <div className="flex flex-wrap gap-1.5">
+                      <div className="flex flex-wrap gap-1.5 mb-4">
                         {detail.services.map((s) => (
                           <span
                             key={s}
@@ -97,7 +97,10 @@ export default function IndustriesPage() {
                       </div>
                     </>
                   )}
-                </div>
+                  <span className="inline-flex items-center gap-1 text-xs font-medium text-brand opacity-0 group-hover:opacity-100 transition-opacity">
+                    View details <ArrowRight size={11} />
+                  </span>
+                </Link>
               );
             })}
           </div>

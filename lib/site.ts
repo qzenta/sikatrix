@@ -187,14 +187,14 @@ export const LOCATIONS = [
 ];
 
 export const INDUSTRIES = [
-  { name: "SMEs & Growing Businesses", icon: "TrendingUp", desc: "Scalable accounting as your business evolves." },
-  { name: "Startups & New Companies", icon: "Rocket", desc: "Company registration, cloud setup, and early-stage compliance." },
-  { name: "Medical & Healthcare", icon: "Stethoscope", desc: "Practice accounting, HPCSA compliance, and tax planning." },
-  { name: "Legal Professionals", icon: "Scale", desc: "Trust account reconciliations and attorney practice financials." },
-  { name: "Property Investors", icon: "Home", desc: "Rental income tax, provisional tax, and property entity structuring." },
-  { name: "NGOs & Nonprofits", icon: "Heart", desc: "SARS PBO applications, donor reporting, and AFS preparation." },
-  { name: "Private Schools", icon: "GraduationCap", desc: "Educational entity accounting, payroll, and compliance." },
-  { name: "Architecture & Engineering", icon: "Compass", desc: "Project-based bookkeeping and professional practice financials." },
+  { slug: "smes-growing-businesses",   shortTitle: "SMEs & Businesses",        name: "SMEs & Growing Businesses",    icon: "TrendingUp",    desc: "Scalable accounting as your business evolves." },
+  { slug: "startups-new-companies",    shortTitle: "Startups",                 name: "Startups & New Companies",     icon: "Rocket",        desc: "Company registration, cloud setup, and early-stage compliance." },
+  { slug: "medical-healthcare",        shortTitle: "Medical & Healthcare",     name: "Medical & Healthcare",         icon: "Stethoscope",   desc: "Practice accounting, HPCSA compliance, and tax planning." },
+  { slug: "legal-professionals",       shortTitle: "Legal Professionals",      name: "Legal Professionals",          icon: "Scale",         desc: "Trust account reconciliations and attorney practice financials." },
+  { slug: "property-investors",        shortTitle: "Property Investors",       name: "Property Investors",           icon: "Home",          desc: "Rental income tax, provisional tax, and property entity structuring." },
+  { slug: "ngos-nonprofits",           shortTitle: "NGOs & Nonprofits",        name: "NGOs & Nonprofits",            icon: "Heart",         desc: "SARS PBO applications, donor reporting, and AFS preparation." },
+  { slug: "private-schools",           shortTitle: "Private Schools",          name: "Private Schools",              icon: "GraduationCap", desc: "Educational entity accounting, payroll, and compliance." },
+  { slug: "architecture-engineering",  shortTitle: "Architecture & Engineering", name: "Architecture & Engineering", icon: "Compass",       desc: "Project-based bookkeeping and professional practice financials." },
 ];
 
 export const TESTIMONIALS = [
