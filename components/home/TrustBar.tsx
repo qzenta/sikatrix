@@ -12,7 +12,7 @@ const PARTNERS = [
 const ALL = PARTNERS;
 
 export default function TrustBar() {
-  const items = [...ALL, ...ALL, ...ALL]; // triple for seamless loop at any viewport width
+  const items = [...ALL, ...ALL]; // two copies — animation translates exactly -50% for seamless loop
 
   return (
     <section className="border-b border-neutral-100 bg-neutral-50 py-4 overflow-hidden">
@@ -29,14 +29,14 @@ export default function TrustBar() {
 
         <div
           className="flex items-center gap-12"
-          style={{ animation: "marquee-scroll 36s linear infinite", width: "max-content", willChange: "transform" }}
+          style={{ animation: "marquee-scroll 28s linear infinite", width: "max-content", willChange: "transform" }}
         >
           {items.map((item, i) => (
             <div key={i} className="flex-shrink-0 flex items-center gap-2">
               <img
                 src={item.logo}
                 alt={item.name}
-                style={{ height: "34px", width: "auto", maxWidth: "110px", objectFit: "contain" }}
+                style={{ height: "44px", width: "auto", maxWidth: "140px", objectFit: "contain" }}
                 onError={(e) => {
                   const img = e.currentTarget;
                   img.style.display = "none";

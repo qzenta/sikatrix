@@ -3,9 +3,17 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Calendar, Clock, ArrowRight, Tag } from "lucide-react";
+import { Calendar, Clock, ArrowRight, Tag, Sparkles } from "lucide-react";
 import type { PostMeta } from "@/lib/blog-config";
 import { BLOG_CATEGORIES } from "@/lib/blog-config";
+
+const NEW_THRESHOLD_DAYS = 60;
+
+function isNew(publishDate: string) {
+  const pub = new Date(publishDate).getTime();
+  const now = Date.now();
+  return (now - pub) / (1000 * 60 * 60 * 24) <= NEW_THRESHOLD_DAYS;
+}
 
 interface BlogListingProps {
   posts: PostMeta[];
@@ -20,7 +28,17 @@ export default function BlogListing({ posts }: BlogListingProps) {
       : posts.filter((p) => p.category === activeCategory);
 
   const featured = filtered.find((p) => p.featured);
-  const rest = filtered.filter((p) => !p.featured);
+
+  // Latest post: most recently published non-featured post across ALL posts (not filtered)
+  const allSortedByDate = [...posts]
+    .filter((p) => !p.featured)
+    .sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime());
+  const latestPost = activeCategory === "All" ? allSortedByDate[0] : null;
+
+  // Exclude the latest post from the grid when on "All" to avoid duplication
+  const rest = filtered.filter(
+    (p) => !p.featured && (!latestPost || activeCategory !== "All" || p.slug !== latestPost.slug)
+  );
 
   return (
     <div>
@@ -50,6 +68,66 @@ export default function BlogListing({ posts }: BlogListingProps) {
           </button>
         ))}
       </div>
+
+      {/* Latest post highlight */}
+      {latestPost && (
+        <div className="mb-8">
+          <div className="flex items-center gap-2 mb-3">
+            <Sparkles size={13} className="text-accent" />
+            <span className="text-xs font-bold uppercase tracking-widest text-accent">Latest</span>
+          </div>
+          <Link
+            href={`/resources/${latestPost.slug}`}
+            className="flex flex-col sm:flex-row gap-0 overflow-hidden rounded-2xl border border-neutral-200 shadow-sm hover:shadow-md transition-shadow group"
+          >
+            <div className="relative sm:w-64 h-44 sm:h-auto flex-shrink-0 bg-brand-50">
+              {latestPost.featuredImage ? (
+                <Image
+                  src={latestPost.featuredImage}
+                  alt={latestPost.featuredImageAlt || latestPost.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  sizes="(max-width: 640px) 100vw, 256px"
+                  priority
+                />
+              ) : (
+                <div className="w-full h-full bg-gradient-to-br from-brand to-brand/70" />
+              )}
+            </div>
+            <div className="flex-1 p-5 bg-white flex flex-col justify-center">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-widest text-white bg-accent px-2 py-0.5 rounded-full">
+                  New
+                </span>
+                <span className="text-2xs font-semibold uppercase tracking-widest text-accent">{latestPost.category}</span>
+                <span className="text-neutral-200">·</span>
+                <span className="text-2xs text-neutral-400 flex items-center gap-1">
+                  <Clock size={9} /> {latestPost.readTime}
+                </span>
+              </div>
+              <h2 className="text-base font-semibold text-neutral-900 leading-snug mb-2 group-hover:text-brand transition-colors">
+                {latestPost.title}
+              </h2>
+              <p className="text-sm text-neutral-500 leading-relaxed mb-3 line-clamp-2">
+                {latestPost.description}
+              </p>
+              <div className="flex items-center justify-between">
+                <span className="text-2xs text-neutral-400 flex items-center gap-1">
+                  <Calendar size={9} />
+                  {new Date(latestPost.publishDate).toLocaleDateString("en-ZA", {
+                    day: "numeric",
+                    month: "short",
+                    year: "numeric",
+                  })}
+                </span>
+                <span className="inline-flex items-center gap-1 text-sm font-medium text-brand">
+                  Read article <ArrowRight size={13} />
+                </span>
+              </div>
+            </div>
+          </Link>
+        </div>
+      )}
 
       {/* Featured article */}
       {featured && (
@@ -117,6 +195,11 @@ export default function BlogListing({ posts }: BlogListingProps) {
                   />
                 ) : (
                   <div className="w-full h-full bg-gradient-to-br from-brand to-brand/70" />
+                )}
+                {isNew(post.publishDate) && (
+                  <span className="absolute top-2 left-2 text-[9px] font-bold uppercase tracking-widest bg-accent text-white px-1.5 py-0.5 rounded-full">
+                    New
+                  </span>
                 )}
               </div>
               <div className="p-4">

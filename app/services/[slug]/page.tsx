@@ -300,82 +300,116 @@ export default async function ServicePage({
         bgImage="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1600&auto=format&fit=crop&q=60"
       />
 
-      {/* Benefits */}
-      {details.benefits.length > 0 && (
-        <section className="py-14 md:py-18 bg-white">
-          <div className="container-page">
-            <div className="grid lg:grid-cols-2 gap-12 items-start">
-              <div>
-                <span className="section-label">What's Included</span>
-                <h2 className="section-title mt-2 mb-4">
-                  What you get with our {service.shortTitle} service
-                </h2>
-                {details.outcome && (
-                  <p className="text-sm text-neutral-600 leading-relaxed mb-6 p-4 bg-brand-50 rounded-lg border-l-4 border-brand">
-                    {details.outcome}
-                  </p>
-                )}
-                <ul className="space-y-3">
-                  {details.benefits.map((b) => (
-                    <li key={b} className="flex gap-3 text-sm text-neutral-700">
-                      <CheckCircle size={16} className="text-brand flex-shrink-0 mt-0.5" />
-                      {b}
+      {/* Sidebar + Main content */}
+      <section className="py-14 bg-white">
+        <div className="container-page">
+          <div className="grid lg:grid-cols-[260px_1fr] gap-10 items-start">
+
+            {/* Left sidebar — all services nav */}
+            <aside className="hidden lg:block sticky top-24">
+              <div className="bg-brand-dark rounded-2xl overflow-hidden">
+                <div className="px-5 py-4 border-b border-white/10">
+                  <p className="text-2xs font-bold uppercase tracking-widest text-accent">Our Services</p>
+                </div>
+                <ul>
+                  {SERVICES.map((s) => (
+                    <li key={s.slug}>
+                      <Link
+                        href={`/services/${s.slug}`}
+                        className={`flex items-center justify-between px-5 py-3.5 text-sm border-b border-white/5 transition-colors ${
+                          s.slug === slug
+                            ? "text-accent font-semibold bg-white/5"
+                            : "text-white/80 hover:text-white hover:bg-white/5"
+                        }`}
+                      >
+                        {s.shortTitle}
+                        <ArrowRight size={13} className="flex-shrink-0 opacity-60" />
+                      </Link>
                     </li>
                   ))}
                 </ul>
-              </div>
-              <div className="card p-7 bg-brand-50 border-brand/20">
-                <div className="w-12 h-12 rounded-xl bg-brand flex items-center justify-center mb-4">
-                  <Icon size={22} className="text-white" />
-                </div>
-                <h3 className="text-base font-semibold text-neutral-900 mb-3">
-                  Get Started with {service.shortTitle}
-                </h3>
-                <p className="text-sm text-neutral-600 mb-5">
-                  Book a free 30-minute consultation and we'll explain exactly how this service
-                  applies to your business — with no obligation.
-                </p>
-                <Link href="/contact" className="btn-primary w-full justify-center text-sm">
-                  Book Free Consultation <ArrowRight size={14} />
-                </Link>
-                <div className="mt-4 pt-4 border-t border-brand/20 space-y-1">
-                  <p className="text-xs text-neutral-500">Or reach us directly:</p>
-                  <a
-                    href="tel:+27118672550"
-                    className="block text-sm font-medium text-brand hover:underline"
+                <div className="p-4">
+                  <Link
+                    href="/contact"
+                    className="block text-center text-xs font-semibold bg-accent hover:bg-accent-light text-white py-2.5 rounded-lg transition-colors"
                   >
-                    (011) 867-2550
-                  </a>
-                  <a
-                    href="mailto:info@sikatrix.com"
-                    className="block text-sm font-medium text-brand hover:underline"
-                  >
-                    info@sikatrix.com
-                  </a>
+                    Book Free Consultation
+                  </Link>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-      )}
+            </aside>
 
-      {/* FAQs */}
-      {details.faqs.length > 0 && (
-        <section className="py-14 bg-neutral-50 border-y border-neutral-200">
-          <div className="container-page max-w-3xl">
-            <span className="section-label">FAQs</span>
-            <h2 className="section-title mt-2 mb-8">Common questions about {service.shortTitle}</h2>
-            <div className="space-y-6">
-              {details.faqs.map(({ q, a }) => (
-                <div key={q} className="card p-6">
-                  <h3 className="text-sm font-semibold text-neutral-900 mb-2">{q}</h3>
-                  <p className="text-sm text-neutral-500 leading-relaxed">{a}</p>
+            {/* Right content */}
+            <div className="space-y-10">
+
+              {/* Benefits */}
+              {details.benefits.length > 0 && (
+                <div>
+                  <span className="section-label">What's Included</span>
+                  <h2 className="section-title mt-2 mb-4">
+                    What you get with our {service.shortTitle} service
+                  </h2>
+                  {details.outcome && (
+                    <p className="text-sm text-neutral-600 leading-relaxed mb-6 p-4 bg-brand-50 rounded-lg border-l-4 border-brand">
+                      {details.outcome}
+                    </p>
+                  )}
+                  <ul className="space-y-3 mb-8">
+                    {details.benefits.map((b) => (
+                      <li key={b} className="flex gap-3 text-sm text-neutral-700">
+                        <CheckCircle size={16} className="text-brand flex-shrink-0 mt-0.5" />
+                        {b}
+                      </li>
+                    ))}
+                  </ul>
+
+                  {/* CTA card */}
+                  <div className="card p-6 bg-brand-50 border-brand/20">
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 rounded-xl bg-brand flex items-center justify-center flex-shrink-0">
+                        <Icon size={18} className="text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-sm font-semibold text-neutral-900 mb-2">
+                          Get Started with {service.shortTitle}
+                        </h3>
+                        <p className="text-sm text-neutral-600 mb-4">
+                          Book a free 15-minute call and we'll explain exactly how this service applies to your business.
+                        </p>
+                        <div className="flex flex-wrap items-center gap-3">
+                          <Link href="/contact" className="btn-primary text-sm">
+                            Book Free Consultation <ArrowRight size={14} />
+                          </Link>
+                          <a href="tel:+27118672550" className="text-sm font-medium text-brand hover:underline">
+                            (011) 867-2550
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              ))}
+              )}
+
+              {/* FAQs */}
+              {details.faqs.length > 0 && (
+                <div className="pt-8 border-t border-neutral-200">
+                  <span className="section-label">FAQs</span>
+                  <h2 className="section-title mt-2 mb-6">Common questions about {service.shortTitle}</h2>
+                  <div className="space-y-4">
+                    {details.faqs.map(({ q, a }) => (
+                      <div key={q} className="card p-5">
+                        <h3 className="text-sm font-semibold text-neutral-900 mb-2">{q}</h3>
+                        <p className="text-sm text-neutral-500 leading-relaxed">{a}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
             </div>
           </div>
-        </section>
-      )}
+        </div>
+      </section>
 
       {/* Other services */}
       <section className="py-14 bg-white">
