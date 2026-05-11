@@ -1,3 +1,5 @@
+import { AnimateIn } from "@/components/ui/AnimateIn";
+
 const STEPS = [
   {
     number: "01",
@@ -25,29 +27,30 @@ export default function HowItWorks() {
   return (
     <section className="py-12 md:py-16 bg-neutral-50">
       <div className="container-page">
-        <div className="text-center mb-12">
+        <AnimateIn className="text-center mb-12">
           <span className="section-label">How It Works</span>
           <h2 className="section-title mt-2">Simple, structured, and transparent</h2>
           <p className="section-subtitle mt-3 mx-auto">
             From first contact to monthly management accounts. A clear process designed around your business.
           </p>
-        </div>
+        </AnimateIn>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {STEPS.map((step, i) => (
-            <div key={step.number} className="relative">
-              {/* Connector line */}
-              {i < STEPS.length - 1 && (
-                <div className="hidden lg:block absolute top-8 left-[calc(50%+2rem)] w-[calc(100%-2rem)] h-px bg-neutral-200" />
-              )}
-              <div className="relative z-10">
-                <div className="w-14 h-14 rounded-full bg-brand text-white flex items-center justify-center text-lg font-semibold mb-4 mx-auto lg:mx-0">
-                  {step.number}
+            <AnimateIn key={step.number} delay={i * 100}>
+              <div className="relative">
+                {i < STEPS.length - 1 && (
+                  <div className="hidden lg:block absolute top-8 left-[calc(50%+2rem)] w-[calc(100%-2rem)] h-px bg-neutral-200" />
+                )}
+                <div className="relative z-10">
+                  <div className="w-14 h-14 rounded-full bg-brand text-white flex items-center justify-center text-lg font-semibold mb-4 mx-auto lg:mx-0">
+                    {step.number}
+                  </div>
+                  <h3 className="text-base font-semibold text-neutral-900 mb-2">{step.title}</h3>
+                  <p className="text-sm text-neutral-500 leading-relaxed">{step.desc}</p>
                 </div>
-                <h3 className="text-sm font-semibold text-neutral-900 mb-2">{step.title}</h3>
-                <p className="text-xs text-neutral-500 leading-relaxed">{step.desc}</p>
               </div>
-            </div>
+            </AnimateIn>
           ))}
         </div>
       </div>
