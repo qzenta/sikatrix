@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 
 const AUTHORITY_LINKS = [
@@ -25,7 +24,7 @@ const AUTHORITY_LINKS = [
     ],
   },
   {
-    category: "Cloud Accounting Platforms",
+    category: "Cloud Accounting",
     links: [
       { label: "QuickBooks Online", href: "https://quickbooks.intuit.com/za/", desc: "Cloud accounting for South African SMEs." },
       { label: "Xero South Africa", href: "https://www.xero.com/za/", desc: "Online accounting software for small businesses." },
@@ -36,40 +35,45 @@ const AUTHORITY_LINKS = [
 
 export default function AuthorityLinks() {
   return (
-    <section className="py-14 bg-neutral-50 border-t border-neutral-100">
+    <section className="py-14 bg-brand border-t border-white/10">
       <div className="container-page">
         <div className="text-center mb-10">
-          <span className="section-label">Useful Resources</span>
-          <h2 className="section-title mt-2">Official government &amp; industry links</h2>
-          <p className="text-sm text-neutral-500 mt-3 max-w-xl mx-auto">
+          <span className="text-xs font-semibold uppercase tracking-widest text-accent-light block mb-2">
+            Useful Resources
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-semibold text-white leading-snug mt-2">
+            Official government &amp; industry links
+          </h2>
+          <p className="text-base text-white/60 mt-3 max-w-xl mx-auto leading-relaxed">
             Direct links to the official platforms and professional bodies that govern accounting,
             tax, and business compliance in South Africa.
           </p>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {AUTHORITY_LINKS.map((cat) => (
             <div key={cat.category}>
-              <h3 className="text-xs font-semibold uppercase tracking-widest text-neutral-400 mb-4">
+              <h3 className="text-xs font-semibold uppercase tracking-widest text-accent mb-4">
                 {cat.category}
               </h3>
-              <ul className="space-y-3">
+              <ul className="space-y-4">
                 {cat.links.map((link) => (
                   <li key={link.href}>
                     <a
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group flex items-start gap-2"
+                      className="group flex items-start gap-2.5"
                     >
                       <ExternalLink
                         size={13}
-                        className="text-brand mt-0.5 flex-shrink-0 group-hover:text-accent transition-colors"
+                        className="text-accent mt-0.5 flex-shrink-0 group-hover:text-accent-light transition-colors"
                       />
                       <span>
-                        <span className="block text-sm font-medium text-neutral-800 group-hover:text-brand transition-colors">
+                        <span className="block text-sm font-medium text-white group-hover:text-accent-light transition-colors">
                           {link.label}
                         </span>
-                        <span className="block text-xs text-neutral-400 leading-snug mt-0.5">
+                        <span className="block text-sm text-white/50 leading-snug mt-0.5">
                           {link.desc}
                         </span>
                       </span>
@@ -80,7 +84,6 @@ export default function AuthorityLinks() {
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );
