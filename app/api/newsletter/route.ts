@@ -266,6 +266,35 @@ function newsletterWelcomeHtml(name: string) {
 </html>`;
 }
 
+// ── MailerLite — adds subscriber to list for campaign sending ─────────────────
+
+async function addToMailerLite(email: string, name: string): Promise<void> {
+  const apiKey = process.env.MAILERLITE_API_KEY;
+  const groupId = process.env.MAILERLITE_GROUP_ID;
+  if (!apiKey || !groupId) return; // silently skip if not configured
+
+  const payload: Record<string, unknown> = {
+    email,
+    groups: [groupId],
+  };
+  if (name) payload.fields = { name };
+
+  const res = await fetch("https://connect.mailerlite.com/api/subscribers", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${apiKey}`,
+      Accept: "application/json",
+    },
+    body: JSON.stringify(payload),
+  });
+
+  if (!res.ok) {
+    const text = await res.text();
+    throw new Error(`MailerLite ${res.status}: ${text}`);
+  }
+}
+
 // ── Route handler ─────────────────────────────────────────────────────────────
 
 export async function POST(req: NextRequest) {
@@ -313,7 +342,7 @@ export async function POST(req: NextRequest) {
   const isChecklist = source === "lead-magnet";
 
   try {
-    await Promise.all([
+    const [notifyResult, welcomeResult, mailerliteResult] = await Promise.allSettled([
       resend.emails.send({
         from: FROM,
         to: NOTIFY_TO,
@@ -331,7 +360,17 @@ export async function POST(req: NextRequest) {
           : "You're subscribed — Sikatrix Monthly Tax Tips",
         html: isChecklist ? checklistHtml(nameClean) : newsletterWelcomeHtml(nameClean),
       }),
+      addToMailerLite(emailClean, nameClean),
     ]);
+
+    // MailerLite failure is non-fatal — log and continue
+    if (mailerliteResult.status === "rejected") {
+      console.error("[newsletter/route] MailerLite:", mailerliteResult.reason);
+    }
+
+    // Resend failures are fatal — the user needs their welcome email
+    if (notifyResult.status === "rejected") throw notifyResult.reason;
+    if (welcomeResult.status === "rejected") throw welcomeResult.reason;
 
     return NextResponse.json({ ok: true });
   } catch (err) {
