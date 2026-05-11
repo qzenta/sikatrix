@@ -17,6 +17,7 @@ export interface LocationDetail {
   };
   nearbyLocations: string[];
   schemaCity: string;
+  faqs?: { q: string; a: string }[];
 }
 
 export const LOCATION_DETAILS: LocationDetail[] = [
@@ -56,6 +57,20 @@ export const LOCATION_DETAILS: LocationDetail[] = [
     },
     nearbyLocations: ["johannesburg", "vereeniging", "germiston"],
     schemaCity: "Alberton",
+    faqs: [
+      {
+        q: "Are you physically based in Alberton?",
+        a: "Yes — Sikatrix Business Accountants is headquartered at 42 Hennie Alberts Street, Brackenhurst, Alberton 1448. We're not a remote-only firm; we're genuinely local to Alberton and have served businesses in this community for over ten years.",
+      },
+      {
+        q: "Do you help Alberton businesses with SARS tax returns and compliance?",
+        a: "Absolutely. As SARS-registered Tax Practitioners, we prepare and submit all tax returns — ITR12 (individuals), ITR14 (companies), IRP6 (provisional tax), and VAT201 returns. We also represent Alberton clients in SARS disputes, audits, and verification reviews.",
+      },
+      {
+        q: "Which industries in Alberton do you serve?",
+        a: "We serve a wide range of Alberton businesses — construction companies and manufacturers in Alrode and New Redruth, professional practices and retailers in Eden Glen and Brackendowns, and nonprofits across the area. If your business operates in Alberton, we have relevant experience.",
+      },
+    ],
   },
   {
     slug: "johannesburg",
@@ -93,6 +108,20 @@ export const LOCATION_DETAILS: LocationDetail[] = [
     },
     nearbyLocations: ["alberton", "sandton", "randburg"],
     schemaCity: "Johannesburg",
+    faqs: [
+      {
+        q: "Do you serve Johannesburg businesses without requiring in-person visits?",
+        a: "Yes. Sikatrix operates a cloud-first model using QuickBooks Online, Xero, and Sage — so your books are managed remotely, management accounts are delivered digitally, and all SARS submissions are handled without you needing to visit our Alberton office.",
+      },
+      {
+        q: "Can Sikatrix handle corporate tax returns for Johannesburg companies?",
+        a: "Yes. We prepare and submit company tax returns (ITR14), provisional tax returns (IRP6), and VAT201 returns for Johannesburg businesses of all sizes. We also provide tax planning advice to ensure your liability is minimised within what SARS permits.",
+      },
+      {
+        q: "Do you assist with SARS disputes and audits for Johannesburg businesses?",
+        a: "Yes. Our SARS audit representation service is in strong demand among Johannesburg clients, where SARS verification and audit activity can be significant. We represent you professionally, compile all required documentation, and engage with SARS on your behalf.",
+      },
+    ],
   },
   {
     slug: "sandton",
@@ -130,6 +159,20 @@ export const LOCATION_DETAILS: LocationDetail[] = [
     },
     nearbyLocations: ["johannesburg", "randburg"],
     schemaCity: "Sandton",
+    faqs: [
+      {
+        q: "Do you work with professional services firms and SMEs in Sandton?",
+        a: "Yes. Sikatrix serves Sandton-based professional services firms, financial consultancies, boutique agencies, and SMEs across Morningside, Bryanston, and the Sandton CBD. Our cloud-based model delivers big-firm quality at an accessible price point.",
+      },
+      {
+        q: "Can you handle accounting for businesses with complex structures — such as multi-entity or multi-currency?",
+        a: "Yes. We regularly work with Sandton businesses that have more complex financial arrangements, including shareholder loan accounts, holding structures, cross-border supplier invoices, and foreign currency transactions. We bring the technical depth these situations require.",
+      },
+      {
+        q: "How does Sikatrix deliver its services to Sandton clients?",
+        a: "Entirely via secure cloud platforms. We set up your business on QuickBooks Online or Xero, manage the books remotely, and deliver monthly management accounts and compliance reports digitally. You get real-time financial visibility without scheduling office visits.",
+      },
+    ],
   },
   {
     slug: "randburg",
@@ -167,6 +210,20 @@ export const LOCATION_DETAILS: LocationDetail[] = [
     },
     nearbyLocations: ["johannesburg", "sandton"],
     schemaCity: "Randburg",
+    faqs: [
+      {
+        q: "Do you serve businesses across Randburg, Ferndale, and surrounding suburbs?",
+        a: "Yes. We serve business owners throughout Randburg, Ferndale, Bloubosrand, Northgate, Randpark Ridge, and surrounding areas. Our cloud-based delivery model means geography within Gauteng is no barrier.",
+      },
+      {
+        q: "Can you manage payroll for my Randburg business?",
+        a: "Yes. We manage the complete payroll cycle for Randburg SMEs — calculating PAYE, SDL, and UIF, issuing payslips, and submitting EMP201 returns to SARS monthly. You provide the hours and leave data; we handle everything else.",
+      },
+      {
+        q: "What accounting software do you use for Randburg clients?",
+        a: "We work primarily with QuickBooks Online, Xero, and Sage One — all cloud-based platforms that give you real-time access to your financials from any device. We handle the setup, training, and ongoing management so you don't need to be a software expert.",
+      },
+    ],
   },
   {
     slug: "vereeniging",
@@ -204,6 +261,20 @@ export const LOCATION_DETAILS: LocationDetail[] = [
     },
     nearbyLocations: ["alberton", "johannesburg", "germiston"],
     schemaCity: "Vereeniging",
+    faqs: [
+      {
+        q: "Do you serve businesses in Vanderbijlpark, Meyerton, and the broader Vaal Triangle?",
+        a: "Yes. Sikatrix serves the full Vaal Triangle region — Vereeniging, Vanderbijlpark, Meyerton, and surrounding industrial and commercial areas. Our cloud-based model means we work with Vaal Triangle businesses efficiently from our Alberton base.",
+      },
+      {
+        q: "Can you handle payroll for manufacturing businesses with large workforces in Vereeniging?",
+        a: "Yes. We regularly manage payroll for industrial and manufacturing businesses with multi-employee workforces — calculating PAYE, UIF, and SDL accurately, processing payslips, and submitting EMP201 returns to SARS on time every month.",
+      },
+      {
+        q: "Do you assist Vereeniging businesses with provisional tax planning?",
+        a: "Yes. Provisional tax is an area where many Vereeniging business owners either overpay unnecessarily or underpay and face penalties. We prepare accurate IRP6 estimates based on your actual income trajectory, minimising exposure while keeping you fully compliant.",
+      },
+    ],
   },
   {
     slug: "germiston",
@@ -241,6 +312,20 @@ export const LOCATION_DETAILS: LocationDetail[] = [
     },
     nearbyLocations: ["alberton", "johannesburg", "vereeniging"],
     schemaCity: "Germiston",
+    faqs: [
+      {
+        q: "How far is Sikatrix from Germiston — is a local accountant available?",
+        a: "Our office is in Alberton's Brackenhurst suburb, just minutes from Germiston across the Ekurhuleni boundary. We're one of the closest SAIPA-registered accounting firms to Germiston, and our cloud-based systems mean most services are delivered remotely — quickly and efficiently.",
+      },
+      {
+        q: "Can you help a Germiston business that has fallen behind on SARS submissions?",
+        a: "Yes, and this is something we see regularly. We start by reconciling your books, identifying outstanding returns, and developing a catch-up submission plan. We then engage with SARS where needed and get your account into good standing — often faster than business owners expect.",
+      },
+      {
+        q: "Do you offer cloud accounting setup for Germiston businesses?",
+        a: "Yes. We implement QuickBooks Online, Xero, or Sage for Germiston clients — migrating historical data, configuring the chart of accounts for your industry, and providing hands-on training. Ongoing bookkeeping and management accounts are then handled by our team each month.",
+      },
+    ],
   },
   {
     slug: "boksburg",
@@ -278,6 +363,20 @@ export const LOCATION_DETAILS: LocationDetail[] = [
     },
     nearbyLocations: ["germiston", "alberton", "johannesburg"],
     schemaCity: "Boksburg",
+    faqs: [
+      {
+        q: "Do you help Boksburg businesses with import/export license applications?",
+        a: "Yes. Given Boksburg's proximity to OR Tambo International Airport and its active logistics corridor, import/export licensing is one of the most requested services from our Boksburg clients. We prepare and submit applications to the Department of Trade, Industry and Competition (dtic) on your behalf.",
+      },
+      {
+        q: "Can you handle bookkeeping and tax for retail or automotive businesses in Boksburg?",
+        a: "Absolutely. Retail and automotive trade are two of Boksburg's dominant commercial sectors. We're experienced in managing VAT-intensive environments, large transaction volumes, and the inventory accounting that comes with dealerships and retail operations.",
+      },
+      {
+        q: "Do I need to visit an office to use Sikatrix's services in Boksburg?",
+        a: "No. All our services are delivered via cloud platforms — QuickBooks Online, Xero, and Sage. We manage your books remotely, submit returns electronically, and deliver management accounts digitally. For new client onboardings, we can arrange a video call or visit your Boksburg premises if preferred.",
+      },
+    ],
   },
   {
     slug: "midrand",
@@ -315,5 +414,19 @@ export const LOCATION_DETAILS: LocationDetail[] = [
     },
     nearbyLocations: ["johannesburg", "sandton", "randburg"],
     schemaCity: "Midrand",
+    faqs: [
+      {
+        q: "Do you specialise in accounting for manufacturing businesses in Midrand?",
+        a: "Yes. We have specific experience in plastics, packaging, food processing, and light engineering — the sectors that dominate Midrand's manufacturing corridor. We understand inventory valuation, cost-of-goods accounting, input VAT claims, and the payroll complexity that comes with shift-based workforces.",
+      },
+      {
+        q: "Can you handle payroll for a Midrand business with a large or shift-based workforce?",
+        a: "Yes. Shift-based payroll with overtime, leave pay, and multi-rate structures is a core competency. We manage the full payroll cycle — PAYE, UIF, SDL, EMP501 reconciliations, and EMP201 monthly submissions — with the accuracy your workforce and SARS expect.",
+      },
+      {
+        q: "How does Sikatrix deliver accounting services to Midrand businesses?",
+        a: "Via cloud accounting platforms — primarily QuickBooks Online, Xero, and Sage. We set up your system, migrate historical data, and then manage your books, payroll, and tax compliance on an ongoing monthly basis. You get real-time financial dashboards and monthly management accounts, without needing to travel to our Alberton office.",
+      },
+    ],
   },
 ];

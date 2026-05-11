@@ -53,12 +53,30 @@ export default async function LocationPage({
   const schema = buildLocalBusinessSchema(loc.name);
   const latestArticles = getLatestPosts(3);
 
+  const faqSchema = loc.faqs?.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: loc.faqs.map(({ q, a }) => ({
+          "@type": "Question",
+          name: q,
+          acceptedAnswer: { "@type": "Answer", text: a },
+        })),
+      }
+    : null;
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
 
       <PageHero
         label={`${loc.name}, ${loc.province}`}
@@ -136,6 +154,24 @@ export default async function LocationPage({
                   <div className="text-xs text-neutral-400">{loc.testimonial.role}</div>
                 </div>
               </div>
+
+              {/* FAQs */}
+              {loc.faqs?.length && (
+                <div className="pt-8 border-t border-neutral-200">
+                  <span className="section-label">FAQs</span>
+                  <h2 className="section-title mt-2 mb-6">
+                    Common questions about accounting in {loc.name}
+                  </h2>
+                  <div className="space-y-4">
+                    {loc.faqs.map(({ q, a }) => (
+                      <div key={q} className="card p-5">
+                        <h3 className="text-base font-semibold text-neutral-900 mb-2">{q}</h3>
+                        <p className="text-sm text-neutral-500 leading-relaxed">{a}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               {/* Map */}
               <div>
