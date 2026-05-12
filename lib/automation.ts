@@ -54,25 +54,40 @@ export async function subscribeToNewsletter(
 // Call this after publishing a new article to trigger a Zapier/Make workflow
 // that schedules social posts for LinkedIn, X, and Facebook.
 
+export interface SocialPostPayload {
+  slug: string;
+  url: string;
+  title: string;
+  description: string;
+  category: string;
+  topicCluster: string;
+  platforms: ("linkedin" | "x" | "facebook")[];
+  linkedinSnippet?: string;
+  xSnippet?: string;
+  facebookSnippet?: string;
+}
+
 export async function notifySocialPublishing(
-  postSlug: string,
-  postUrl: string,
-  platforms: ("linkedin" | "x" | "facebook")[],
+  payload: SocialPostPayload,
   webhookUrl?: string
 ): Promise<void> {
-  if (!webhookUrl) {
-    console.log("[automation] Social publish notification (no webhook):", postSlug);
+  const url = webhookUrl ?? process.env.MAKE_WEBHOOK_URL;
+  if (!url) {
+    console.log("[automation] MAKE_WEBHOOK_URL not set — skipping social notify");
     return;
   }
 
-  // TODO: POST to webhookUrl with post data for Zapier/Make automation:
-  //   await fetch(webhookUrl, {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/json" },
-  //     body: JSON.stringify({ slug: postSlug, url: postUrl, platforms }),
-  //   });
+  const res = await fetch(url, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
 
-  console.log("[automation] Social publish notification:", { postSlug, postUrl, platforms });
+  if (!res.ok) {
+    console.error("[automation] Make webhook call failed:", res.status, await res.text());
+  } else {
+    console.log("[automation] Make webhook called successfully for:", payload.slug);
+  }
 }
 
 // ─── ConvertKit segment tags ──────────────────────────────────────────────────

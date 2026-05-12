@@ -45,12 +45,14 @@ if (!CLIENT_ID || !CLIENT_SECRET) {
 }
 
 // ── Build the authorization URL ───────────────────────────────────────────────
+// Scopes: add w_member_social+w_organization_social+r_organization_social
+// once LinkedIn approves the "Share on LinkedIn" product for this app.
 const authUrl =
   `https://www.linkedin.com/oauth/v2/authorization` +
   `?response_type=code` +
   `&client_id=${CLIENT_ID}` +
   `&redirect_uri=${encodeURIComponent(REDIRECT_URI)}` +
-  `&scope=openid%20profile%20w_member_social%20w_organization_social%20r_organization_social`;
+  `&scope=openid%20profile%20email`;
 
 console.log("\n── LinkedIn OAuth Setup ─────────────────────────────────────────────────────");
 console.log("Step 1: Open this URL in your browser and authorize the app:\n");

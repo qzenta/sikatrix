@@ -81,12 +81,26 @@ function parseFrontmatter(src) {
   const match = src.match(/^---\n([\s\S]*?)\n---/);
   if (!match) return {};
   const fm = {};
+  let lastKey = null;
+
   for (const line of match[1].split("\n")) {
+    // YAML list item (e.g. "  - provisional-tax") — append to the preceding key
+    if (/^  - /.test(line) && lastKey) {
+      const item = line.slice(4).trim();
+      fm[lastKey] = fm[lastKey] ? `${fm[lastKey]},${item}` : item;
+      continue;
+    }
+    // Skip all other indented lines (nested objects like author.title)
+    if (/^[ \t]/.test(line)) continue;
+
     const idx = line.indexOf(":");
     if (idx === -1) continue;
     const key = line.slice(0, idx).trim();
     const val = line.slice(idx + 1).trim().replace(/^["']|["']$/g, "");
-    if (key) fm[key] = val;
+    if (key) {
+      fm[key] = val;
+      lastKey = val === "" ? key : null; // empty value = YAML list may follow
+    }
   }
   return fm;
 }
@@ -165,7 +179,7 @@ function buildOAuthHeader(method, url, bodyParams = {}) {
 }
 
 // ── Post tweet ───────────────────────────────────────────────────────────────
-const TWEET_URL = "https://api.twitter.com/2/tweets";
+const TWEET_URL = "https://api.x.com/2/tweets";
 
 async function postTweet(text) {
   const body = JSON.stringify({ text });
