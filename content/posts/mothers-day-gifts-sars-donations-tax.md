@@ -61,7 +61,7 @@ This applies to workplace gifts only. What you choose to spend your own after-ta
 
 ## Practical Guidance for Larger Transfers
 
-Most Mother's Day gifts require no documentation, no reporting, and no concern. If you are doing something more substantial, such as paying off a parent's vehicle, contributing toward a property purchase, or making a significant lump-sum transfer, it is worth keeping a short paper trail. A clear transfer description, a message confirming the purpose, or a brief personal note is usually enough to explain it if questions ever arise.
+Most Mother's Day gifts require no documentation, no reporting, and no concern. If you are doing something more substantial, such as paying off a parent's vehicle, contributing toward a property purchase, or making a significant lump-sum transfer, keep a short paper trail. A clear transfer description, a message confirming the purpose, or a brief personal note is enough if questions ever arise.
 
 For amounts approaching or exceeding the R100,000 annual exemption, speak to a tax practitioner before the transfer rather than after. Donations above the exemption must be declared on a IT144 form and donations tax paid within three months of the donation.
 

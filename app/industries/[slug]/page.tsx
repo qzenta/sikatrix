@@ -76,7 +76,7 @@ const INDUSTRY_DATA: Record<string, IndustryDetail> = {
     metaDesc: "Company registration, SARS eFiling setup, cloud accounting, and first-year compliance for South African startups. Get your books right from day one.",
     heroTitle: "Start Right. Stay Compliant from Day One.",
     heroSubtitle: "We handle the admin so you can focus on building your business. Company registration, SARS setup, and clean books from the moment you open.",
-    bgImage: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1600&auto=format&fit=crop&q=60",
+    bgImage: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1600&auto=format&fit=crop&q=60",
     contentImage: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=900&auto=format&fit=crop&q=60",
     contentImageAlt: "Young Black South African entrepreneur working on his laptop to launch his new business",
     outcome: "By the end of your first month with us, your company is registered, SARS profiles are active, your cloud accounting is set up, and you have a compliance calendar so you never miss a deadline.",
@@ -145,12 +145,12 @@ const INDUSTRY_DATA: Record<string, IndustryDetail> = {
     metaTitle: "Accounting for Attorneys & Legal Professionals | Sikatrix Business Accountants",
     metaDesc: "Trust account reconciliations, LSSA compliance support, practice bookkeeping, and tax returns for South African attorneys and law firms.",
     heroTitle: "Accounting Precision for Legal Practices",
-    heroSubtitle: "Trust account accuracy and LSSA compliance are non-negotiable. We handle them both so your practice remains in good standing.",
+    heroSubtitle: "Trust accounts and LSSA compliance records have to be right. We handle both so your practice stays in good standing.",
     bgImage: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1600&auto=format&fit=crop&q=60",
     contentImage: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=900&auto=format&fit=crop&q=60",
     contentImageAlt: "Black South African attorney reviewing legal documents and compliance records at her desk",
     outcome: "Your trust account reconciles to the cent every month. LSSA compliance records are in order. And your personal and practice tax returns are filed on time, every time.",
-    highlight: "Trust account accuracy is non-negotiable. We handle it with precision.",
+    highlight: "Trust account compliance is your professional reputation. We reconcile it exactly.",
     services: [
       "Monthly trust account reconciliations",
       "LSSA audit-readiness record keeping",
@@ -180,12 +180,12 @@ const INDUSTRY_DATA: Record<string, IndustryDetail> = {
     metaTitle: "Accounting for Property Investors & Landlords | Sikatrix Business Accountants",
     metaDesc: "Rental income tax, provisional tax, Capital Gains Tax, and property entity structuring for South African property investors and landlords.",
     heroTitle: "Maximise Your Property Returns. Minimise Your Tax.",
-    heroSubtitle: "Property tax in South Africa is layered. We make sure you claim every deduction you're entitled to and structure your portfolio for maximum efficiency.",
+    heroSubtitle: "Property tax in South Africa has real complexity. We find every deduction you qualify for and structure your portfolio properly.",
     bgImage: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600&auto=format&fit=crop&q=60",
     contentImage: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=900&auto=format&fit=crop&q=60",
     contentImageAlt: "Black South African property investor consulting with an accountant about rental income and tax planning",
     outcome: "After working with us, your rental income is correctly declared, every allowable deduction is claimed, and your provisional tax instalments are based on accurate projections. No overpayments, no penalties.",
-    highlight: "Property tax is complex. We ensure you claim every deduction you're entitled to.",
+    highlight: "Property tax has real complexity. We find every deduction you qualify for and file it properly.",
     services: [
       "Rental income tax declarations (ITR12 and ITR14)",
       "Provisional tax calculations (IRP6)",
@@ -220,7 +220,7 @@ const INDUSTRY_DATA: Record<string, IndustryDetail> = {
     contentImage: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=900&auto=format&fit=crop&q=60",
     contentImageAlt: "Diverse South African NGO team and community volunteers working together on a project",
     outcome: "With PBO status in place and annual accounts prepared to donor standards, your organisation is positioned to attract and retain funding. We ensure the financials never stand in the way of your mission.",
-    highlight: "We've secured PBO status for multiple NPOs, unlocking tax exemptions and donor confidence.",
+    highlight: "We've registered multiple NPOs for SARS PBO tax exemption status. We know the process.",
     services: [
       "SARS Section 18A PBO application",
       "CIPC NPC and NPO registration",
@@ -250,12 +250,12 @@ const INDUSTRY_DATA: Record<string, IndustryDetail> = {
     metaTitle: "Accounting for Private Schools & Educational Institutions | Sikatrix Business Accountants",
     metaDesc: "School fee income accounting, teaching staff payroll, SARS compliance, and annual financial statements for South African independent schools and educational institutions.",
     heroTitle: "Financial Management for Private Educational Institutions",
-    heroSubtitle: "Private schools have unique accounting needs: fee income recognition, bursaries, tuck shop operations, and complex payroll. We handle all of it.",
+    heroSubtitle: "Private schools have specific accounting requirements: fee income cycles, bursaries, tuck shop operations, and layered payroll. We handle all of it.",
     bgImage: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1600&auto=format&fit=crop&q=60",
     contentImage: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=900&auto=format&fit=crop&q=60",
     contentImageAlt: "Diverse South African private school students learning in a well-equipped classroom",
     outcome: "Your school fee income is correctly accounted for, staff payroll is accurate and SARS-compliant, and your AFS meets the standards required by your governing body and the Department of Education.",
-    highlight: "Education entities have unique accounting needs. We understand the sector.",
+    highlight: "School fee cycles, term payroll, and SARS compliance — we handle the full picture.",
     services: [
       "School fee income accounting and recognition",
       "Bursary and scholarship expense recording",
@@ -384,7 +384,7 @@ export default async function IndustryPage({
       />
 
       {/* Sidebar + main content */}
-      <section className="py-14 bg-neutral-50 border-t-[3px] border-accent">
+      <section className="py-14 bg-neutral-50 border-t-[3px] border-neutral-200">
         <div className="container-page">
           <div className="grid lg:grid-cols-[260px_1fr] gap-10 items-start">
 

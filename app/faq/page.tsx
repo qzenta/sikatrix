@@ -143,7 +143,7 @@ export default function FAQPage() {
         bgImage="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1600&auto=format&fit=crop&q=60"
       />
 
-      <section className="py-14 bg-neutral-50 border-t-[3px] border-accent">
+      <section className="py-14 bg-neutral-50 border-t-[3px] border-white/40">
         <div className="container-page max-w-3xl">
           <div className="space-y-12">
             {FAQS.map((section) => (

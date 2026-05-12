@@ -15,6 +15,7 @@ interface PageHeroProps {
   cta?: { label: string; href: string };
   size?: "sm" | "md" | "lg";
   bgImage?: string;
+  goldLabel?: boolean;
 }
 
 export default function PageHero({
@@ -25,6 +26,7 @@ export default function PageHero({
   cta,
   size = "md",
   bgImage,
+  goldLabel = false,
 }: PageHeroProps) {
   const padding =
     size === "sm" ? "py-10 md:py-14" : size === "lg" ? "py-20 md:py-28" : "py-14 md:py-20";
@@ -95,7 +97,7 @@ export default function PageHero({
 
         <div className="max-w-2xl">
           {label && (
-            <span className="inline-block text-accent-light text-xs font-semibold uppercase tracking-widest mb-3">
+            <span className={`inline-block text-xs font-semibold uppercase tracking-widest mb-3 ${goldLabel ? "text-accent-light" : "text-white/80"}`}>
               {label}
             </span>
           )}

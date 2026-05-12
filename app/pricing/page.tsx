@@ -158,7 +158,7 @@ export default function PricingPage() {
       />
 
       {/* Intro note */}
-      <section className="py-10 bg-neutral-50 border-t-[3px] border-accent border-b border-neutral-200">
+      <section className="py-10 bg-neutral-50 border-t-[3px] border-neutral-200 border-b border-neutral-200">
         <div className="container-page max-w-2xl text-center">
           <p className="text-sm text-neutral-600 leading-relaxed">
             The prices below are <strong className="text-neutral-800">starting-from guides</strong> — your actual fee depends on

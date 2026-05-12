@@ -36,7 +36,7 @@ export default function ResourcesPage() {
       />
 
       {/* Tools pinned section */}
-      <section className="py-8 bg-neutral-50 border-t-[3px] border-accent border-b border-neutral-200">
+      <section className="py-8 bg-neutral-50 border-t-[3px] border-neutral-200 border-b border-neutral-200">
         <div className="container-page">
           <div className="rounded-2xl bg-gradient-to-r from-brand-dark via-brand to-brand-dark p-px">
             <div className="rounded-2xl bg-gradient-to-r from-[#0a1e3d] to-[#0f2347] px-7 py-6">

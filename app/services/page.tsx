@@ -26,13 +26,13 @@ export default function ServicesPage() {
         label="Our Services"
         title="Everything Your Business Needs — Under One Roof"
         subtitle="From annual financial statements to monthly payroll, we handle every financial obligation so you can focus on running your business."
-        bgImage="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1600&auto=format&fit=crop&q=60"
+        bgImage="https://images.pexels.com/photos/7876449/pexels-photo-7876449.jpeg?auto=compress&cs=tinysrgb&w=1600&fit=crop"
         crumbs={[{ label: "Services" }]}
         cta={{ label: "Book Free Consultation", href: "/contact" }}
       />
 
       {/* Services grid */}
-      <section className="py-16 md:py-20 bg-brand-dark border-t-[3px] border-accent">
+      <section className="py-16 md:py-20 bg-brand-dark border-t-[3px] border-white/20">
         <div className="container-page">
           <div className="text-center mb-12">
             <span className="text-xs font-semibold uppercase tracking-widest text-accent-light block mb-2">What We Offer</span>

@@ -20,11 +20,11 @@ export default function LocationsPage() {
         title="Local Expertise. Cloud Reach. Gauteng-Wide."
         subtitle="Headquartered in Alberton with clients across Greater Johannesburg and the Vaal Triangle. We're the accounting firm that's close to home — and even closer online."
         crumbs={[{ label: "Locations" }]}
-        bgImage="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1600&auto=format&fit=crop&q=60"
+        bgImage="https://images.pexels.com/photos/14660445/pexels-photo-14660445.jpeg?auto=compress&cs=tinysrgb&w=1600&fit=crop"
       />
 
       {/* Locations grid */}
-      <section className="py-16 md:py-20 bg-brand-dark border-t-[3px] border-accent">
+      <section className="py-16 md:py-20 bg-brand-dark border-t-[3px] border-white/20">
         <div className="container-page">
           <div className="text-center mb-12">
             <span className="text-xs font-semibold uppercase tracking-widest text-accent-light block mb-2">Service Areas</span>

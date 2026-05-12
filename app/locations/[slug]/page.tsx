@@ -12,7 +12,7 @@ import { buildLocalBusinessSchema } from "@/lib/metadata";
 
 const LOCATION_HERO_IMAGES: Record<string, string> = {
   "alberton":    "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1600&auto=format&fit=crop&q=60",
-  "johannesburg":"https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1600&auto=format&fit=crop&q=60",
+  "johannesburg":"https://images.pexels.com/photos/11313729/pexels-photo-11313729.jpeg?auto=compress&cs=tinysrgb&w=1600&fit=crop",
   "sandton":     "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1600&auto=format&fit=crop&q=60",
   "randburg":    "https://images.unsplash.com/photo-1573497161161-c3e73707e25c?w=1600&auto=format&fit=crop&q=60",
   "vereeniging": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1600&auto=format&fit=crop&q=60",
@@ -91,7 +91,7 @@ export default async function LocationPage({
       />
 
       {/* Main content */}
-      <section className="py-16 md:py-20 bg-neutral-50 border-t-[3px] border-accent">
+      <section className="py-16 md:py-20 bg-neutral-50 border-t-[3px] border-neutral-200">
         <div className="container-page">
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Body */}

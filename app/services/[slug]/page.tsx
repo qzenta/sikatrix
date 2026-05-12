@@ -32,7 +32,7 @@ const SERVICE_HERO_IMAGES: Record<string, string> = {
   "tax-services":                "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1600&auto=format&fit=crop&q=60",
   "bookkeeping":                 "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1600&auto=format&fit=crop&q=60",
   "payroll":                     "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1600&auto=format&fit=crop&q=60",
-  "cloud-accounting":            "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1600&auto=format&fit=crop&q=60",
+  "cloud-accounting":            "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=1600&auto=format&fit=crop&q=60",
   "company-secretarial":         "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1600&auto=format&fit=crop&q=60",
   "business-permit-support":     "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1600&auto=format&fit=crop&q=60",
   "import-export-license":       "https://images.unsplash.com/photo-1573497161161-c3e73707e25c?w=1600&auto=format&fit=crop&q=60",
@@ -312,7 +312,7 @@ export default async function ServicePage({
       />
 
       {/* Sidebar + Main content */}
-      <section className="py-14 bg-neutral-50 border-t-[3px] border-accent">
+      <section className="py-14 bg-neutral-50 border-t-[3px] border-neutral-200">
         <div className="container-page">
           <div className="grid lg:grid-cols-[260px_1fr] gap-10 items-start">
 

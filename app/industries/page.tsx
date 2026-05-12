@@ -29,23 +29,23 @@ const INDUSTRY_DETAIL: Record<string, { services: string[]; highlight: string }>
   },
   "Medical & Healthcare": {
     services: ["Practice revenue reconciliation", "Staff payroll", "SARS submissions", "HPCSA compliance support"],
-    highlight: "We understand the unique billing and compliance environment of private healthcare.",
+    highlight: "Healthcare billing is complex. We handle HPCSA compliance and practice revenue reconciliation.",
   },
   "Legal Professionals": {
     services: ["Trust account reconciliations", "LSSA compliance support", "Practice bookkeeping", "Tax returns"],
-    highlight: "Trust account accuracy is non-negotiable. We handle it with precision.",
+    highlight: "Trust account compliance is your professional reputation. We reconcile it exactly.",
   },
   "Property Investors": {
     services: ["Rental income tax", "Provisional tax", "Capital Gains Tax", "Property entity structuring"],
-    highlight: "Property tax is complex. We ensure you claim every deduction you're entitled to.",
+    highlight: "Property tax has real complexity. We find every deduction you qualify for and file it properly.",
   },
   "NGOs & Nonprofits": {
     services: ["SARS PBO application", "Donor-ready AFS", "CIPC NPC registration", "Grant reporting"],
-    highlight: "We've secured PBO status for multiple NPOs — unlocking tax exemptions and donor confidence.",
+    highlight: "We've registered multiple NPOs for SARS PBO tax exemption status. We know the process.",
   },
   "Private Schools": {
     services: ["School fee income accounting", "Payroll for teaching staff", "SARS compliance", "AFS preparation"],
-    highlight: "Education entities have unique accounting needs. We understand the sector.",
+    highlight: "School fee cycles, term payroll, and SARS compliance — we handle the full picture.",
   },
   "Architecture & Engineering": {
     services: ["Project-based bookkeeping", "WIP accounting", "Payroll", "Provisional tax"],
@@ -58,14 +58,14 @@ export default function IndustriesPage() {
     <>
       <PageHero
         label="Industries"
-        title="Sector-Specific Expertise. Real-World Results."
-        subtitle="We don't just know accounting — we know your industry. From healthcare to nonprofits, we tailor our services to your specific compliance environment."
+        title="Accounting Built Around Your Industry"
+        subtitle="Every sector has its own compliance rules. We know yours and apply them directly — from healthcare billing to NGO donor reporting."
         crumbs={[{ label: "Industries" }]}
         bgImage="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1600&auto=format&fit=crop&q=60"
       />
 
       {/* Grid */}
-      <section className="py-16 md:py-20 bg-brand-dark border-t-[3px] border-accent">
+      <section className="py-16 md:py-20 bg-brand-dark border-t-[3px] border-white/20">
         <div className="container-page">
           <div className="text-center mb-12">
             <span className="text-xs font-semibold uppercase tracking-widest text-accent-light block mb-2">Sectors We Serve</span>

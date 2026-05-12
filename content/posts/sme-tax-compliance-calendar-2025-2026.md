@@ -226,4 +226,4 @@ If your current accountant isn't sending you reminders before each deadline, or 
 
 **Call us on (011) 867-2550 or [book online](/contact).**
 
-*Note: SARS occasionally adjusts deadline dates — particularly for EMP501 reconciliations and Filing Season. Always confirm exact dates on the [SARS website](https://www.sars.gov.za) or speak to your registered tax practitioner. Deadlines in this article are based on standard SARS practice for the 2025/2026 tax year.*
+*Note: SARS occasionally adjusts deadline dates — particularly for EMP501 reconciliations and Filing Season. Always confirm exact dates on the [SARS website](https://www.sars.gov.za) or speak to your registered tax practitioner. Deadlines above are based on standard SARS practice for the 2025/2026 tax year.*
