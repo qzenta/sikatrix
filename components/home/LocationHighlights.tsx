@@ -1,6 +1,18 @@
 import Link from "next/link";
+import Image from "next/image";
 import { MapPin, ArrowRight } from "lucide-react";
 import { LOCATIONS } from "@/lib/site";
+
+const LOCATION_IMAGES: Record<string, string> = {
+  alberton:      "https://images.pexels.com/photos/5668482/pexels-photo-5668482.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1",
+  johannesburg:  "https://images.pexels.com/photos/3760072/pexels-photo-3760072.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1",
+  sandton:       "https://images.pexels.com/photos/5690374/pexels-photo-5690374.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1",
+  randburg:      "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1",
+  vereeniging:   "https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1",
+  germiston:     "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1",
+  boksburg:      "https://images.pexels.com/photos/7821681/pexels-photo-7821681.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1",
+  midrand:       "https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1",
+};
 
 export default function LocationHighlights() {
   return (
@@ -22,27 +34,37 @@ export default function LocationHighlights() {
             <Link
               key={loc.slug}
               href={`/locations/${loc.slug}`}
-              className={`card p-6 group ${loc.isHQ ? "ring-2 ring-brand" : ""}`}
+              className={`card overflow-hidden group ${loc.isHQ ? "ring-2 ring-brand" : ""}`}
             >
-              <div className="flex items-start justify-between mb-3">
-                <div className="flex items-center gap-2">
-                  <MapPin size={15} className="text-brand flex-shrink-0" />
-                  <span className="text-sm font-semibold text-neutral-900 group-hover:text-brand transition-colors">
-                    {loc.name}
-                  </span>
+              {LOCATION_IMAGES[loc.slug] && (
+                <div className="relative h-32 overflow-hidden bg-brand-50">
+                  <Image
+                    src={LOCATION_IMAGES[loc.slug]}
+                    alt={`Professional accounting services in ${loc.name}`}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/60 to-transparent" />
+                  <div className="absolute bottom-2 left-3 flex items-center gap-2">
+                    <MapPin size={13} className="text-white flex-shrink-0" />
+                    <span className="text-sm font-semibold text-white">{loc.name}</span>
+                    {loc.isHQ && (
+                      <span className="text-2xs font-semibold uppercase tracking-wider text-accent bg-brand-dark/60 px-2 py-0.5 rounded">
+                        HQ
+                      </span>
+                    )}
+                  </div>
                 </div>
-                {loc.isHQ && (
-                  <span className="text-2xs font-semibold uppercase tracking-wider text-accent bg-accent/10 px-2 py-0.5 rounded">
-                    HQ
-                  </span>
-                )}
+              )}
+              <div className="p-5">
+                <p className="text-xs text-neutral-500 leading-relaxed mb-3">
+                  {loc.intro.substring(0, 100)}…
+                </p>
+                <span className="inline-flex items-center gap-1 text-xs font-medium text-brand group-hover:gap-2 transition-all">
+                  View services in {loc.name} <ArrowRight size={11} />
+                </span>
               </div>
-              <p className="text-xs text-neutral-500 leading-relaxed mb-3">
-                {loc.intro.substring(0, 100)}…
-              </p>
-              <span className="inline-flex items-center gap-1 text-xs font-medium text-brand group-hover:gap-2 transition-all">
-                View services in {loc.name} <ArrowRight size={11} />
-              </span>
             </Link>
           ))}
         </div>

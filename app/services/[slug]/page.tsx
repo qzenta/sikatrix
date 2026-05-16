@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import {
   CheckCircle, ArrowRight,
   FileText, Receipt, BookOpen, Users, Cloud,
@@ -28,14 +29,25 @@ const ICON_MAP: Record<string, React.ElementType> = {
 };
 
 const SERVICE_HERO_IMAGES: Record<string, string> = {
-  "annual-financial-statements": "https://images.unsplash.com/photo-1573497161161-c3e73707e25c?w=1600&auto=format&fit=crop&q=60",
-  "tax-services":                "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1600&auto=format&fit=crop&q=60",
-  "bookkeeping":                 "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1600&auto=format&fit=crop&q=60",
-  "payroll":                     "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1600&auto=format&fit=crop&q=60",
-  "cloud-accounting":            "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=1600&auto=format&fit=crop&q=60",
-  "company-secretarial":         "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1600&auto=format&fit=crop&q=60",
-  "business-permit-support":     "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1600&auto=format&fit=crop&q=60",
-  "import-export-license":       "https://images.unsplash.com/photo-1573497161161-c3e73707e25c?w=1600&auto=format&fit=crop&q=60",
+  "annual-financial-statements": "https://images.pexels.com/photos/5668482/pexels-photo-5668482.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&dpr=1",
+  "tax-services":                "https://images.pexels.com/photos/5690374/pexels-photo-5690374.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&dpr=1",
+  "bookkeeping":                 "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&dpr=1",
+  "payroll":                     "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&dpr=1",
+  "cloud-accounting":            "https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&dpr=1",
+  "company-secretarial":         "https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&dpr=1",
+  "business-permit-support":     "https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&dpr=1",
+  "import-export-license":       "https://images.pexels.com/photos/906494/pexels-photo-906494.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&dpr=1",
+};
+
+const SERVICE_CONTENT_IMAGES: Record<string, { src: string; alt: string }> = {
+  "annual-financial-statements": { src: "https://images.pexels.com/photos/7821681/pexels-photo-7821681.jpeg?auto=compress&cs=tinysrgb&w=900&h=500&dpr=1", alt: "Black South African accountant preparing annual financial statements at his desk" },
+  "tax-services":                { src: "https://images.pexels.com/photos/6863183/pexels-photo-6863183.jpeg?auto=compress&cs=tinysrgb&w=900&h=500&dpr=1", alt: "Tax practitioner reviewing SARS returns on a laptop with documents" },
+  "bookkeeping":                 { src: "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=900&h=500&dpr=1", alt: "Diverse South African business team reviewing monthly management accounts together" },
+  "payroll":                     { src: "https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=900&h=500&dpr=1", alt: "Black South African HR professional processing payroll on a laptop" },
+  "cloud-accounting":            { src: "https://images.pexels.com/photos/6963944/pexels-photo-6963944.jpeg?auto=compress&cs=tinysrgb&w=900&h=500&dpr=1", alt: "Business owner accessing real-time financial data on cloud accounting software" },
+  "company-secretarial":         { src: "https://images.pexels.com/photos/5668482/pexels-photo-5668482.jpeg?auto=compress&cs=tinysrgb&w=900&h=500&dpr=1", alt: "Black male professional reviewing CIPC company registration documents" },
+  "business-permit-support":     { src: "https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=900&h=500&dpr=1", alt: "Professional accountant preparing financial documentation for a work permit application" },
+  "import-export-license":       { src: "https://images.pexels.com/photos/1427107/pexels-photo-1427107.jpeg?auto=compress&cs=tinysrgb&w=900&h=500&dpr=1", alt: "Cargo containers at a South African port representing import and export trade" },
 };
 
 const SERVICE_DETAILS: Record<string, { outcome: string; benefits: string[]; faqs: { q: string; a: string }[] }> = {
@@ -312,7 +324,7 @@ export default async function ServicePage({
       />
 
       {/* Sidebar + Main content */}
-      <section className="py-14 bg-neutral-50 border-t-[3px] border-neutral-200">
+      <section id="content" className="py-14 bg-neutral-50 border-t-[3px] border-neutral-200">
         <div className="container-page">
           <div className="grid lg:grid-cols-[260px_1fr] gap-10 items-start">
 
@@ -326,7 +338,8 @@ export default async function ServicePage({
                   {SERVICES.map((s) => (
                     <li key={s.slug}>
                       <Link
-                        href={`/services/${s.slug}`}
+                        href={`/services/${s.slug}#content`}
+                        scroll={false}
                         className={`flex items-center justify-between px-5 py-3.5 text-sm border-b border-white/5 transition-colors ${
                           s.slug === slug
                             ? "text-accent font-semibold bg-white/5"
@@ -365,6 +378,21 @@ export default async function ServicePage({
                       {details.outcome}
                     </p>
                   )}
+
+                  {/* Content image */}
+                  {SERVICE_CONTENT_IMAGES[slug] && (
+                    <div className="relative h-52 sm:h-64 rounded-xl overflow-hidden mb-6">
+                      <Image
+                        src={SERVICE_CONTENT_IMAGES[slug].src}
+                        alt={SERVICE_CONTENT_IMAGES[slug].alt}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 1024px) 100vw, 700px"
+                        priority
+                      />
+                    </div>
+                  )}
+
                   <ul className="space-y-3 mb-8">
                     {details.benefits.map((b) => (
                       <li key={b} className="flex gap-3 text-sm text-neutral-700">

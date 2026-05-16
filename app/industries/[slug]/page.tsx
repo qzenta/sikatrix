@@ -41,9 +41,9 @@ const INDUSTRY_DATA: Record<string, IndustryDetail> = {
     metaDesc: "Fixed-fee bookkeeping, payroll, tax, and annual financial statements for South African SMEs. Scalable accounting support as your business grows.",
     heroTitle: "Accounting That Scales With Your Business",
     heroSubtitle: "Whether you're a sole proprietor or running a 50-person operation, we handle your compliance, books, and tax so you can focus on growth.",
-    bgImage: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1600&auto=format&fit=crop&q=60",
-    contentImage: "https://images.unsplash.com/photo-1573497161161-c3e73707e25c?w=900&auto=format&fit=crop&q=60",
-    contentImageAlt: "Black South African business owner reviewing financial reports with her accountant",
+    bgImage: "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&dpr=1",
+    contentImage: "https://images.pexels.com/photos/5668482/pexels-photo-5668482.jpeg?auto=compress&cs=tinysrgb&w=900&h=500&dpr=1",
+    contentImageAlt: "Black South African business owner reviewing financial reports with his accountant",
     outcome: "Within 30 days of onboarding, you'll have clean, current books, a monthly management account schedule, and full visibility into your tax position. No surprises at year-end.",
     highlight: "We grow with you — from a sole proprietor startup to a 50-person team.",
     services: [
@@ -76,9 +76,9 @@ const INDUSTRY_DATA: Record<string, IndustryDetail> = {
     metaDesc: "Company registration, SARS eFiling setup, cloud accounting, and first-year compliance for South African startups. Get your books right from day one.",
     heroTitle: "Start Right. Stay Compliant from Day One.",
     heroSubtitle: "We handle the admin so you can focus on building your business. Company registration, SARS setup, and clean books from the moment you open.",
-    bgImage: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1600&auto=format&fit=crop&q=60",
-    contentImage: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=900&auto=format&fit=crop&q=60",
-    contentImageAlt: "Young Black South African entrepreneur working on his laptop to launch his new business",
+    bgImage: "https://images.pexels.com/photos/3760072/pexels-photo-3760072.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&dpr=1",
+    contentImage: "https://images.pexels.com/photos/3760072/pexels-photo-3760072.jpeg?auto=compress&cs=tinysrgb&w=900&h=500&dpr=1",
+    contentImageAlt: "Young Black South African male entrepreneur working on his laptop to launch his new business",
     outcome: "By the end of your first month with us, your company is registered, SARS profiles are active, your cloud accounting is set up, and you have a compliance calendar so you never miss a deadline.",
     highlight: "Get your compliance right from day one. We've helped 40+ startups launch cleanly.",
     services: [
@@ -111,9 +111,9 @@ const INDUSTRY_DATA: Record<string, IndustryDetail> = {
     metaDesc: "Practice accounting, SARS compliance, payroll, and annual financial statements for South African doctors, dentists, physiotherapists, and private healthcare businesses.",
     heroTitle: "Financial Management for Healthcare Professionals",
     heroSubtitle: "We understand the unique billing environment, professional body requirements, and compliance obligations of private healthcare in South Africa.",
-    bgImage: "https://images.unsplash.com/photo-1573497161161-c3e73707e25c?w=1600&auto=format&fit=crop&q=60",
-    contentImage: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=900&auto=format&fit=crop&q=60",
-    contentImageAlt: "Diverse South African medical team discussing patient care and practice finances",
+    bgImage: "https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&dpr=1",
+    contentImage: "https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=900&h=500&dpr=1",
+    contentImageAlt: "Diverse South African medical team including a Black male doctor discussing patient care and practice finances",
     outcome: "You'll have monthly reconciled revenue accounts, compliant payroll for clinical and administrative staff, and zero outstanding SARS obligations. Your practice runs. We handle the numbers.",
     highlight: "We understand the unique billing and compliance environment of private healthcare.",
     services: [
@@ -147,8 +147,8 @@ const INDUSTRY_DATA: Record<string, IndustryDetail> = {
     heroTitle: "Accounting Precision for Legal Practices",
     heroSubtitle: "Trust accounts and LSSA compliance records have to be right. We handle both so your practice stays in good standing.",
     bgImage: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1600&auto=format&fit=crop&q=60",
-    contentImage: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=900&auto=format&fit=crop&q=60",
-    contentImageAlt: "Black South African attorney reviewing legal documents and compliance records at her desk",
+    contentImage: "https://images.pexels.com/photos/5668482/pexels-photo-5668482.jpeg?auto=compress&cs=tinysrgb&w=900&h=500&dpr=1",
+    contentImageAlt: "Black South African attorney reviewing legal documents and compliance records at his desk",
     outcome: "Your trust account reconciles to the cent every month. LSSA compliance records are in order. And your personal and practice tax returns are filed on time, every time.",
     highlight: "Trust account compliance is your professional reputation. We reconcile it exactly.",
     services: [
@@ -182,8 +182,8 @@ const INDUSTRY_DATA: Record<string, IndustryDetail> = {
     heroTitle: "Maximise Your Property Returns. Minimise Your Tax.",
     heroSubtitle: "Property tax in South Africa has real complexity. We find every deduction you qualify for and structure your portfolio properly.",
     bgImage: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600&auto=format&fit=crop&q=60",
-    contentImage: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=900&auto=format&fit=crop&q=60",
-    contentImageAlt: "Black South African property investor consulting with an accountant about rental income and tax planning",
+    contentImage: "https://images.pexels.com/photos/7821681/pexels-photo-7821681.jpeg?auto=compress&cs=tinysrgb&w=900&h=500&dpr=1",
+    contentImageAlt: "Black South African male property investor consulting with an accountant about rental income and tax planning",
     outcome: "After working with us, your rental income is correctly declared, every allowable deduction is claimed, and your provisional tax instalments are based on accurate projections. No overpayments, no penalties.",
     highlight: "Property tax has real complexity. We find every deduction you qualify for and file it properly.",
     services: [
@@ -384,7 +384,7 @@ export default async function IndustryPage({
       />
 
       {/* Sidebar + main content */}
-      <section className="py-14 bg-neutral-50 border-t-[3px] border-neutral-200">
+      <section id="content" className="py-14 bg-neutral-50 border-t-[3px] border-neutral-200">
         <div className="container-page">
           <div className="grid lg:grid-cols-[260px_1fr] gap-10 items-start">
 
@@ -398,7 +398,8 @@ export default async function IndustryPage({
                   {INDUSTRIES.map((ind) => (
                     <li key={ind.slug}>
                       <Link
-                        href={`/industries/${ind.slug}`}
+                        href={`/industries/${ind.slug}#content`}
+                        scroll={false}
                         className={`flex items-center justify-between px-5 py-3.5 text-sm border-b border-white/5 transition-colors ${
                           ind.slug === slug
                             ? "text-accent font-semibold bg-white/5"

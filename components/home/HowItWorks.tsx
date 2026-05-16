@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { AnimateIn } from "@/components/ui/AnimateIn";
 
 const STEPS = [
@@ -33,6 +34,23 @@ export default function HowItWorks() {
           <p className="section-subtitle mt-3 mx-auto">
             From first contact to monthly management accounts. A clear process designed around your business.
           </p>
+        </AnimateIn>
+
+        {/* Context image */}
+        <AnimateIn className="relative h-52 sm:h-64 rounded-2xl overflow-hidden mb-12">
+          <Image
+            src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=600&dpr=1"
+            alt="Diverse South African team including a Black male professional in a cloud accounting consultation"
+            fill
+            className="object-cover object-center"
+            sizes="(max-width: 768px) 100vw, 1200px"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/60 to-transparent" />
+          <div className="absolute inset-0 flex items-center px-8">
+            <p className="text-white font-semibold text-lg sm:text-xl max-w-xs leading-snug">
+              Up and running within <span className="text-accent-light">30 days</span> of your first call.
+            </p>
+          </div>
         </AnimateIn>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
