@@ -28,25 +28,27 @@ const ICON_MAP: Record<string, React.ElementType> = {
   FileText, Receipt, BookOpen, Users, Cloud, Briefcase, ShieldCheck, Globe,
 };
 
+// Hero backgrounds — swap to local file once dropped in public/photos/services/
 const SERVICE_HERO_IMAGES: Record<string, string> = {
   "annual-financial-statements": "https://images.pexels.com/photos/5668482/pexels-photo-5668482.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&dpr=1",
   "tax-services":                "https://images.pexels.com/photos/5690374/pexels-photo-5690374.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&dpr=1",
-  "bookkeeping":                 "https://images.pexels.com/photos/5668482/pexels-photo-5668482.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&dpr=1",
-  "payroll":                     "https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&dpr=1",
+  "bookkeeping":                 "/photos/services/bookkeeping.jpg",
+  "payroll":                     "/photos/services/payroll.jpg",
   "cloud-accounting":            "https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&dpr=1",
-  "company-secretarial":         "https://images.pexels.com/photos/3760072/pexels-photo-3760072.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&dpr=1",
-  "business-permit-support":     "https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&dpr=1",
+  "company-secretarial":         "/photos/services/company-sec.jpg",
+  "business-permit-support":     "/photos/services/permit-support.jpg",
   "import-export-license":       "https://images.pexels.com/photos/906494/pexels-photo-906494.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&dpr=1",
 };
 
+// Content section images — drop matching file in public/photos/services/ to override
 const SERVICE_CONTENT_IMAGES: Record<string, { src: string; alt: string }> = {
   "annual-financial-statements": { src: "https://images.pexels.com/photos/7821681/pexels-photo-7821681.jpeg?auto=compress&cs=tinysrgb&w=900&h=500&dpr=1", alt: "Black South African accountant preparing annual financial statements at his desk" },
   "tax-services":                { src: "https://images.pexels.com/photos/6863183/pexels-photo-6863183.jpeg?auto=compress&cs=tinysrgb&w=900&h=500&dpr=1", alt: "Tax practitioner reviewing SARS returns on a laptop with documents" },
-  "bookkeeping":                 { src: "https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=900&h=500&dpr=1", alt: "Black South African male bookkeeper reviewing accounts and financial records on his desk" },
-  "payroll":                     { src: "https://images.pexels.com/photos/3760072/pexels-photo-3760072.jpeg?auto=compress&cs=tinysrgb&w=900&h=500&dpr=1", alt: "Black South African male business professional managing payroll on a laptop" },
+  "bookkeeping":                 { src: "/photos/services/bookkeeping.jpg", alt: "Black South African male bookkeeper reviewing accounts and financial records on his desk" },
+  "payroll":                     { src: "/photos/services/payroll.jpg", alt: "Black South African male business professional managing payroll on a laptop" },
   "cloud-accounting":            { src: "https://images.pexels.com/photos/6963944/pexels-photo-6963944.jpeg?auto=compress&cs=tinysrgb&w=900&h=500&dpr=1", alt: "Business owner accessing real-time financial data on cloud accounting software" },
-  "company-secretarial":         { src: "https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=900&h=500&dpr=1", alt: "Black South African male professional reviewing CIPC company registration documents at his desk" },
-  "business-permit-support":     { src: "https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=900&h=500&dpr=1", alt: "Professional accountant preparing financial documentation for a work permit application" },
+  "company-secretarial":         { src: "/photos/services/company-sec.jpg", alt: "Black South African male professional reviewing CIPC company registration documents at his desk" },
+  "business-permit-support":     { src: "/photos/services/permit-support.jpg", alt: "Black South African professional preparing financial documentation for a work permit application" },
   "import-export-license":       { src: "https://images.pexels.com/photos/1427107/pexels-photo-1427107.jpeg?auto=compress&cs=tinysrgb&w=900&h=500&dpr=1", alt: "Cargo containers at a South African port representing import and export trade" },
 };
 
