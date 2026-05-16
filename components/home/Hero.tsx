@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { ArrowRight, Phone, ChevronLeft, ChevronRight, CheckCircle } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
 import { SITE } from "@/lib/site";
 
 function StatDisplay({ value, label }: { value: string; label: string }) {
@@ -62,18 +63,10 @@ const STATS = [
 
 export default function Hero() {
   const [current, setCurrent] = useState(0);
-  const [visible, setVisible] = useState(true);
 
-  const goTo = (index: number) => {
-    setVisible(false);
-    setTimeout(() => {
-      setCurrent(index);
-      setVisible(true);
-    }, 400);
-  };
-
-  const next = () => goTo((current + 1) % SLIDES.length);
-  const prev = () => goTo((current - 1 + SLIDES.length) % SLIDES.length);
+  const goTo = (index: number) => setCurrent(index);
+  const next = () => setCurrent((c) => (c + 1) % SLIDES.length);
+  const prev = () => setCurrent((c) => (c - 1 + SLIDES.length) % SLIDES.length);
 
   // Auto-advance — resets whenever slide changes
   useEffect(() => {
@@ -87,15 +80,18 @@ export default function Hero() {
   return (
     <section className="relative bg-brand-dark overflow-hidden">
 
-      {/* ── Background image (fades with slide) ── */}
-      <div
-        className="absolute inset-0 bg-cover transition-opacity duration-700 ease-in-out"
-        style={{
-          backgroundImage: `url(${slide.bgImage})`,
-          backgroundPosition: slide.bgPosition,
-          opacity: visible ? 1 : 0,
-        }}
-      />
+      {/* ── Background image (AnimatePresence crossfade) ── */}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={slide.bgImage}
+          className="absolute inset-0 bg-cover"
+          style={{ backgroundImage: `url(${slide.bgImage})`, backgroundPosition: slide.bgPosition }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.7, ease: "easeInOut" }}
+        />
+      </AnimatePresence>
 
       {/* ── Gradient overlays — ensures text stays readable on any photo ── */}
       {/* Strong left-side cover fades to semi-transparent on right */}
@@ -109,9 +105,14 @@ export default function Hero() {
 
       <div className="container-page relative py-10 md:py-14 lg:py-18">
         {/* Slide content */}
-        <div
-          className="max-w-2xl transition-opacity duration-400 ease-in-out"
-          style={{ opacity: visible ? 1 : 0 }}
+        <AnimatePresence mode="wait">
+        <motion.div
+          key={current}
+          className="max-w-2xl"
+          initial={{ opacity: 0, y: 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -12 }}
+          transition={{ duration: 0.45, ease: "easeOut" }}
         >
           <span className="inline-block text-accent-light text-xs font-semibold uppercase tracking-widest mb-4">
             {slide.tag}
@@ -157,7 +158,8 @@ export default function Hero() {
               </a>
             )}
           </div>
-        </div>
+        </motion.div>
+        </AnimatePresence>
 
         {/* Controls */}
         <div className="flex items-center gap-3 mt-10">

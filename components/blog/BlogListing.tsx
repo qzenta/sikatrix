@@ -73,8 +73,10 @@ export default function BlogListing({ posts }: BlogListingProps) {
       {latestPost && (
         <div className="mb-8">
           <div className="flex items-center gap-2 mb-3">
-            <Sparkles size={13} className="text-accent" />
-            <span className="text-xs font-bold uppercase tracking-widest text-accent">Latest</span>
+            <Sparkles size={14} className="text-accent" />
+            <span className="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-widest bg-accent text-white px-3 py-1 rounded-full shadow-sm">
+              Latest News
+            </span>
           </div>
           <Link
             href={`/resources/${latestPost.slug}`}

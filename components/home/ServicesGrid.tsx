@@ -1,10 +1,11 @@
 import Link from "next/link";
 import {
   FileText, Receipt, BookOpen, Users, Cloud,
-  Briefcase, LifeBuoy, Globe, ArrowRight
+  Briefcase, LifeBuoy, Globe,
 } from "lucide-react";
 import { SERVICES } from "@/lib/site";
 import { AnimateIn } from "@/components/ui/AnimateIn";
+import { MotionServiceCard } from "@/components/home/MotionServiceCard";
 
 const ICON_MAP: Record<string, React.ElementType> = {
   FileText, Receipt, BookOpen, Users, Cloud,
@@ -31,21 +32,12 @@ export default function ServicesGrid() {
             const Icon = ICON_MAP[service.icon] ?? FileText;
             return (
               <AnimateIn key={service.slug} delay={i * 80} className="h-full">
-                <Link
+                <MotionServiceCard
                   href={`/services/${service.slug}`}
-                  className="card p-5 group block h-full"
-                >
-                  <div className="w-10 h-10 rounded-lg bg-brand-50 flex items-center justify-center mb-4 group-hover:bg-brand group-hover:text-white transition-colors">
-                    <Icon size={18} className="text-brand group-hover:text-white transition-colors" />
-                  </div>
-                  <h3 className="text-base font-semibold text-neutral-900 mb-2 group-hover:text-brand transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-sm text-neutral-500 leading-relaxed">{service.summary}</p>
-                  <span className="inline-flex items-center gap-1 text-sm font-medium text-brand mt-3 opacity-0 group-hover:opacity-100 transition-opacity">
-                    Learn more <ArrowRight size={12} />
-                  </span>
-                </Link>
+                  icon={<Icon size={18} className="text-brand group-hover:text-white transition-colors" />}
+                  title={service.title}
+                  summary={service.summary}
+                />
               </AnimateIn>
             );
           })}
