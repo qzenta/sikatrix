@@ -144,8 +144,20 @@ export function buildLocalBusinessSchema(locationName?: string) {
       { "@type": "City", name: "Boksburg", containedInPlace: { "@type": "State", name: "Gauteng" } },
       { "@type": "City", name: "Midrand", containedInPlace: { "@type": "State", name: "Gauteng" } },
     ],
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: -26.2844,
+      longitude: 28.1218,
+    },
+    hasMap: "https://maps.google.com/?q=42+Hennie+Alberts+Street,+Brackenhurst,+Alberton,+1448",
     priceRange: "$$",
     currenciesAccepted: "ZAR",
     paymentAccepted: "Cash, EFT, Credit Card",
+    image: `${SITE.url}/logo.png`,
+    sameAs: [
+      SITE.social.facebook,
+      SITE.social.linkedin,
+      SITE.social.twitter,
+    ],
   };
 }

@@ -6,6 +6,37 @@ import { Resend } from "resend";
 const NOTIFY_TO = "info@sikatrix.com";
 const FROM = "Sikatrix Business Accountants <info@sikatrix.com>";
 
+// ── Spam detection ────────────────────────────────────────────────────────────
+// Score the submission and silently swallow confirmed spam so senders cannot
+// probe the filter. No auto-reply is sent (avoids burning Resend quota and
+// confirming our address to the spammer).
+const SPAM_TERMS = [
+  "cpa firm", "cpa firms", "accounting firm", "accounting firms",
+  "decision-maker", "decision makers", "decision maker",
+  "predictable pipeline", "sales pipeline", "build a pipeline",
+  "qualified leads", "qualified opportunities", "qualified pipeline",
+  "verified contacts", "verified contact",
+  "targeted outreach", "meaningful conversations",
+  "b2b", "lead generation", "lead gen",
+  "data provider", "email list", "contact list", "contact database",
+  "expand your client base", "grow your client base", "client acquisition",
+  "high-intent", "custom-built dataset", "custom built dataset",
+  "outreach campaign", "cold outreach",
+  "network includes", "segmented by",
+  "70,000", "11,000 cpa", "11000 cpa",
+];
+
+// Matches US-format phone numbers (submitted without + prefix, e.g. 16109987890)
+const US_PHONE_RE = /^1\d{10}$/;
+
+function detectSpam(message: string, phone: string, email: string): boolean {
+  const haystack = `${message} ${email}`.toLowerCase();
+  const hits = SPAM_TERMS.filter((t) => haystack.includes(t)).length;
+  if (hits >= 2) return true;
+  const digits = phone.replace(/[\s\-().+]/g, "");
+  return US_PHONE_RE.test(digits);
+}
+
 // ── Rate limiting ──────────────────────────────────────────────────────────────
 // In-memory; resets on cold start. Sufficient for a contact form.
 const rateMap = new Map<string, { count: number; windowStart: number }>();
@@ -237,6 +268,11 @@ export async function POST(req: NextRequest) {
 
   // Honeypot — silent accept for bots so they don't retry
   if (_trap) {
+    return NextResponse.json({ ok: true });
+  }
+
+  // Spam filter — silent accept so senders cannot probe the filter
+  if (detectSpam(message ?? "", phone ?? "", email ?? "")) {
     return NextResponse.json({ ok: true });
   }
 

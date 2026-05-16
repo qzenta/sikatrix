@@ -24,7 +24,7 @@ export const SITE = {
     sunday: "Sunday: Closed",
   },
   social: {
-    facebook: "https://facebook.com/sikatrix",
+    facebook: "https://www.facebook.com/sikatrixSA",
     linkedin: "https://linkedin.com/company/sikatrix",
     twitter: "https://x.com/sikatrix",
   },

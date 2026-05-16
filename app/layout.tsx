@@ -24,6 +24,12 @@ export const metadata: Metadata = {
     "cloud accounting South Africa",
     "SME accountant Alberton",
   ],
+  other: {
+    "geo.region": "ZA-GP",
+    "geo.placename": "Alberton, Gauteng, South Africa",
+    "geo.position": "-26.2844;28.1218",
+    ICBM: "-26.2844, 28.1218",
+  },
   openGraph: {
     siteName: SITE.name,
     locale: "en_ZA",
