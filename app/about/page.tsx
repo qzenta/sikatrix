@@ -5,6 +5,7 @@ import { CheckCircle, Award, Users, Clock, Shield, BadgeCheck } from "lucide-rea
 import PageHero from "@/components/shared/PageHero";
 import CTABlock from "@/components/shared/CTABlock";
 import TrustBar from "@/components/home/TrustBar";
+import CredentialsGrid from "@/components/about/CredentialsGrid";
 import { SITE } from "@/lib/site";
 import { buildPersonSchema } from "@/lib/metadata";
 
@@ -160,33 +161,7 @@ export default function AboutPage() {
             <span className="section-label">Credentials & Partners</span>
             <h2 className="section-title mt-2">Qualified, registered, and recognised</h2>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-4xl mx-auto">
-            {[
-              {
-                badge: "SAIPA",
-                title: "Professional Accountant (SA)",
-                desc: "Registered member of the South African Institute of Professional Accountants — your assurance of professional and ethical practice.",
-              },
-              {
-                badge: "SARS",
-                title: "Registered Tax Practitioner",
-                desc: "Officially registered with the South African Revenue Service to act as your tax practitioner and submit on your behalf.",
-              },
-              {
-                badge: "Cloud",
-                title: "Cloud Accounting Specialist",
-                desc: "Certified on QuickBooks, Xero, and Sage — bringing you real-time financial management without the spreadsheet chaos.",
-              },
-            ].map((c) => (
-              <div key={c.badge} className="card p-6">
-                <div className="inline-block px-2.5 py-1 rounded bg-brand text-white text-xs font-bold mb-3">
-                  {c.badge}
-                </div>
-                <h3 className="text-sm font-semibold text-neutral-900 mb-2">{c.title}</h3>
-                <p className="text-xs text-neutral-500 leading-relaxed">{c.desc}</p>
-              </div>
-            ))}
-          </div>
+          <CredentialsGrid />
         </div>
       </section>
 
