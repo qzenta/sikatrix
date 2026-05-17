@@ -111,9 +111,9 @@ const INDUSTRY_DATA: Record<string, IndustryDetail> = {
     metaDesc: "Practice accounting, SARS compliance, payroll, and annual financial statements for South African doctors, dentists, physiotherapists, and private healthcare businesses.",
     heroTitle: "Financial Management for Healthcare Professionals",
     heroSubtitle: "We understand the unique billing environment, professional body requirements, and compliance obligations of private healthcare in South Africa.",
-    bgImage: "https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&dpr=1",
-    contentImage: "https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=900&h=500&dpr=1",
-    contentImageAlt: "Diverse South African medical team including a Black male doctor discussing patient care and practice finances",
+    bgImage: "/photos/industries/medical.jpg",
+    contentImage: "/photos/industries/medical.jpg",
+    contentImageAlt: "Black South African medical professional discussing patient care and practice finances",
     outcome: "You'll have monthly reconciled revenue accounts, compliant payroll for clinical and administrative staff, and zero outstanding SARS obligations. Your practice runs. We handle the numbers.",
     highlight: "We understand the unique billing and compliance environment of private healthcare.",
     services: [
