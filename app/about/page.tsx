@@ -155,11 +155,11 @@ export default function AboutPage() {
       </section>
 
       {/* Credentials */}
-      <section className="py-14 bg-neutral-100">
+      <section className="py-14 bg-neutral-800">
         <div className="container-page">
           <div className="text-center mb-10">
-            <span className="section-label">Credentials & Partners</span>
-            <h2 className="section-title mt-2">Qualified, registered, and recognised</h2>
+            <span className="text-xs font-semibold uppercase tracking-widest text-accent block mb-2">Credentials &amp; Partners</span>
+            <h2 className="text-3xl sm:text-4xl font-semibold text-white leading-snug mt-0">Qualified, registered, and recognised</h2>
           </div>
           <CredentialsGrid />
         </div>
