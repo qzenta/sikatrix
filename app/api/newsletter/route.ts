@@ -1,9 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import { Resend } from "resend";
+import { sendEmail } from "@/lib/brevo";
 
-// Initialised inside handler — build succeeds without RESEND_API_KEY present.
 const NOTIFY_TO = "info@sikatrix.com";
-const FROM = "Sikatrix Business Accountants <info@sikatrix.com>";
 
 const rateMap = new Map<string, { count: number; windowStart: number }>();
 
@@ -298,7 +296,6 @@ async function addToMailerLite(email: string, name: string): Promise<void> {
 // ── Route handler ─────────────────────────────────────────────────────────────
 
 export async function POST(req: NextRequest) {
-  const resend = new Resend(process.env.RESEND_API_KEY);
 
   if (!req.headers.get("content-type")?.includes("application/json")) {
     return NextResponse.json({ error: "Invalid request." }, { status: 400 });
@@ -343,18 +340,16 @@ export async function POST(req: NextRequest) {
 
   try {
     const [notifyResult, welcomeResult, mailerliteResult] = await Promise.allSettled([
-      resend.emails.send({
-        from: FROM,
-        to: NOTIFY_TO,
-        replyTo: emailClean,
+      sendEmail({
+        to: { email: NOTIFY_TO },
+        replyTo: { email: emailClean },
         subject: isChecklist
           ? `New checklist download — ${emailClean}`
           : `New newsletter subscriber — ${emailClean}`,
         html: notificationHtml(nameClean, emailClean, source, timestamp),
       }),
-      resend.emails.send({
-        from: FROM,
-        to: emailClean,
+      sendEmail({
+        to: { email: emailClean, name: nameClean },
         subject: isChecklist
           ? "Your SARS Compliance Checklist — Sikatrix Business Accountants"
           : "You're subscribed — Sikatrix Monthly Tax Tips",
@@ -368,13 +363,13 @@ export async function POST(req: NextRequest) {
       console.error("[newsletter/route] MailerLite:", mailerliteResult.reason);
     }
 
-    // Resend failures are fatal — the user needs their welcome email
+    // Brevo failures are fatal — the user needs their welcome email
     if (notifyResult.status === "rejected") throw notifyResult.reason;
     if (welcomeResult.status === "rejected") throw welcomeResult.reason;
 
     return NextResponse.json({ ok: true });
   } catch (err) {
-    console.error("[newsletter/route] Resend error:", err);
+    console.error("[newsletter/route] Brevo error:", err);
     return NextResponse.json(
       { error: "Something went wrong. Please try again or email us directly." },
       { status: 500 }

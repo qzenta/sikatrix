@@ -1,14 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
-import { Resend } from "resend";
+import { sendEmail } from "@/lib/brevo";
 
-// Resend is intentionally initialised inside the handler so the build
-// succeeds even when RESEND_API_KEY is not present in the build environment.
 const NOTIFY_TO = "info@sikatrix.com";
-const FROM = "Sikatrix Business Accountants <info@sikatrix.com>";
 
 // ── Spam detection ────────────────────────────────────────────────────────────
 // Score the submission and silently swallow confirmed spam so senders cannot
-// probe the filter. No auto-reply is sent (avoids burning Resend quota and
+// probe the filter. No auto-reply is sent (avoids burning Brevo quota and
 // confirming our address to the spammer).
 const SPAM_TERMS = [
   "cpa firm", "cpa firms", "accounting firm", "accounting firms",
@@ -237,7 +234,6 @@ function autoReplyHtml(name: string, timestamp: string) {
 // ── Route handler ─────────────────────────────────────────────────────────────
 
 export async function POST(req: NextRequest) {
-  const resend = new Resend(process.env.RESEND_API_KEY);
 
   // Content-Type guard
   if (!req.headers.get("content-type")?.includes("application/json")) {
@@ -300,10 +296,9 @@ export async function POST(req: NextRequest) {
 
   try {
     await Promise.all([
-      resend.emails.send({
-        from: FROM,
-        to: NOTIFY_TO,
-        replyTo: emailClean,
+      sendEmail({
+        to: { email: NOTIFY_TO },
+        replyTo: { email: emailClean },
         subject: `New enquiry from ${nameClean}${service ? ` — ${service}` : ""}`,
         html: notificationHtml({
           name: nameClean,
@@ -315,9 +310,8 @@ export async function POST(req: NextRequest) {
           timestamp,
         }),
       }),
-      resend.emails.send({
-        from: FROM,
-        to: emailClean,
+      sendEmail({
+        to: { email: emailClean, name: nameClean },
         subject: "We received your enquiry — Sikatrix Business Accountants",
         html: autoReplyHtml(nameClean, timestamp),
       }),
@@ -325,7 +319,7 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({ ok: true });
   } catch (err) {
-    console.error("[contact/route] Resend error:", err);
+    console.error("[contact/route] Brevo error:", err);
     return NextResponse.json(
       { error: "Failed to send your message. Please try again or call us on (011) 867-2550." },
       { status: 500 }
