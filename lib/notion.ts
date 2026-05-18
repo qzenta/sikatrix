@@ -83,9 +83,9 @@ export async function getUpcomingDeadlines(): Promise<NotionDeadline[]> {
   const cutoff = new Date(today);
   cutoff.setDate(today.getDate() + 3);
 
-  // Include overdue tasks (past 30 days) up to 3 days ahead
+  // Include overdue tasks (past 7 days) up to 3 days ahead
   const floor = new Date(today);
-  floor.setDate(today.getDate() - 30);
+  floor.setDate(today.getDate() - 7);
 
   const res = await fetch(`${NOTION_API}/databases/${DEADLINES_DB}/query`, {
     method: "POST",
