@@ -3,10 +3,11 @@ import { NextRequest, NextResponse } from "next/server";
 export const runtime = "nodejs";
 export const maxDuration = 60;
 
-const NOTION_API   = "https://api.notion.com/v1";
-const NOTION_VER   = "2022-06-28";
-const CLIENT_DB    = "32d8e3e04cde8093afbee879f5a7ce2b";
-const DEADLINES_DB = "25a14ed22b2044a6921282ada8705a8e";
+const NOTION_API       = "https://api.notion.com/v1";
+const NOTION_VER       = "2022-06-28";
+const CLIENT_DB        = "32d8e3e04cde8093afbee879f5a7ce2b";
+const DEADLINES_DB     = "25a14ed22b2044a6921282ada8705a8e";
+const SARS_CALENDAR_DB = "3358e3e04cde81a4b27fce5b66dc48d9";
 
 const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 const MONTH_FULL = ["January","February","March","April","May","June","July","August","September","October","November","December"];
@@ -42,6 +43,56 @@ async function notionCreate(properties: Record<string, unknown>) {
     body: JSON.stringify({ parent: { database_id: DEADLINES_DB }, properties }),
   });
   if (!res.ok) throw new Error(`Notion create ${res.status}: ${await res.text()}`);
+}
+
+// ── SARS Calendar helpers ─────────────────────────────────────────────────────
+
+async function fetchSarsCalendar(): Promise<Map<string, string>> {
+  const map = new Map<string, string>();
+  let cursor: string | null = null;
+  do {
+    const res: Response = await fetch(`${NOTION_API}/databases/${SARS_CALENDAR_DB}/query`, {
+      method: "POST",
+      headers: notionHeaders(),
+      body: JSON.stringify({ page_size: 100, ...(cursor ? { start_cursor: cursor } : {}) }),
+    });
+    if (!res.ok) throw new Error(`SARS Calendar query ${res.status}: ${await res.text()}`);
+    const data: { results: Record<string, unknown>[]; has_more: boolean; next_cursor: string } = await res.json();
+    for (const p of data.results) {
+      const props = (p as { properties: Record<string, { select?: { name: string }; date?: { start: string } }> }).properties;
+      const type    = props["Obligation Type"]?.select?.name ?? "";
+      const dueDate = props["Due Date"]?.date?.start ?? "";
+      if (type && dueDate) map.set(`${type}|${dueDate}`, p.id as string);
+    }
+    cursor = data.has_more ? data.next_cursor : null;
+  } while (cursor);
+  return map;
+}
+
+async function getOrCreateSarsEntry(
+  sarsMap: Map<string, string>,
+  type: string,
+  dueDate: string,
+  name: string,
+): Promise<string | null> {
+  const key = `${type}|${dueDate}`;
+  if (sarsMap.has(key)) return sarsMap.get(key)!;
+  const res = await fetch(`${NOTION_API}/pages`, {
+    method: "POST",
+    headers: notionHeaders(),
+    body: JSON.stringify({
+      parent: { database_id: SARS_CALENDAR_DB },
+      properties: {
+        "Deadline Name":   { title: [{ text: { content: name } }] },
+        "Due Date":        { date: { start: dueDate } },
+        "Obligation Type": { select: { name: type } },
+      },
+    }),
+  });
+  if (!res.ok) throw new Error(`SARS Calendar create ${res.status}: ${await res.text()}`);
+  const page: { id: string } = await res.json();
+  sarsMap.set(key, page.id);
+  return page.id;
 }
 
 // ── Date helpers ──────────────────────────────────────────────────────────────
@@ -118,6 +169,7 @@ interface ClientRecord {
 }
 interface TaskSpec {
   name: string; due: string; type: string; priority: string; clientId: string;
+  sarsName?: string; sarsType?: string;
 }
 
 function generateTasks(client: ClientRecord, today: Date): TaskSpec[] {
@@ -155,7 +207,8 @@ function generateTasks(client: ClientRecord, today: Date): TaskSpec[] {
   if (hasVat) {
     for (const { date, ps, pe } of vatDates(today, 2)) {
       const periodYear = pe < ps ? date.getFullYear() - 1 : date.getFullYear();
-      add({ name: `VAT Return — ${MONTHS[ps]}–${MONTHS[pe]} ${periodYear}`, due: isoDate(date), type: "VAT Return", priority: "\u{1F534} High" });
+      const vatLabel = `VAT Return — ${MONTHS[ps]}–${MONTHS[pe]} ${periodYear}`;
+      add({ name: vatLabel, due: isoDate(date), type: "VAT Return", priority: "\u{1F534} High", sarsName: vatLabel, sarsType: "VAT Return" });
     }
   }
 
@@ -171,7 +224,11 @@ function generateTasks(client: ClientRecord, today: Date): TaskSpec[] {
     for (const date of emp201Dates(today, 3)) {
       const pm = date.getMonth() === 0 ? 11 : date.getMonth() - 1;
       const py = date.getMonth() === 0 ? date.getFullYear() - 1 : date.getFullYear();
-      add({ name: `EMP201 — ${MONTH_FULL[pm]} ${py}`, due: isoDate(date), type: "EMP201", priority: "\u{1F534} High" });
+      add({
+        name: `EMP201 — ${MONTH_FULL[pm]} ${py}`, due: isoDate(date),
+        type: "EMP201", priority: "\u{1F534} High",
+        sarsName: `PAYE/UIF/SDL — ${MONTH_FULL[pm]} ${py}`, sarsType: "EMP201",
+      });
     }
   }
 
@@ -211,6 +268,9 @@ export async function GET(req: NextRequest) {
       };
     }).filter(c => c.name);
 
+    // Fetch SARS Calendar for linking EMP201 and VAT tasks
+    const sarsMap = await fetchSarsCalendar();
+
     // Build existing task lookup
     const existingPages = await notionQuery(DEADLINES_DB);
     const existingKeys = new Set<string>();
@@ -230,13 +290,21 @@ export async function GET(req: NextRequest) {
         const key = `${task.clientId}|${task.type}|${task.due}`;
         if (existingKeys.has(key)) { skipped++; continue; }
         try {
+          // Link EMP201 and VAT tasks to SARS Compliance Calendar
+          const sarsRelation: { id: string }[] = [];
+          if (task.sarsType && task.sarsName) {
+            const sarsId = await getOrCreateSarsEntry(sarsMap, task.sarsType, task.due, task.sarsName);
+            if (sarsId) sarsRelation.push({ id: sarsId });
+          }
+
           await notionCreate({
-            "Task Name": { title: [{ text: { content: task.name } }] },
-            "Due Date":  { date: { start: task.due } },
-            "Task Type": { select: { name: task.type } },
-            "Priority":  { select: { name: task.priority } },
-            "Status":    { select: { name: "⚪ Not Started" } },
-            "Client":    { relation: [{ id: task.clientId }] },
+            "Task Name":  { title: [{ text: { content: task.name } }] },
+            "Due Date":   { date: { start: task.due } },
+            "Task Type":  { select: { name: task.type } },
+            "Priority":   { select: { name: task.priority } },
+            "Status":     { select: { name: "⚪ Not Started" } },
+            "Client":     { relation: [{ id: task.clientId }] },
+            ...(sarsRelation.length ? { "SARS Calendar": { relation: sarsRelation } } : {}),
           });
           existingKeys.add(key);
           created++;

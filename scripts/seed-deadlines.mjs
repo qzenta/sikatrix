@@ -33,10 +33,11 @@ try {
 const NOTION_TOKEN = process.env.NOTION_TOKEN?.trim();
 if (!NOTION_TOKEN) { console.error("NOTION_TOKEN not set"); process.exit(1); }
 
-const NOTION_API   = "https://api.notion.com/v1";
-const NOTION_VER   = "2022-06-28";
-const CLIENT_DB    = "32d8e3e04cde8093afbee879f5a7ce2b";
-const DEADLINES_DB = "25a14ed22b2044a6921282ada8705a8e";
+const NOTION_API      = "https://api.notion.com/v1";
+const NOTION_VER      = "2022-06-28";
+const CLIENT_DB       = "32d8e3e04cde8093afbee879f5a7ce2b";
+const DEADLINES_DB    = "25a14ed22b2044a6921282ada8705a8e";
+const SARS_CALENDAR_DB = "3358e3e04cde81a4b27fce5b66dc48d9";
 
 const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 const MONTH_FULL = ["January","February","March","April","May","June","July","August","September","October","November","December"];
@@ -71,6 +72,43 @@ async function notionCreate(properties) {
   });
   if (!res.ok) throw new Error(`Notion create ${res.status}: ${await res.text()}`);
   return res.json();
+}
+
+// ── SARS Calendar helpers ─────────────────────────────────────────────────────
+
+// Returns a map of "type|due" → page_id for all existing SARS Calendar entries
+async function fetchSarsCalendar() {
+  const pages = await notionQuery(SARS_CALENDAR_DB);
+  const map = new Map();
+  for (const p of pages) {
+    const type    = p.properties["Obligation Type"]?.select?.name ?? "";
+    const dueDate = p.properties["Due Date"]?.date?.start ?? "";
+    if (type && dueDate) map.set(`${type}|${dueDate}`, p.id);
+  }
+  return map;
+}
+
+// Returns the page_id of a matching SARS Calendar entry, creating it if missing
+async function getOrCreateSarsEntry(sarsMap, type, dueDate, name) {
+  const key = `${type}|${dueDate}`;
+  if (sarsMap.has(key)) return sarsMap.get(key);
+  if (DRY_RUN) return null; // don't mutate in dry run
+  const res = await fetch(`${NOTION_API}/pages`, {
+    method: "POST",
+    headers: notionHeaders(),
+    body: JSON.stringify({
+      parent: { database_id: SARS_CALENDAR_DB },
+      properties: {
+        "Deadline Name":   { title: [{ text: { content: name } }] },
+        "Due Date":        { date: { start: dueDate } },
+        "Obligation Type": { select: { name: type } },
+      },
+    }),
+  });
+  if (!res.ok) throw new Error(`SARS Calendar create ${res.status}: ${await res.text()}`);
+  const page = await res.json();
+  sarsMap.set(key, page.id);
+  return page.id;
 }
 
 // ── Date helpers ──────────────────────────────────────────────────────────────
@@ -211,8 +249,11 @@ function generateTasksForClient(client, today) {
     for (const [i, date] of vatDates(today, 2).entries()) {
       const ps = periodStart[i % 6], pe = periodEnd[i % 6];
       const periodYear = pe < ps ? date.getFullYear() - 1 : date.getFullYear();
+      const vatLabel = `VAT Return — ${months[ps]}–${months[pe]} ${periodYear}`;
       tasks.push({
-        name: `VAT Return — ${months[ps]}–${months[pe]} ${periodYear}`,
+        name:     vatLabel,
+        sarsName: vatLabel,
+        sarsType: "VAT Return",
         due: isoDate(date),
         type: "VAT Return",
         priority: "🔴 High",
@@ -235,12 +276,13 @@ function generateTasksForClient(client, today) {
   // ─ Payroll: EMP201 monthly ───────────────────────────────────────────────
   if (services.includes("Payroll")) {
     const mNames = MONTH_FULL;
-    let baseM = today.getMonth(), baseY = today.getFullYear();
     for (const date of emp201Dates(today, 3)) {
       const payMonth = date.getMonth() === 0 ? 11 : date.getMonth() - 1;
       const payYear  = date.getMonth() === 0 ? date.getFullYear() - 1 : date.getFullYear();
       tasks.push({
-        name: `EMP201 — ${mNames[payMonth]} ${payYear}`,
+        name:     `EMP201 — ${mNames[payMonth]} ${payYear}`,
+        sarsName: `PAYE/UIF/SDL — ${mNames[payMonth]} ${payYear}`,
+        sarsType: "EMP201",
         due: isoDate(date),
         type: "EMP201",
         priority: "🔴 High",
@@ -289,7 +331,12 @@ async function main() {
 
   console.log(`Found ${clients.length} active clients.\n`);
 
-  // 2. Fetch ALL existing tasks for duplicate detection
+  // 2. Fetch SARS Compliance Calendar for linking
+  console.log("Fetching SARS Compliance Calendar...");
+  const sarsMap = await fetchSarsCalendar();
+  console.log(`Found ${sarsMap.size} SARS calendar entries.\n`);
+
+  // 3. Fetch ALL existing tasks for duplicate detection
   console.log("Fetching existing tasks...");
   const existingPages = await notionQuery(DEADLINES_DB);
   const existingKeys = new Set();
@@ -305,7 +352,7 @@ async function main() {
   }
   console.log(`Found ${existingPages.length} existing tasks. ${existingKeys.size} keyed entries.\n`);
 
-  // 3. Generate and create tasks
+  // 4. Generate and create tasks
   let totalCreated = 0, totalSkipped = 0, totalFailed = 0;
 
   for (const client of clients) {
@@ -329,13 +376,21 @@ async function main() {
       }
 
       try {
+        // Link EMP201 and VAT tasks to the SARS Compliance Calendar
+        const sarsRelation = [];
+        if (task.sarsType) {
+          const sarsId = await getOrCreateSarsEntry(sarsMap, task.sarsType, task.due, task.sarsName);
+          if (sarsId) sarsRelation.push({ id: sarsId });
+        }
+
         await notionCreate({
-          "Task Name": { title: [{ text: { content: task.name } }] },
-          "Due Date":  { date: { start: task.due } },
-          "Task Type": { select: { name: task.type } },
-          "Priority":  { select: { name: task.priority } },
-          "Status":    { select: { name: "⚪ Not Started" } },
-          "Client":    { relation: [{ id: client.id }] },
+          "Task Name":     { title: [{ text: { content: task.name } }] },
+          "Due Date":      { date: { start: task.due } },
+          "Task Type":     { select: { name: task.type } },
+          "Priority":      { select: { name: task.priority } },
+          "Status":        { select: { name: "⚪ Not Started" } },
+          "Client":        { relation: [{ id: client.id }] },
+          ...(sarsRelation.length ? { "SARS Calendar": { relation: sarsRelation } } : {}),
         });
         existingKeys.add(key); // prevent duplicates within same run
         created++;
