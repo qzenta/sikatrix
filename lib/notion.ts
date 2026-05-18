@@ -88,10 +88,8 @@ export async function getUpcomingDeadlines(): Promise<NotionDeadline[]> {
     headers: notionHeaders(),
     body: JSON.stringify({
       filter: {
-        and: [
-          { property: "Due Date", date: { on_or_before: cutoff.toISOString().split("T")[0] } },
-          { property: "Status", select: { does_not_equal: "🟢 Completed" } },
-        ],
+        property: "Due Date",
+        date: { on_or_before: cutoff.toISOString().split("T")[0] },
       },
       sorts: [{ property: "Due Date", direction: "ascending" }],
     }),
@@ -144,7 +142,7 @@ export async function getUpcomingDeadlines(): Promise<NotionDeadline[]> {
 
       return { id: page.id as string, taskName, dueDate, clientName, taskType, priority, status };
     })
-    .filter((d) => d.taskName && d.dueDate);
+    .filter((d) => d.taskName && d.dueDate && d.status !== "\u{1F7E2} Completed");
 }
 
 // Marks Welcome Sent = true on a Notion page
