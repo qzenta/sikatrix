@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getClientsForEngagement, markEngagementSent } from "@/lib/notion";
-import { sendEmail } from "@/lib/brevo";
+import { sendEmail, sendCronAlert } from "@/lib/brevo";
 import type { NotionClient } from "@/lib/notion";
 
 export const runtime = "nodejs";
@@ -326,6 +326,7 @@ export async function GET(req: NextRequest) {
     clients = await getClientsForEngagement();
   } catch (err) {
     console.error("[cron/engagement] Client fetch failed:", err);
+    await sendCronAlert("cron/engagement", err);
     return NextResponse.json({ error: "Client fetch failed" }, { status: 500 });
   }
 
@@ -342,6 +343,7 @@ export async function GET(req: NextRequest) {
         replyTo: { email: "info@sikatrix.com" },
         subject: `Letter of Engagement — Sikatrix Business Accountants`,
         html:    buildEngagementEmail(client),
+        bcc:     true,
       });
       await markEngagementSent(client.id);
       sent++;

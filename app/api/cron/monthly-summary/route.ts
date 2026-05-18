@@ -7,7 +7,7 @@ import {
   type NotionDeadline,
   type NotionClient,
 } from "@/lib/notion";
-import { sendEmail } from "@/lib/brevo";
+import { sendEmail, sendCronAlert } from "@/lib/brevo";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -180,6 +180,7 @@ export async function GET(req: NextRequest) {
     ]);
   } catch (err) {
     console.error("[cron/monthly-summary] Data fetch failed:", err);
+    await sendCronAlert("cron/monthly-summary", err);
     return NextResponse.json({ error: "Data fetch failed" }, { status: 500 });
   }
 

@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getClientsForReminders } from "@/lib/notion";
-import { sendEmail } from "@/lib/brevo";
+import { sendEmail, sendCronAlert } from "@/lib/brevo";
 import type { NotionClient } from "@/lib/notion";
 
 export const runtime = "nodejs";
@@ -244,6 +244,7 @@ export async function GET(req: NextRequest) {
     clients = await getClientsForReminders();
   } catch (err) {
     console.error("[cron/client-reminders] Client fetch failed:", err);
+    await sendCronAlert("cron/client-reminders", err);
     return NextResponse.json({ error: "Client fetch failed" }, { status: 500 });
   }
 
@@ -274,6 +275,7 @@ export async function GET(req: NextRequest) {
     taskPages = data.results as Record<string, unknown>[];
   } catch (err) {
     console.error("[cron/client-reminders] Task fetch failed:", err);
+    await sendCronAlert("cron/client-reminders", err);
     return NextResponse.json({ error: "Task fetch failed" }, { status: 500 });
   }
 
@@ -319,6 +321,7 @@ export async function GET(req: NextRequest) {
         replyTo: { email: "info@sikatrix.com" },
         subject: `Action Required — ${tasks.length} compliance deadline${tasks.length > 1 ? "s" : ""} in 7 days | Sikatrix`,
         html: buildReminderEmail(client, tasks),
+        bcc: true,
       });
       sent++;
     } catch (err) {

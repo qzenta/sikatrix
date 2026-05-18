@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getNewClients, markWelcomeSent } from "@/lib/notion";
-import { sendEmail } from "@/lib/brevo";
+import { sendEmail, sendCronAlert } from "@/lib/brevo";
 import type { NotionClient } from "@/lib/notion";
 
 export const runtime = "nodejs";
@@ -230,6 +230,7 @@ export async function GET(req: NextRequest) {
     clients = await getNewClients();
   } catch (err) {
     console.error("[cron/welcome] Notion query failed:", err);
+    await sendCronAlert("cron/welcome", err);
     return NextResponse.json({ error: "Notion query failed" }, { status: 500 });
   }
 
@@ -243,6 +244,7 @@ export async function GET(req: NextRequest) {
         to: { email: client.email, name: client.contact || client.name },
         subject: `Welcome to Sikatrix Business Accountants — ${client.name}`,
         html: welcomeEmailHtml(client),
+        bcc: true,
       });
       await markWelcomeSent(client.id);
     })

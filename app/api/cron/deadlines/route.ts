@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getUpcomingDeadlines } from "@/lib/notion";
-import { sendEmail } from "@/lib/brevo";
+import { sendEmail, sendCronAlert } from "@/lib/brevo";
 import type { NotionDeadline } from "@/lib/notion";
 
 export const runtime = "nodejs";
@@ -157,6 +157,7 @@ export async function GET(req: NextRequest) {
     deadlines = await getUpcomingDeadlines();
   } catch (err) {
     console.error("[cron/deadlines] Notion query failed:", err);
+    await sendCronAlert("cron/deadlines", err);
     return NextResponse.json({ error: "Notion query failed" }, { status: 500 });
   }
 

@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { sendCronAlert } from "@/lib/brevo";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -319,6 +320,7 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ ok: true, created, skipped, failed, clients: clients.length });
   } catch (err) {
     console.error("[cron/seed-deadlines] Error:", err);
+    await sendCronAlert("cron/seed-deadlines", err);
     return NextResponse.json({ error: String(err) }, { status: 500 });
   }
 }

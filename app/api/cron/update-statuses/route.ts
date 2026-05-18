@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getTasksForStatusUpdate, updateTaskStatus } from "@/lib/notion";
+import { sendCronAlert } from "@/lib/brevo";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -27,6 +28,7 @@ export async function GET(req: NextRequest) {
     tasks = await getTasksForStatusUpdate();
   } catch (err) {
     console.error("[cron/update-statuses] Fetch failed:", err);
+    await sendCronAlert("cron/update-statuses", err);
     return NextResponse.json({ error: "Fetch failed" }, { status: 500 });
   }
 
