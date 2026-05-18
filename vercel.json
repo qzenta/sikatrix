@@ -1,6 +1,10 @@
 {
   "crons": [
     {
+      "path": "/api/cron/update-statuses",
+      "schedule": "0 3 * * *"
+    },
+    {
       "path": "/api/cron/welcome",
       "schedule": "0 6 * * *"
     },

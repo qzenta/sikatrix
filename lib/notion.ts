@@ -204,6 +204,56 @@ export async function getUpcomingDeadlines(): Promise<NotionDeadline[]> {
     .filter((d) => d.taskName && d.dueDate && d.status !== "\u{1F7E2} Completed");
 }
 
+export interface NotionTask {
+  id: string;
+  dueDate: string;
+  status: string;
+}
+
+// Returns all tasks that have a Due Date (paginated), for status auto-update
+export async function getTasksForStatusUpdate(): Promise<NotionTask[]> {
+  const all: NotionTask[] = [];
+  let cursor: string | undefined;
+
+  do {
+    const body: Record<string, unknown> = {
+      filter: { property: "Due Date", date: { is_not_empty: true } },
+      page_size: 100,
+    };
+    if (cursor) body.start_cursor = cursor;
+
+    const res = await fetch(`${NOTION_API}/databases/${DEADLINES_DB}/query`, {
+      method: "POST",
+      headers: notionHeaders(),
+      body: JSON.stringify(body),
+    });
+
+    if (!res.ok) throw new Error(`Notion ${res.status}: ${await res.text()}`);
+    const data = await res.json();
+
+    for (const page of data.results as Record<string, unknown>[]) {
+      const props = page.properties as Record<string, unknown>;
+      const dueDate = (props["Due Date"] as { date?: { start: string } })?.date?.start ?? "";
+      const status = (props["Status"] as { select?: { name: string } })?.select?.name ?? "";
+      if (dueDate) all.push({ id: page.id as string, dueDate, status });
+    }
+
+    cursor = data.has_more ? (data.next_cursor as string) : undefined;
+  } while (cursor);
+
+  return all;
+}
+
+// Updates the Status select field on a Notion task page
+export async function updateTaskStatus(pageId: string, status: string): Promise<void> {
+  const res = await fetch(`${NOTION_API}/pages/${pageId}`, {
+    method: "PATCH",
+    headers: notionHeaders(),
+    body: JSON.stringify({ properties: { Status: { select: { name: status } } } }),
+  });
+  if (!res.ok) throw new Error(`Notion update ${res.status}: ${await res.text()}`);
+}
+
 // Marks Welcome Sent = true on a Notion page
 export async function markWelcomeSent(pageId: string): Promise<void> {
   const res = await fetch(`${NOTION_API}/pages/${pageId}`, {
