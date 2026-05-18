@@ -130,6 +130,151 @@ export interface NotionDeadline {
   status: string;
 }
 
+// ── Shared helpers (unexported) ───────────────────────────────────────────────
+
+async function resolveClientNames(pages: Record<string, unknown>[]): Promise<Record<string, string>> {
+  const ids = new Set<string>();
+  for (const page of pages) {
+    const rel = ((page.properties as Record<string, unknown>)["Client"] as { relation?: { id: string }[] })?.relation ?? [];
+    if (rel[0]?.id) ids.add(rel[0].id);
+  }
+  const names: Record<string, string> = {};
+  await Promise.all(Array.from(ids).map(async (id) => {
+    const r = await fetch(`${NOTION_API}/pages/${id}`, { headers: notionHeaders() });
+    if (!r.ok) return;
+    const p = await r.json();
+    const t = (p.properties["Client Name"] as { title?: { plain_text: string }[] })?.title ?? [];
+    names[id] = t[0]?.plain_text ?? "Unknown Client";
+  }));
+  return names;
+}
+
+function pageToDeadline(page: Record<string, unknown>, clientNames: Record<string, string>): NotionDeadline {
+  const props = page.properties as Record<string, unknown>;
+  const taskName = ((props["Task Name"] as { title?: { plain_text: string }[] })?.title ?? [])[0]?.plain_text ?? "";
+  const dueDate  = (props["Due Date"] as { date?: { start: string } })?.date?.start ?? "";
+  const rel      = (props["Client"] as { relation?: { id: string }[] })?.relation ?? [];
+  const clientId = rel[0]?.id ?? "";
+  return {
+    id:         page.id as string,
+    taskName,
+    dueDate,
+    clientName: clientId ? (clientNames[clientId] ?? "Unknown") : "—",
+    taskType:   (props["Task Type"] as { select?: { name: string } })?.select?.name ?? "",
+    priority:   (props["Priority"]  as { select?: { name: string } })?.select?.name ?? "",
+    status:     (props["Status"]    as { select?: { name: string } })?.select?.name ?? "",
+  };
+}
+
+// ── Monthly-summary query helpers ─────────────────────────────────────────────
+
+// Tasks with due date in [start, end] ISO strings — caller filters by status
+export async function getTasksInDateRange(start: string, end: string): Promise<NotionDeadline[]> {
+  const res = await fetch(`${NOTION_API}/databases/${DEADLINES_DB}/query`, {
+    method: "POST",
+    headers: notionHeaders(),
+    body: JSON.stringify({
+      filter: {
+        and: [
+          { property: "Due Date", date: { on_or_after: start } },
+          { property: "Due Date", date: { on_or_before: end } },
+        ],
+      },
+      sorts: [{ property: "Due Date", direction: "ascending" }],
+    }),
+  });
+  if (!res.ok) throw new Error(`Notion ${res.status}: ${await res.text()}`);
+  const data = await res.json();
+  const pages = data.results as Record<string, unknown>[];
+  const clientNames = await resolveClientNames(pages);
+  return pages.map(p => pageToDeadline(p, clientNames)).filter(d => d.taskName && d.dueDate);
+}
+
+// Tasks past due date that are not completed
+export async function getOverdueTasksAll(): Promise<NotionDeadline[]> {
+  const yesterday = new Date();
+  yesterday.setDate(yesterday.getDate() - 1);
+  const yesterdayIso = yesterday.toISOString().split("T")[0];
+
+  const res = await fetch(`${NOTION_API}/databases/${DEADLINES_DB}/query`, {
+    method: "POST",
+    headers: notionHeaders(),
+    body: JSON.stringify({
+      filter: { property: "Due Date", date: { on_or_before: yesterdayIso } },
+      sorts: [{ property: "Due Date", direction: "ascending" }],
+    }),
+  });
+  if (!res.ok) throw new Error(`Notion ${res.status}: ${await res.text()}`);
+  const data = await res.json();
+  const pages = data.results as Record<string, unknown>[];
+  const clientNames = await resolveClientNames(pages);
+  return pages
+    .map(p => pageToDeadline(p, clientNames))
+    .filter(d => d.taskName && d.dueDate && d.status !== "\u{1F7E2} Completed");
+}
+
+// Active clients created on or after a given ISO datetime string
+export async function getClientsCreatedSince(since: string): Promise<NotionClient[]> {
+  const res = await fetch(`${NOTION_API}/databases/${CLIENT_REGISTER_DB}/query`, {
+    method: "POST",
+    headers: notionHeaders(),
+    body: JSON.stringify({
+      filter: {
+        and: [
+          { property: "Status", status: { equals: "Active" } },
+          { timestamp: "created_time", created_time: { on_or_after: since } },
+        ],
+      },
+    }),
+  });
+  if (!res.ok) throw new Error(`Notion ${res.status}: ${await res.text()}`);
+  const data = await res.json();
+  return (data.results as Record<string, unknown>[]).map((page) => {
+    const props = page.properties as Record<string, unknown>;
+    const name    = ((props["Client Name"] as { title?: { plain_text: string }[] })?.title ?? [])[0]?.plain_text ?? "";
+    const contact = ((props["Contact"] as { rich_text?: { plain_text: string }[] })?.rich_text ?? [])[0]?.plain_text ?? "";
+    const email   = (props["Email"] as { email?: string })?.email ?? "";
+    const entityType = (props["Entity Type"] as { select?: { name: string } })?.select?.name ?? "";
+    const services   = ((props["Services"] as { multi_select?: { name: string }[] })?.multi_select ?? []).map(s => s.name);
+    const fye        = (props["FYE"] as { select?: { name: string } })?.select?.name ?? "";
+    const vatNo      = ((props["VAT No"] as { rich_text?: { plain_text: string }[] })?.rich_text ?? [])[0]?.plain_text ?? "";
+    return { id: page.id as string, name, contact, email, entityType, services, reminders: false, fye, vatNo };
+  }).filter(c => c.name);
+}
+
+// Tasks due within the next N days, not completed
+export async function getUpcomingDeadlinesN(days: number): Promise<NotionDeadline[]> {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const cutoff = new Date(today);
+  cutoff.setDate(today.getDate() + days);
+  const todayIso  = today.toISOString().split("T")[0];
+  const cutoffIso = cutoff.toISOString().split("T")[0];
+
+  const res = await fetch(`${NOTION_API}/databases/${DEADLINES_DB}/query`, {
+    method: "POST",
+    headers: notionHeaders(),
+    body: JSON.stringify({
+      filter: {
+        and: [
+          { property: "Due Date", date: { on_or_after: todayIso } },
+          { property: "Due Date", date: { on_or_before: cutoffIso } },
+        ],
+      },
+      sorts: [{ property: "Due Date", direction: "ascending" }],
+    }),
+  });
+  if (!res.ok) throw new Error(`Notion ${res.status}: ${await res.text()}`);
+  const data = await res.json();
+  const pages = data.results as Record<string, unknown>[];
+  const clientNames = await resolveClientNames(pages);
+  return pages
+    .map(p => pageToDeadline(p, clientNames))
+    .filter(d => d.taskName && d.dueDate && d.status !== "\u{1F7E2} Completed");
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+
 // Returns tasks due within the next 3 days (and overdue) that are not Completed
 export async function getUpcomingDeadlines(): Promise<NotionDeadline[]> {
   const today = new Date();
