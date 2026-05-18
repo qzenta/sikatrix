@@ -5,7 +5,7 @@ const CLIENT_REGISTER_DB = "32d8e3e04cde8093afbee879f5a7ce2b";
 const DEADLINES_DB = "25a14ed22b2044a6921282ada8705a8e";
 
 function notionHeaders() {
-  const token = process.env.NOTION_TOKEN;
+  const token = process.env.NOTION_TOKEN?.trim();
   if (!token) throw new Error("NOTION_TOKEN is not set");
   return {
     Authorization: `Bearer ${token}`,
@@ -83,13 +83,19 @@ export async function getUpcomingDeadlines(): Promise<NotionDeadline[]> {
   const cutoff = new Date(today);
   cutoff.setDate(today.getDate() + 3);
 
+  // Include overdue tasks (past 30 days) up to 3 days ahead
+  const floor = new Date(today);
+  floor.setDate(today.getDate() - 30);
+
   const res = await fetch(`${NOTION_API}/databases/${DEADLINES_DB}/query`, {
     method: "POST",
     headers: notionHeaders(),
     body: JSON.stringify({
       filter: {
-        property: "Due Date",
-        date: { on_or_before: cutoff.toISOString().split("T")[0] },
+        and: [
+          { property: "Due Date", date: { on_or_after: floor.toISOString().split("T")[0] } },
+          { property: "Due Date", date: { on_or_before: cutoff.toISOString().split("T")[0] } },
+        ],
       },
       sorts: [{ property: "Due Date", direction: "ascending" }],
     }),
