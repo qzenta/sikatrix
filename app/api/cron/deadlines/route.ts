@@ -175,7 +175,7 @@ export async function GET(req: NextRequest) {
 
   try {
     await sendEmail({
-      to: { email: "nerkke@gmail.com", name: "Daniel Amoah" },
+      to: { email: "daniel@sikatrix.com", name: "Daniel Amoah" },
       subject,
       html: buildEmailHtml(deadlines, todayStr),
     });
