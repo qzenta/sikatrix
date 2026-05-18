@@ -24,6 +24,7 @@ export interface NotionClient {
   reminders: boolean;
   fye: string;
   vatNo: string;
+  regNo?: string;
 }
 
 // Returns Active clients where Welcome Sent checkbox is false
@@ -395,6 +396,47 @@ export async function updateTaskStatus(pageId: string, status: string): Promise<
     method: "PATCH",
     headers: notionHeaders(),
     body: JSON.stringify({ properties: { Status: { select: { name: status } } } }),
+  });
+  if (!res.ok) throw new Error(`Notion update ${res.status}: ${await res.text()}`);
+}
+
+// Active clients where Welcome Sent = true and Engagement Sent = false
+export async function getClientsForEngagement(): Promise<NotionClient[]> {
+  const res = await fetch(`${NOTION_API}/databases/${CLIENT_REGISTER_DB}/query`, {
+    method: "POST",
+    headers: notionHeaders(),
+    body: JSON.stringify({
+      filter: {
+        and: [
+          { property: "Status",          status:   { equals: "Active" } },
+          { property: "Welcome Sent",    checkbox: { equals: true     } },
+          { property: "Engagement Sent", checkbox: { equals: false    } },
+        ],
+      },
+    }),
+  });
+  if (!res.ok) throw new Error(`Notion ${res.status}: ${await res.text()}`);
+  const data = await res.json();
+  return (data.results as Record<string, unknown>[]).map((page) => {
+    const props = page.properties as Record<string, unknown>;
+    const name    = ((props["Client Name"] as { title?: { plain_text: string }[] })?.title ?? [])[0]?.plain_text ?? "";
+    const contact = ((props["Contact"]     as { rich_text?: { plain_text: string }[] })?.rich_text ?? [])[0]?.plain_text ?? "";
+    const email   = (props["Email"]        as { email?: string })?.email ?? "";
+    const entityType = (props["Entity Type"] as { select?: { name: string } })?.select?.name ?? "";
+    const services   = ((props["Services"]   as { multi_select?: { name: string }[] })?.multi_select ?? []).map(s => s.name);
+    const fye        = (props["FYE"]         as { select?: { name: string } })?.select?.name ?? "";
+    const vatNo      = ((props["VAT No"]     as { rich_text?: { plain_text: string }[] })?.rich_text ?? [])[0]?.plain_text ?? "";
+    const regNo      = ((props["Reg No."]    as { rich_text?: { plain_text: string }[] })?.rich_text ?? [])[0]?.plain_text ?? "";
+    return { id: page.id as string, name, contact, email, entityType, services, reminders: false, fye, vatNo, regNo };
+  }).filter(c => c.email && c.name);
+}
+
+// Marks Engagement Sent = true on a Notion page
+export async function markEngagementSent(pageId: string): Promise<void> {
+  const res = await fetch(`${NOTION_API}/pages/${pageId}`, {
+    method: "PATCH",
+    headers: notionHeaders(),
+    body: JSON.stringify({ properties: { "Engagement Sent": { checkbox: true } } }),
   });
   if (!res.ok) throw new Error(`Notion update ${res.status}: ${await res.text()}`);
 }
