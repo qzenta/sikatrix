@@ -1,8 +1,8 @@
 const NOTION_API = "https://api.notion.com/v1";
 const NOTION_VERSION = "2022-06-28";
 
-// Sikatrix HQ — Client Register database ID
 const CLIENT_REGISTER_DB = "32d8e3e04cde8093afbee879f5a7ce2b";
+const DEADLINES_DB = "25a14ed22b2044a6921282ada8705a8e";
 
 function notionHeaders() {
   const token = process.env.NOTION_TOKEN;
@@ -65,6 +65,86 @@ export async function getNewClients(): Promise<NotionClient[]> {
       return { id: page.id as string, name, contact, email, entityType, services };
     })
     .filter((c) => c.email && c.name); // skip records missing email or name
+}
+
+export interface NotionDeadline {
+  id: string;
+  taskName: string;
+  dueDate: string;
+  clientName: string;
+  taskType: string;
+  priority: string;
+  status: string;
+}
+
+// Returns tasks due within the next 3 days (and overdue) that are not Completed
+export async function getUpcomingDeadlines(): Promise<NotionDeadline[]> {
+  const today = new Date();
+  const cutoff = new Date(today);
+  cutoff.setDate(today.getDate() + 3);
+
+  const res = await fetch(`${NOTION_API}/databases/${DEADLINES_DB}/query`, {
+    method: "POST",
+    headers: notionHeaders(),
+    body: JSON.stringify({
+      filter: {
+        and: [
+          { property: "Due Date", date: { on_or_before: cutoff.toISOString().split("T")[0] } },
+          { property: "Status", select: { does_not_equal: "🟢 Completed" } },
+        ],
+      },
+      sorts: [{ property: "Due Date", direction: "ascending" }],
+    }),
+  });
+
+  if (!res.ok) {
+    const text = await res.text();
+    throw new Error(`Notion deadlines query ${res.status}: ${text}`);
+  }
+
+  const data = await res.json();
+  const pages = data.results as Record<string, unknown>[];
+
+  // Collect unique client page IDs to resolve names in one pass
+  const clientIdSet = new Set<string>();
+  for (const page of pages) {
+    const props = page.properties as Record<string, unknown>;
+    const rel = (props["Client"] as { relation?: { id: string }[] })?.relation ?? [];
+    if (rel[0]?.id) clientIdSet.add(rel[0].id);
+  }
+
+  const clientNames: Record<string, string> = {};
+  await Promise.all(
+    Array.from(clientIdSet).map(async (clientId) => {
+      const r = await fetch(`${NOTION_API}/pages/${clientId}`, { headers: notionHeaders() });
+      if (!r.ok) return;
+      const p = await r.json();
+      const props = p.properties as Record<string, unknown>;
+      const titleArr = (props["Client Name"] as { title?: { plain_text: string }[] })?.title ?? [];
+      clientNames[clientId] = titleArr[0]?.plain_text ?? "Unknown Client";
+    })
+  );
+
+  return pages
+    .map((page) => {
+      const props = page.properties as Record<string, unknown>;
+
+      const titleArr = (props["Task Name"] as { title?: { plain_text: string }[] })?.title ?? [];
+      const taskName = titleArr[0]?.plain_text ?? "";
+
+      const dueDate = (props["Due Date"] as { date?: { start: string } })?.date?.start ?? "";
+
+      const rel = (props["Client"] as { relation?: { id: string }[] })?.relation ?? [];
+      const clientId = rel[0]?.id ?? "";
+      const clientName = clientId ? (clientNames[clientId] ?? "Unknown") : "—";
+
+      const taskType = (props["Task Type"] as { select?: { name: string } })?.select?.name ?? "";
+      const priority = (props["Priority"] as { select?: { name: string } })?.select?.name ?? "";
+      const status = (props["Status"] as { select?: { name: string } })?.select?.name ?? "";
+
+      return { id: page.id as string, taskName, dueDate, clientName, taskType, priority, status };
+    })
+    .filter((d) => d.taskName && d.dueDate);
 }
 
 // Marks Welcome Sent = true on a Notion page
