@@ -67,7 +67,7 @@ export const TOPIC_CLUSTERS: Record<
   },
   payroll: {
     label: "Payroll",
-    description: "PAYE, UIF, SDL, and employer tax obligations.",
+    description: "PAYE, UIF, SDL, COIDA, and all employer statutory obligations.",
     color: "bg-purple-50 text-purple-700 border-purple-200",
   },
   tax: {
