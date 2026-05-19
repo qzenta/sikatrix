@@ -153,18 +153,23 @@ export default function Footer() {
           <span className="text-2xs font-semibold uppercase tracking-widest text-neutral-600 flex-shrink-0">
             Professional Memberships
           </span>
-          <div className="flex flex-wrap items-center gap-6">
+          <div className="flex flex-wrap items-center gap-4">
             {[
               { name: "SAIPA — Registered Professional Accountant", logo: "/partners/saipa.png" },
               { name: "IBASA — Member",                             logo: "/partners/ibasa.png" },
               { name: "SARS — Registered Tax Practitioner",         logo: "/partners/sars.png"  },
             ].map((m) => (
-              <div key={m.name} title={m.name} className="flex items-center justify-center" style={{ height: 36 }}>
+              <div
+                key={m.name}
+                title={m.name}
+                className="flex items-center justify-center bg-white rounded px-3 py-1.5"
+                style={{ height: 44 }}
+              >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={m.logo}
                   alt={m.name}
-                  style={{ height: 32, width: "auto", maxWidth: 90, objectFit: "contain", filter: "brightness(0) invert(1)", opacity: 0.65 }}
+                  style={{ height: 28, width: "auto", maxWidth: 100, objectFit: "contain" }}
                 />
               </div>
             ))}
