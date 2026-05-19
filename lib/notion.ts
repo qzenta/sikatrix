@@ -3,6 +3,7 @@ const NOTION_VERSION = "2022-06-28";
 
 const CLIENT_REGISTER_DB = "32d8e3e04cde8093afbee879f5a7ce2b";
 const DEADLINES_DB = "25a14ed22b2044a6921282ada8705a8e";
+const BRAIN_DB = process.env.NOTION_BRAIN_DB_ID ?? "";
 
 function notionHeaders() {
   const token = process.env.NOTION_TOKEN?.trim();
@@ -457,4 +458,66 @@ export async function markWelcomeSent(pageId: string): Promise<void> {
     const text = await res.text();
     throw new Error(`Notion update ${res.status}: ${text}`);
   }
+}
+
+// ── 🧠 Daniel's Brain ────────────────────────────────────────────────────────
+
+export type BrainProject     = "Sikatrix" | "TiqBooks" | "GDSA" | "Erga" | "Content" | "IBASA" | "Personal";
+export type BrainEntryType   = "Decision" | "Context" | "Idea" | "Handoff" | "Outstanding" | "Strategy" | "Reference";
+export type BrainEnvironment = "Claude.ai" | "CC" | "Both";
+export type BrainStatus      = "Active" | "Archived" | "Superseded";
+
+export interface BrainEntry {
+  title:           string;
+  project:         BrainProject;
+  entryType:       BrainEntryType;
+  environment:     BrainEnvironment;
+  status:          BrainStatus;
+  summary:         string;
+  nextAction?:     string;
+  files?:          string;
+  date?:           string; // ISO date "YYYY-MM-DD"
+  tags?:           string[];
+  linkedProjectDb?: string; // URL
+}
+
+function brainRichText(content: string) {
+  const chunks: { type: "text"; text: { content: string } }[] = [];
+  for (let i = 0; i < content.length; i += 1900) {
+    chunks.push({ type: "text", text: { content: content.slice(i, i + 1900) } });
+  }
+  return chunks;
+}
+
+export async function createBrainEntry(entry: BrainEntry): Promise<string> {
+  if (!BRAIN_DB) throw new Error("NOTION_BRAIN_DB_ID is not set");
+
+  const properties: Record<string, unknown> = {
+    Title:          { title: [{ type: "text", text: { content: entry.title } }] },
+    Project:        { select: { name: entry.project } },
+    "Entry Type":   { select: { name: entry.entryType } },
+    Environment:    { select: { name: entry.environment } },
+    Status:         { select: { name: entry.status } },
+    Summary:        { rich_text: brainRichText(entry.summary) },
+  };
+
+  if (entry.nextAction)     properties["Next Action"]        = { rich_text: brainRichText(entry.nextAction) };
+  if (entry.files)          properties["Files"]              = { rich_text: brainRichText(entry.files) };
+  if (entry.date)           properties["Date"]               = { date: { start: entry.date } };
+  if (entry.tags?.length)   properties["Tags"]               = { multi_select: entry.tags.map(t => ({ name: t })) };
+  if (entry.linkedProjectDb) properties["Linked Project DB"] = { url: entry.linkedProjectDb };
+
+  const res = await fetch(`${NOTION_API}/pages`, {
+    method: "POST",
+    headers: notionHeaders(),
+    body: JSON.stringify({ parent: { database_id: BRAIN_DB }, properties }),
+  });
+
+  if (!res.ok) {
+    const text = await res.text();
+    throw new Error(`Brain entry create ${res.status}: ${text}`);
+  }
+
+  const data = await res.json();
+  return data.id as string;
 }
