@@ -17,14 +17,21 @@ import { SERVICES, LOCATIONS, SITE } from "@/lib/site";
 
 // Deliberate internal backlinking: each article links to its most relevant services
 const ARTICLE_SERVICE_MAP: Record<string, string[]> = {
-  "sars-provisional-tax-guide-2025":       ["tax-services", "bookkeeping", "cloud-accounting"],
-  "small-business-bookkeeping-mistakes":   ["bookkeeping", "cloud-accounting", "tax-services"],
-  "cloud-accounting-vs-desktop":           ["cloud-accounting", "bookkeeping", "annual-financial-statements"],
-  "registering-a-company-cipc-guide":      ["company-secretarial", "tax-services", "bookkeeping"],
-  "paye-uif-sdl-explained":               ["payroll", "tax-services", "bookkeeping"],
-  "vat-registration-when-and-how":         ["tax-services", "bookkeeping", "annual-financial-statements"],
-  "sars-efiling-business-registration":    ["tax-services", "company-secretarial", "bookkeeping"],
-  "how-to-submit-company-tax-return-itr14":["tax-services", "annual-financial-statements", "bookkeeping"],
+  "sars-provisional-tax-guide-2025":                    ["tax-services", "bookkeeping", "cloud-accounting"],
+  "small-business-bookkeeping-mistakes":                ["bookkeeping", "cloud-accounting", "tax-services"],
+  "cloud-accounting-vs-desktop":                        ["cloud-accounting", "bookkeeping", "annual-financial-statements"],
+  "registering-a-company-cipc-guide":                   ["company-secretarial", "tax-services", "bookkeeping"],
+  "paye-uif-sdl-explained":                             ["payroll", "tax-services", "bookkeeping"],
+  "vat-registration-when-and-how":                      ["tax-services", "bookkeeping", "annual-financial-statements"],
+  "sars-efiling-business-registration":                 ["tax-services", "company-secretarial", "bookkeeping"],
+  "how-to-submit-company-tax-return-itr14":             ["tax-services", "annual-financial-statements", "bookkeeping"],
+  "coida-return-of-earnings-guide-south-africa":        ["payroll", "tax-services", "annual-financial-statements"],
+  "workmens-compensation-south-africa":                 ["payroll", "tax-services", "bookkeeping"],
+  "sme-tax-compliance-calendar-2025-2026":              ["tax-services", "bookkeeping", "payroll"],
+  "mothers-day-gifts-sars-donations-tax":               ["tax-services", "bookkeeping"],
+  "tax-clearance-certificate-south-africa":             ["tax-services", "company-secretarial", "bookkeeping"],
+  "sars-penalties-objections-appeals":                  ["tax-services", "bookkeeping"],
+  "home-office-tax-deduction-south-africa":             ["tax-services", "bookkeeping", "cloud-accounting"],
 };
 
 export async function generateStaticParams() {
@@ -255,6 +262,29 @@ export default async function BlogPostPage({
                 >
                   Book Free Consultation <ArrowRight size={13} />
                 </Link>
+              </div>
+
+              {/* Author bio */}
+              <div className="mt-8 p-5 rounded-xl bg-neutral-50 border border-neutral-200 flex gap-4 items-start">
+                <div className="flex-shrink-0">
+                  <Image
+                    src="/about/daniel-amoah.jpg"
+                    alt="Daniel Amoah — SAIPA Professional Accountant"
+                    width={56}
+                    height={56}
+                    className="rounded-full object-cover"
+                  />
+                </div>
+                <div className="min-w-0">
+                  <p className="text-sm font-semibold text-neutral-900 mb-0.5">Daniel Amoah</p>
+                  <p className="text-xs text-brand font-medium mb-2">SAIPA Professional Accountant (SA) · SARS Tax Practitioner · IBASA Member</p>
+                  <p className="text-xs text-neutral-500 leading-relaxed">
+                    Daniel founded Sikatrix Business Accountants to give Gauteng&apos;s growing businesses access to SAIPA-registered accounting. With over 10 years in practice, he specialises in tax compliance, annual financial statements, and cloud accounting for SMEs across Alberton and Johannesburg.
+                  </p>
+                  <Link href="/about" className="inline-flex items-center gap-1 text-xs text-brand hover:underline mt-2 font-medium">
+                    About the author <ArrowRight size={10} />
+                  </Link>
+                </div>
               </div>
 
               {/* Tags */}

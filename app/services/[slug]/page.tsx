@@ -14,14 +14,108 @@ import { getAllPosts } from "@/lib/blog";
 
 // Deliberate backlinking: service pages link to their most relevant articles
 const SERVICE_ARTICLE_MAP: Record<string, string[]> = {
-  "annual-financial-statements": ["registering-a-company-cipc-guide", "small-business-bookkeeping-mistakes"],
-  "tax-services":                ["sars-provisional-tax-guide-2025", "vat-registration-when-and-how"],
+  "annual-financial-statements": ["registering-a-company-cipc-guide", "small-business-bookkeeping-mistakes", "sme-tax-compliance-calendar-2025-2026"],
+  "tax-services":                ["sars-provisional-tax-guide-2025", "vat-registration-when-and-how", "sars-penalties-objections-appeals"],
   "bookkeeping":                 ["small-business-bookkeeping-mistakes", "cloud-accounting-vs-desktop"],
-  "payroll":                     ["paye-uif-sdl-explained"],
+  "payroll":                     ["paye-uif-sdl-explained", "coida-return-of-earnings-guide-south-africa", "workmens-compensation-south-africa"],
   "cloud-accounting":            ["cloud-accounting-vs-desktop", "small-business-bookkeeping-mistakes"],
-  "company-secretarial":         ["registering-a-company-cipc-guide"],
+  "company-secretarial":         ["registering-a-company-cipc-guide", "tax-clearance-certificate-south-africa"],
   "business-permit-support":     ["registering-a-company-cipc-guide"],
   "import-export-license":       [],
+};
+
+// ICP targeting: who each service is (and isn't) for
+const SERVICE_WHO_FOR: Record<string, { for: string[]; notFor: string[] }> = {
+  "annual-financial-statements": {
+    for: [
+      "Private companies (Pty Ltd, NPC, CC) with CIPC annual filing obligations",
+      "Businesses applying for a bank loan, overdraft, or external funding",
+      "Companies with shareholders or a board requiring formal financial reporting",
+      "Any entity that must prove financial compliance to a regulatory body or funder",
+    ],
+    notFor: [
+      "Sole proprietors who only need a simple cash book or management summary",
+      "Dormant companies with no trading activity in the year",
+    ],
+  },
+  "tax-services": {
+    for: [
+      "Business owners with ITR14 (company) or IRP6 (provisional tax) obligations",
+      "VAT vendors with monthly or bi-monthly VAT201 submissions",
+      "Anyone with outstanding SARS returns, penalties, or objections pending",
+      "Sole proprietors, freelancers, and individuals with multiple income sources",
+    ],
+    notFor: [
+      "Employees whose only income is a single salary with PAYE fully deducted — SARS Auto-Assessment typically handles these",
+    ],
+  },
+  "bookkeeping": {
+    for: [
+      "Growing SMEs that need reliable monthly management accounts to make decisions",
+      "VAT vendors who need clean, complete records for every bi-monthly submission",
+      "Businesses that are months or years behind on their bookkeeping",
+      "Business owners who want to stop guessing where the money is at month-end",
+    ],
+    notFor: [
+      "Businesses with fewer than 15 monthly transactions already using a well-maintained system",
+    ],
+  },
+  "payroll": {
+    for: [
+      "Any business employing at least one person — full-time, part-time, or casual",
+      "Employers with PAYE, UIF, SDL, and COIDA (Compensation Fund) obligations",
+      "Businesses with complex payroll: overtime, commissions, leave accruals, bonuses",
+      "Companies that have received SARS payroll penalties and need to get clean",
+    ],
+    notFor: [
+      "Sole proprietors with no employees who only draw owner's drawings or dividends",
+    ],
+  },
+  "cloud-accounting": {
+    for: [
+      "Businesses moving from desktop accounting software (Pastel, QuickBooks Desktop) to cloud",
+      "Businesses with no formal accounting system who need one set up from scratch",
+      "Multi-location or remote businesses needing real-time financial visibility",
+      "Business owners who want 24/7 access to their numbers from any device",
+    ],
+    notFor: [
+      "Businesses already on a well-configured cloud platform with clean, current data",
+    ],
+  },
+  "company-secretarial": {
+    for: [
+      "Entrepreneurs registering a new Pty Ltd, NPC, or converting a CC",
+      "Existing companies needing CIPC annual returns filed before the deadline",
+      "Businesses requiring director, shareholder, or registered office amendments",
+      "Foreign nationals needing a South African company legally registered",
+    ],
+    notFor: [
+      "Sole proprietors with no CIPC registration requirements",
+      "Companies already self-managing CIPC compliance with a dedicated in-house secretary",
+    ],
+  },
+  "business-permit-support": {
+    for: [
+      "Foreign nationals starting or running a business in South Africa",
+      "South African employers hiring foreign skills under a critical skills or work visa",
+      "Permit applicants who need financial viability reports for DHA submissions",
+      "Businesses needing CIPC registration and SARS tax registration for foreign principals",
+    ],
+    notFor: [
+      "South African citizens with no immigration or permit requirements",
+    ],
+  },
+  "import-export-license": {
+    for: [
+      "Businesses importing goods for resale, manufacturing, or distribution in South Africa",
+      "South African businesses exporting goods or services internationally",
+      "Any business crossing the SARS customs registration threshold",
+      "Companies dealing in goods subject to specific import duties or permits",
+    ],
+    notFor: [
+      "Businesses that exclusively buy and sell within South Africa with no cross-border activity",
+    ],
+  },
 };
 
 const ICON_MAP: Record<string, React.ElementType> = {
@@ -381,6 +475,34 @@ export default async function ServicePage({
                     </p>
                   )}
 
+                  {/* Who this is for */}
+                  {SERVICE_WHO_FOR[slug] && (
+                    <div className="mb-6 p-5 bg-white rounded-xl border border-neutral-200">
+                      <h3 className="text-sm font-semibold text-neutral-900 mb-3">Who this service is for</h3>
+                      <ul className="space-y-2 mb-4">
+                        {SERVICE_WHO_FOR[slug].for.map((item) => (
+                          <li key={item} className="flex gap-2.5 text-sm text-neutral-700">
+                            <CheckCircle size={14} className="text-brand flex-shrink-0 mt-0.5" />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                      {SERVICE_WHO_FOR[slug].notFor.length > 0 && (
+                        <>
+                          <p className="text-xs font-semibold text-neutral-400 uppercase tracking-widest mb-2">Probably not for you if…</p>
+                          <ul className="space-y-1.5">
+                            {SERVICE_WHO_FOR[slug].notFor.map((item) => (
+                              <li key={item} className="flex gap-2 text-sm text-neutral-400">
+                                <span className="flex-shrink-0">·</span>
+                                {item}
+                              </li>
+                            ))}
+                          </ul>
+                        </>
+                      )}
+                    </div>
+                  )}
+
                   {/* Content image */}
                   {SERVICE_CONTENT_IMAGES[slug] && (
                     <div className="relative h-52 sm:h-64 rounded-xl overflow-hidden mb-6">
@@ -415,7 +537,7 @@ export default async function ServicePage({
                           Get Started with {service.shortTitle}
                         </h3>
                         <p className="text-sm text-neutral-600 mb-4">
-                          Book a free 15-minute call and we'll explain exactly how this service applies to your business.
+                          Book a free 30-minute consultation and we'll explain exactly how this service applies to your business.
                         </p>
                         <div className="flex flex-wrap items-center gap-3">
                           <Link href="/contact" className="btn-primary text-sm">
