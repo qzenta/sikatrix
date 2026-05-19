@@ -61,6 +61,32 @@ const nextConfig: NextConfig = {
       // /feed → resources (middleware handles wp-admin/login/xmlrpc/etc with 410)
       { source: "/feed", destination: "/resources", permanent: true },
       { source: "/feed/:path*", destination: "/resources", permanent: true },
+
+      // ── Legacy WordPress slug variants (with trailing slash) ──────────
+      { source: "/about-us/",         destination: "/about",    permanent: true },
+      { source: "/contact-us/",       destination: "/contact",  permanent: true },
+      { source: "/our-services/",     destination: "/services", permanent: true },
+      { source: "/blog/",             destination: "/resources", permanent: true },
+
+      // ── Old service slugs that are still indexed ──────────────────────
+      { source: "/faqs",              destination: "/faq",                       permanent: true },
+      { source: "/faqs/",             destination: "/faq",                       permanent: true },
+      { source: "/faqs/:path*",       destination: "/faq",                       permanent: true },
+      { source: "/tax-services",      destination: "/services/tax-services",     permanent: true },
+      { source: "/tax-services/",     destination: "/services/tax-services",     permanent: true },
+      { source: "/cloud-accounting",  destination: "/services/cloud-accounting", permanent: true },
+      { source: "/cloud-accounting/", destination: "/services/cloud-accounting", permanent: true },
+
+      // ── Doubled privacy-policy path ───────────────────────────────────
+      { source: "/privacy-policy/privacy-policy", destination: "/privacy-policy", permanent: true },
+      { source: "/privacy-policy/privacy-policy/", destination: "/privacy-policy", permanent: true },
+
+      // ── Old static HTML pages still indexed under www ─────────────────
+      { source: "/services3.html",    destination: "/services", permanent: true },
+      { source: "/services4.html",    destination: "/services", permanent: true },
+      { source: "/services5.html",    destination: "/services", permanent: true },
+      { source: "/services6.html",    destination: "/services", permanent: true },
+      { source: "/careers.html",      destination: "/contact",  permanent: true },
     ];
   },
 };

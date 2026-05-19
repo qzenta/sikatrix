@@ -282,9 +282,9 @@ export default function ContactForm() {
                 <span className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />
                 <span className="text-xs font-semibold uppercase tracking-wider text-accent">Book a Call</span>
               </div>
-              <h3 className="text-base font-semibold mb-1">Free 15-Minute Discovery Call</h3>
+              <h3 className="text-base font-semibold mb-1">Book a Free 30-Minute Consultation</h3>
               <p className="text-sm text-white/70 mb-4">
-                Pick a time that suits you. No obligation — just a quick chat about your accounting needs.
+                Pick a time that suits you. No obligation — just a straight conversation about your accounting needs.
               </p>
               <a
                 href="https://calendly.com/onukpa/15min"

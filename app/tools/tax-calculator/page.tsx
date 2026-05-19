@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     description:
       "Calculate your South African income tax instantly — 2026/27 SARS brackets, rebates, medical credits, and take-home pay.",
     type: "website",
-    url: "https://sikatrix.com/tools/tax-calculator",
+    url: "https://www.sikatrix.com/tools/tax-calculator",
   },
 };
 
@@ -33,14 +33,14 @@ const calculatorSchema = {
   "@type": "WebApplication",
   name: "SARS Income Tax Calculator 2026/27",
   description: "Free South African income tax calculator for individuals — 2026/27 tax year.",
-  url: "https://sikatrix.com/tools/tax-calculator",
+  url: "https://www.sikatrix.com/tools/tax-calculator",
   applicationCategory: "FinanceApplication",
   operatingSystem: "Any",
   offers: { "@type": "Offer", price: "0", priceCurrency: "ZAR" },
   provider: {
     "@type": "AccountingService",
     name: "Sikatrix Business Accountants",
-    url: "https://sikatrix.com",
+    url: "https://www.sikatrix.com",
   },
 };
 

@@ -11,7 +11,7 @@ import { SERVICES } from "@/lib/site";
 export const metadata: Metadata = {
   title: { absolute: "Accounting & Tax Services | Sikatrix Business Accountants" },
   description:
-    "Full-spectrum accounting services: annual financial statements, tax returns, bookkeeping, payroll, cloud accounting, company secretarial, and business rescue.",
+    "Full-spectrum accounting services for South African businesses: annual financial statements, tax returns, bookkeeping, payroll, cloud accounting, and company secretarial support.",
   alternates: { canonical: "https://www.sikatrix.com/services" },
 };
 

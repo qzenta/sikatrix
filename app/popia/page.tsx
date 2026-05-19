@@ -3,7 +3,7 @@ import PageHero from "@/components/shared/PageHero";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "POPIA Compliance Notice | Sikatrix Business Accountants",
+  title: { absolute: "POPIA Compliance Notice | Sikatrix Business Accountants" },
   description: "POPIA Compliance Notice for Sikatrix Business Accountants — information on our obligations as a Responsible Party under the Protection of Personal Information Act.",
   robots: { index: false, follow: false },
 };
