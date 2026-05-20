@@ -7,6 +7,7 @@ import PricingTeaser from "@/components/home/PricingTeaser";
 import LocationHighlights from "@/components/home/LocationHighlights";
 import LeadMagnet from "@/components/home/LeadMagnet";
 import TestimonialsGrid from "@/components/shared/TestimonialsGrid";
+import ProofModules from "@/components/home/ProofModules";
 import CTABlock from "@/components/shared/CTABlock";
 import { getLatestPosts } from "@/lib/blog";
 import Link from "next/link";
@@ -38,6 +39,7 @@ export default function HomePage() {
       <LocationHighlights />
       <LeadMagnet />
       <TestimonialsGrid />
+      <ProofModules />
 
       {/* Blog preview */}
       <section className="py-12 md:py-16 bg-neutral-100">
