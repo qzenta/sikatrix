@@ -14,7 +14,14 @@ const WP_DEAD_EXACT = [
 ];
 
 export function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl;
+  const { pathname, search } = request.nextUrl;
+  const host = request.headers.get("host") ?? "";
+
+  // Enforce www — redirect bare apex domain at app level as a safety net
+  if (host === "sikatrix.com") {
+    const url = `https://www.sikatrix.com${pathname}${search}`;
+    return NextResponse.redirect(url, { status: 301 });
+  }
 
   const isDeadPrefix = WP_DEAD_PREFIXES.some(
     (p) => pathname === p || pathname.startsWith(p + "/")
@@ -36,5 +43,6 @@ export const config = {
     "/wp-login.php",
     "/wp-register.php",
     "/xmlrpc.php",
+    "/((?!_next/static|_next/image|favicon.ico).*)",
   ],
 };

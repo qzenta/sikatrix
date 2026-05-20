@@ -477,7 +477,7 @@ export default async function IndustryPage({
                         Get Specialist Accounting for {industry.shortTitle}
                       </h3>
                       <p className="text-sm text-neutral-600 mb-4">
-                        Book a free 15-minute call and we'll show you exactly how we support your sector.
+                        Book a free 30-minute consultation and we'll show you exactly how we support your sector.
                       </p>
                       <div className="flex flex-wrap items-center gap-3">
                         <Link href="/contact" className="btn-primary text-sm">
