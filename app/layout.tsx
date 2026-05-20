@@ -5,6 +5,8 @@ import Footer from "@/components/layout/Footer";
 import CookieBanner from "@/components/ui/CookieBanner";
 import TaxCalcBanner from "@/components/ui/TaxCalcBanner";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { SITE } from "@/lib/site";
 import { buildLocalBusinessSchema } from "@/lib/metadata";
 
@@ -62,6 +64,8 @@ export default function RootLayout({
         {process.env.NEXT_PUBLIC_GA_ID && (
           <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
         )}
+        <Analytics />
+        <SpeedInsights />
 
         {/* WhatsApp float */}
         <a
