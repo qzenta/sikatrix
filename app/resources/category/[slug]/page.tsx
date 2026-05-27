@@ -60,7 +60,7 @@ export default async function CategoryPage({
           { label: "Resources", href: "/resources" },
           { label: cluster.label },
         ]}
-        bgImage="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1600&auto=format&fit=crop&q=60"
+        bgImage="https://images.pexels.com/photos/7567313/pexels-photo-7567313.jpeg?auto=compress&cs=tinysrgb&w=1600&fit=crop"
       />
 
       <section className="py-16 md:py-20 bg-neutral-50 border-t-[3px] border-neutral-200">

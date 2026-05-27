@@ -12,8 +12,8 @@ tags:
   - VAT
   - payroll
   - CIPC
-featuredImage: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1200&auto=format&fit=crop&q=60"
-featuredImageAlt: "Black South African business owner reviewing compliance calendar and tax deadlines with her accountant"
+featuredImage: "https://images.pexels.com/photos/7821702/pexels-photo-7821702.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+featuredImageAlt: "Black South African accountant reviewing tax compliance calendar and SARS deadlines"
 author:
   name: "Daniel Amoah"
   title: "SAIPA Professional Accountant (SA)"

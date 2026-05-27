@@ -32,7 +32,7 @@ export default function ResourcesPage() {
         title="Tax & Accounting Insights for South African Businesses"
         subtitle="Free, practical articles written by qualified accountants. No jargon, no filler. Just guidance you can act on."
         crumbs={[{ label: "Resources" }]}
-        bgImage="https://images.unsplash.com/photo-1573497161161-c3e73707e25c?w=1600&auto=format&fit=crop&q=60"
+        bgImage="https://images.pexels.com/photos/7821702/pexels-photo-7821702.jpeg?auto=compress&cs=tinysrgb&w=1600&fit=crop"
       />
 
       {/* Tools pinned section */}

@@ -8,8 +8,8 @@ tags:
   - SARS
   - tax-planning
   - SME
-featuredImage: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1200&auto=format&fit=crop&q=60"
-featuredImageAlt: "South African professional reviewing provisional tax obligations with her accountant"
+featuredImage: "https://images.pexels.com/photos/28426637/pexels-photo-28426637.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+featuredImageAlt: "Black South African male professional reviewing provisional tax obligations"
 author:
   name: "Daniel Amoah"
   title: "SAIPA Professional Accountant (SA)"

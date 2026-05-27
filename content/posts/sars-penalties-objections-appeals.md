@@ -9,8 +9,8 @@ tags:
   - objection
   - compliance
   - taxadmin
-featuredImage: "https://images.pexels.com/photos/7876449/pexels-photo-7876449.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-featuredImageAlt: "South African accountant reviewing a SARS penalty assessment with a client"
+featuredImage: "https://images.pexels.com/photos/4559704/pexels-photo-4559704.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+featuredImageAlt: "Black South African male professional reviewing SARS penalty assessment options"
 author:
   name: "Daniel Amoah"
   title: "SAIPA Professional Accountant (SA)"

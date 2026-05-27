@@ -140,7 +140,7 @@ export default function FAQPage() {
         title="Frequently Asked Questions"
         subtitle="Everything you need to know about working with Sikatrix — from getting started to SARS compliance and cloud accounting."
         crumbs={[{ label: "FAQ" }]}
-        bgImage="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1600&auto=format&fit=crop&q=60"
+        bgImage="https://images.pexels.com/photos/4559704/pexels-photo-4559704.jpeg?auto=compress&cs=tinysrgb&w=1600&fit=crop"
       />
 
       <section className="py-14 bg-neutral-50 border-t-[3px] border-white/40">

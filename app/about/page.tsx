@@ -48,7 +48,7 @@ export default function AboutPage() {
         label="About Us"
         title="Qualified. Local. Personally Accountable."
         subtitle="10+ years in practice, 148+ businesses served across Gauteng. One accountant who knows your file — not a rotating team."
-        bgImage="https://images.pexels.com/photos/5466267/pexels-photo-5466267.jpeg?auto=compress&cs=tinysrgb&w=1600&fit=crop"
+        bgImage="https://images.pexels.com/photos/7679131/pexels-photo-7679131.jpeg?auto=compress&cs=tinysrgb&w=1600&fit=crop"
         crumbs={[{ label: "About" }]}
         goldLabel
       />

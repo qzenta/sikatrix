@@ -13,11 +13,11 @@ import { buildLocalBusinessSchema } from "@/lib/metadata";
 const LOCATION_HERO_IMAGES: Record<string, string> = {
   "alberton":    "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1600&auto=format&fit=crop&q=60",
   "johannesburg":"https://images.pexels.com/photos/11313729/pexels-photo-11313729.jpeg?auto=compress&cs=tinysrgb&w=1600&fit=crop",
-  "sandton":     "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1600&auto=format&fit=crop&q=60",
-  "randburg":    "https://images.unsplash.com/photo-1573497161161-c3e73707e25c?w=1600&auto=format&fit=crop&q=60",
-  "vereeniging": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1600&auto=format&fit=crop&q=60",
+  "sandton":     "https://images.pexels.com/photos/28426637/pexels-photo-28426637.jpeg?auto=compress&cs=tinysrgb&w=1600&fit=crop",
+  "randburg":    "https://images.pexels.com/photos/4559704/pexels-photo-4559704.jpeg?auto=compress&cs=tinysrgb&w=1600&fit=crop",
+  "vereeniging": "https://images.pexels.com/photos/7679131/pexels-photo-7679131.jpeg?auto=compress&cs=tinysrgb&w=1600&fit=crop",
   "germiston":   "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1600&auto=format&fit=crop&q=60",
-  "boksburg":    "https://images.unsplash.com/photo-1573497161161-c3e73707e25c?w=1600&auto=format&fit=crop&q=60",
+  "boksburg":    "https://images.pexels.com/photos/7821702/pexels-photo-7821702.jpeg?auto=compress&cs=tinysrgb&w=1600&fit=crop",
   "midrand":     "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1600&auto=format&fit=crop&q=60",
 };
 

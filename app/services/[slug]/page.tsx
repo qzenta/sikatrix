@@ -124,11 +124,11 @@ const ICON_MAP: Record<string, React.ElementType> = {
 
 // Hero backgrounds — swap to local file once dropped in public/photos/services/
 const SERVICE_HERO_IMAGES: Record<string, string> = {
-  "annual-financial-statements": "https://images.pexels.com/photos/5668482/pexels-photo-5668482.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&dpr=1",
-  "tax-services":                "https://images.pexels.com/photos/5690374/pexels-photo-5690374.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&dpr=1",
+  "annual-financial-statements": "https://images.pexels.com/photos/7821702/pexels-photo-7821702.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&dpr=1",
+  "tax-services":                "https://images.pexels.com/photos/7567313/pexels-photo-7567313.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&dpr=1",
   "bookkeeping":                 "/photos/services/bookkeeping.jpg",
   "payroll":                     "/photos/services/payroll.jpg",
-  "cloud-accounting":            "https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&dpr=1",
+  "cloud-accounting":            "https://images.pexels.com/photos/7679131/pexels-photo-7679131.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&dpr=1",
   "company-secretarial":         "/photos/services/company-sec.jpg",
   "business-permit-support":     "/photos/services/permit-support.jpg",
   "import-export-license":       "https://images.pexels.com/photos/906494/pexels-photo-906494.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&dpr=1",

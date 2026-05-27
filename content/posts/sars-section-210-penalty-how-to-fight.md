@@ -10,8 +10,8 @@ tags:
   - remission
   - compliance
   - taxadmin
-featuredImage: "https://images.pexels.com/photos/7876449/pexels-photo-7876449.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-featuredImageAlt: "South African business owner reviewing a SARS Section 210 administrative penalty notice"
+featuredImage: "https://images.pexels.com/photos/7679131/pexels-photo-7679131.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+featuredImageAlt: "Black South African business professional reviewing a SARS Section 210 administrative penalty notice at his desk"
 author:
   name: "Daniel Amoah"
   title: "SAIPA Professional Accountant (SA)"
@@ -66,7 +66,7 @@ SARS also raises administrative penalties under Section 210 for failure to regis
 
 One point worth understanding: **SARS raises these penalties automatically, through a system process.** The fact that a penalty was raised does not mean a SARS official reviewed your affairs and made a decision about you personally. It means a system flag triggered on a missing return. This matters when you approach remission, because the process is likewise largely administrative — structured and rule-bound, not discretionary.
 
-[img]https://images.pexels.com/photos/5668482/pexels-photo-5668482.jpeg?auto=compress&cs=tinysrgb&w=800&q=80|Business owner filing outstanding tax returns on eFiling|Filing the outstanding return before or simultaneously with the remission request is the single most important step in the process
+[img]https://images.pexels.com/photos/7821702/pexels-photo-7821702.jpeg?auto=compress&cs=tinysrgb&w=800&q=80|Black South African accountant filing outstanding tax returns on eFiling|Filing the outstanding return before or simultaneously with the remission request is the single most important step in the process
 
 ## How the Request for Remission Works (TAA Section 215)
 

@@ -26,7 +26,7 @@ export default function ServicesPage() {
         label="Our Services"
         title="Everything Your Business Needs — Under One Roof"
         subtitle="From annual financial statements to monthly payroll, we handle every financial obligation so you can focus on running your business."
-        bgImage="https://images.pexels.com/photos/7876449/pexels-photo-7876449.jpeg?auto=compress&cs=tinysrgb&w=1600&fit=crop"
+        bgImage="https://images.pexels.com/photos/28426637/pexels-photo-28426637.jpeg?auto=compress&cs=tinysrgb&w=1600&fit=crop"
         crumbs={[{ label: "Services" }]}
         cta={{ label: "Book Free Consultation", href: "/contact" }}
       />

@@ -4,14 +4,14 @@ import { MapPin, ArrowRight } from "lucide-react";
 import { LOCATIONS } from "@/lib/site";
 
 const LOCATION_IMAGES: Record<string, string> = {
-  alberton:      "https://images.pexels.com/photos/5668482/pexels-photo-5668482.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1",
+  alberton:      "https://images.pexels.com/photos/28426637/pexels-photo-28426637.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1",
   johannesburg:  "https://images.pexels.com/photos/3760072/pexels-photo-3760072.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1",
-  sandton:       "https://images.pexels.com/photos/5690374/pexels-photo-5690374.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1",
+  sandton:       "https://images.pexels.com/photos/7821702/pexels-photo-7821702.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1",
   randburg:      "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1",
   vereeniging:   "https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1",
   germiston:     "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1",
   boksburg:      "https://images.pexels.com/photos/7821681/pexels-photo-7821681.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1",
-  midrand:       "https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1",
+  midrand:       "https://images.pexels.com/photos/7679131/pexels-photo-7679131.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1",
 };
 
 export default function LocationHighlights() {

@@ -56,7 +56,7 @@ The most common requirements:
 - **Commercial property deals** — conveyancers request TCS confirmation on large transactions
 - **Private sector onboarding** — many larger corporates include tax compliance as a supplier requirement
 
-[img]https://images.pexels.com/photos/5466267/pexels-photo-5466267.jpeg?auto=compress&cs=tinysrgb&w=800&q=80|South African professional reviewing eFiling status on a laptop|The TCS PIN is verified in real time — compliance is checked at the moment of verification, not when the PIN was generated
+[img]https://images.pexels.com/photos/4559704/pexels-photo-4559704.jpeg?auto=compress&cs=tinysrgb&w=800&q=80|Black South African male professional reviewing tax clearance status on eFiling|The TCS PIN is verified in real time — compliance is checked at the moment of verification, not when the PIN was generated
 
 ## How to Apply on SARS eFiling
 

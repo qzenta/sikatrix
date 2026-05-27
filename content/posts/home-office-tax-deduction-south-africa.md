@@ -62,7 +62,7 @@ Regardless of employment status, the space claimed must be used **regularly and 
 
 A study that doubles as a children's homework room does not meet the test. A bedroom with a desk in the corner does not meet the test. If SARS audits the claim, they may request photographs and a floor plan — and those documents need to show a room that is unambiguously a dedicated office.
 
-[img]https://images.pexels.com/photos/5466267/pexels-photo-5466267.jpeg?auto=compress&cs=tinysrgb&w=800&q=80|Dedicated home office setup with desk and equipment|SARS expects a dedicated, specifically equipped room — a corner of a shared space does not satisfy the regularly and exclusively requirement
+[img]https://images.pexels.com/photos/7821702/pexels-photo-7821702.jpeg?auto=compress&cs=tinysrgb&w=800&q=80|Black South African professional working at dedicated home office desk|SARS expects a dedicated, specifically equipped room — a corner of a shared space does not satisfy the regularly and exclusively requirement
 
 ## What Expenses Can You Deduct?
 
