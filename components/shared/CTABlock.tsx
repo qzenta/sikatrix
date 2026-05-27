@@ -34,7 +34,7 @@ export default function CTABlock({
   return (
     <section className={`${bg} rounded-2xl p-8 md:p-12`}>
       <div className="max-w-2xl mx-auto text-center">
-        <h2 className={`text-xl md:text-2xl font-semibold mb-3 ${textColor}`}>
+        <h2 className={`text-xl md:text-2xl font-bold mb-3 ${textColor}`}>
           {title}
         </h2>
         <p className={`text-sm leading-relaxed mb-7 ${subtitleColor}`}>{subtitle}</p>

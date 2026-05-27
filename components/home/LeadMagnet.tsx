@@ -46,15 +46,15 @@ export default function LeadMagnet() {
   };
 
   return (
-    <section className="py-16 md:py-20 bg-brand-dark">
+    <section className="py-20 md:py-28 bg-brand-dark">
       <div className="container-page">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left: checklist */}
           <div>
-            <span className="inline-block text-accent-light text-xs font-semibold uppercase tracking-widest mb-3">
+            <span className="inline-block text-accent-light text-xs font-semibold uppercase tracking-widest border-b-2 border-accent-light pb-0.5 mb-4">
               Free Resource
             </span>
-            <h2 className="text-2xl font-semibold text-white mb-4 leading-snug">
+            <h2 className="text-2xl font-bold text-white mb-4 leading-snug">
               The SARS Compliance Checklist Every South African Business Owner Needs
             </h2>
             <p className="text-brand-100 text-sm leading-relaxed mb-6">

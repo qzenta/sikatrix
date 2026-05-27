@@ -61,9 +61,9 @@ const CASES = [
 
 export default function ProofModules() {
   return (
-    <section className="py-14 md:py-20 bg-white border-t border-neutral-100">
+    <section className="py-16 md:py-24 bg-white border-t border-neutral-100">
       <div className="container-page">
-        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12">
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12 md:mb-16">
           <div>
             <span className="section-label">Client Results</span>
             <h2 className="section-title mt-2">
@@ -78,13 +78,13 @@ export default function ProofModules() {
           </Link>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {CASES.map((c) => {
             const Icon = c.icon;
             return (
               <div
                 key={c.sector}
-                className="group relative flex flex-col rounded-2xl border border-neutral-200 bg-neutral-50 overflow-hidden hover:border-brand/30 hover:shadow-md transition-all duration-200"
+                className="group relative flex flex-col rounded-2xl border border-neutral-200 border-l-4 border-l-accent/40 hover:border-l-accent bg-neutral-50 overflow-hidden hover:shadow-md transition-all duration-200"
               >
                 {/* Header */}
                 <div className="px-6 pt-6 pb-4 border-b border-neutral-200 bg-white">

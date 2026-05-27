@@ -26,9 +26,9 @@ const STEPS = [
 
 export default function HowItWorks() {
   return (
-    <section className="py-12 md:py-16 bg-neutral-50">
+    <section className="py-16 md:py-24 bg-neutral-50">
       <div className="container-page">
-        <AnimateIn className="text-center mb-12">
+        <AnimateIn className="text-center mb-12 md:mb-16">
           <span className="section-label">How It Works</span>
           <h2 className="section-title mt-2">Simple, structured, and transparent</h2>
           <p className="section-subtitle mt-3 mx-auto">
@@ -61,7 +61,7 @@ export default function HowItWorks() {
                   <div className="hidden lg:block absolute top-8 left-[calc(50%+2rem)] w-[calc(100%-2rem)] h-px bg-neutral-200" />
                 )}
                 <div className="relative z-10">
-                  <div className="w-14 h-14 rounded-full bg-brand text-white flex items-center justify-center text-lg font-semibold mb-4 mx-auto lg:mx-0">
+                  <div className="w-14 h-14 rounded-full border-2 border-brand bg-white text-accent font-bold flex items-center justify-center text-lg mb-4 mx-auto lg:mx-0">
                     {step.number}
                   </div>
                   <h3 className="text-base font-semibold text-neutral-900 mb-2">{step.title}</h3>

@@ -118,7 +118,7 @@ export default function Hero() {
             {slide.tag}
           </span>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white leading-tight mb-5 text-balance">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight mb-5 text-balance">
             {slide.heading}{" "}
             <span className="text-accent-light">{slide.highlight}</span>
           </h1>

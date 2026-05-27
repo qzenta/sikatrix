@@ -14,9 +14,9 @@ const ICON_MAP: Record<string, React.ElementType> = {
 
 export default function ServicesGrid() {
   return (
-    <section className="py-12 md:py-16 bg-neutral-100">
+    <section className="py-16 md:py-24 bg-neutral-100">
       <div className="container-page">
-        <AnimateIn className="text-center mb-12">
+        <AnimateIn className="text-center mb-12 md:mb-16">
           <span className="section-label">What We Do</span>
           <h2 className="section-title mt-2">
             Full-spectrum accounting & compliance services
@@ -27,7 +27,7 @@ export default function ServicesGrid() {
           </p>
         </AnimateIn>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {SERVICES.map((service, i) => {
             const Icon = ICON_MAP[service.icon] ?? FileText;
             return (

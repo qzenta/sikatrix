@@ -16,9 +16,9 @@ const LOCATION_IMAGES: Record<string, string> = {
 
 export default function LocationHighlights() {
   return (
-    <section className="py-12 md:py-16 bg-neutral-100">
+    <section className="py-16 md:py-24 bg-neutral-100">
       <div className="container-page">
-        <div className="mb-12">
+        <div className="mb-12 md:mb-16">
           <span className="section-label">Our Locations</span>
           <h2 className="section-title mt-2">
             Serving Gauteng businesses, in person and online
@@ -29,7 +29,7 @@ export default function LocationHighlights() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {LOCATIONS.map((loc) => (
             <Link
               key={loc.slug}

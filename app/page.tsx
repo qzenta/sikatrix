@@ -42,9 +42,9 @@ export default function HomePage() {
       <ProofModules />
 
       {/* Blog preview */}
-      <section className="py-12 md:py-16 bg-neutral-100">
+      <section className="py-16 md:py-24 bg-neutral-100">
         <div className="container-page">
-          <div className="flex items-end justify-between mb-10">
+          <div className="flex items-end justify-between mb-12 md:mb-16">
             <div>
               <span className="section-label">Resources</span>
               <h2 className="section-title mt-2">Tax & accounting insights</h2>
@@ -53,7 +53,7 @@ export default function HomePage() {
               View all articles →
             </Link>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {latestPosts.map((post) => (
               <Link key={post.slug} href={`/resources/${post.slug}`} className="card overflow-hidden group">
                 {post.featuredImage && (
@@ -101,7 +101,7 @@ export default function HomePage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 bg-neutral-50">
+      <section className="py-16 md:py-24 bg-neutral-50">
         <div className="container-page">
           <CTABlock
             title="Ready to simplify your accounting?"

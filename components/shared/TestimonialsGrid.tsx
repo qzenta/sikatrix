@@ -61,13 +61,13 @@ export default function TestimonialsGrid({
   }, [items.length, paused]);
 
   return (
-    <section className="py-16 bg-slate-800">
+    <section className="py-20 md:py-28 bg-slate-800">
       <div className="container-page">
-        <AnimateIn className="text-center mb-10">
-          <span className="text-xs font-semibold uppercase tracking-widest text-accent-light block mb-2">
+        <AnimateIn className="text-center mb-12 md:mb-16">
+          <span className="text-xs font-semibold uppercase tracking-widest text-accent-light border-b-2 border-accent-light pb-0.5 inline-block mb-3">
             Testimonials
           </span>
-          <h2 className="text-3xl sm:text-4xl font-semibold text-white leading-snug">{title}</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-white leading-snug">{title}</h2>
         </AnimateIn>
 
         {/* Mobile: auto-scrolling carousel */}
@@ -101,7 +101,7 @@ export default function TestimonialsGrid({
         </div>
 
         {/* Desktop: staggered grid */}
-        <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {items.map((t, i) => (
             <AnimateIn key={i} delay={i * 100}>
               <TestimonialCard t={t} />

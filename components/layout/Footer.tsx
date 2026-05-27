@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="bg-neutral-900 text-neutral-300">
       {/* Main footer */}
-      <div className="container-page py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-6">
+      <div className="container-page py-16 md:py-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-6">
         {/* Brand */}
         <div className="sm:col-span-2 lg:col-span-1">
           <Link href="/" className="flex items-center gap-2.5 mb-4">
@@ -61,7 +61,7 @@ export default function Footer() {
               <li key={s.slug}>
                 <Link
                   href={`/services/${s.slug}`}
-                  className="text-sm text-neutral-400 hover:text-white transition-colors"
+                  className="text-sm text-neutral-300 hover:text-white transition-colors"
                 >
                   {s.shortTitle}
                 </Link>
@@ -84,7 +84,7 @@ export default function Footer() {
               { label: "Contact", href: "/contact" },
             ].map((l) => (
               <li key={l.href}>
-                <Link href={l.href} className="text-sm text-neutral-400 hover:text-white transition-colors">
+                <Link href={l.href} className="text-sm text-neutral-300 hover:text-white transition-colors">
                   {l.label}
                 </Link>
               </li>
@@ -100,7 +100,7 @@ export default function Footer() {
               <li key={l.slug}>
                 <Link
                   href={`/locations/${l.slug}`}
-                  className="text-sm text-neutral-400 hover:text-white transition-colors"
+                  className="text-sm text-neutral-300 hover:text-white transition-colors"
                 >
                   {l.name} {l.isHQ && <span className="text-2xs text-accent ml-1">(HQ)</span>}
                 </Link>

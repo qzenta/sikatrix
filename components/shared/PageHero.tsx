@@ -101,7 +101,7 @@ export default function PageHero({
               {label}
             </span>
           )}
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white leading-snug mb-4 text-balance">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-snug mb-4 text-balance">
             {title}
           </h1>
           {subtitle && (
