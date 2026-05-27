@@ -154,7 +154,7 @@ export default function PricingPage() {
         subtitle="Fixed-fee accounting — you know what you're paying before we start. No hourly billing, no hidden extras."
         crumbs={[{ label: "Pricing" }]}
         size="sm"
-        bgImage="https://images.pexels.com/photos/5690374/pexels-photo-5690374.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&dpr=1"
+        bgImage="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1600&auto=format&fit=crop&q=60"
       />
 
       {/* Intro note */}
