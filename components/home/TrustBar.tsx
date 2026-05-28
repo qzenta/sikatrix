@@ -36,7 +36,7 @@ export default function TrustBar() {
               <img
                 src={item.logo}
                 alt={item.name}
-                style={{ height: "44px", width: "auto", maxWidth: "140px", objectFit: "contain" }}
+                style={{ height: "62px", width: "auto", maxWidth: "196px", objectFit: "contain" }}
                 onError={(e) => {
                   const img = e.currentTarget;
                   img.style.display = "none";

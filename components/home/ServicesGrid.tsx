@@ -12,7 +12,9 @@ const ICON_MAP: Record<string, React.ElementType> = {
   Briefcase, LifeBuoy, Globe,
 };
 
-export default function ServicesGrid() {
+export default function ServicesGrid({ limit }: { limit?: number } = {}) {
+  const visibleServices = limit ? SERVICES.slice(0, limit) : SERVICES;
+
   return (
     <section className="py-16 md:py-24 bg-neutral-100">
       <div className="container-page">
@@ -28,7 +30,7 @@ export default function ServicesGrid() {
         </AnimateIn>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {SERVICES.map((service, i) => {
+          {visibleServices.map((service, i) => {
             const Icon = ICON_MAP[service.icon] ?? FileText;
             return (
               <AnimateIn key={service.slug} delay={i * 80} className="h-full">

@@ -4,7 +4,6 @@ import TrustBar from "@/components/home/TrustBar";
 import ServicesGrid from "@/components/home/ServicesGrid";
 import HowItWorks from "@/components/home/HowItWorks";
 import PricingTeaser from "@/components/home/PricingTeaser";
-import LocationHighlights from "@/components/home/LocationHighlights";
 import LeadMagnet from "@/components/home/LeadMagnet";
 import TestimonialsGrid from "@/components/shared/TestimonialsGrid";
 import ProofModules from "@/components/home/ProofModules";
@@ -23,7 +22,7 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
-  const latestPosts = getLatestPosts(3);
+  const latestPosts = getLatestPosts(2);
   const webSiteSchema = buildWebSiteSchema();
   const orgSchema = buildOrganizationSchema();
 
@@ -32,14 +31,13 @@ export default function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
       <Hero />
-      <TrustBar />
-      <ServicesGrid />
+      <ServicesGrid limit={4} />
       <HowItWorks />
       <PricingTeaser />
-      <LocationHighlights />
-      <LeadMagnet />
-      <TestimonialsGrid />
       <ProofModules />
+      <TestimonialsGrid />
+      <TrustBar />
+      <LeadMagnet />
 
       {/* Blog preview */}
       <section className="py-16 md:py-24 bg-neutral-100">
@@ -53,7 +51,7 @@ export default function HomePage() {
               View all articles →
             </Link>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 gap-6">
             {latestPosts.map((post) => (
               <Link key={post.slug} href={`/resources/${post.slug}`} className="card overflow-hidden group">
                 {post.featuredImage && (
