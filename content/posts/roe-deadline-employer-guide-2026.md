@@ -1,6 +1,6 @@
 ---
-title: "ROE 2026: Every South African Employer Must Submit by 31 May"
-description: "The Return of Earnings deadline is 31 May. If you employ staff in South Africa, here is exactly what to submit, how to calculate your assessment, and what penalties apply for late filing."
+title: "ROE 2026: Every South African Employer Must Submit by 30 June"
+description: "The Return of Earnings deadline is 30 June 2026. If you employ staff in South Africa, here is exactly what to submit, how to calculate your assessment, and what penalties apply for late filing."
 slug: "roe-deadline-employer-guide-2026"
 category: "SARS Compliance"
 tags:
@@ -27,13 +27,13 @@ relatedPosts:
   - "workmens-compensation-south-africa"
   - "paye-uif-sdl-explained"
 social:
-  ogTitle: "ROE 2026: Submit Your Return of Earnings by 31 May | Sikatrix"
-  ogDescription: "The Return of Earnings (COIDA) deadline is 31 May. What to submit, how to calculate your assessment, and the penalties for filing late."
+  ogTitle: "ROE 2026: Submit Your Return of Earnings by 30 June | Sikatrix"
+  ogDescription: "The Return of Earnings (COIDA) deadline is 30 June 2026. What to submit, how to calculate your assessment, and the penalties for filing late."
   twitterCard: "summary_large_image"
 newsletterSegment: "compliance"
 ---
 
-If you employ staff in South Africa, 31 May is one of the most overlooked compliance deadlines on the calendar. The Return of Earnings (ROE) is your annual declaration to the Compensation Commissioner under the Compensation for Occupational Injuries and Diseases Act (COIDA). Miss it, and your employees lose their cover for workplace injuries. You also face penalties and interest. At Sikatrix, we file ROEs for clients across Alberton, Johannesburg, and Gauteng every year. This guide covers what the ROE is, how to calculate it, how to submit it, and what happens if you miss the deadline.
+If you employ staff in South Africa, 30 June 2026 is one of the most overlooked compliance deadlines on the calendar. The Return of Earnings (ROE) is your annual declaration to the Compensation Commissioner under the Compensation for Occupational Injuries and Diseases Act (COIDA). Miss it, and your employees lose their cover for workplace injuries. You also face penalties and interest. At Sikatrix, we file ROEs for clients across Alberton, Johannesburg, and Gauteng every year. This guide covers what the ROE is, how to calculate it, how to submit it, and what happens if you miss the deadline.
 
 ## What Is the Return of Earnings?
 
@@ -88,7 +88,7 @@ The submission is done online through the Compensation Fund's CompEasy system. T
 
 Keep the confirmation number and a copy of the submitted return. If a query arises later, that record is your proof that you filed on time.
 
-## What Happens If You Miss the 31 May Deadline?
+## What Happens If You Miss the 30 June Deadline?
 
 Late submission carries a 10% penalty on the assessment amount, plus interest. More seriously, your COIDA cover lapses while you are not compliant. If an employee is injured at work during a lapse, the Compensation Fund can decline the claim, and personal liability falls on the employer. That means the employer can be held responsible for medical costs and disability compensation directly.
 
