@@ -32,6 +32,9 @@ const ARTICLE_SERVICE_MAP: Record<string, string[]> = {
   "tax-clearance-certificate-south-africa":             ["tax-services", "company-secretarial", "bookkeeping"],
   "sars-penalties-objections-appeals":                  ["tax-services", "bookkeeping"],
   "home-office-tax-deduction-south-africa":             ["tax-services", "bookkeeping", "cloud-accounting"],
+  "roe-deadline-employer-guide-2026":                   ["payroll", "tax-services", "annual-financial-statements"],
+  "emp501-annual-reconciliation-guide-south-africa":    ["payroll", "tax-services", "bookkeeping"],
+  "outsourced-payroll-accounting-how-they-connect":     ["payroll", "bookkeeping", "annual-financial-statements"],
 };
 
 export async function generateStaticParams() {
