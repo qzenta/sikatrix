@@ -202,7 +202,7 @@ export default function BlogListing({ posts }: BlogListingProps) {
                 <span className="text-xs font-semibold uppercase tracking-widest text-neutral-400">More Articles</span>
                 <div className="h-px flex-1 bg-neutral-200" />
               </div>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 {rest.map((post) => (
                   <Link
                     key={post.slug}
