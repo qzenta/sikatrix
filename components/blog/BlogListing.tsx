@@ -74,10 +74,10 @@ export default function BlogListing({ posts }: BlogListingProps) {
         ))}
       </div>
 
-      {/* Outer 2-column layout: main content left, sticky sidebar right */}
-      <div className="grid lg:grid-cols-[1fr_240px] gap-6 items-start">
+      {/* 2-column: Latest + Featured left, sticky sidebar right */}
+      <div className="grid lg:grid-cols-[1fr_240px] gap-6 items-start mb-6">
 
-        {/* LEFT — all main content stacked */}
+        {/* LEFT — highlighted articles only */}
         <div className="min-w-0 space-y-4">
 
           {/* Latest post */}
@@ -194,83 +194,14 @@ export default function BlogListing({ posts }: BlogListingProps) {
             </div>
           )}
 
-          {/* Archive grid */}
-          {rest.length > 0 && (
-            <div>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="h-px flex-1 bg-neutral-200" />
-                <span className="text-xs font-semibold uppercase tracking-widest text-neutral-400">More Articles</span>
-                <div className="h-px flex-1 bg-neutral-200" />
-              </div>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                {rest.map((post) => (
-                  <Link
-                    key={post.slug}
-                    href={`/resources/${post.slug}`}
-                    className="rounded-xl border border-neutral-200 bg-white overflow-hidden group hover:shadow-md transition-shadow"
-                  >
-                    <div className="relative h-36 bg-brand/10 overflow-hidden">
-                      {post.featuredImage ? (
-                        <Image
-                          src={post.featuredImage}
-                          alt={post.featuredImageAlt || post.title}
-                          fill
-                          className="object-cover group-hover:scale-105 transition-transform duration-300"
-                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        />
-                      ) : (
-                        <div className="w-full h-full bg-gradient-to-br from-brand to-brand/70" />
-                      )}
-                      {isNew(post.publishDate) && (
-                        <span className="absolute top-2 left-2 text-[9px] font-bold uppercase tracking-widest bg-accent text-white px-1.5 py-0.5 rounded-full">
-                          New
-                        </span>
-                      )}
-                    </div>
-                    <div className="p-4">
-                      <div className="flex items-center gap-2 mb-2">
-                        <span className="text-2xs font-semibold uppercase tracking-widest text-accent">
-                          {post.category}
-                        </span>
-                        <span className="text-neutral-300">·</span>
-                        <span className="text-2xs text-neutral-400">
-                          {post.readTime}
-                        </span>
-                      </div>
-                      <h2 className="text-sm font-semibold text-neutral-800 leading-snug mb-2 group-hover:text-brand transition-colors line-clamp-2">
-                        {post.title}
-                      </h2>
-                      <p className="text-xs text-neutral-500 leading-relaxed mb-3 line-clamp-2">
-                        {post.description}
-                      </p>
-                      <div className="flex items-center justify-between">
-                        <span className="text-2xs text-neutral-400 flex items-center gap-1">
-                          <Calendar size={9} />
-                          {new Date(post.publishDate).toLocaleDateString("en-ZA", {
-                            day: "numeric",
-                            month: "short",
-                            year: "numeric",
-                          })}
-                        </span>
-                        <span className="text-xs text-brand flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                          Read <ArrowRight size={10} />
-                        </span>
-                      </div>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {!latestPost && !featured && rest.length === 0 && (
+          {!latestPost && !featured && (
             <p className="text-sm text-neutral-500 py-8 text-center">
               No articles in this category yet.
             </p>
           )}
         </div>
 
-        {/* RIGHT — sticky sidebar, spans all left content */}
+        {/* RIGHT — sticky sidebar alongside Latest + Featured only */}
         <aside className="hidden lg:block">
           <div className="sticky top-24 rounded-2xl border border-neutral-200 bg-white overflow-hidden">
             <div className="bg-brand px-5 py-4">
@@ -312,6 +243,75 @@ export default function BlogListing({ posts }: BlogListingProps) {
         </aside>
 
       </div>
+
+      {/* Archive grid — full width below the 2-column section */}
+      {rest.length > 0 && (
+        <div>
+          <div className="flex items-center gap-3 mb-4">
+            <div className="h-px flex-1 bg-neutral-200" />
+            <span className="text-xs font-semibold uppercase tracking-widest text-neutral-400">More Articles</span>
+            <div className="h-px flex-1 bg-neutral-200" />
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {rest.map((post) => (
+              <Link
+                key={post.slug}
+                href={`/resources/${post.slug}`}
+                className="rounded-xl border border-neutral-200 bg-white overflow-hidden group hover:shadow-md transition-shadow"
+              >
+                <div className="relative h-36 bg-brand/10 overflow-hidden">
+                  {post.featuredImage ? (
+                    <Image
+                      src={post.featuredImage}
+                      alt={post.featuredImageAlt || post.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gradient-to-br from-brand to-brand/70" />
+                  )}
+                  {isNew(post.publishDate) && (
+                    <span className="absolute top-2 left-2 text-[9px] font-bold uppercase tracking-widest bg-accent text-white px-1.5 py-0.5 rounded-full">
+                      New
+                    </span>
+                  )}
+                </div>
+                <div className="p-4">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-2xs font-semibold uppercase tracking-widest text-accent">
+                      {post.category}
+                    </span>
+                    <span className="text-neutral-300">·</span>
+                    <span className="text-2xs text-neutral-400">
+                      {post.readTime}
+                    </span>
+                  </div>
+                  <h2 className="text-sm font-semibold text-neutral-800 leading-snug mb-2 group-hover:text-brand transition-colors line-clamp-2">
+                    {post.title}
+                  </h2>
+                  <p className="text-xs text-neutral-500 leading-relaxed mb-3 line-clamp-2">
+                    {post.description}
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-2xs text-neutral-400 flex items-center gap-1">
+                      <Calendar size={9} />
+                      {new Date(post.publishDate).toLocaleDateString("en-ZA", {
+                        day: "numeric",
+                        month: "short",
+                        year: "numeric",
+                      })}
+                    </span>
+                    <span className="text-xs text-brand flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                      Read <ArrowRight size={10} />
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
