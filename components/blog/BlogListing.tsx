@@ -78,7 +78,7 @@ export default function BlogListing({ posts }: BlogListingProps) {
       <div className="grid lg:grid-cols-[1fr_268px] gap-8 items-start">
 
         {/* LEFT — all main content stacked */}
-        <div className="min-w-0 space-y-6">
+        <div className="min-w-0 space-y-4">
 
           {/* Latest post */}
           {latestPost && (
@@ -107,7 +107,7 @@ export default function BlogListing({ posts }: BlogListingProps) {
                     <div className="w-full h-full bg-gradient-to-br from-brand to-brand/70" />
                   )}
                 </div>
-                <div className="flex-1 p-5 flex flex-col justify-center">
+                <div className="flex-1 p-4 flex flex-col justify-center">
                   <div className="flex items-center gap-2 mb-2">
                     <span className="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-widest text-white bg-accent px-2 py-0.5 rounded-full">
                       New
@@ -167,8 +167,8 @@ export default function BlogListing({ posts }: BlogListingProps) {
                     <div className="w-full h-full bg-gradient-to-br from-brand to-brand/70" />
                   )}
                 </div>
-                <div className="flex-1 p-5 flex flex-col justify-center">
-                  <div className="flex items-center gap-3 mb-3">
+                <div className="flex-1 p-4 flex flex-col justify-center">
+                  <div className="flex items-center gap-3 mb-2">
                     <span className="inline-flex items-center gap-1 text-2xs font-semibold uppercase tracking-widest text-accent">
                       <Tag size={9} /> {featured.category}
                     </span>
@@ -183,7 +183,7 @@ export default function BlogListing({ posts }: BlogListingProps) {
                   <h2 className="text-base font-semibold text-neutral-900 leading-snug mb-2 group-hover:text-brand transition-colors">
                     {featured.title}
                   </h2>
-                  <p className="text-sm text-neutral-500 leading-relaxed mb-4 line-clamp-2">
+                  <p className="text-sm text-neutral-500 leading-relaxed mb-3 line-clamp-2">
                     {featured.description}
                   </p>
                   <span className="inline-flex items-center gap-1.5 text-sm font-medium text-brand">
@@ -197,7 +197,7 @@ export default function BlogListing({ posts }: BlogListingProps) {
           {/* Archive grid */}
           {rest.length > 0 && (
             <div>
-              <div className="flex items-center gap-3 mb-4 pt-2">
+              <div className="flex items-center gap-3 mb-4">
                 <div className="h-px flex-1 bg-neutral-200" />
                 <span className="text-xs font-semibold uppercase tracking-widest text-neutral-400">More Articles</span>
                 <div className="h-px flex-1 bg-neutral-200" />
