@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { SITE, SERVICES, LOCATIONS, INDUSTRIES } from "@/lib/site";
 
@@ -92,15 +93,6 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
-    const img = document.getElementById("site-logo") as HTMLImageElement | null;
-    if (img && img.complete && img.naturalHeight > 0) {
-      img.style.display = "block";
-      const fb = document.getElementById("logo-fallback") as HTMLElement | null;
-      if (fb) fb.style.display = "none";
-    }
-  }, []);
-
   const openDropdown = (label: string) => {
     if (closeTimer.current) clearTimeout(closeTimer.current);
     setActiveDropdown(label);
@@ -149,32 +141,15 @@ export default function Header() {
         <div className="container-page flex items-center justify-between h-16">
 
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5 flex-shrink-0">
-            <img
+          <Link href="/" className="flex items-center flex-shrink-0">
+            <Image
               src="/logo.png"
               alt="Sikatrix Business Accountants"
-              id="site-logo"
-              style={{ height: "36px", width: "auto", maxWidth: "180px", objectFit: "contain", display: "none" }}
-              onLoad={(e) => {
-                (e.currentTarget as HTMLImageElement).style.display = "block";
-                const fallback = document.getElementById("logo-fallback");
-                if (fallback) (fallback as HTMLElement).style.display = "none";
-              }}
-              onError={(e) => {
-                (e.currentTarget as HTMLImageElement).style.display = "none";
-              }}
+              width={180}
+              height={36}
+              priority
+              className="h-9 w-auto object-contain"
             />
-            <span id="logo-fallback" className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-md bg-brand flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-                S
-              </div>
-              <span className="font-semibold text-neutral-900 text-[0.95rem]">
-                Sikatrix
-                <span className="text-brand text-[0.8rem] font-normal ml-0.5 hidden sm:inline">
-                  {" "}Business Accountants
-                </span>
-              </span>
-            </span>
           </Link>
 
           {/* Desktop nav */}
