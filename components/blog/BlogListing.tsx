@@ -75,7 +75,7 @@ export default function BlogListing({ posts }: BlogListingProps) {
       </div>
 
       {/* Outer 2-column layout: main content left, sticky sidebar right */}
-      <div className="grid lg:grid-cols-[1fr_268px] gap-8 items-start">
+      <div className="grid lg:grid-cols-[1fr_240px] gap-6 items-start">
 
         {/* LEFT — all main content stacked */}
         <div className="min-w-0 space-y-4">
@@ -281,12 +281,12 @@ export default function BlogListing({ posts }: BlogListingProps) {
                 </span>
               </div>
             </div>
-            <div className="divide-y divide-neutral-100 max-h-[70vh] overflow-y-auto">
+            <div className="divide-y divide-neutral-100 max-h-[360px] overflow-y-auto">
               {allByDate.map((post) => (
                 <Link
                   key={post.slug}
                   href={`/resources/${post.slug}`}
-                  className="flex items-start gap-3 px-4 py-3 hover:bg-neutral-50 transition-colors group"
+                  className="flex items-start gap-2 px-3 py-2 hover:bg-neutral-50 transition-colors group"
                 >
                   <ChevronRight size={12} className="text-neutral-300 group-hover:text-brand mt-0.5 flex-shrink-0 transition-colors" />
                   <div className="min-w-0">

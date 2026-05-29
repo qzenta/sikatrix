@@ -38,7 +38,7 @@ export default function ResourcesPage() {
       {/* Tools pinned section — 2-column */}
       <section className="py-8 bg-neutral-50 border-t-[3px] border-neutral-200 border-b border-neutral-200">
         <div className="container-page">
-          <div className="grid lg:grid-cols-[1fr_320px] gap-6 items-stretch">
+          <div className="max-w-5xl mx-auto grid lg:grid-cols-[1fr_260px] gap-5 items-stretch">
 
             {/* Left — Tax Calculator card */}
             <div className="rounded-2xl bg-gradient-to-r from-brand-dark via-brand to-brand-dark p-px">
@@ -143,7 +143,9 @@ export default function ResourcesPage() {
 
       <section className="py-16 md:py-20 bg-neutral-50">
         <div className="container-page">
-          <BlogListing posts={posts} />
+          <div className="max-w-5xl mx-auto">
+            <BlogListing posts={posts} />
+          </div>
         </div>
       </section>
 
