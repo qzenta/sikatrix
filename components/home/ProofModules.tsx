@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, TrendingUp, ShieldCheck, Clock, FileText, Cloud } from "lucide-react";
+import { ArrowRight, TrendingUp, ShieldCheck, Clock, FileText, Cloud, Building2 } from "lucide-react";
 
 const CASES = [
   {
@@ -56,6 +56,17 @@ const CASES = [
     metricLabel: "from zero to investor-ready accounts",
     href: "/services/cloud-accounting",
     service: "Cloud Accounting",
+  },
+  {
+    icon: Building2,
+    sector: "Retail · Boksburg",
+    problem: "A family-owned retail business missed three consecutive CIPC annual returns. CIPC deregistered the company, freezing the business bank account and halting trade.",
+    fix: "Filed a CIPC reinstatement application, lodged all outstanding annual returns with updated beneficial ownership disclosures, and updated director details at CIPC.",
+    outcome: "Company fully reinstated and banking restored within 8 weeks. Annual return compliance now managed on a standing mandate.",
+    metric: "8 weeks",
+    metricLabel: "from deregistration to full reinstatement",
+    href: "/services/company-secretarial",
+    service: "Company Secretarial",
   },
 ];
 

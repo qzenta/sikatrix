@@ -7,6 +7,7 @@ const PARTNERS = [
   { name: "Draftworx",  logo: "/partners/draftworx.png" },
   { name: "SimplePay",  logo: "/partners/simplepay.png" },
   { name: "Syft",       logo: "/partners/syft.png" },
+  { name: "CIPC",       logo: "/partners/cipc.png" },
 ];
 
 export default function TrustBar() {
@@ -31,11 +32,8 @@ export default function TrustBar() {
         <div
           className="flex items-center"
           style={{
-            animation: "marquee-scroll 30s linear infinite",
+            animation: "marquee-scroll 35s linear infinite",
             willChange: "transform",
-            // Force a dedicated GPU compositing layer — prevents layout recalculations
-            // during page scroll from disrupting the animation mid-cycle.
-            transform: "translateZ(0)",
             backfaceVisibility: "hidden",
           }}
         >

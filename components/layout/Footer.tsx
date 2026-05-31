@@ -7,8 +7,19 @@ export default function Footer() {
 
   return (
     <footer className="bg-neutral-900 text-neutral-300">
-      {/* Main footer */}
-      <div className="container-page py-16 md:py-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-6">
+      {/* Main footer with watermark wordmark */}
+      <div className="relative overflow-hidden">
+        {/* Sikatrix wordmark — decorative, behind all content */}
+        <div className="pointer-events-none select-none absolute inset-0 flex items-center justify-center overflow-hidden">
+          <span
+            className="text-[8rem] sm:text-[12rem] lg:text-[16rem] font-black uppercase tracking-tighter whitespace-nowrap"
+            style={{ color: "rgba(255,255,255,0.03)", lineHeight: 1 }}
+          >
+            SIKATRIX
+          </span>
+        </div>
+
+      <div className="container-page relative py-10 md:py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-6">
         {/* Brand */}
         <div className="sm:col-span-2 lg:col-span-1">
           <Link href="/" className="flex items-center gap-2.5 mb-4">
@@ -146,6 +157,7 @@ export default function Footer() {
           </ul>
         </div>
       </div>
+      </div>{/* end watermark wrapper */}
 
       {/* Professional memberships — actual logos, uniform 80 × 36 px boxes */}
       <div className="border-t border-neutral-800">
