@@ -273,10 +273,10 @@ const SERVICE_DETAILS: Record<string, { outcome: string; benefits: string[]; faq
     ],
   },
   "company-secretarial": {
-    outcome: "Your company is registered, in good standing with CIPC, and compliant with annual return obligations — so you never risk deregistration or the cost of reinstatement.",
+    outcome: "Your company is registered, in good standing with CIPC, and compliant with annual return obligations — so you never risk deregistration or the cost of reinstatement. Annual return filing from R350.",
     benefits: [
       "CIPC company registration (Pty Ltd, NPC, CC)",
-      "Annual return filings to CIPC",
+      "Annual return filings to CIPC — from R350",
       "Director and shareholder amendments",
       "Registered office address updates",
       "Share certificate issuance",
@@ -567,6 +567,64 @@ export default async function ServicePage({
                     ))}
                   </div>
                 </div>
+              )}
+
+              {/* Company Secretarial — Compliance Watch + CIPC checklist */}
+              {slug === "company-secretarial" && (
+                <>
+                  {/* Compliance Watch */}
+                  <div className="pt-8 border-t border-neutral-200">
+                    <span className="section-label">Compliance Watch</span>
+                    <h2 className="section-title mt-2 mb-4">Stay ahead of your CIPC obligations</h2>
+                    <p className="text-sm text-neutral-600 leading-relaxed mb-4">
+                      Compliance Watch is a proactive add-on for existing Sikatrix clients — we track your CIPC anniversary dates, flag upcoming annual return deadlines, and alert you before penalties apply. No surprises, no deregistration risk.
+                    </p>
+                    <a
+                      href={`https://wa.me/27118672550?text=Hi%2C%20I'd%20like%20to%20add%20Compliance%20Watch%20to%20my%20secretarial%20service`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-white bg-[#25D366] hover:bg-[#1eb858] px-4 py-2.5 rounded-lg transition-colors"
+                    >
+                      <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4" aria-hidden="true">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                      </svg>
+                      Ask about Compliance Watch
+                    </a>
+                  </div>
+
+                  {/* CIPC self-audit checklist */}
+                  <div className="pt-8 border-t border-neutral-200">
+                    <span className="section-label">Quick Self-Audit</span>
+                    <h2 className="section-title mt-2 mb-2">Is your company CIPC-compliant?</h2>
+                    <p className="text-sm text-neutral-500 mb-5">Run through these five checks. If any are &quot;no&quot;, we can fix them.</p>
+                    <div className="rounded-xl border border-neutral-200 overflow-hidden">
+                      {[
+                        "Annual return filed on or before your company's anniversary date?",
+                        "Beneficial ownership submitted to CIPC?",
+                        "Share register up to date and accessible?",
+                        "Director details current at CIPC?",
+                        "MOI accessible, signed, and current?",
+                      ].map((item, i) => (
+                        <div
+                          key={i}
+                          className="flex items-center gap-4 px-5 py-4 border-b border-neutral-100 last:border-0 bg-white hover:bg-neutral-50 transition-colors"
+                        >
+                          <div className="w-6 h-6 rounded-full border-2 border-neutral-300 flex items-center justify-center flex-shrink-0">
+                            <span className="text-2xs font-bold text-neutral-400">{i + 1}</span>
+                          </div>
+                          <p className="text-sm text-neutral-700 flex-1">{item}</p>
+                          <div className="flex gap-2 flex-shrink-0">
+                            <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-green-50 text-green-700 border border-green-200">Yes</span>
+                            <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-red-50 text-red-600 border border-red-200">No</span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    <p className="text-xs text-neutral-400 mt-3">
+                      Not sure? <Link href="/contact" className="text-brand hover:underline font-medium">Book a free consultation</Link> — we&apos;ll run a full secretarial health check at no charge.
+                    </p>
+                  </div>
+                </>
               )}
 
             </div>

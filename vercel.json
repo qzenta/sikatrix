@@ -10,7 +10,7 @@
     },
     {
       "path": "/api/cron/deadlines",
-      "schedule": "0 5 * * *"
+      "schedule": "0 5 * * 1"
     },
     {
       "path": "/api/cron/seed-deadlines",

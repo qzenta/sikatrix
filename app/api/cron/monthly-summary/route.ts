@@ -12,7 +12,7 @@ import { sendEmail, sendCronAlert } from "@/lib/brevo";
 export const runtime = "nodejs";
 export const maxDuration = 60;
 
-const DANIEL_EMAIL = "daniel@sikatrix.com";
+const DANIEL_EMAIL = "info@sikatrix.com";
 const COMPLETED    = "\u{1F7E2} Completed";
 
 function esc(s: string) {

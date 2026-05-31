@@ -77,7 +77,7 @@ function buildEmailHtml(deadlines: NotionDeadline[], todayStr: string): string {
         <!-- Header -->
         <tr>
           <td style="background:#0f2347;padding:22px 28px;">
-            <p style="margin:0;color:#ffffff;font-size:15px;font-weight:700;">Sikatrix — Daily Deadline Briefing</p>
+            <p style="margin:0;color:#ffffff;font-size:15px;font-weight:700;">Sikatrix — Weekly Deadline Briefing</p>
             <p style="margin:4px 0 0;color:#d4920a;font-size:12px;letter-spacing:0.05em;text-transform:uppercase;">
               ${esc(todayStr)}
             </p>
@@ -176,7 +176,7 @@ export async function GET(req: NextRequest) {
 
   try {
     await sendEmail({
-      to: { email: "daniel@sikatrix.com", name: "Daniel Amoah" },
+      to: { email: "info@sikatrix.com", name: "Sikatrix" },
       subject,
       html: buildEmailHtml(deadlines, todayStr),
     });

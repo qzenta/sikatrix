@@ -5,7 +5,7 @@ const DEFAULT_SENDER = {
   email: "info@sikatrix.com",
 };
 
-const DANIEL_EMAIL = "daniel@sikatrix.com";
+const DANIEL_EMAIL = "info@sikatrix.com";
 
 interface SendEmailParams {
   to: { email: string; name?: string };
@@ -13,7 +13,7 @@ interface SendEmailParams {
   subject: string;
   html: string;
   sender?: { name: string; email: string };
-  bcc?: boolean; // set true to BCC daniel@sikatrix.com
+  bcc?: boolean; // set true to BCC info@sikatrix.com
 }
 
 export async function sendEmail(params: SendEmailParams): Promise<void> {
@@ -31,7 +31,7 @@ export async function sendEmail(params: SendEmailParams): Promise<void> {
       sender: params.sender ?? DEFAULT_SENDER,
       to: [{ email: params.to.email, name: params.to.name ?? params.to.email }],
       ...(params.replyTo ? { replyTo: params.replyTo } : {}),
-      ...(params.bcc ? { bcc: [{ email: DANIEL_EMAIL, name: "Daniel Amoah" }] } : {}),
+      ...(params.bcc ? { bcc: [{ email: DANIEL_EMAIL, name: "Sikatrix" }] } : {}),
       subject: params.subject,
       htmlContent: params.html,
     }),

@@ -271,6 +271,23 @@ export default function ContactForm() {
                 </button>
               </form>
             )}
+
+            {/* Office map */}
+            <div className="mt-8 pt-8 border-t border-neutral-200">
+              <h3 className="text-sm font-semibold text-neutral-900 mb-1">Find Our Office</h3>
+              <p className="text-xs text-neutral-500 mb-3">42 Hennie Alberts Street, Brackenhurst, Alberton — Monday to Friday 08:00–17:00</p>
+              <div className="rounded-xl overflow-hidden border border-neutral-200 h-64 sm:h-72">
+                <iframe
+                  title="Sikatrix office location"
+                  src="https://maps.google.com/maps?q=42+Hennie+Alberts+Street+Brackenhurst+Alberton+1448+South+Africa&output=embed&z=15"
+                  width="100%"
+                  height="100%"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="border-0 w-full h-full"
+                />
+              </div>
+            </div>
           </div>
 
           {/* Sidebar */}
