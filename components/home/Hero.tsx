@@ -18,8 +18,8 @@ function StatDisplay({ value, label }: { value: string; label: string }) {
 const SLIDES = [
   {
     tag: "Alberton · Johannesburg · Gauteng",
-    heading: "The accountant Alberton's",
-    highlight: "businesses call first",
+    heading: "The accountant",
+    highlight: "Alberton calls first",
     body: "SAIPA-registered accountants and SARS Tax Practitioners with 10+ years in practice. Fixed-fee quotes. Same-day responses. No year-end surprises.",
     points: [
       "SAIPA Registered Professional Accountant",
