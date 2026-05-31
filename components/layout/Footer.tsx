@@ -6,7 +6,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-neutral-900 text-neutral-300">
+    <footer className="bg-neutral-800 text-neutral-300">
       {/* Main footer with watermark wordmark */}
       <div className="relative overflow-hidden">
         {/* Sikatrix wordmark — decorative, behind all content */}
@@ -38,7 +38,7 @@ export default function Footer() {
               href={SITE.social.facebook}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-8 h-8 rounded-md bg-neutral-800 flex items-center justify-center text-neutral-400 hover:bg-brand hover:text-white transition-colors"
+              className="w-8 h-8 rounded-md bg-neutral-700 flex items-center justify-center text-neutral-400 hover:bg-brand hover:text-white transition-colors"
               aria-label="Facebook"
             >
               <Facebook size={14} />
@@ -47,7 +47,7 @@ export default function Footer() {
               href={SITE.social.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-8 h-8 rounded-md bg-neutral-800 flex items-center justify-center text-neutral-400 hover:bg-brand hover:text-white transition-colors"
+              className="w-8 h-8 rounded-md bg-neutral-700 flex items-center justify-center text-neutral-400 hover:bg-brand hover:text-white transition-colors"
               aria-label="LinkedIn"
             >
               <Linkedin size={14} />
@@ -56,7 +56,7 @@ export default function Footer() {
               href={SITE.social.twitter}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-8 h-8 rounded-md bg-neutral-800 flex items-center justify-center text-neutral-400 hover:bg-brand hover:text-white transition-colors"
+              className="w-8 h-8 rounded-md bg-neutral-700 flex items-center justify-center text-neutral-400 hover:bg-brand hover:text-white transition-colors"
               aria-label="X / Twitter"
             >
               <Twitter size={14} />
@@ -160,7 +160,7 @@ export default function Footer() {
       </div>{/* end watermark wrapper */}
 
       {/* Professional memberships — actual logos, uniform 80 × 36 px boxes */}
-      <div className="border-t border-neutral-800">
+      <div className="border-t border-neutral-700">
         <div className="container-page py-5 flex flex-col sm:flex-row items-center gap-4 sm:gap-8">
           <span className="text-2xs font-semibold uppercase tracking-widest text-neutral-600 flex-shrink-0">
             Professional Memberships
@@ -190,7 +190,7 @@ export default function Footer() {
       </div>
 
       {/* Legal bar */}
-      <div className="border-t border-neutral-800">
+      <div className="border-t border-neutral-700">
         <div className="container-page py-4 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-neutral-600">
           <span>© {year} Sikatrix. All rights reserved.</span>
           <div className="flex flex-wrap gap-4">

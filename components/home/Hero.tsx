@@ -103,7 +103,7 @@ export default function Hero() {
       {/* Accent glow */}
       <div className="absolute -top-40 -right-40 w-[520px] h-[520px] bg-brand-light/20 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="container-page relative py-6 md:py-8 lg:py-10">
+      <div className="container-page relative py-4 md:py-5 lg:py-6">
         {/* Slide content */}
         <AnimatePresence mode="wait">
         <motion.div
