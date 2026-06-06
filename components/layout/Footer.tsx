@@ -206,6 +206,8 @@ export default function Footer() {
             <Link href="/cookie-policy" className="hover:text-neutral-400 transition-colors">
               Cookie
             </Link>
+            <span className="text-neutral-700">·</span>
+            <a href="https://qzenta.com" target="_blank" rel="noopener noreferrer" className="hover:text-neutral-400 transition-colors">Powered by Qzenta</a>
           </div>
         </div>
       </div>
