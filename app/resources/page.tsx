@@ -36,7 +36,7 @@ export default function ResourcesPage() {
       />
 
       {/* Tools pinned section — 2-column */}
-      <section className="py-8 bg-neutral-50 border-t-[3px] border-neutral-200 border-b border-neutral-200">
+      <section className="py-8 bg-neutral-100 border-t-[3px] border-accent border-b border-neutral-300">
         <div className="container-page">
           <div className="max-w-5xl mx-auto grid lg:grid-cols-[1fr_260px] gap-5 items-stretch">
 
@@ -141,7 +141,7 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-neutral-50">
+      <section className="py-16 md:py-20 bg-neutral-200">
         <div className="container-page">
           <div className="max-w-5xl mx-auto">
             <BlogListing posts={posts} />
