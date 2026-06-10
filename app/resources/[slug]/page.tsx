@@ -55,7 +55,7 @@ export async function generateMetadata({
   const canonicalUrl = `${SITE.url}/resources/${slug}`;
 
   return {
-    title: { absolute: `${post.title} | Sikatrix Resources` },
+    title: { absolute: `${post.title} | Sikatrix` },
     description: post.description,
     alternates: { canonical: canonicalUrl },
     openGraph: {

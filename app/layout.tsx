@@ -36,6 +36,11 @@ export const metadata: Metadata = {
     siteName: SITE.name,
     locale: "en_ZA",
     type: "website",
+    images: [{ url: "/og-default.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/og-default.png"],
   },
   robots: { index: true, follow: true },
 };

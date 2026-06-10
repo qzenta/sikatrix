@@ -26,7 +26,7 @@ export const LOCATION_DETAILS: LocationDetail[] = [
     name: "Alberton",
     province: "Gauteng",
     isHQ: true,
-    metaTitle: "Accountants in Alberton | Sikatrix Business Accountants (HQ)",
+    metaTitle: "Accountants in Alberton | Sikatrix Business Accountants",
     metaDescription:
       "Sikatrix Business Accountants is based in Alberton, Gauteng. SAIPA-registered accountants and SARS Tax Practitioners serving Alberton SMEs, sole proprietors, NGOs and professionals. Call (011) 867-2550.",
     headline: "Your Trusted Accountants in Alberton — Based Right Here",
@@ -128,7 +128,7 @@ export const LOCATION_DETAILS: LocationDetail[] = [
     name: "Sandton",
     province: "Gauteng",
     isHQ: false,
-    metaTitle: "Accountants in Sandton | Tax & Accounting Services | Sikatrix",
+    metaTitle: "Accountants in Sandton | Sikatrix Business Accountants",
     metaDescription:
       "Professional accounting and tax services for Sandton businesses. SAIPA-registered accountants providing bookkeeping, payroll, tax planning and SARS compliance. Cloud-based delivery.",
     headline: "Professional Tax & Accounting Services for Sandton Businesses",
@@ -383,7 +383,7 @@ export const LOCATION_DETAILS: LocationDetail[] = [
     name: "Midrand",
     province: "Gauteng",
     isHQ: false,
-    metaTitle: "Accountants in Midrand | Manufacturing & Business Accounting | Sikatrix",
+    metaTitle: "Accountants in Midrand | Sikatrix Business Accountants",
     metaDescription:
       "Professional accounting, payroll, and tax services for Midrand businesses. Specialising in manufacturing, plastics, and industrial sectors. SAIPA-registered accountants and SARS Tax Practitioners. Cloud-based delivery.",
     headline: "Professional Accounting for Midrand's Growing Business Community",

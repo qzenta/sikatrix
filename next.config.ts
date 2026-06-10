@@ -38,6 +38,22 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // ── Bare domain → www (308 permanent, runs before middleware) ─────
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "sikatrix.com" }],
+        destination: "https://www.sikatrix.com/:path*",
+        permanent: true,
+      },
+
+      // ── Legacy WordPress /?p= query URLs ─────────────────────────────
+      {
+        source: "/",
+        has: [{ type: "query", key: "p" }],
+        destination: "/",
+        permanent: true,
+      },
+
       // ── Legacy WordPress / cPanel page slugs ──────────────────────────
       { source: "/contact-us", destination: "/contact", permanent: true },
       { source: "/about-us", destination: "/about", permanent: true },

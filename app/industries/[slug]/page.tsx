@@ -37,7 +37,7 @@ type IndustryDetail = {
 
 const INDUSTRY_DATA: Record<string, IndustryDetail> = {
   "smes-growing-businesses": {
-    metaTitle: "Accounting for SMEs & Growing Businesses | Sikatrix Business Accountants",
+    metaTitle: "SME Accounting Services | Sikatrix Business Accountants",
     metaDesc: "Fixed-fee bookkeeping, payroll, tax, and annual financial statements for South African SMEs. Scalable accounting support as your business grows.",
     heroTitle: "Accounting That Scales With Your Business",
     heroSubtitle: "Whether you're a sole proprietor or running a 50-person operation, we handle your compliance, books, and tax so you can focus on growth.",
@@ -72,7 +72,7 @@ const INDUSTRY_DATA: Record<string, IndustryDetail> = {
   },
 
   "startups-new-companies": {
-    metaTitle: "Accounting for Startups & New Companies | Sikatrix Business Accountants",
+    metaTitle: "Startup Accounting Services | Sikatrix Business Accountants",
     metaDesc: "Company registration, SARS eFiling setup, cloud accounting, and first-year compliance for South African startups. Get your books right from day one.",
     heroTitle: "Start Right. Stay Compliant from Day One.",
     heroSubtitle: "We handle the admin so you can focus on building your business. Company registration, SARS setup, and clean books from the moment you open.",
@@ -107,7 +107,7 @@ const INDUSTRY_DATA: Record<string, IndustryDetail> = {
   },
 
   "medical-healthcare": {
-    metaTitle: "Accounting for Medical Practices & Healthcare Professionals | Sikatrix Business Accountants",
+    metaTitle: "Medical Practice Accounting | Sikatrix Business Accountants",
     metaDesc: "Practice accounting, SARS compliance, payroll, and annual financial statements for South African doctors, dentists, physiotherapists, and private healthcare businesses.",
     heroTitle: "Financial Management for Healthcare Professionals",
     heroSubtitle: "We understand the unique billing environment, professional body requirements, and compliance obligations of private healthcare in South Africa.",
@@ -142,7 +142,7 @@ const INDUSTRY_DATA: Record<string, IndustryDetail> = {
   },
 
   "legal-professionals": {
-    metaTitle: "Accounting for Attorneys & Legal Professionals | Sikatrix Business Accountants",
+    metaTitle: "Legal Professional Accounting | Sikatrix Business Accountants",
     metaDesc: "Trust account reconciliations, LSSA compliance support, practice bookkeeping, and tax returns for South African attorneys and law firms.",
     heroTitle: "Accounting Precision for Legal Practices",
     heroSubtitle: "Trust accounts and LSSA compliance records have to be right. We handle both so your practice stays in good standing.",
@@ -177,7 +177,7 @@ const INDUSTRY_DATA: Record<string, IndustryDetail> = {
   },
 
   "property-investors": {
-    metaTitle: "Accounting for Property Investors & Landlords | Sikatrix Business Accountants",
+    metaTitle: "Property Investor Accounting | Sikatrix Business Accountants",
     metaDesc: "Rental income tax, provisional tax, Capital Gains Tax, and property entity structuring for South African property investors and landlords.",
     heroTitle: "Maximise Your Property Returns. Minimise Your Tax.",
     heroSubtitle: "Property tax in South Africa has real complexity. We find every deduction you qualify for and structure your portfolio properly.",
@@ -212,7 +212,7 @@ const INDUSTRY_DATA: Record<string, IndustryDetail> = {
   },
 
   "ngos-nonprofits": {
-    metaTitle: "Accounting for NGOs & Nonprofits | Sikatrix Business Accountants",
+    metaTitle: "NGO & Nonprofit Accounting | Sikatrix Business Accountants",
     metaDesc: "SARS PBO applications, donor-ready annual financial statements, CIPC NPC registration, and grant reporting for South African nonprofits and NGOs.",
     heroTitle: "Accounting That Supports Your Mission",
     heroSubtitle: "We help NGOs achieve PBO status, prepare donor-ready financial statements, and maintain the compliance records that funders and SARS require.",
@@ -247,7 +247,7 @@ const INDUSTRY_DATA: Record<string, IndustryDetail> = {
   },
 
   "private-schools": {
-    metaTitle: "Accounting for Private Schools & Educational Institutions | Sikatrix Business Accountants",
+    metaTitle: "Private School Accounting | Sikatrix Business Accountants",
     metaDesc: "School fee income accounting, teaching staff payroll, SARS compliance, and annual financial statements for South African independent schools and educational institutions.",
     heroTitle: "Financial Management for Private Educational Institutions",
     heroSubtitle: "Private schools have specific accounting requirements: fee income cycles, bursaries, tuck shop operations, and layered payroll. We handle all of it.",
@@ -282,7 +282,7 @@ const INDUSTRY_DATA: Record<string, IndustryDetail> = {
   },
 
   "architecture-engineering": {
-    metaTitle: "Accounting for Architects & Engineers | Sikatrix Business Accountants",
+    metaTitle: "Accounting for Architects & Engineers | Sikatrix",
     metaDesc: "Project-based bookkeeping, WIP accounting, payroll, and tax for South African architects, engineers, quantity surveyors, and construction professionals.",
     heroTitle: "Accounting for Project-Based Professionals",
     heroSubtitle: "Architecture and engineering firms face unique financial challenges: WIP, project cost tracking, and professional practice compliance. We handle all of it.",

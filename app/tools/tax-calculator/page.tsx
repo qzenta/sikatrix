@@ -69,7 +69,7 @@ const faqSchema = {
       name: "How does the medical scheme fees tax credit work?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The medical scheme fees tax credit (MTC) reduces your tax liability directly. For 2025/26, the credit is R364 per month for the main member, R364 for the first additional dependant, and R246 per month for each subsequent dependant. The MTC is applied after rebates and directly reduces the tax you owe.",
+        text: "The medical scheme fees tax credit (MTC) reduces your tax liability directly. For 2026/27, the credit is R376 per month for the main member and first dependant, and R254 per month for each additional dependant. The MTC is applied after rebates and directly reduces the tax you owe.",
       },
     },
     {
@@ -317,7 +317,7 @@ export default function TaxCalculatorPage() {
               </tbody>
             </table>
             <p className="text-xs text-neutral-400 mt-2">
-              * Medical credit figures are based on 2025/26 SARS rates. 2026/27 figures will be published by SARS closer to 1 March 2026.
+              * Medical credit figures reflect confirmed 2026/27 SARS rates: R376/month for the main member and first dependant, R254/month for each additional dependant.
             </p>
           </div>
 
