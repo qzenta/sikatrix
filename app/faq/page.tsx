@@ -68,7 +68,7 @@ const FAQS = [
       },
       {
         q: "When do I need to register for VAT?",
-        a: "You must register for VAT once your taxable turnover has exceeded R1 million in any 12-month period, or is expected to do so. Voluntary registration is possible from R50,000. We handle VAT registrations and submissions for our clients and can advise on whether voluntary registration makes sense for your business.",
+        a: "You must register for VAT once your taxable turnover has exceeded R2.3 million in any 12-month period, or is expected to do so. This threshold was increased from R1 million effective 1 April 2026. Voluntary registration is possible from R50,000. We handle VAT registrations and submissions for our clients and can advise on whether voluntary registration makes sense for your business.",
       },
       {
         q: "Do I need to register for provisional tax?",

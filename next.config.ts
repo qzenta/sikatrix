@@ -10,11 +10,11 @@ const nextConfig: NextConfig = {
   async headers() {
     const csp = [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://*.google-analytics.com",
+      "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://*.google-analytics.com https://www.clarity.ms",
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data: blob: https://images.unsplash.com https://images.pexels.com https://*.google-analytics.com https://*.googletagmanager.com",
       "font-src 'self'",
-      "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://region1.google-analytics.com https://hook.eu2.make.com https://va.vercel-analytics.com https://vitals.vercel-insights.com",
+      "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://region1.google-analytics.com https://hook.eu2.make.com https://va.vercel-analytics.com https://vitals.vercel-insights.com https://e.clarity.ms",
       "frame-src https://maps.google.com https://www.google.com",
       "object-src 'none'",
       "base-uri 'self'",

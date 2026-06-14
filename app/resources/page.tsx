@@ -18,7 +18,15 @@ export const metadata: Metadata = {
     description:
       "Free guides on SARS compliance, VAT, bookkeeping, and business finance — written by qualified accountants for South African SMEs.",
     type: "website",
-    url: "https://sikatrix.com/resources",
+    url: "https://www.sikatrix.com/resources",
+    images: [
+      {
+        url: "https://www.sikatrix.com/og-default.png",
+        width: 1200,
+        height: 630,
+        alt: "Tax & Accounting Resources | Sikatrix Business Accountants",
+      },
+    ],
   },
 };
 
