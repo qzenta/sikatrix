@@ -57,13 +57,13 @@ export default function BlogListing({ posts }: BlogListingProps) {
   return (
     <div>
       {/* ── Category filter ─────────────────────────────────────────── */}
-      <div className="flex flex-wrap gap-2 mb-8">
+      <div className="flex flex-wrap gap-2 mb-8 p-3 rounded-xl bg-white border border-neutral-200 shadow-sm">
         <button
           onClick={() => setActiveCategory("All")}
-          className={`px-4 py-1.5 rounded text-xs font-semibold border transition-all duration-200 ${
+          className={`px-4 py-1.5 rounded-full text-xs font-semibold border-2 transition-all duration-200 ${
             activeCategory === "All"
               ? "bg-brand border-brand text-white shadow-sm"
-              : "bg-white border-neutral-300 text-neutral-600 hover:border-brand hover:text-brand"
+              : "bg-neutral-50 border-neutral-300 text-neutral-700 hover:border-brand hover:text-brand hover:bg-brand/5 shadow-[inset_0_0_0_1px_theme(colors.neutral.200)]"
           }`}
         >
           All
@@ -72,10 +72,10 @@ export default function BlogListing({ posts }: BlogListingProps) {
           <button
             key={cat}
             onClick={() => setActiveCategory(cat)}
-            className={`px-4 py-1.5 rounded text-xs font-semibold border transition-all duration-200 ${
+            className={`px-4 py-1.5 rounded-full text-xs font-semibold border-2 transition-all duration-200 ${
               activeCategory === cat
                 ? "bg-brand border-brand text-white shadow-sm"
-                : "bg-white border-neutral-300 text-neutral-600 hover:border-brand hover:text-brand"
+                : "bg-neutral-50 border-neutral-300 text-neutral-700 hover:border-brand hover:text-brand hover:bg-brand/5 shadow-[inset_0_0_0_1px_theme(colors.neutral.200)]"
             }`}
           >
             {cat}

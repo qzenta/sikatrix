@@ -8,7 +8,7 @@ tags:
   - personal-finance
   - SARS
   - tax-planning
-featuredImage: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&auto=format&fit=crop&q=60"
+featuredImage: "https://images.pexels.com/photos/6693661/pexels-photo-6693661.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
 featuredImageAlt: "Colourful gift boxes and flowers arranged on a table for Mother's Day"
 author:
   name: "Daniel Amoah"

@@ -6,11 +6,36 @@ import { ArrowRight, Phone, ChevronLeft, ChevronRight, CheckCircle } from "lucid
 import { AnimatePresence, motion } from "framer-motion";
 import { SITE } from "@/lib/site";
 
-function StatDisplay({ value, label }: { value: string; label: string }) {
+const STAT_BACKS = [
+  "Sole traders to growing SMEs across Gauteng",
+  "A decade of SAIPA-registered professional practice",
+  "Tax · Payroll · Cloud Accounting · Compliance",
+  "QuickBooks · Xero · Sage — anytime, anywhere",
+];
+
+function StatCard({ value, label, back }: { value: string; label: string; back: string }) {
   return (
-    <div className="text-center">
-      <div className="text-xl font-semibold text-accent-light">{value}</div>
-      <div className="text-xs text-brand-100 mt-0.5">{label}</div>
+    <div className="group" style={{ perspective: "800px" }}>
+      <div
+        className="relative w-full transition-transform duration-500 group-hover:[transform:rotateY(180deg)]"
+        style={{ transformStyle: "preserve-3d", minHeight: "80px" }}
+      >
+        {/* Front */}
+        <div
+          className="absolute inset-0 flex flex-col items-center justify-center rounded-lg border border-white/10 bg-white/5 px-3 py-4 text-center"
+          style={{ backfaceVisibility: "hidden" }}
+        >
+          <div className="text-2xl font-bold text-accent-light">{value}</div>
+          <div className="text-xs text-brand-100 mt-1">{label}</div>
+        </div>
+        {/* Back */}
+        <div
+          className="absolute inset-0 flex items-center justify-center rounded-lg bg-accent px-3 py-4 text-center"
+          style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
+        >
+          <p className="text-xs font-semibold text-white leading-snug">{back}</p>
+        </div>
+      </div>
     </div>
   );
 }
@@ -199,12 +224,15 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Stats bar — fixed, not part of carousel */}
-      <div className="border-t border-white/10 bg-black/25 relative">
-        <div className="container-page py-5">
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-            {STATS.map((s) => (
-              <StatDisplay key={s.label} value={s.value} label={s.label} />
+      {/* Navy separator bar */}
+      <div className="relative h-1.5 bg-accent/60" />
+
+      {/* Stats cards — 4 flip cards */}
+      <div className="bg-brand relative">
+        <div className="container-page py-6">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            {STATS.map((s, i) => (
+              <StatCard key={s.label} value={s.value} label={s.label} back={STAT_BACKS[i]} />
             ))}
           </div>
         </div>

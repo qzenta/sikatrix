@@ -42,6 +42,7 @@ export const BLOG_CATEGORIES = [
   "SARS Compliance",
   "Bookkeeping",
   "Business Growth",
+  "SME",
 ] as const;
 
 export type BlogCategory = (typeof BLOG_CATEGORIES)[number];
