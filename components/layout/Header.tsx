@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X, ChevronDown, Phone, Calculator } from "lucide-react";
+import { Menu, X, ChevronDown, Phone, PhoneCall, Calculator } from "lucide-react";
 import { SITE, SERVICES, LOCATIONS, INDUSTRIES } from "@/lib/site";
 
 type NavChild = { label: string; href: string };
@@ -233,7 +233,7 @@ export default function Header() {
               aria-label="Contact us"
               title="Contact us"
             >
-              <Phone size={16} strokeWidth={1.75} />
+              <PhoneCall size={16} strokeWidth={1.75} />
               <span className="pointer-events-none absolute top-full left-1/2 -translate-x-1/2 mt-2 whitespace-nowrap rounded-md bg-brand-dark px-2.5 py-1 text-[10px] font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-150">
                 Contact us
               </span>
@@ -272,7 +272,7 @@ export default function Header() {
                         onClick={() => setOpen(false)}
                         className="flex-1 px-3 py-2.5 text-sm font-medium text-neutral-700 hover:text-brand hover:bg-neutral-50 rounded-md transition-colors flex items-center gap-2"
                       >
-                        {item.isContact && <Phone size={15} strokeWidth={2} className="flex-shrink-0 text-accent" />}
+                        {item.isContact && <PhoneCall size={15} strokeWidth={2} className="flex-shrink-0 text-brand" />}
                         {item.label}
                       </Link>
                       {item.children && (
