@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X, ChevronDown, Phone } from "lucide-react";
+import { Menu, X, ChevronDown, Phone, Calculator } from "lucide-react";
 import { SITE, SERVICES, LOCATIONS, INDUSTRIES } from "@/lib/site";
 
 type NavChild = { label: string; href: string };
@@ -155,7 +155,7 @@ export default function Header() {
 
           {/* Desktop nav */}
           <nav className="hidden lg:flex items-center gap-1">
-            {NAV_ITEMS.map((item) =>
+            {NAV_ITEMS.filter((item) => !item.isContact).map((item) =>
               item.children ? (
                 <div
                   key={item.label}
@@ -199,21 +199,6 @@ export default function Header() {
                     </div>
                   )}
                 </div>
-              ) : item.isContact ? (
-                <Link
-                  key={item.label}
-                  href={item.href}
-                  className="group relative px-2.5 py-1.5 rounded-md transition-colors"
-                  aria-label="Contact us"
-                  title="Contact us"
-                >
-                  <span className="flex items-center justify-center w-8 h-8 rounded-full bg-accent text-white group-hover:bg-accent-light transition-colors shadow-sm">
-                    <Phone size={15} strokeWidth={2} />
-                  </span>
-                  <span className="pointer-events-none absolute top-full left-1/2 -translate-x-1/2 mt-2 whitespace-nowrap rounded-md bg-brand-dark px-2.5 py-1 text-[10px] font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-150">
-                    Contact us
-                  </span>
-                </Link>
               ) : (
                 <Link
                   key={item.label}
@@ -226,11 +211,43 @@ export default function Header() {
             )}
           </nav>
 
-          {/* CTA + mobile toggle */}
-          <div className="flex items-center gap-3">
-            <Link href="/contact" className="hidden md:inline-flex btn-primary text-xs px-4 py-2">
+          {/* CTA cluster + mobile toggle */}
+          <div className="flex items-center gap-2">
+            {/* Tax Calculator icon */}
+            <Link
+              href="/tools/tax-calculator"
+              className="group relative hidden lg:flex items-center justify-center w-9 h-9 rounded-full bg-brand/10 text-brand hover:bg-brand/20 transition-colors border border-brand/15"
+              aria-label="Tax Calculator"
+              title="Tax Calculator"
+            >
+              <Calculator size={16} strokeWidth={1.75} />
+              <span className="pointer-events-none absolute top-full left-1/2 -translate-x-1/2 mt-2 whitespace-nowrap rounded-md bg-brand-dark px-2.5 py-1 text-[10px] font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-150">
+                Tax Calculator
+              </span>
+            </Link>
+
+            {/* Phone / Contact icon */}
+            <Link
+              href="/contact"
+              className="group relative hidden lg:flex items-center justify-center w-9 h-9 rounded-full bg-brand/10 text-brand hover:bg-brand/20 transition-colors border border-brand/15"
+              aria-label="Contact us"
+              title="Contact us"
+            >
+              <Phone size={16} strokeWidth={1.75} />
+              <span className="pointer-events-none absolute top-full left-1/2 -translate-x-1/2 mt-2 whitespace-nowrap rounded-md bg-brand-dark px-2.5 py-1 text-[10px] font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-150">
+                Contact us
+              </span>
+            </Link>
+
+            {/* Book Consultation button */}
+            <Link
+              href="/contact"
+              className="hidden md:inline-flex items-center text-xs font-semibold px-4 py-2 rounded-lg bg-brand/10 text-brand border border-brand/20 hover:bg-brand/20 transition-colors"
+            >
               Book Consultation
             </Link>
+
+            {/* Mobile hamburger */}
             <button
               onClick={() => setOpen(!open)}
               className="lg:hidden p-2 rounded-md text-neutral-600 hover:bg-neutral-100 transition-colors"

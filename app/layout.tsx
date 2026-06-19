@@ -3,7 +3,6 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import CookieBanner from "@/components/ui/CookieBanner";
-import TaxCalcBanner from "@/components/ui/TaxCalcBanner";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -76,7 +75,6 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <CookieBanner />
-        <TaxCalcBanner />
         {process.env.NEXT_PUBLIC_GA_ID && (
           <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
         )}
