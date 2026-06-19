@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X, Phone, ChevronDown } from "lucide-react";
+import { Menu, X, Phone, ChevronDown, MessageCircle } from "lucide-react";
 import { SITE, SERVICES, LOCATIONS, INDUSTRIES } from "@/lib/site";
 
 type NavChild = { label: string; href: string };
@@ -14,6 +14,7 @@ type NavItem = {
   panelLabel?: string;
   panelDesc?: string;
   footerLabel?: string;
+  isContact?: boolean;
 };
 
 const NAV_ITEMS: NavItem[] = [
@@ -68,7 +69,7 @@ const NAV_ITEMS: NavItem[] = [
     ],
   },
   { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
+  { label: "Contact", href: "/contact", isContact: true },
 ];
 
 export default function Header() {
@@ -198,6 +199,19 @@ export default function Header() {
                     </div>
                   )}
                 </div>
+              ) : item.isContact ? (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  className="group relative px-3 py-2 text-sm font-medium text-neutral-700 hover:text-brand rounded-md hover:bg-neutral-50 transition-colors"
+                  aria-label="Contact us"
+                  title="Contact us"
+                >
+                  <MessageCircle size={18} strokeWidth={1.75} />
+                  <span className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-2 whitespace-nowrap rounded-md bg-brand-dark px-2.5 py-1 text-[10px] font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-150">
+                    Contact us
+                  </span>
+                </Link>
               ) : (
                 <Link
                   key={item.label}
@@ -237,8 +251,9 @@ export default function Header() {
                       <Link
                         href={item.href}
                         onClick={() => setOpen(false)}
-                        className="flex-1 px-3 py-2.5 text-sm font-medium text-neutral-700 hover:text-brand hover:bg-neutral-50 rounded-md transition-colors"
+                        className="flex-1 px-3 py-2.5 text-sm font-medium text-neutral-700 hover:text-brand hover:bg-neutral-50 rounded-md transition-colors flex items-center gap-2"
                       >
+                        {item.isContact && <MessageCircle size={15} strokeWidth={1.75} className="flex-shrink-0" />}
                         {item.label}
                       </Link>
                       {item.children && (

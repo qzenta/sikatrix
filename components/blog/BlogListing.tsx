@@ -1,13 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { Calendar, Clock, ArrowRight, Tag, Sparkles, BookOpen, ChevronRight } from "lucide-react";
+import { Calendar, Clock, ArrowRight, Tag, Sparkles, BookOpen, ChevronRight, ChevronLeft } from "lucide-react";
 import type { PostMeta } from "@/lib/blog-config";
 import { BLOG_CATEGORIES } from "@/lib/blog-config";
 
 const NEW_THRESHOLD_DAYS = 60;
+const POSTS_PER_PAGE = 6;
 
 function isNew(publishDate: string) {
   const pub = new Date(publishDate).getTime();
@@ -32,7 +34,30 @@ interface BlogListingProps {
 }
 
 export default function BlogListing({ posts }: BlogListingProps) {
+  const router = useRouter();
+  const searchParams = useSearchParams();
   const [activeCategory, setActiveCategory] = useState<string>("All");
+
+  const pageParam = parseInt(searchParams.get("page") ?? "1", 10);
+  const currentPage = isNaN(pageParam) || pageParam < 1 ? 1 : pageParam;
+
+  // Reset to page 1 when category changes
+  const [page, setPage] = useState(currentPage);
+  useEffect(() => { setPage(currentPage); }, [currentPage]);
+
+  const handleCategoryChange = (cat: string) => {
+    setActiveCategory(cat);
+    setPage(1);
+    router.push("/resources", { scroll: false });
+  };
+
+  const handlePageChange = (p: number) => {
+    setPage(p);
+    const params = new URLSearchParams(searchParams.toString());
+    if (p === 1) params.delete("page");
+    else params.set("page", String(p));
+    router.push(`/resources?${params.toString()}`, { scroll: true });
+  };
 
   const filtered =
     activeCategory === "All"
@@ -54,12 +79,17 @@ export default function BlogListing({ posts }: BlogListingProps) {
     (a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()
   );
 
+  // Paginate the archive grid
+  const totalPages = Math.ceil(rest.length / POSTS_PER_PAGE);
+  const safePage = Math.min(page, Math.max(totalPages, 1));
+  const pagedRest = rest.slice((safePage - 1) * POSTS_PER_PAGE, safePage * POSTS_PER_PAGE);
+
   return (
     <div>
       {/* ── Category filter ─────────────────────────────────────────── */}
       <div className="flex flex-wrap gap-2 mb-8 p-3 rounded-xl bg-white border border-neutral-200 shadow-sm">
         <button
-          onClick={() => setActiveCategory("All")}
+          onClick={() => handleCategoryChange("All")}
           className={`px-4 py-1.5 rounded-full text-xs font-semibold border-2 transition-all duration-200 ${
             activeCategory === "All"
               ? "bg-brand border-brand text-white shadow-sm"
@@ -71,7 +101,7 @@ export default function BlogListing({ posts }: BlogListingProps) {
         {BLOG_CATEGORIES.map((cat) => (
           <button
             key={cat}
-            onClick={() => setActiveCategory(cat)}
+            onClick={() => handleCategoryChange(cat)}
             className={`px-4 py-1.5 rounded-full text-xs font-semibold border-2 transition-all duration-200 ${
               activeCategory === cat
                 ? "bg-brand border-brand text-white shadow-sm"
@@ -88,8 +118,8 @@ export default function BlogListing({ posts }: BlogListingProps) {
 
         <div className="min-w-0 space-y-4">
 
-          {/* Latest post */}
-          {latestPost && (
+          {/* Latest post — only on page 1 */}
+          {latestPost && safePage === 1 && (
             <div>
               <div className="flex items-center gap-2 mb-3">
                 <Sparkles size={14} className="text-accent" />
@@ -148,8 +178,8 @@ export default function BlogListing({ posts }: BlogListingProps) {
             </div>
           )}
 
-          {/* Featured article */}
-          {featured && (
+          {/* Featured article — only on page 1 */}
+          {featured && safePage === 1 && (
             <div>
               <div className="flex items-center gap-2 mb-3">
                 <Tag size={13} className="text-brand" />
@@ -249,15 +279,17 @@ export default function BlogListing({ posts }: BlogListingProps) {
       </div>
 
       {/* ── Archive grid ─────────────────────────────────────────────── */}
-      {rest.length > 0 && (
+      {pagedRest.length > 0 && (
         <div>
           <div className="flex items-center gap-3 mb-5">
             <div className="h-px flex-1 bg-neutral-300" />
-            <span className="text-xs font-semibold uppercase tracking-widest text-neutral-500">More Articles</span>
+            <span className="text-xs font-semibold uppercase tracking-widest text-neutral-500">
+              {totalPages > 1 ? `More Articles — Page ${safePage} of ${totalPages}` : "More Articles"}
+            </span>
             <div className="h-px flex-1 bg-neutral-300" />
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {rest.map((post) => (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {pagedRest.map((post) => (
               <Link
                 key={post.slug}
                 href={`/resources/${post.slug}`}
@@ -270,7 +302,7 @@ export default function BlogListing({ posts }: BlogListingProps) {
                       alt={post.featuredImageAlt || post.title}
                       fill
                       className="object-cover group-hover:scale-110 transition-transform duration-500"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                   ) : (
                     <div className="w-full h-full bg-gradient-to-br from-brand to-brand/70" />
@@ -308,6 +340,45 @@ export default function BlogListing({ posts }: BlogListingProps) {
               </Link>
             ))}
           </div>
+
+          {/* ── Pagination ────────────────────────────────────────────── */}
+          {totalPages > 1 && (
+            <div className="flex items-center justify-center gap-1 mt-8">
+              <button
+                onClick={() => handlePageChange(safePage - 1)}
+                disabled={safePage === 1}
+                className="flex items-center gap-1 px-3 py-2 rounded-lg text-xs font-semibold border border-neutral-300 bg-white text-neutral-700 hover:border-brand hover:text-brand transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+                aria-label="Previous page"
+              >
+                <ChevronLeft size={13} /> Prev
+              </button>
+
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
+                <button
+                  key={p}
+                  onClick={() => handlePageChange(p)}
+                  className={`w-9 h-9 rounded-lg text-xs font-semibold border-2 transition-all ${
+                    p === safePage
+                      ? "bg-brand border-brand text-white shadow-sm"
+                      : "border-neutral-300 bg-white text-neutral-700 hover:border-brand hover:text-brand"
+                  }`}
+                  aria-label={`Page ${p}`}
+                  aria-current={p === safePage ? "page" : undefined}
+                >
+                  {p}
+                </button>
+              ))}
+
+              <button
+                onClick={() => handlePageChange(safePage + 1)}
+                disabled={safePage === totalPages}
+                className="flex items-center gap-1 px-3 py-2 rounded-lg text-xs font-semibold border border-neutral-300 bg-white text-neutral-700 hover:border-brand hover:text-brand transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+                aria-label="Next page"
+              >
+                Next <ArrowRight size={13} />
+              </button>
+            </div>
+          )}
         </div>
       )}
     </div>

@@ -114,6 +114,35 @@ const FAQS = [
       },
     ],
   },
+  {
+    category: "Consultations & Process",
+    items: [
+      {
+        q: "How do I book a consultation with Sikatrix?",
+        a: "You can book a free 30-minute consultation through our contact page at sikatrix.com/contact, by calling us on (011) 867-2550, or by sending a WhatsApp message. We offer phone, video call, and in-person appointments at our Brackenhurst, Alberton office. No obligation and no fee for the first consultation.",
+      },
+      {
+        q: "What documents should I bring to my first consultation?",
+        a: "For a first consultation, it helps to have a recent bank statement, your SARS tax reference number, and any outstanding SARS correspondence. If you are a business owner, bring your most recent management accounts or income and expense summary. If you are not sure what to bring, contact us beforehand and we will guide you.",
+      },
+      {
+        q: "How quickly can you turn around a tax return or set of financial statements?",
+        a: "For annual financial statements with clean, complete records, our typical turnaround is 10 to 15 business days. For tax returns with all supporting documents in hand, we aim for 5 to 10 business days. Rush turnarounds are possible at short notice — contact us and we will advise based on current capacity.",
+      },
+      {
+        q: "How does your fee structure work?",
+        a: "We prefer fixed monthly retainers for ongoing services such as bookkeeping, payroll, and tax management. This gives you a predictable cost and aligns our incentives with yours. For once-off work such as annual financial statements, tax returns, or CIPC filings, we provide a fixed quote upfront. We do not use hourly billing for most services.",
+      },
+      {
+        q: "Can you help me register on SARS eFiling or sort out my eFiling profile?",
+        a: "Yes. We assist clients with eFiling registration, profile corrections, tax reference number queries, and banking detail updates. If you have been locked out of eFiling or received a suspicious eFiling message, contact us before taking any action — we can verify SARS correspondence and access your profile on your behalf as your registered Tax Practitioner.",
+      },
+      {
+        q: "Do you only serve clients in Alberton, or can you work with businesses anywhere in South Africa?",
+        a: "We serve clients across South Africa. Our primary service areas are Alberton, Johannesburg, Sandton, Randburg, Germiston, Boksburg, Vereeniging, and Midrand, but most of our work is done remotely via cloud platforms, email, and video calls. If you are based in another province, we can still serve you effectively.",
+      },
+    ],
+  },
 ];
 
 const faqSchema = {

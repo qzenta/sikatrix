@@ -83,6 +83,18 @@ export default function RootLayout({
         <Analytics />
         <SpeedInsights />
 
+        {/* Contact float */}
+        <a
+          href="/contact"
+          className="fixed bottom-6 right-20 z-40 w-12 h-12 rounded-full bg-[#172846] flex items-center justify-center shadow-lg hover:bg-[#1e3461] transition-colors"
+          aria-label="Contact us"
+          title="Contact us"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+          </svg>
+        </a>
+
         {/* WhatsApp float */}
         <a
           href={`https://wa.me/${SITE.whatsapp}?text=Hi%2C%20I'd%20like%20to%20book%20a%20consultation`}

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import Link from "next/link";
 import { Calculator, ArrowRight, Download, FileText, BookOpen, ExternalLink } from "lucide-react";
 import PageHero from "@/components/shared/PageHero";
@@ -152,7 +153,9 @@ export default function ResourcesPage() {
       <section className="py-16 md:py-20 bg-neutral-200">
         <div className="container-page">
           <div className="max-w-5xl mx-auto">
+            <Suspense fallback={<div className="text-sm text-neutral-400 py-10 text-center">Loading articles...</div>}>
             <BlogListing posts={posts} />
+          </Suspense>
           </div>
         </div>
       </section>

@@ -170,6 +170,18 @@ const SERVICE_DETAILS: Record<string, { outcome: string; benefits: string[]; faq
         q: "Do I need an audit or just a compilation?",
         a: "Most SMEs require only a compilation engagement. An audit or review is required if your company meets the Public Interest Score (PIS) threshold of 350+. We'll assess this during your consultation.",
       },
+      {
+        q: "Who needs Annual Financial Statements in South Africa?",
+        a: "Every registered company — including Pty Ltd entities, Non-Profit Companies (NPCs), and Close Corporations — must prepare Annual Financial Statements in accordance with the Companies Act, 2008. Sole proprietors are not legally required to prepare formal AFS, but banks, funders, and SARS may request them as supporting documentation.",
+      },
+      {
+        q: "What is the difference between compiled and audited AFS?",
+        a: "A compilation engagement means an accountant prepares the statements from your records without performing verification procedures. An audit involves an independent auditor examining your records and providing an opinion on their accuracy. Most SMEs require compiled statements only. An audit is required if your Public Interest Score (PIS) exceeds 350, or if your MOI requires it.",
+      },
+      {
+        q: "Can SARS request my Annual Financial Statements?",
+        a: "Yes. SARS can and does request AFS during audits, verifications, and income tax return reviews, particularly for companies. SARS may also request management accounts or detailed income and expense records. We recommend keeping signed AFS for a minimum of five years.",
+      },
     ],
   },
   "tax-services": {
@@ -188,12 +200,40 @@ const SERVICE_DETAILS: Record<string, { outcome: string; benefits: string[]; faq
         a: "Provisional tax requires you to pay estimated tax in two instalments (August and February) based on your anticipated taxable income. Business owners, freelancers, and those with income beyond salary generally must submit.",
       },
       {
+        q: "What is the difference between provisional and non-provisional tax?",
+        a: "Non-provisional taxpayers earn only a salary with PAYE fully deducted by their employer. They file one ITR12 return per year, and SARS may issue an auto assessment on their behalf. Provisional taxpayers earn income beyond a salary, such as from a business, freelancing, investments, or rental properties, and must submit two IRP6 estimates per year (in August and February) in addition to their annual ITR12.",
+      },
+      {
+        q: "What happens if I miss the filing deadline?",
+        a: "SARS issues administrative penalties for late submissions, which can range from R250 to R16,000 per month depending on your taxable income. Interest also accrues on any tax due. If you have missed a deadline, contact us immediately — voluntary disclosure before SARS initiates a case significantly reduces your exposure.",
+      },
+      {
+        q: "Can SARS audit me after submission?",
+        a: "Yes. SARS selects returns for audit or verification based on risk profiling, discrepancies in third-party data, or random selection. An audit can cover up to 5 years of returns under normal circumstances, or up to 15 years in cases involving fraud or willful negligence. We represent clients in SARS audits and ensure all correspondence is handled professionally.",
+      },
+      {
+        q: "What records do I need to keep and for how long?",
+        a: "SARS requires all financial records to be retained for a minimum of five years from the date of submission of the return to which they relate. This includes bank statements, invoices, receipts, payroll records, VAT records, and supporting documents for all deductions claimed. Cloud accounting software makes this significantly easier by digitising records automatically.",
+      },
+      {
         q: "Can you handle SARS disputes on my behalf?",
         a: "Yes. As a registered Tax Practitioner, we can represent you in SARS disputes, lodge objections, and engage with SARS directly — including attending audit meetings where required.",
       },
       {
         q: "How far back can SARS audit my returns?",
         a: "SARS can audit up to 5 years back under normal circumstances, or up to 15 years in cases of fraud or negligence. Keeping accurate records is therefore essential.",
+      },
+      {
+        q: "Am I required to register for VAT?",
+        a: "You must register for VAT once your taxable turnover exceeds R2.3 million in any 12-month period, or is reasonably expected to do so. This threshold was increased from R1 million effective 1 April 2026. Voluntary registration is possible from R50,000. We handle VAT registrations and all VAT201 submissions for our clients.",
+      },
+      {
+        q: "What is the difference between input and output VAT?",
+        a: "Output VAT is the VAT you charge on the goods and services you sell. Input VAT is the VAT you pay on business expenses and purchases. Your VAT liability is the difference between output VAT collected and input VAT paid. If your input exceeds your output, SARS owes you a refund. Accurate record-keeping is essential to claim all allowable input VAT.",
+      },
+      {
+        q: "How long does a SARS VAT refund take?",
+        a: "SARS is required to pay VAT refunds within 21 business days of receiving a valid return. In practice, refunds may take longer if SARS selects the return for verification. We submit VAT returns with complete supporting documentation to minimise the risk of delays.",
       },
     ],
   },
@@ -211,6 +251,18 @@ const SERVICE_DETAILS: Record<string, { outcome: string; benefits: string[]; faq
       {
         q: "Which software do you use for bookkeeping?",
         a: "We work on QuickBooks Online, Xero, and Sage Business Cloud — whichever best suits your business size and budget. We handle setup, migration, and training.",
+      },
+      {
+        q: "How often should my books be updated?",
+        a: "For most SMEs, monthly bookkeeping is the minimum required to keep VAT submissions accurate and management accounts meaningful. We process transactions weekly for clients with higher transaction volumes and deliver monthly management accounts within 10 days of each month-end.",
+      },
+      {
+        q: "What is the difference between bookkeeping and accounting?",
+        a: "Bookkeeping is the day-to-day recording of financial transactions: capturing invoices, reconciling bank accounts, and maintaining ledgers. Accounting is the broader process of interpreting, classifying, and reporting on that data — producing financial statements, tax returns, and business insights. We provide both as part of an integrated service.",
+      },
+      {
+        q: "Can I switch bookkeepers mid-year?",
+        a: "Yes. Mid-year switches are common and we handle them regularly. We will request access to your existing records, review and correct any issues, reconcile the books from the start of the year, and take over from the point of handover. There is no need to wait until year-end.",
       },
       {
         q: "How often do you update the books?",
@@ -234,8 +286,16 @@ const SERVICE_DETAILS: Record<string, { outcome: string; benefits: string[]; faq
     ],
     faqs: [
       {
-        q: "What is the EMP201 and when must I submit it?",
-        a: "The EMP201 is your monthly employer declaration to SARS reporting PAYE, SDL, and UIF deductions. It's due by the 7th of each month following the payroll month.",
+        q: "What is the EMP201 and when is it due?",
+        a: "The EMP201 is your monthly employer declaration to SARS reporting the PAYE, SDL, and UIF deductions made from your employees' salaries. It is due by the 7th of each month following the payroll month. Missing this deadline results in administrative penalties and interest. We submit on time every month.",
+      },
+      {
+        q: "What happens if I pay employees late?",
+        a: "Late payment of salaries is a contravention of the Basic Conditions of Employment Act (BCEA) and can result in labour disputes and CCMA claims. Separately, late EMP201 submissions to SARS trigger penalties regardless of when employees are paid. We track both to ensure you remain compliant on both fronts.",
+      },
+      {
+        q: "How does the UIF contribution work for employers?",
+        a: "Both the employer and employee each contribute 1% of the employee's remuneration to the Unemployment Insurance Fund (UIF), capped at the monthly remuneration ceiling. The employer deducts the employee's 1% from their salary and remits the combined 2% to SARS via the EMP201 monthly. Domestic workers are also subject to UIF.",
       },
       {
         q: "What happens if I miss a payroll submission?",
