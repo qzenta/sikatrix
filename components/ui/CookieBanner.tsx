@@ -25,7 +25,7 @@ export default function CookieBanner() {
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-4 left-4 right-4 md:left-auto md:right-6 md:max-w-sm z-50 bg-white rounded-xl border border-neutral-200 shadow-lg p-5">
+    <div className="fixed bottom-4 left-4 right-4 md:right-auto md:left-6 md:max-w-sm z-50 bg-white rounded-xl border border-neutral-200 shadow-lg p-5">
       <div className="flex items-start gap-3 mb-3">
         <Cookie size={16} className="text-accent mt-0.5 flex-shrink-0" />
         <div>

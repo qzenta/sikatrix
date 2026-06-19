@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X, Phone, ChevronDown, MessageCircle } from "lucide-react";
+import { Menu, X, ChevronDown, Phone } from "lucide-react";
 import { SITE, SERVICES, LOCATIONS, INDUSTRIES } from "@/lib/site";
 
 type NavChild = { label: string; href: string };
@@ -203,11 +203,13 @@ export default function Header() {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="group relative px-3 py-2 text-sm font-medium text-neutral-700 hover:text-brand rounded-md hover:bg-neutral-50 transition-colors"
+                  className="group relative px-2.5 py-1.5 rounded-md transition-colors"
                   aria-label="Contact us"
                   title="Contact us"
                 >
-                  <MessageCircle size={18} strokeWidth={1.75} />
+                  <span className="flex items-center justify-center w-8 h-8 rounded-full bg-accent text-white group-hover:bg-accent-light transition-colors shadow-sm">
+                    <Phone size={15} strokeWidth={2} />
+                  </span>
                   <span className="pointer-events-none absolute top-full left-1/2 -translate-x-1/2 mt-2 whitespace-nowrap rounded-md bg-brand-dark px-2.5 py-1 text-[10px] font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-150">
                     Contact us
                   </span>
@@ -253,7 +255,7 @@ export default function Header() {
                         onClick={() => setOpen(false)}
                         className="flex-1 px-3 py-2.5 text-sm font-medium text-neutral-700 hover:text-brand hover:bg-neutral-50 rounded-md transition-colors flex items-center gap-2"
                       >
-                        {item.isContact && <MessageCircle size={15} strokeWidth={1.75} className="flex-shrink-0" />}
+                        {item.isContact && <Phone size={15} strokeWidth={2} className="flex-shrink-0 text-accent" />}
                         {item.label}
                       </Link>
                       {item.children && (
