@@ -23,8 +23,9 @@ relatedServices:
   - "bookkeeping"
   - "annual-financial-statements"
 relatedPosts:
+  - "vat-registration-threshold-2026-south-africa"
+  - "vat-registration-mandatory-threshold-south-africa"
   - "sars-provisional-tax-guide-2025"
-  - "sars-efiling-business-registration"
 social:
   ogTitle: "VAT Registration South Africa: When & How | Sikatrix"
   ogDescription: "The R1 million threshold, voluntary registration, and a step-by-step SARS eFiling guide to VAT registration."
@@ -35,6 +36,8 @@ newsletterSegment: "vat"
 VAT (Value-Added Tax) is a consumption tax levied at 15% on the supply of most goods and services in South Africa. As a VAT vendor, you collect VAT from your customers (output tax), offset it against the VAT you paid to your suppliers (input tax), and pay the difference to SARS. Getting this right matters, and getting it wrong is expensive.
 
 ## The R1 Million Threshold: When Registration is Mandatory
+
+> **April 2026 update:** The compulsory VAT registration threshold increased to R2.3 million from 1 April 2026. See [VAT Registration Threshold 2026](/resources/vat-registration-threshold-2026-south-africa) for what changed and whether your business is affected.
 
 You are legally required to register for VAT if your taxable turnover has exceeded R1 million in any consecutive 12-month period, or if it is reasonably expected to exceed R1 million in the next 12 months. 'Taxable turnover' includes all standard-rated and zero-rated supplies, but excludes exempt supplies (such as residential rental income and certain financial services).
 
@@ -73,6 +76,8 @@ SARS assigns you a VAT category based on your turnover and the nature of your bu
 Returns are due by the last business day of the month following the end of your VAT period (or the 25th of the month for eFiling submissions). Late payment attracts a 10% penalty plus interest.
 
 ## Penalties for Failure to Register
+
+*For a deeper breakdown of the 21-day registration deadline, retroactive liability, and how to use SARS's Voluntary Disclosure Programme, see our updated guide: [VAT Registration: When It Becomes Mandatory and What to Do Next](/resources/vat-registration-mandatory-threshold-south-africa).*
 
 If SARS discovers you should have registered and did not, they will raise a VAT assessment for all periods from the date you were required to register. This includes output tax on all sales made during that period, regardless of whether you collected VAT from customers. Add penalties of up to 10% and interest, and the exposure can be substantial.
 

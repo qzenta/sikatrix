@@ -24,6 +24,7 @@ relatedServices:
   - "bookkeeping"
   - "annual-financial-statements"
 relatedPosts:
+  - "vat-registration-threshold-2026-south-africa"
   - "vat-registration-when-and-how"
   - "sars-efiling-business-registration"
 social:
@@ -32,6 +33,10 @@ social:
   twitterCard: "summary_large_image"
 newsletterSegment: "vat"
 ---
+
+*This article is an updated companion to our [VAT Registration guide](/resources/vat-registration-when-and-how), which covers the step-by-step eFiling process and voluntary registration benefits. This piece focuses specifically on when the obligation becomes mandatory and what happens if you miss the deadline.*
+
+> **Threshold update — April 2026:** Budget 2026 raised the compulsory VAT registration threshold from R1 million to R2.3 million, effective 1 April 2026. The R1 million figures in this article reflect the historic threshold that applied before that date. For the current threshold and what it means for your business, see [VAT Registration Threshold 2026: What the R2.3 Million Change Means](/resources/vat-registration-threshold-2026-south-africa). The process rules — the 21-day deadline, rolling turnover measurement, penalties, and the Voluntary Disclosure Programme — all remain the same under the new threshold.
 
 Most small business owners know roughly that VAT registration kicks in somewhere around R1 million. What they often do not know is exactly when the clock starts, what counts towards that figure, how quickly they need to act once they cross it, and what SARS does to businesses that register late. The details matter — because the consequences of getting this wrong are not just a fine. They are a retroactive VAT liability on every invoice you issued from the day you should have registered, regardless of whether you charged your customers VAT or not.
 

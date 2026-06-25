@@ -23,15 +23,17 @@ relatedServices:
   - "tax-services"
   - "bookkeeping"
 relatedPosts:
+  - "vat-registration-mandatory-threshold-south-africa"
   - "vat-registration-when-and-how"
   - "sars-tax-season-2026-filing-dates-south-africa"
-  - "sme-tax-compliance-calendar-2025-2026"
 social:
   ogTitle: "VAT Threshold Now R2.3 Million: What It Means for You | Sikatrix"
   ogDescription: "Budget 2026 raised the compulsory VAT threshold to R2.3 million from 1 April 2026. Here is what changed and what your business must do next."
   twitterCard: "summary_large_image"
 newsletterSegment: "compliance"
 ---
+
+*This article covers the April 2026 threshold change. For the registration process, the 21-day statutory deadline, and what happens if you register late, see [VAT Registration: When It Becomes Mandatory and What to Do Next](/resources/vat-registration-mandatory-threshold-south-africa).*
 
 Budget 2026 made a significant change to the VAT registration threshold in South Africa, and many business owners have not yet acted on it. From 1 April 2026, the compulsory VAT registration threshold increased from R1 million to R2.3 million in annual taxable turnover. This is the most substantial adjustment to the threshold in years, and it has real implications for businesses on both sides of the line.
 

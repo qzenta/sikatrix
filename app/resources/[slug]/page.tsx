@@ -35,6 +35,19 @@ const ARTICLE_SERVICE_MAP: Record<string, string[]> = {
   "roe-deadline-employer-guide-2026":                   ["payroll", "tax-services", "annual-financial-statements"],
   "emp501-annual-reconciliation-guide-south-africa":    ["payroll", "tax-services", "bookkeeping"],
   "outsourced-payroll-accounting-how-they-connect":     ["payroll", "bookkeeping", "annual-financial-statements"],
+  "vat-registration-mandatory-threshold-south-africa":  ["tax-services", "bookkeeping", "annual-financial-statements"],
+  "sars-penalties-objections-appeals":                  ["tax-services", "bookkeeping"],
+  "sars-section-210-penalty-how-to-fight":              ["tax-services", "bookkeeping"],
+  "sars-tax-season-2026-filing-dates-south-africa":     ["tax-services", "bookkeeping", "cloud-accounting"],
+  "sars-tax-season-2026-filing-guide":                  ["tax-services", "bookkeeping", "cloud-accounting"],
+  "auto-assessment-2026-south-africa":                  ["tax-services", "bookkeeping", "cloud-accounting"],
+  "sars-tax-scams-2026-south-africa":                   ["tax-services", "bookkeeping"],
+  "paye-payroll-updates-south-africa-2026-2027":        ["payroll", "tax-services", "bookkeeping"],
+  "roe-deadline-employer-guide-2026":                   ["payroll", "tax-services", "annual-financial-statements"],
+  "sme-accounting-mistakes-south-africa":               ["bookkeeping", "cloud-accounting", "annual-financial-statements"],
+  "sme-cash-flow-tips-south-africa":                    ["bookkeeping", "cloud-accounting", "annual-financial-statements"],
+  "business-permits-work-visas-south-africa":           ["company-secretarial", "tax-services"],
+  "vat-registration-threshold-2026-south-africa":       ["tax-services", "bookkeeping", "annual-financial-statements"],
 };
 
 export async function generateStaticParams() {
