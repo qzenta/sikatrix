@@ -93,6 +93,46 @@ const nextConfig: NextConfig = {
       { source: "/cloud-accounting",  destination: "/services/cloud-accounting", permanent: true },
       { source: "/cloud-accounting/", destination: "/services/cloud-accounting", permanent: true },
 
+      // ── GSC 404 recovery — old Axxess/WordPress service slugs ───────
+      { source: "/annual-financial-statements",   destination: "/services/annual-financial-statements", permanent: true },
+      { source: "/annual-financial-statements/",  destination: "/services/annual-financial-statements", permanent: true },
+      { source: "/annual-financials",             destination: "/services/annual-financial-statements", permanent: true },
+      { source: "/annual-financials/",            destination: "/services/annual-financial-statements", permanent: true },
+      { source: "/import-export-codes",           destination: "/services/import-export-license",       permanent: true },
+      { source: "/import-export-codes/",          destination: "/services/import-export-license",       permanent: true },
+      { source: "/bookkeeping-services",          destination: "/services/bookkeeping",                 permanent: true },
+      { source: "/bookkeeping-services/",         destination: "/services/bookkeeping",                 permanent: true },
+      { source: "/business-permit-support",       destination: "/services/business-permit-support",     permanent: true },
+      { source: "/business-permit-support/",      destination: "/services/business-permit-support",     permanent: true },
+      { source: "/business-rescue",               destination: "/services",                             permanent: true },
+      { source: "/business-rescue/",              destination: "/services",                             permanent: true },
+
+      // ── GSC 404 recovery — old WordPress blog post ──────────────────
+      {
+        source: "/what-every-startup-in-johannesburg-needs-to-know-about-tax-registration",
+        destination: "/resources/registering-a-company-cipc-guide",
+        permanent: true,
+      },
+      {
+        source: "/what-every-startup-in-johannesburg-needs-to-know-about-tax-registration/",
+        destination: "/resources/registering-a-company-cipc-guide",
+        permanent: true,
+      },
+
+      // ── GSC 404 recovery — privacy-policy nested path ───────────────
+      { source: "/privacy-policy/terms-of-use",  destination: "/privacy-policy", permanent: true },
+      { source: "/privacy-policy/terms-of-use/", destination: "/privacy-policy", permanent: true },
+
+      // ── GSC 404 recovery — old location slugs (accountant-in-*) ─────
+      { source: "/locations/accountant-in-randburg",     destination: "/locations/randburg",    permanent: true },
+      { source: "/locations/accountant-in-randburg/",    destination: "/locations/randburg",    permanent: true },
+      { source: "/locations/accountant-in-vereeniging",  destination: "/locations/vereeniging", permanent: true },
+      { source: "/locations/accountant-in-vereeniging/", destination: "/locations/vereeniging", permanent: true },
+      { source: "/locations/accountant-in-sandton",      destination: "/locations/sandton",     permanent: true },
+      { source: "/locations/accountant-in-sandton/",     destination: "/locations/sandton",     permanent: true },
+      { source: "/locations/accountant-in-pretoria",     destination: "/locations",             permanent: true },
+      { source: "/locations/accountant-in-pretoria/",    destination: "/locations",             permanent: true },
+
       // ── Doubled privacy-policy path ───────────────────────────────────
       { source: "/privacy-policy/privacy-policy", destination: "/privacy-policy", permanent: true },
       { source: "/privacy-policy/privacy-policy/", destination: "/privacy-policy", permanent: true },
