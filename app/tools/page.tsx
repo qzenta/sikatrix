@@ -67,7 +67,7 @@ export default function ToolsPage() {
       />
 
       {/* Live tools */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-14 md:py-20 bg-neutral-100">
         <div className="container-page">
           <div className="mb-10">
             <span className="section-label">Available Now</span>
@@ -99,7 +99,7 @@ export default function ToolsPage() {
                   </div>
 
                   {/* Body */}
-                  <div className="flex flex-col flex-1 p-6">
+                  <div className="flex flex-col flex-1 p-6 bg-white">
                     <p className="text-sm text-neutral-500 leading-relaxed flex-1">{tool.description}</p>
                     <div className="flex items-center gap-1.5 mt-5 text-sm font-semibold text-brand group-hover:gap-3 transition-all">
                       Open calculator <ArrowRight size={14} />
@@ -113,23 +113,23 @@ export default function ToolsPage() {
       </section>
 
       {/* Coming soon */}
-      <section className="py-14 md:py-20 bg-neutral-100 border-t border-neutral-200">
+      <section className="py-14 md:py-20 bg-brand-dark border-t border-white/10">
         <div className="container-page">
           <div className="mb-8">
-            <span className="section-label">In Development</span>
-            <h2 className="text-2xl font-bold text-neutral-900 mt-2">Coming soon</h2>
+            <span className="text-xs font-semibold uppercase tracking-widest text-accent-light border-b-2 border-accent-light pb-0.5 inline-block mb-2">In Development</span>
+            <h2 className="text-2xl font-bold text-white mt-2">Coming soon</h2>
           </div>
           <div className="grid sm:grid-cols-2 gap-5 max-w-2xl">
             {COMING_SOON.map((tool) => {
               const Icon = tool.icon;
               return (
-                <div key={tool.title} className="card p-6 opacity-70">
-                  <div className="w-10 h-10 rounded-xl bg-neutral-200 flex items-center justify-center mb-4">
-                    <Icon size={18} className="text-neutral-500" />
+                <div key={tool.title} className="rounded-xl border border-white/10 bg-white/5 p-6">
+                  <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center mb-4">
+                    <Icon size={18} className="text-brand-100" />
                   </div>
-                  <h3 className="text-sm font-semibold text-neutral-700 mb-1.5">{tool.title}</h3>
-                  <p className="text-xs text-neutral-400 leading-relaxed">{tool.description}</p>
-                  <span className="inline-block mt-3 text-2xs font-bold uppercase tracking-wider text-neutral-400 bg-neutral-100 border border-neutral-200 px-2 py-0.5 rounded">
+                  <h3 className="text-sm font-semibold text-white mb-1.5">{tool.title}</h3>
+                  <p className="text-xs text-brand-100 leading-relaxed">{tool.description}</p>
+                  <span className="inline-block mt-3 text-2xs font-bold uppercase tracking-wider text-accent-light border border-accent-light/30 bg-accent-light/10 px-2 py-0.5 rounded">
                     Coming soon
                   </span>
                 </div>
@@ -137,9 +137,9 @@ export default function ToolsPage() {
             })}
           </div>
 
-          <p className="mt-8 text-sm text-neutral-500">
+          <p className="mt-8 text-sm text-brand-100">
             Need a calculation we don&apos;t cover yet?{" "}
-            <Link href="/contact" className="text-brand hover:underline font-medium">
+            <Link href="/contact" className="text-accent-light hover:underline font-medium">
               Ask us directly
             </Link>{" "}
             — our tax practitioners handle complex scenarios every day.
@@ -147,7 +147,7 @@ export default function ToolsPage() {
         </div>
       </section>
 
-      <section className="py-14 bg-neutral-50 border-t border-neutral-200">
+      <section className="py-14 bg-neutral-900 border-t border-white/10">
         <div className="container-page">
           <CTABlock />
         </div>
