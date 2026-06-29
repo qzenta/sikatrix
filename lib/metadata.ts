@@ -161,3 +161,62 @@ export function buildLocalBusinessSchema(locationName?: string) {
     ],
   };
 }
+
+export function buildServiceSchema({
+  name,
+  description,
+  url,
+}: {
+  name: string;
+  description: string;
+  url: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name,
+    description,
+    url,
+    provider: {
+      "@type": "AccountingService",
+      name: SITE.name,
+      url: SITE.url,
+      telephone: SITE.phone,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: SITE.address.street,
+        addressLocality: SITE.address.city,
+        addressRegion: SITE.address.province,
+        postalCode: SITE.address.postalCode,
+        addressCountry: "ZA",
+      },
+    },
+    areaServed: { "@type": "State", name: "Gauteng", containedInPlace: { "@type": "Country", name: "South Africa" } },
+    serviceType: "Accounting",
+  };
+}
+
+export function buildBreadcrumbSchema(crumbs: { name: string; url: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: crumbs.map((c, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: c.name,
+      item: c.url,
+    })),
+  };
+}
+
+export function buildFAQSchema(faqs: { question: string; answer: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: f.answer },
+    })),
+  };
+}

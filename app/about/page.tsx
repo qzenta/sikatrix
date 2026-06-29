@@ -6,6 +6,7 @@ import PageHero from "@/components/shared/PageHero";
 import CTABlock from "@/components/shared/CTABlock";
 import TrustBar from "@/components/home/TrustBar";
 import CredentialsGrid from "@/components/about/CredentialsGrid";
+import ProofModules from "@/components/home/ProofModules";
 import { SITE } from "@/lib/site";
 import { buildPersonSchema } from "@/lib/metadata";
 
@@ -185,6 +186,11 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* Client results — full set, anchored for the homepage "View more" link */}
+      <div id="client-results">
+        <ProofModules />
+      </div>
 
       <TrustBar />
 

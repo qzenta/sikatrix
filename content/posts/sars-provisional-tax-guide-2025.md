@@ -23,7 +23,8 @@ relatedServices:
   - "cloud-accounting"
 relatedPosts:
   - "vat-registration-when-and-how"
-  - "sars-efiling-business-registration"
+  - "sars-penalties-objections-appeals"
+  - "how-to-submit-company-tax-return-itr14"
 social:
   ogTitle: "SARS Provisional Tax Guide 2025 | Sikatrix Business Accountants"
   ogDescription: "Who must register, how to calculate your estimate, and critical deadlines. A complete guide for SA business owners."

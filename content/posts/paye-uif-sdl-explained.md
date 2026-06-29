@@ -24,8 +24,9 @@ relatedServices:
   - "tax-services"
   - "bookkeeping"
 relatedPosts:
-  - "sars-efiling-business-registration"
-  - "vat-registration-when-and-how"
+  - "coida-return-of-earnings-guide-south-africa"
+  - "emp501-annual-reconciliation-guide-south-africa"
+  - "outsourced-payroll-accounting-how-they-connect"
 social:
   ogTitle: "PAYE, UIF & SDL Explained for First-Time Employers | Sikatrix"
   ogDescription: "The three payroll obligations that kick in the moment you hire your first employee. What they mean and how to stay compliant."

@@ -25,6 +25,8 @@ relatedServices:
   - "annual-financial-statements"
 relatedPosts:
   - "small-business-bookkeeping-mistakes"
+  - "outsourced-payroll-accounting-how-they-connect"
+  - "sme-accounting-mistakes-south-africa"
 social:
   ogTitle: "Cloud vs Desktop Accounting Software | Sikatrix Business Accountants"
   ogDescription: "QuickBooks Online, Xero, and Sage vs desktop software. We break down costs, access, and compliance implications for SA SMEs."

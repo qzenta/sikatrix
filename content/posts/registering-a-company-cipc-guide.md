@@ -25,6 +25,7 @@ relatedServices:
 relatedPosts:
   - "sars-efiling-business-registration"
   - "paye-uif-sdl-explained"
+  - "tax-clearance-certificate-south-africa"
 social:
   ogTitle: "How to Register a Company in SA: CIPC Guide | Sikatrix"
   ogDescription: "Step-by-step CIPC registration guide for South African entrepreneurs. Choose the right entity and get compliance right from day one."

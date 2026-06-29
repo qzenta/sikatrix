@@ -14,6 +14,7 @@ import {
   getRelatedPosts,
 } from "@/lib/blog";
 import { SERVICES, LOCATIONS, SITE } from "@/lib/site";
+import { buildBreadcrumbSchema } from "@/lib/metadata";
 
 // Deliberate internal backlinking: each article links to its most relevant services
 const ARTICLE_SERVICE_MAP: Record<string, string[]> = {
@@ -134,6 +135,27 @@ export default async function BlogPostPage({
       return { level, text, id } as TocHeading;
     });
 
+  // Extract Q&A pairs from markdown FAQ sections for FAQPage schema
+  const faqMatches = [...post.content.matchAll(/### (.+?)\n+([\s\S]+?)(?=\n### |\n## |$)/g)];
+  const faqItems = faqMatches
+    .map((m) => ({ question: m[1].trim(), answer: m[2].replace(/\*\*/g, "").replace(/\[([^\]]+)\]\([^)]+\)/g, "$1").trim() }))
+    .filter((f) => f.answer.length > 30 && f.answer.length < 600);
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: "Home", url: SITE.url },
+    { name: "Resources", url: `${SITE.url}/resources` },
+    { name: post.title, url: articleUrl },
+  ]);
+
+  const articleFaqSchema = faqItems.length >= 2 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((f) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: f.answer },
+    })),
+  } : null;
+
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -165,8 +187,18 @@ export default async function BlogPostPage({
     <>
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
+      {articleFaqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleFaqSchema) }}
+        />
+      )}
 
       {/* Hero */}
       <section className="relative bg-brand-dark py-12 md:py-16 overflow-hidden">

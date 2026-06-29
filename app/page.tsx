@@ -2,17 +2,15 @@ import type { Metadata } from "next";
 import Hero from "@/components/home/Hero";
 import TrustBar from "@/components/home/TrustBar";
 import ServicesGrid from "@/components/home/ServicesGrid";
-import HowItWorks from "@/components/home/HowItWorks";
 import PricingTeaser from "@/components/home/PricingTeaser";
 import LeadMagnet from "@/components/home/LeadMagnet";
 import TestimonialsGrid from "@/components/shared/TestimonialsGrid";
 import ProofModules from "@/components/home/ProofModules";
-import CTABlock from "@/components/shared/CTABlock";
 import { getLatestPosts } from "@/lib/blog";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Calendar } from "lucide-react";
-import { buildWebSiteSchema, buildOrganizationSchema } from "@/lib/metadata";
+import { buildWebSiteSchema, buildOrganizationSchema, buildLocalBusinessSchema } from "@/lib/metadata";
 
 export const metadata: Metadata = {
   title: { absolute: "Accountants in Alberton | Sikatrix Business Accountants" },
@@ -25,16 +23,17 @@ export default function HomePage() {
   const latestPosts = getLatestPosts(2);
   const webSiteSchema = buildWebSiteSchema();
   const orgSchema = buildOrganizationSchema();
+  const localBizSchema = buildLocalBusinessSchema();
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBizSchema) }} />
       <Hero />
       <ServicesGrid limit={4} />
-      <HowItWorks />
       <PricingTeaser />
-      <ProofModules />
+      <ProofModules limit={3} />
       <TestimonialsGrid />
       <TrustBar />
       <LeadMagnet />
@@ -42,7 +41,7 @@ export default function HomePage() {
       {/* Blog preview */}
       <section className="py-16 md:py-24 bg-neutral-100">
         <div className="container-page">
-          <div className="flex items-end justify-between mb-12 md:mb-16">
+          <div className="flex items-end justify-between mb-10">
             <div>
               <span className="section-label">Resources</span>
               <h2 className="section-title mt-2">Tax & accounting insights</h2>
@@ -98,15 +97,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-16 md:py-24 bg-neutral-50">
-        <div className="container-page">
-          <CTABlock
-            title="Ready to simplify your accounting?"
-            subtitle="Book a free 30-minute consultation. No commitment, no jargon — just straight answers about your compliance needs."
-          />
-        </div>
-      </section>
     </>
   );
 }

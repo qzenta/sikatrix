@@ -66,6 +66,8 @@ const NAV_ITEMS: NavItem[] = [
       { label: "Bookkeeping", href: "/resources/category/bookkeeping" },
       { label: "Business Growth", href: "/resources/category/business-growth" },
       { label: "⚡ Tax Calculator 2026/27", href: "/tools/tax-calculator" },
+      { label: "🧮 VAT Calculator", href: "/tools/vat-calculator" },
+      { label: "All Tools", href: "/tools" },
     ],
   },
   { label: "About", href: "/about" },

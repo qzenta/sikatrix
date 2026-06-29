@@ -70,7 +70,9 @@ const CASES = [
   },
 ];
 
-export default function ProofModules() {
+export default function ProofModules({ limit }: { limit?: number } = {}) {
+  const visibleCases = limit ? CASES.slice(0, limit) : CASES;
+
   return (
     <section className="py-16 md:py-24 bg-white border-t border-neutral-100">
       <div className="container-page">
@@ -90,7 +92,7 @@ export default function ProofModules() {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {CASES.map((c) => {
+          {visibleCases.map((c) => {
             const Icon = c.icon;
             return (
               <div
@@ -143,6 +145,14 @@ export default function ProofModules() {
             );
           })}
         </div>
+
+        {limit && CASES.length > limit && (
+          <div className="mt-8 text-center">
+            <Link href="/about#client-results" className="btn-outline text-sm">
+              View more client results <ArrowRight size={14} className="inline ml-1" />
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );

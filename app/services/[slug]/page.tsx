@@ -9,8 +9,9 @@ import {
 } from "lucide-react";
 import PageHero from "@/components/shared/PageHero";
 import CTABlock from "@/components/shared/CTABlock";
-import { SERVICES, LOCATIONS } from "@/lib/site";
+import { SERVICES, LOCATIONS, SITE } from "@/lib/site";
 import { getAllPosts } from "@/lib/blog";
+import { buildServiceSchema, buildBreadcrumbSchema } from "@/lib/metadata";
 
 // Deliberate backlinking: service pages link to their most relevant articles
 const SERVICE_ARTICLE_MAP: Record<string, string[]> = {
@@ -459,8 +460,22 @@ export default async function ServicePage({
     })),
   } : null;
 
+  const serviceSchema = buildServiceSchema({
+    name: service.title,
+    description: service.description,
+    url: `${SITE.url}/services/${slug}`,
+  });
+
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: "Home", url: SITE.url },
+    { name: "Services", url: `${SITE.url}/services` },
+    { name: service.title, url: `${SITE.url}/services/${slug}` },
+  ]);
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {faqSchema && (
         <script
           type="application/ld+json"
