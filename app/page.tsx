@@ -9,7 +9,7 @@ import ProofModules from "@/components/home/ProofModules";
 import { getLatestPosts } from "@/lib/blog";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Calendar } from "lucide-react";
+import { ArrowRight, Calendar, Calculator, Percent, ClipboardList } from "lucide-react";
 import { buildWebSiteSchema, buildOrganizationSchema, buildLocalBusinessSchema } from "@/lib/metadata";
 
 export const metadata: Metadata = {
@@ -33,46 +33,46 @@ export default function HomePage() {
       <Hero />
       <ServicesGrid limit={4} />
       <PricingTeaser />
-      <ProofModules limit={3} />
+      <ProofModules limit={3} variant="strip" />
       <TestimonialsGrid />
       <TrustBar />
       <LeadMagnet />
 
-      {/* Blog preview */}
-      <section className="py-16 md:py-24 bg-neutral-100">
+      {/* Resources & Tools */}
+      <section className="py-12 md:py-18 bg-neutral-100">
         <div className="container-page">
-          <div className="flex items-end justify-between mb-10">
+          <div className="flex items-end justify-between mb-8">
             <div>
-              <span className="section-label">Resources</span>
-              <h2 className="section-title mt-2">Tax & accounting insights</h2>
+              <span className="section-label">Knowledge Centre</span>
+              <h2 className="section-title mt-2">Insights & free tools</h2>
             </div>
             <Link href="/resources" className="hidden sm:inline-flex btn-ghost text-sm text-brand">
-              View all articles →
+              All articles →
             </Link>
           </div>
-          <div className="grid sm:grid-cols-2 gap-6">
+
+          <div className="grid sm:grid-cols-2 gap-5 mb-8">
             {latestPosts.map((post) => (
               <Link key={post.slug} href={`/resources/${post.slug}`} className="card overflow-hidden group">
                 {post.featuredImage && (
-                  <div className="relative h-40 bg-brand-50 overflow-hidden">
+                  <div className="relative h-36 bg-brand-50 overflow-hidden">
                     <Image
                       src={post.featuredImage}
                       alt={post.featuredImageAlt || post.title}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      sizes="(max-width: 640px) 100vw, 50vw"
                     />
                   </div>
                 )}
-                <div className="p-6">
-                  <span className="inline-block text-2xs font-semibold uppercase tracking-widest text-accent mb-3">
+                <div className="p-5">
+                  <span className="inline-block text-2xs font-semibold uppercase tracking-widest text-accent mb-2">
                     {post.category}
                   </span>
                   <h3 className="text-sm font-semibold text-neutral-900 leading-snug mb-2 group-hover:text-brand transition-colors">
                     {post.title}
                   </h3>
-                  <p className="text-xs text-neutral-500 leading-relaxed mb-4">{post.description}</p>
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between mt-3">
                     <div className="flex items-center gap-1.5 text-2xs text-neutral-400">
                       <Calendar size={10} />
                       {new Date(post.publishDate).toLocaleDateString("en-ZA", {
@@ -89,10 +89,31 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
-          <div className="mt-6 text-center sm:hidden">
-            <Link href="/resources" className="btn-ghost text-sm text-brand">
-              View all articles →
+
+          {/* Tools teaser */}
+          <div className="rounded-xl border border-brand/15 bg-white p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-widest text-brand mb-1.5">Free Tax Tools</p>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  { href: "/tools/tax-calculator", label: "Income Tax Calculator", Icon: Calculator },
+                  { href: "/tools/vat-calculator", label: "VAT Calculator", Icon: Percent },
+                  { href: "/tools/provisional-tax-estimator", label: "Provisional Tax", Icon: ClipboardList },
+                ].map(({ href, label, Icon }) => (
+                  <Link key={href} href={href} className="inline-flex items-center gap-1.5 text-xs font-medium text-neutral-700 bg-neutral-100 hover:bg-brand hover:text-white px-3 py-1.5 rounded-lg transition-colors">
+                    <Icon size={11} />
+                    {label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+            <Link href="/tools" className="btn-outline text-xs whitespace-nowrap self-start sm:self-auto">
+              Explore all tools →
             </Link>
+          </div>
+
+          <div className="mt-5 text-center sm:hidden">
+            <Link href="/resources" className="btn-ghost text-sm text-brand">All articles →</Link>
           </div>
         </div>
       </section>

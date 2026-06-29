@@ -5,13 +5,10 @@ import { CheckCircle, Download, Loader2 } from "lucide-react";
 
 const CHECKLIST_ITEMS = [
   "Income Tax Return (ITR12 / ITR14)",
-  "Provisional Tax (IRP6): 2 submissions per year",
-  "VAT Returns (VAT201): monthly or bi-monthly",
-  "PAYE / EMP201: monthly payroll taxes",
-  "Annual Employer Reconciliation (EMP501)",
-  "CIPC Annual Return",
-  "UIF and SDL declarations",
-  "Workmen's Compensation (COIDA) annual return",
+  "Provisional Tax (IRP6) — 2 submissions per year",
+  "VAT Returns (VAT201) — monthly or bi-monthly",
+  "PAYE / EMP201 — monthly payroll taxes",
+  "CIPC Annual Return + EMP501 reconciliation",
 ];
 
 export default function LeadMagnet() {
@@ -46,7 +43,7 @@ export default function LeadMagnet() {
   };
 
   return (
-    <section className="py-20 md:py-28 bg-brand-dark">
+    <section className="py-14 md:py-20 bg-brand-dark">
       <div className="container-page">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left: checklist */}
@@ -54,12 +51,11 @@ export default function LeadMagnet() {
             <span className="inline-block text-accent-light text-xs font-semibold uppercase tracking-widest border-b-2 border-accent-light pb-0.5 mb-4">
               Free Resource
             </span>
-            <h2 className="text-2xl font-bold text-white mb-4 leading-snug">
-              The SARS Compliance Checklist Every South African Business Owner Needs
+            <h2 className="text-2xl font-bold text-white mb-3 leading-snug">
+              Free SARS Compliance Checklist for South African SMEs
             </h2>
-            <p className="text-brand-100 text-sm leading-relaxed mb-6">
-              Never miss a SARS deadline again. Download our annual compliance checklist
-              covering every submission a typical SME is obligated to make.
+            <p className="text-brand-100 text-sm leading-relaxed mb-5">
+              Every submission your business is obligated to make — delivered free to your inbox.
             </p>
             <ul className="space-y-2">
               {CHECKLIST_ITEMS.map((item) => (

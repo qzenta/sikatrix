@@ -26,14 +26,14 @@ const TEASERS = [
 
 export default function PricingTeaser() {
   return (
-    <section className="py-16 md:py-24 bg-neutral-900">
+    <section className="py-12 md:py-18 bg-neutral-900">
       <div className="container-page">
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 md:mb-12">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8 md:mb-10">
           <div>
             <span className="text-xs font-semibold uppercase tracking-widest text-accent-light border-b-2 border-accent-light pb-0.5 block mb-2 w-fit">Pricing</span>
             <h2 className="text-2xl sm:text-3xl font-bold text-white leading-snug">Simple, fixed-fee accounting</h2>
             <p className="text-sm text-neutral-400 mt-2 max-w-lg">
-              No hourly billing. No surprises. Every client receives a written fixed-fee quote before work begins.
+              Every client receives a written fixed-fee quote before work begins.
             </p>
           </div>
           <Link href="/pricing" className="hidden sm:inline-flex text-sm font-medium text-accent-light hover:text-white transition-colors flex-shrink-0">

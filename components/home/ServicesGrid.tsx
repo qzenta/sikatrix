@@ -16,16 +16,15 @@ export default function ServicesGrid({ limit }: { limit?: number } = {}) {
   const visibleServices = limit ? SERVICES.slice(0, limit) : SERVICES;
 
   return (
-    <section className="py-16 md:py-24 bg-neutral-100">
+    <section className="py-12 md:py-18 bg-neutral-100">
       <div className="container-page">
-        <AnimateIn className="text-center mb-12 md:mb-16">
+        <AnimateIn className="text-center mb-10 md:mb-12">
           <span className="section-label">What We Do</span>
           <h2 className="section-title mt-2">
-            Full-spectrum accounting & compliance services
+            Accounting & tax services for South African SMEs
           </h2>
-          <p className="section-subtitle mt-3 mx-auto">
-            SAIPA-registered accountants handling tax, bookkeeping, payroll, and company compliance
-            — so you stay legal, minimise your tax burden, and get back to running your business.
+          <p className="section-subtitle mt-2 mx-auto">
+            Fixed-fee. SAIPA-registered. No hourly billing.
           </p>
         </AnimateIn>
 
@@ -45,7 +44,7 @@ export default function ServicesGrid({ limit }: { limit?: number } = {}) {
           })}
         </div>
 
-        <AnimateIn className="text-center mt-8" delay={200}>
+        <AnimateIn className="text-center mt-7" delay={200}>
           <Link href="/services" className="btn-outline text-sm">
             View all services
           </Link>

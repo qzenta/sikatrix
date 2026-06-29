@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, TrendingUp, ShieldCheck, Clock, FileText, Cloud, Building2 } from "lucide-react";
 
+
 const CASES = [
   {
     icon: FileText,
@@ -70,20 +71,69 @@ const CASES = [
   },
 ];
 
-export default function ProofModules({ limit }: { limit?: number } = {}) {
+export default function ProofModules({ limit, variant = "full" }: { limit?: number; variant?: "full" | "strip" } = {}) {
   const visibleCases = limit ? CASES.slice(0, limit) : CASES;
 
+  // Compact homepage strip — metric + outcome only
+  if (variant === "strip") {
+    return (
+      <section className="py-12 md:py-16 bg-brand-dark border-t border-white/10">
+        <div className="container-page">
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mb-8">
+            <div>
+              <span className="text-xs font-semibold uppercase tracking-widest text-accent-light border-b-2 border-accent-light pb-0.5 inline-block mb-2">Client Results</span>
+              <h2 className="text-2xl font-bold text-white">Real problems. Measurable outcomes.</h2>
+            </div>
+            <Link href="/about#client-results" className="text-sm font-medium text-accent-light hover:text-white transition-colors flex-shrink-0">
+              View all results →
+            </Link>
+          </div>
+
+          <div className="grid sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-white/10 rounded-2xl border border-white/10 overflow-hidden">
+            {CASES.slice(0, 3).map((c) => {
+              const Icon = c.icon;
+              return (
+                <div key={c.sector} className="px-7 py-7 bg-white/5 hover:bg-white/8 transition-colors">
+                  <div className="flex items-center gap-2.5 mb-4">
+                    <div className="w-7 h-7 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0">
+                      <Icon size={13} className="text-accent-light" />
+                    </div>
+                    <span className="text-2xs font-semibold uppercase tracking-widest text-brand-100">{c.sector}</span>
+                  </div>
+                  <div className="mb-3">
+                    <span className="text-3xl font-bold text-accent-light">{c.metric}</span>
+                    <p className="text-xs text-brand-100 mt-0.5">{c.metricLabel}</p>
+                  </div>
+                  <p className="text-sm text-white/80 leading-relaxed mb-4">{c.outcome}</p>
+                  <Link href={c.href} className="inline-flex items-center gap-1 text-xs font-medium text-accent-light hover:underline">
+                    {c.service} <ArrowRight size={10} />
+                  </Link>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="mt-6 flex flex-col sm:flex-row items-start sm:items-center gap-3">
+            <Link href="/contact" className="btn-primary text-sm">Book Free Consultation</Link>
+            <Link href="/about#client-results" className="text-sm text-brand-100 hover:text-white transition-colors sm:hidden">
+              View all client results →
+            </Link>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  // Full narrative cards — used on /about and standalone pages
   return (
-    <section className="py-16 md:py-24 bg-white border-t border-neutral-100">
+    <section className="py-14 md:py-20 bg-white border-t border-neutral-100">
       <div className="container-page">
-        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12 md:mb-16">
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10 md:mb-14">
           <div>
             <span className="section-label">Client Results</span>
-            <h2 className="section-title mt-2">
-              Real problems we&apos;ve solved
-            </h2>
-            <p className="mt-3 text-sm text-neutral-500 max-w-xl">
-              Situations like these are routine for us. Details are representative of client outcomes.
+            <h2 className="section-title mt-2">Real problems we&apos;ve solved</h2>
+            <p className="mt-2 text-sm text-neutral-500 max-w-xl">
+              Details are representative of client outcomes.
             </p>
           </div>
           <Link href="/contact" className="btn-primary self-start sm:self-auto whitespace-nowrap">
@@ -99,24 +149,19 @@ export default function ProofModules({ limit }: { limit?: number } = {}) {
                 key={c.sector}
                 className="group relative flex flex-col rounded-2xl border border-neutral-200 border-l-4 border-l-accent/40 hover:border-l-accent bg-neutral-50 overflow-hidden hover:shadow-md transition-all duration-200"
               >
-                {/* Header */}
                 <div className="px-6 pt-6 pb-4 border-b border-neutral-200 bg-white">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-9 h-9 rounded-xl bg-brand-50 flex items-center justify-center flex-shrink-0">
                       <Icon size={16} className="text-brand" />
                     </div>
-                    <span className="text-2xs font-semibold uppercase tracking-widest text-neutral-400">
-                      {c.sector}
-                    </span>
+                    <span className="text-2xs font-semibold uppercase tracking-widest text-neutral-400">{c.sector}</span>
                   </div>
-                  {/* Metric callout */}
                   <div className="flex items-baseline gap-1.5">
                     <span className="text-2xl font-bold text-brand">{c.metric}</span>
                     <span className="text-xs text-neutral-400">{c.metricLabel}</span>
                   </div>
                 </div>
 
-                {/* Body */}
                 <div className="flex flex-col flex-1 px-6 py-5 gap-4">
                   <div>
                     <p className="text-2xs font-semibold uppercase tracking-widest text-neutral-400 mb-1">Problem</p>
@@ -132,12 +177,8 @@ export default function ProofModules({ limit }: { limit?: number } = {}) {
                   </div>
                 </div>
 
-                {/* Footer link */}
                 <div className="px-6 pb-5">
-                  <Link
-                    href={c.href}
-                    className="inline-flex items-center gap-1 text-xs font-medium text-brand hover:underline"
-                  >
+                  <Link href={c.href} className="inline-flex items-center gap-1 text-xs font-medium text-brand hover:underline">
                     {c.service} <ArrowRight size={11} />
                   </Link>
                 </div>
