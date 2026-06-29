@@ -13,7 +13,7 @@ function fmt(n: number) {
 }
 
 export default function VatCalculator() {
-  const [amount, setAmount] = useState("");
+  const [amount, setAmount] = useState("1000");
   const [mode, setMode] = useState<Mode>("add");
 
   const result = useMemo(() => {
@@ -96,7 +96,7 @@ export default function VatCalculator() {
           </div>
         </div>
 
-        {/* Results */}
+        {/* Results — always visible once amount is entered */}
         {result && (
           <div className="rounded-xl bg-brand-dark text-white p-5 space-y-3">
             <p className="text-2xs font-semibold uppercase tracking-widest text-brand-100 mb-1">Result</p>

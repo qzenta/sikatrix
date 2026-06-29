@@ -65,9 +65,10 @@ const NAV_ITEMS: NavItem[] = [
       { label: "SARS Compliance", href: "/resources/category/sars" },
       { label: "Bookkeeping", href: "/resources/category/bookkeeping" },
       { label: "Business Growth", href: "/resources/category/business-growth" },
-      { label: "⚡ Tax Calculator 2026/27", href: "/tools/tax-calculator" },
+      { label: "⚡ Income Tax Calculator", href: "/tools/tax-calculator" },
       { label: "🧮 VAT Calculator", href: "/tools/vat-calculator" },
-      { label: "All Tools", href: "/tools" },
+      { label: "📋 Provisional Tax Estimator", href: "/tools/provisional-tax-estimator" },
+      { label: "All Tools →", href: "/tools" },
     ],
   },
   { label: "About", href: "/about" },
@@ -214,16 +215,16 @@ export default function Header() {
           </nav>
 
           {/* CTA cluster + mobile toggle */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2.5">
             {/* Tax Calculator icon */}
             <Link
               href="/tools/tax-calculator"
-              className="group relative hidden lg:flex items-center justify-center w-9 h-9 rounded-full bg-brand/10 text-brand hover:bg-brand/20 transition-colors border border-brand/15"
+              className="group relative hidden lg:flex items-center justify-center w-9 h-9 rounded-lg bg-brand text-white hover:bg-brand-dark shadow-sm shadow-brand/30 transition-all duration-150"
               aria-label="Tax Calculator"
               title="Tax Calculator"
             >
-              <Calculator size={16} strokeWidth={1.75} />
-              <span className="pointer-events-none absolute top-full left-1/2 -translate-x-1/2 mt-2 whitespace-nowrap rounded-md bg-brand-dark px-2.5 py-1 text-[10px] font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-150">
+              <Calculator size={16} strokeWidth={2} />
+              <span className="pointer-events-none absolute top-full left-1/2 -translate-x-1/2 mt-2 whitespace-nowrap rounded-md bg-brand-dark px-2.5 py-1 text-[10px] font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-150 z-50">
                 Tax Calculator
               </span>
             </Link>
@@ -231,12 +232,12 @@ export default function Header() {
             {/* Phone / Contact icon */}
             <Link
               href="/contact"
-              className="group relative hidden lg:flex items-center justify-center w-9 h-9 rounded-full bg-brand/10 text-brand hover:bg-brand/20 transition-colors border border-brand/15"
+              className="group relative hidden lg:flex items-center justify-center w-9 h-9 rounded-lg bg-accent text-white hover:bg-accent/85 shadow-sm shadow-accent/30 transition-all duration-150"
               aria-label="Contact us"
               title="Contact us"
             >
-              <PhoneCall size={16} strokeWidth={1.75} />
-              <span className="pointer-events-none absolute top-full left-1/2 -translate-x-1/2 mt-2 whitespace-nowrap rounded-md bg-brand-dark px-2.5 py-1 text-[10px] font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-150">
+              <PhoneCall size={16} strokeWidth={2} />
+              <span className="pointer-events-none absolute top-full left-1/2 -translate-x-1/2 mt-2 whitespace-nowrap rounded-md bg-brand-dark px-2.5 py-1 text-[10px] font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-150 z-50">
                 Contact us
               </span>
             </Link>
@@ -244,7 +245,7 @@ export default function Header() {
             {/* Book Consultation button */}
             <Link
               href="/contact"
-              className="hidden md:inline-flex items-center text-xs font-semibold px-4 py-2 rounded-lg bg-brand/10 text-brand border border-brand/20 hover:bg-brand/20 transition-colors"
+              className="hidden md:inline-flex items-center gap-1.5 text-xs font-bold px-4 py-2.5 rounded-lg bg-accent text-white hover:bg-accent/85 shadow-md shadow-accent/25 transition-all duration-150 tracking-wide"
             >
               Book Consultation
             </Link>
