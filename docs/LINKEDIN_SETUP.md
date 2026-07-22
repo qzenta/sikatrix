@@ -107,7 +107,4 @@ LinkedIn access tokens last **60 days**. When one expires:
 # 2. git push origin master   (auto-deploys to sikatrix.com)
 # 3. Post to LinkedIn:
 node scripts/linkedin-post.mjs your-article-slug
-
-# 4. (Optional) also fire Make webhook for Facebook + X:
-node scripts/publish-post.mjs your-article-slug
 ```

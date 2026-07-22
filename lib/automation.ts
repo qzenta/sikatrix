@@ -2,10 +2,10 @@
 //
 // This file documents and scaffolds all future automation connection points.
 // Nothing is live yet — replace the placeholder bodies with real API calls
-// when you connect ConvertKit, Mailchimp, Zapier, or Make.
+// when you connect ConvertKit or Mailchimp.
 //
 // Pattern:
-//   1. Add env vars in Vercel dashboard (CONVERTKIT_API_KEY, MAKE_WEBHOOK_URL, etc.)
+//   1. Add env vars in Vercel dashboard (CONVERTKIT_API_KEY, etc.)
 //   2. Install SDK (npm install @convertkit/sdk or similar)
 //   3. Replace the console.log stubs below with real calls
 //
@@ -26,8 +26,6 @@ export interface AutomationConfig {
   convertkitFormId?: string;
   mailchimpApiKey?: string;
   mailchimpListId?: string;
-  zapierWebhookUrl?: string;
-  makeWebhookUrl?: string;
   // Map segment names to platform tag IDs
   tagMap?: Record<string, string>;
 }
@@ -48,46 +46,6 @@ export async function subscribeToNewsletter(
 
   console.log("[automation] Newsletter subscription queued:", subscription);
   return { success: true, message: "Subscription recorded" };
-}
-
-// ─── Social publishing notification ──────────────────────────────────────────
-// Call this after publishing a new article to trigger a Zapier/Make workflow
-// that schedules social posts for LinkedIn, X, and Facebook.
-
-export interface SocialPostPayload {
-  slug: string;
-  url: string;
-  title: string;
-  description: string;
-  category: string;
-  topicCluster: string;
-  platforms: ("linkedin" | "x" | "facebook")[];
-  linkedinSnippet?: string;
-  xSnippet?: string;
-  facebookSnippet?: string;
-}
-
-export async function notifySocialPublishing(
-  payload: SocialPostPayload,
-  webhookUrl?: string
-): Promise<void> {
-  const url = webhookUrl ?? process.env.MAKE_WEBHOOK_URL;
-  if (!url) {
-    console.log("[automation] MAKE_WEBHOOK_URL not set — skipping social notify");
-    return;
-  }
-
-  const res = await fetch(url, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(payload),
-  });
-
-  if (!res.ok) {
-    console.error("[automation] Make webhook call failed:", res.status, await res.text());
-  } else {
-    console.log("[automation] Make webhook called successfully for:", payload.slug);
-  }
 }
 
 // ─── ConvertKit segment tags ──────────────────────────────────────────────────
