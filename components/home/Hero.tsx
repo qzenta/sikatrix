@@ -103,7 +103,8 @@ export default function Hero() {
   const slide = SLIDES[current];
 
   return (
-    <section className="relative bg-brand-dark overflow-hidden">
+    <div className="px-3 sm:px-4 pt-3 md:pt-4">
+    <section className="relative bg-brand-dark overflow-hidden rounded-2xl">
 
       {/* ── Background image (AnimatePresence crossfade) ── */}
       <AnimatePresence mode="wait">
@@ -238,5 +239,6 @@ export default function Hero() {
         </div>
       </div>
     </section>
+    </div>
   );
 }
