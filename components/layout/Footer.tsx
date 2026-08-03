@@ -24,8 +24,10 @@ export default function Footer() {
         <div className="sm:col-span-2 lg:col-span-1">
           <Link href="/" className="flex items-center gap-2.5 mb-4">
             <img
-              src="/logo-footer.png"
+              src="/logo-footer.webp"
               alt="Sikatrix Business Accountants"
+              width={351}
+              height={120}
               style={{ height: "36px", width: "auto", maxWidth: "140px", objectFit: "contain" }}
             />
           </Link>
@@ -167,9 +169,9 @@ export default function Footer() {
           </span>
           <div className="flex flex-wrap items-center gap-4">
             {[
-              { name: "SAIPA — Registered Professional Accountant", logo: "/partners/saipa.png" },
-              { name: "IBASA — Member",                             logo: "/partners/ibasa.png" },
-              { name: "SARS — Registered Tax Practitioner",         logo: "/partners/sars.png"  },
+              { name: "SAIPA — Registered Professional Accountant", logo: "/partners/saipa.webp" },
+              { name: "IBASA — Member",                             logo: "/partners/ibasa.webp" },
+              { name: "SARS — Registered Tax Practitioner",         logo: "/partners/sars.webp"  },
             ].map((m) => (
               <div
                 key={m.name}
@@ -181,6 +183,8 @@ export default function Footer() {
                 <img
                   src={m.logo}
                   alt={m.name}
+                  width={276}
+                  height={90}
                   style={{ height: 28, width: "auto", maxWidth: 100, objectFit: "contain" }}
                 />
               </div>

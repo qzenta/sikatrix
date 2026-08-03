@@ -1,13 +1,13 @@
 "use client";
 
 const PARTNERS = [
-  { name: "QuickBooks", logo: "/partners/quickbooks.png" },
-  { name: "Xero",       logo: "/partners/xero.png" },
-  { name: "Sage",       logo: "/partners/sage.png" },
-  { name: "Draftworx",  logo: "/partners/draftworx.png" },
-  { name: "SimplePay",  logo: "/partners/simplepay.png" },
-  { name: "Syft",       logo: "/partners/syft.png" },
-  { name: "CIPC",       logo: "/partners/cipc.png" },
+  { name: "QuickBooks", logo: "/partners/quickbooks.png", w: 444, h: 113 },
+  { name: "Xero",       logo: "/partners/xero.png",       w: 318, h: 159 },
+  { name: "Sage",       logo: "/partners/sage.png",       w: 360, h: 140 },
+  { name: "Draftworx",  logo: "/partners/draftworx.png",  w: 444, h: 113 },
+  { name: "SimplePay",  logo: "/partners/simplepay.webp", w: 422, h: 119 },
+  { name: "Syft",       logo: "/partners/syft.png",       w: 264, h: 191 },
+  { name: "CIPC",       logo: "/partners/cipc.webp",      w: 250, h: 190 },
 ];
 
 export default function TrustBar() {
@@ -52,6 +52,8 @@ export default function TrustBar() {
               <img
                 src={item.logo}
                 alt={item.name}
+                width={item.w}
+                height={item.h}
                 style={{
                   maxHeight: "62px",
                   maxWidth: "160px",

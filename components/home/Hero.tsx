@@ -50,7 +50,7 @@ const SLIDES = [
       "SAIPA Registered Professional Accountant",
       "SARS Registered Tax Practitioner",
     ],
-    bgImage: "/hero/slide-1.png",
+    bgImage: "/hero/slide-1.webp",
     bgPosition: "center center",
   },
   {
@@ -62,7 +62,7 @@ const SLIDES = [
       "ITR12 & ITR14 returns filed on time",
       "Provisional tax calculated & submitted",
     ],
-    bgImage: "/hero/slide-2.png",
+    bgImage: "/hero/slide-2.webp",
     bgPosition: "center top",
   },
   {
@@ -74,7 +74,7 @@ const SLIDES = [
       "Setup & migration managed end-to-end",
       "Bank feeds, reconciliations & management accounts",
     ],
-    bgImage: "/hero/slide-3.png",
+    bgImage: "/hero/slide-3.webp",
     bgPosition: "center center",
   },
 ];
