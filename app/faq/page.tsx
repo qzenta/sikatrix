@@ -4,6 +4,7 @@ import { ChevronDown } from "lucide-react";
 import PageHero from "@/components/shared/PageHero";
 import CTABlock from "@/components/shared/CTABlock";
 import { SITE } from "@/lib/site";
+import { buildBreadcrumbSchema } from "@/lib/metadata";
 
 export const metadata: Metadata = {
   title: { absolute: "Frequently Asked Questions | Sikatrix Business Accountants" },
@@ -158,12 +159,17 @@ const faqSchema = {
 };
 
 export default function FAQPage() {
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: "Home", url: SITE.url },
+    { name: "FAQ", url: `${SITE.url}/faq` },
+  ]);
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <PageHero
         label="FAQ"
         title="Frequently Asked Questions"

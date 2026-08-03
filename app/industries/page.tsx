@@ -5,7 +5,8 @@ import {
 } from "lucide-react";
 import PageHero from "@/components/shared/PageHero";
 import CTABlock from "@/components/shared/CTABlock";
-import { INDUSTRIES } from "@/lib/site";
+import { INDUSTRIES, SITE } from "@/lib/site";
+import { buildBreadcrumbSchema } from "@/lib/metadata";
 
 export const metadata: Metadata = {
   title: { absolute: "Industries We Serve | Sikatrix Business Accountants" },
@@ -54,8 +55,13 @@ const INDUSTRY_DETAIL: Record<string, { services: string[]; highlight: string }>
 };
 
 export default function IndustriesPage() {
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: "Home", url: SITE.url },
+    { name: "Industries", url: `${SITE.url}/industries` },
+  ]);
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <PageHero
         label="Industries"
         title="Accounting Built Around Your Industry"

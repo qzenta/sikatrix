@@ -8,7 +8,8 @@ import {
 } from "lucide-react";
 import PageHero from "@/components/shared/PageHero";
 import CTABlock from "@/components/shared/CTABlock";
-import { INDUSTRIES, SERVICES } from "@/lib/site";
+import { INDUSTRIES, SERVICES, SITE } from "@/lib/site";
+import { buildBreadcrumbSchema } from "@/lib/metadata";
 
 const ICON_MAP: Record<string, React.ElementType> = {
   TrendingUp, Rocket, Stethoscope, Scale, Home, Heart, GraduationCap, Compass,
@@ -364,12 +365,19 @@ export default async function IndustryPage({
     })),
   };
 
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: "Home", url: SITE.url },
+    { name: "Industries", url: `${SITE.url}/industries` },
+    { name: industry.shortTitle, url: `${SITE.url}/industries/${slug}` },
+  ]);
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <PageHero
         label="Industry"

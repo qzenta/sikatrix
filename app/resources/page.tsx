@@ -8,6 +8,8 @@ import NewsletterForm from "@/components/shared/NewsletterForm";
 import BlogListing from "@/components/blog/BlogListing";
 import AuthorityLinks from "@/components/shared/AuthorityLinks";
 import { getAllPosts } from "@/lib/blog";
+import { SITE } from "@/lib/site";
+import { buildBreadcrumbSchema } from "@/lib/metadata";
 
 export const metadata: Metadata = {
   title: { absolute: "Tax & Accounting Resources | Sikatrix Business Accountants" },
@@ -33,9 +35,14 @@ export const metadata: Metadata = {
 
 export default function ResourcesPage() {
   const posts = getAllPosts();
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: "Home", url: SITE.url },
+    { name: "Resources", url: `${SITE.url}/resources` },
+  ]);
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <PageHero
         label="Resources"
         title="Tax & Accounting Insights for South African Businesses"

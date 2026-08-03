@@ -4,6 +4,7 @@ import { Check, Phone } from "lucide-react";
 import PageHero from "@/components/shared/PageHero";
 import CTABlock from "@/components/shared/CTABlock";
 import { SITE } from "@/lib/site";
+import { buildBreadcrumbSchema } from "@/lib/metadata";
 
 export const metadata: Metadata = {
   title: { absolute: "Transparent Accounting & Tax Pricing | Sikatrix Business Accountants" },
@@ -144,10 +145,15 @@ export default function PricingPage() {
     })),
   };
 
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: "Home", url: SITE.url },
+    { name: "Pricing", url: `${SITE.url}/pricing` },
+  ]);
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(offersSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <PageHero
         label="Pricing"
         title="Simple, Transparent Fees"

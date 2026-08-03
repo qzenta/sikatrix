@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/shared/PageHero";
 import ContactForm from "@/components/contact/ContactForm";
+import { SITE } from "@/lib/site";
+import { buildBreadcrumbSchema } from "@/lib/metadata";
 
 export const metadata: Metadata = {
   title: { absolute: "Book a Free Consultation | Sikatrix Business Accountants" },
@@ -10,8 +12,13 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: "Home", url: SITE.url },
+    { name: "Contact", url: `${SITE.url}/contact` },
+  ]);
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <PageHero
         label="Contact"
         title="Book a Free Consultation"

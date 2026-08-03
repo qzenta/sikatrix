@@ -4,6 +4,7 @@ import { MapPin, ArrowRight, Phone, Mail } from "lucide-react";
 import PageHero from "@/components/shared/PageHero";
 import CTABlock from "@/components/shared/CTABlock";
 import { LOCATIONS, SITE } from "@/lib/site";
+import { buildBreadcrumbSchema } from "@/lib/metadata";
 
 export const metadata: Metadata = {
   title: { absolute: "Locations | Accountants Across Gauteng | Sikatrix Business Accountants" },
@@ -13,8 +14,13 @@ export const metadata: Metadata = {
 };
 
 export default function LocationsPage() {
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: "Home", url: SITE.url },
+    { name: "Locations", url: `${SITE.url}/locations` },
+  ]);
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <PageHero
         label="Locations"
         title="Local Expertise. Cloud Reach. Gauteng-Wide."

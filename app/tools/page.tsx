@@ -3,6 +3,8 @@ import Link from "next/link";
 import { Calculator, Percent, CalendarClock, FileCheck, ClipboardList, ArrowRight } from "lucide-react";
 import PageHero from "@/components/shared/PageHero";
 import CTABlock from "@/components/shared/CTABlock";
+import { SITE } from "@/lib/site";
+import { buildBreadcrumbSchema } from "@/lib/metadata";
 
 export const metadata: Metadata = {
   title: { absolute: "Free Accounting & Tax Tools | Sikatrix Business Accountants" },
@@ -55,8 +57,13 @@ const COMING_SOON = [
 ];
 
 export default function ToolsPage() {
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: "Home", url: SITE.url },
+    { name: "Tools", url: `${SITE.url}/tools` },
+  ]);
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <PageHero
         label="Free Tools"
         title="Tax & Accounting Calculators"

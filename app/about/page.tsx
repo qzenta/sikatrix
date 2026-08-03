@@ -8,7 +8,7 @@ import TrustBar from "@/components/home/TrustBar";
 import CredentialsGrid from "@/components/about/CredentialsGrid";
 import ProofModules from "@/components/home/ProofModules";
 import { SITE } from "@/lib/site";
-import { buildPersonSchema } from "@/lib/metadata";
+import { buildPersonSchema, buildBreadcrumbSchema } from "@/lib/metadata";
 
 export const metadata: Metadata = {
   title: { absolute: "About Sikatrix Business Accountants | SAIPA-Registered, Alberton" },
@@ -42,9 +42,14 @@ const VALUES = [
 
 export default function AboutPage() {
   const personSchema = buildPersonSchema();
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: "Home", url: SITE.url },
+    { name: "About", url: `${SITE.url}/about` },
+  ]);
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <PageHero
         label="About Us"
         title="Qualified. Local. Personally Accountable."

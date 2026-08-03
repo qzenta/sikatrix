@@ -7,6 +7,7 @@ import PageHero from "@/components/shared/PageHero";
 import CTABlock from "@/components/shared/CTABlock";
 import { getAllPosts, getPostsByTopicCluster, TOPIC_CLUSTERS } from "@/lib/blog";
 import { SITE } from "@/lib/site";
+import { buildBreadcrumbSchema } from "@/lib/metadata";
 
 export async function generateStaticParams() {
   return Object.keys(TOPIC_CLUSTERS).map((slug) => ({ slug }));
@@ -49,9 +50,15 @@ export default async function CategoryPage({
 
   const posts = getPostsByTopicCluster(slug);
   const allPosts = getAllPosts();
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: "Home", url: SITE.url },
+    { name: "Resources", url: `${SITE.url}/resources` },
+    { name: cluster.label, url: `${SITE.url}/resources/category/${slug}` },
+  ]);
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <PageHero
         label={cluster.label}
         title={`${cluster.label} Resources for South African Businesses`}

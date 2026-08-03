@@ -8,7 +8,7 @@ import GoogleMap from "@/components/shared/GoogleMap";
 import { LOCATION_DETAILS } from "@/lib/location-data";
 import { LOCATIONS, SERVICES, SITE } from "@/lib/site";
 import { getLatestPosts } from "@/lib/blog";
-import { buildLocalBusinessSchema } from "@/lib/metadata";
+import { buildBreadcrumbSchema } from "@/lib/metadata";
 
 const LOCATION_HERO_IMAGES: Record<string, string> = {
   "alberton":    "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1600&auto=format&fit=crop&q=60",
@@ -50,7 +50,6 @@ export default async function LocationPage({
   if (!loc) notFound();
 
   const nearby = LOCATION_DETAILS.filter((l) => loc.nearbyLocations.includes(l.slug));
-  const schema = buildLocalBusinessSchema(loc.name);
   const latestArticles = getLatestPosts(3);
 
   const faqSchema = loc.faqs?.length
@@ -65,18 +64,21 @@ export default async function LocationPage({
       }
     : null;
 
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: "Home", url: SITE.url },
+    { name: "Locations", url: `${SITE.url}/locations` },
+    { name: loc.name, url: `${SITE.url}/locations/${slug}` },
+  ]);
+
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
       {faqSchema && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
       )}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <PageHero
         label={`${loc.name}, ${loc.province}`}
