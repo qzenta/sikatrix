@@ -132,6 +132,22 @@ const nextConfig: NextConfig = {
       { source: "/locations/accountant-in-sandton/",     destination: "/locations/sandton",     permanent: true },
       { source: "/locations/accountant-in-pretoria",     destination: "/locations",             permanent: true },
       { source: "/locations/accountant-in-pretoria/",    destination: "/locations",             permanent: true },
+      { source: "/locations/accountant-in-germiston",     destination: "/locations/germiston",   permanent: true },
+      { source: "/locations/accountant-in-germiston/",    destination: "/locations/germiston",   permanent: true },
+      { source: "/locations/accountant-in-boksburg",      destination: "/locations/boksburg",    permanent: true },
+      { source: "/locations/accountant-in-boksburg/",     destination: "/locations/boksburg",    permanent: true },
+      { source: "/locations/accountant-in-midrand",       destination: "/locations/midrand",     permanent: true },
+      { source: "/locations/accountant-in-midrand/",      destination: "/locations/midrand",     permanent: true },
+      { source: "/locations/accountant-in-alberton",      destination: "/locations/alberton",    permanent: true },
+      { source: "/locations/accountant-in-alberton/",     destination: "/locations/alberton",    permanent: true },
+      { source: "/locations/accountant-in-johannesburg",  destination: "/locations/johannesburg", permanent: true },
+      { source: "/locations/accountant-in-johannesburg/", destination: "/locations/johannesburg", permanent: true },
+
+      // ── GSC 404 recovery — typo variant + legacy category archive ──
+      { source: "/anual-financials",  destination: "/services/annual-financial-statements", permanent: true },
+      { source: "/anual-financials/", destination: "/services/annual-financial-statements", permanent: true },
+      { source: "/category/smes",     destination: "/industries/smes-growing-businesses",    permanent: true },
+      { source: "/category/smes/",    destination: "/industries/smes-growing-businesses",    permanent: true },
 
       // ── Doubled privacy-policy path ───────────────────────────────────
       { source: "/privacy-policy/privacy-policy", destination: "/privacy-policy", permanent: true },
