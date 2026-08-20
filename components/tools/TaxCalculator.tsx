@@ -22,7 +22,7 @@ const ALL_TAX_DATA = {
     thresholds: { under65: 99000, age65: 153250, age75: 171300 },
     medCredits: { main: 364, first: 364, additional: 246 },
     uifRate: 0.01,
-    uifMonthCap: 17712 / 12,
+    uifMonthCap: 17712,
   },
   "2025/26": {
     label: "2025/26",
@@ -40,7 +40,7 @@ const ALL_TAX_DATA = {
     thresholds: { under65: 95750, age65: 148217, age75: 165689 },
     medCredits: { main: 364, first: 364, additional: 246 },
     uifRate: 0.01,
-    uifMonthCap: 17712 / 12,
+    uifMonthCap: 17712,
   },
   "2024/25": {
     label: "2024/25",
@@ -58,7 +58,7 @@ const ALL_TAX_DATA = {
     thresholds: { under65: 95750, age65: 148217, age75: 165689 },
     medCredits: { main: 364, first: 364, additional: 246 },
     uifRate: 0.01,
-    uifMonthCap: 17712 / 12,
+    uifMonthCap: 17712,
   },
 } as const;
 

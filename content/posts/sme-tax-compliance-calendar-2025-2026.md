@@ -118,7 +118,7 @@ Always use eFiling — the 25th deadline only applies to eFilers. Branch submiss
 ### June 2025
 
 - **7 June:** EMP201 for May 2025 payroll due
-- **25 June:** EMP501 Final Reconciliation submission window typically closes around this date — confirm the exact deadline on SARS eFiling each year.
+- **31 May:** EMP501 Final Reconciliation submission window typically closes around this date — confirm the exact deadline on SARS eFiling each year.
 - **30 June:** Many companies with a June financial year-end close their books today. If that's you, your provisional tax second payment and ITR14 deadlines will be 6 months and 12 months ahead, respectively.
 
 ### July 2025 — Individual Filing Season Opens

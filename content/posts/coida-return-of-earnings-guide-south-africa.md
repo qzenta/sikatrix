@@ -67,7 +67,7 @@ The **Return of Earnings (CF-2)** is an annual declaration submitted to the Comp
 
 Think of the ROE the same way you think of the EMP501 payroll reconciliation for SARS, or the VAT201 for SARS. It is a statutory return that triggers a financial obligation. The difference is that this one goes to the Compensation Fund, not SARS.
 
-**The ROE is due by 31 March every year** for the prior calendar year's earnings. The 2025 ROE (covering earnings from 1 January 2025 to 31 December 2025) was due by 31 March 2026. If you have not yet filed, you are already late and penalties are accruing.
+**The ROE is due by 30 June every year** for the prior calendar year's earnings. The 2025 ROE (covering earnings from 1 January 2025 to 31 December 2025) was due by 30 June 2026. If you have not yet filed, you are already late and penalties are accruing.
 
 ---
 
@@ -150,7 +150,7 @@ Many employers confuse COIDA with UIF. They are separate systems:
 | **Purpose** | Unemployment, illness, maternity relief | Workplace injury and disease compensation |
 | **Who pays** | Employer + Employee (1% each) | Employer only |
 | **Submitted via** | SARS eFiling (EMP201) | Compensation Fund portal |
-| **Timing** | Monthly | Annual ROE by 31 March |
+| **Timing** | Monthly | Annual ROE by 30 June |
 | **Rate** | Fixed 2% (1%+1%) | Variable by industry class |
 
 Both are compulsory. Both are separate registrations. Paying UIF through SARS does not substitute for COIDA registration and the ROE.
@@ -179,7 +179,7 @@ Most of our clients in Alberton, Johannesburg, Germiston, and across Gauteng com
 
 | Event | Deadline |
 |---|---|
-| ROE filing (prior calendar year earnings) | **31 March annually** |
+| ROE filing (prior calendar year earnings) | **30 June annually** |
 | Assessment payment | Within 30 days of assessment notice |
 | Letter of Good Standing renewal | Annual (triggered by ROE + payment) |
 

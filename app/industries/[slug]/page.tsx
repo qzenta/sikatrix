@@ -62,7 +62,7 @@ const INDUSTRY_DATA: Record<string, IndustryDetail> = {
       },
       {
         q: "Do I need to register for VAT as an SME?",
-        a: "VAT registration is compulsory once your taxable turnover exceeds R1 million in any 12-month period. Voluntary registration is possible from R50,000. We assess your position and advise on the timing and implications.",
+        a: "VAT registration is compulsory once your taxable turnover exceeds R2.3 million in any 12-month period. This threshold was increased from R1 million effective 1 April 2026. Voluntary registration is possible from R50,000. We assess your position and advise on the timing and implications.",
       },
       {
         q: "What are management accounts and why do I need them?",
@@ -97,7 +97,7 @@ const INDUSTRY_DATA: Record<string, IndustryDetail> = {
       },
       {
         q: "What must I register for with SARS after incorporating?",
-        a: "At a minimum, Corporate Income Tax (CIT). If you take on employees, you must also register as an employer for PAYE. VAT registration is required once taxable turnover exceeds R1 million. We handle all three simultaneously.",
+        a: "At a minimum, Corporate Income Tax (CIT). If you take on employees, you must also register as an employer for PAYE. VAT registration is required once taxable turnover exceeds R2.3 million (increased from R1 million effective 1 April 2026). We handle all three simultaneously.",
       },
       {
         q: "When does my first tax return become due?",
@@ -167,7 +167,7 @@ const INDUSTRY_DATA: Record<string, IndustryDetail> = {
       },
       {
         q: "Must attorneys register for VAT?",
-        a: "Yes, if annual taxable turnover from legal fees exceeds R1 million. Legal services are standard-rated at 15%. Trust account receipts held on behalf of clients are not taxable turnover. We set up your VAT registration and returns correctly from the start.",
+        a: "Yes, if annual taxable turnover from legal fees exceeds R2.3 million (increased from R1 million effective 1 April 2026). Legal services are standard-rated at 15%. Trust account receipts held on behalf of clients are not taxable turnover. We set up your VAT registration and returns correctly from the start.",
       },
       {
         q: "Can you prepare the records needed for our annual LSSA compliance audit?",
@@ -307,7 +307,7 @@ const INDUSTRY_DATA: Record<string, IndustryDetail> = {
       },
       {
         q: "Must I register for VAT as an architect or engineer?",
-        a: "Yes, if your taxable professional fee income exceeds R1 million in any 12-month period, VAT registration is compulsory. Voluntary registration from R50,000 is also possible. We assess your position and handle the full VAT101 registration process.",
+        a: "Yes, if your taxable professional fee income exceeds R2.3 million in any 12-month period (increased from R1 million effective 1 April 2026), VAT registration is compulsory. Voluntary registration from R50,000 is also possible. We assess your position and handle the full VAT101 registration process.",
       },
       {
         q: "How do we allocate costs correctly across multiple projects?",

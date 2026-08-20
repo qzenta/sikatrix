@@ -70,7 +70,7 @@ SDL is submitted and paid together with PAYE and UIF via the monthly EMP201 retu
 
 The EMP201 is a payment declaration submitted to SARS by the 7th of each month. It declares your PAYE, SDL, and UIF contributions for the prior month. Late submission carries a penalty of 10% of the amount due, plus interest at the prescribed rate.
 
-Every six months (August and February), you must also submit an EMP501 reconciliation, which reconciles your monthly EMP201 submissions against the IRP5/IT3(a) certificates issued to employees.
+Once a year, you must also submit an EMP501 reconciliation, which reconciles your monthly EMP201 submissions against the IRP5/IT3(a) certificates issued to employees. The annual EMP501 window runs from 1 April to 31 May.
 
 ## Registering as an Employer with SARS
 

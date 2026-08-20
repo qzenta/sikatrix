@@ -179,7 +179,7 @@ Most small businesses in Alberton, Boksburg, Germiston, and the wider East Rand 
 | Governing legislation | COIDA Act 130 of 1993 |
 | Administered by | Compensation Fund, Dept. of Employment & Labour |
 | Who must register | All employers (excluding domestic & mining) |
-| Annual return | Return of Earnings (CF-2) — due 31 March |
+| Annual return | Return of Earnings (CF-2) — due 30 June |
 | Accident report | W.Cl.2 — within 7 days of injury |
 | Disease report | W.Cl.1 — within 14 days of diagnosis |
 | Helpline | 0860 105 350 |

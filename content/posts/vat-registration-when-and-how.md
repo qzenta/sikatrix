@@ -39,13 +39,13 @@ VAT (Value-Added Tax) is a consumption tax levied at 15% on the supply of most g
 
 > **April 2026 update:** The compulsory VAT registration threshold increased to R2.3 million from 1 April 2026. See [VAT Registration Threshold 2026](/resources/vat-registration-threshold-2026-south-africa) for what changed and whether your business is affected.
 
-You are legally required to register for VAT if your taxable turnover has exceeded R1 million in any consecutive 12-month period, or if it is reasonably expected to exceed R1 million in the next 12 months. 'Taxable turnover' includes all standard-rated and zero-rated supplies, but excludes exempt supplies (such as residential rental income and certain financial services).
+You are legally required to register for VAT if your taxable turnover has exceeded R2.3 million in any consecutive 12-month period, or if it is reasonably expected to exceed R2.3 million in the next 12 months. 'Taxable turnover' includes all standard-rated and zero-rated supplies, but excludes exempt supplies (such as residential rental income and certain financial services).
 
-You must apply for VAT registration within 21 days of the date your turnover first exceeds (or is expected to exceed) R1 million. Late registration results in deemed VAT liability from the date you should have registered, plus a 10% penalty on the outstanding amount.
+You must apply for VAT registration within 21 days of the date your turnover first exceeds (or is expected to exceed) R2.3 million. Late registration results in deemed VAT liability from the date you should have registered, plus a 10% penalty on the outstanding amount.
 
 ## Voluntary VAT Registration
 
-Businesses with taxable turnover between R50,000 and R1 million per year may apply for voluntary VAT registration. This can be advantageous if you supply other VAT-registered businesses, as they can claim the VAT you charge as an input tax credit, making your pricing more competitive.
+Businesses with taxable turnover between R50,000 and R2.3 million per year may apply for voluntary VAT registration. This can be advantageous if you supply other VAT-registered businesses, as they can claim the VAT you charge as an input tax credit, making your pricing more competitive.
 
 To qualify for voluntary registration, you must be able to demonstrate that you are making or intend to make taxable supplies. SARS may request supporting documentation such as signed contracts, invoices, or a business plan.
 
@@ -81,7 +81,7 @@ Returns are due by the last business day of the month following the end of your 
 
 If SARS discovers you should have registered and did not, they will raise a VAT assessment for all periods from the date you were required to register. This includes output tax on all sales made during that period, regardless of whether you collected VAT from customers. Add penalties of up to 10% and interest, and the exposure can be substantial.
 
-If you believe you've crossed the R1 million threshold and haven't yet registered, act immediately. Voluntary disclosure before SARS raises an assessment significantly reduces the penalty exposure. Sikatrix Business Accountants can assess your registration obligation and manage the registration process on your behalf.
+If you believe you've crossed the R2.3 million threshold and haven't yet registered, act immediately. Voluntary disclosure before SARS raises an assessment significantly reduces the penalty exposure. Sikatrix Business Accountants can assess your registration obligation and manage the registration process on your behalf.
 
 ---
 

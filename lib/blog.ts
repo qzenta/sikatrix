@@ -47,6 +47,7 @@ function parsePost(slug: string): Post | null {
     relatedPosts: data.relatedPosts ?? [],
     social: data.social ?? {},
     newsletterSegment: data.newsletterSegment,
+    draft: data.draft ?? false,
     content: content.trim(),
   };
 }
@@ -56,7 +57,7 @@ function parsePost(slug: string): Post | null {
 export function getAllPosts(): PostMeta[] {
   return getSlugsFromDir()
     .map((slug) => parsePost(slug))
-    .filter((p): p is Post => p !== null)
+    .filter((p): p is Post => p !== null && !p.draft)
     .sort(
       (a, b) =>
         new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()
@@ -64,7 +65,8 @@ export function getAllPosts(): PostMeta[] {
 }
 
 export function getPostBySlug(slug: string): Post | null {
-  return parsePost(slug);
+  const post = parsePost(slug);
+  return post && !post.draft ? post : null;
 }
 
 export function getPostsByCategory(category: string): PostMeta[] {
