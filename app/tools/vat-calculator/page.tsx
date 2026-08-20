@@ -104,7 +104,7 @@ export default function VatCalculatorPage() {
                   {[
                     { label: "Standard rate", value: "15%", sub: "since 1 April 2018" },
                     { label: "Zero rate", value: "0%", sub: "basic foods, exports" },
-                    { label: "Mandatory threshold", value: "R1M", sub: "12-month taxable supplies" },
+                    { label: "Mandatory threshold", value: "R2.3M", sub: "12-month taxable supplies" },
                     { label: "Voluntary threshold", value: "R50k", sub: "minimum for voluntary reg." },
                     { label: "Return frequency", value: "Monthly / Bi-monthly", sub: "assigned by SARS on registration" },
                     { label: "VAT201 due date", value: "25th of month", sub: "following the tax period" },
