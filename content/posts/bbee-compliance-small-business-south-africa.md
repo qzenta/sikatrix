@@ -22,6 +22,7 @@ social:
   ogDescription: "B-BBEE Compliance for Small Businesses in South Africa: What You Need to Know"
   twitterCard: "summary_large_image"
 newsletterSegment: "compliance"
+draft: true
 ---
 
 

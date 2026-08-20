@@ -31,6 +31,7 @@ export interface PostMeta {
   relatedPosts: string[];
   social: PostSocialMeta;
   newsletterSegment?: string;
+  draft?: boolean;
 }
 
 export interface Post extends PostMeta {

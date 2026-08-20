@@ -380,7 +380,7 @@ const SERVICE_DETAILS: Record<string, { outcome: string; benefits: string[]; faq
       },
       {
         q: "Do foreign-owned businesses have different SARS obligations?",
-        a: "Every business operating in South Africa must register with SARS for income tax, and for VAT if turnover exceeds R1 million. We guide foreign business owners through registration and ongoing compliance from day one.",
+        a: "Every business operating in South Africa must register with SARS for income tax, and for VAT if turnover exceeds R2.3 million. This threshold was increased from R1 million effective 1 April 2026. We guide foreign business owners through registration and ongoing compliance from day one.",
       },
     ],
   },

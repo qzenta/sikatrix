@@ -44,7 +44,7 @@ const FAQS = [
   },
   {
     question: "When must a business register for VAT in South Africa?",
-    answer: "You must register for VAT with SARS when your taxable supplies exceed R1,000,000 in any consecutive 12-month period. You may also voluntarily register if your supplies exceed R50,000 per year. Failure to register on time attracts penalties.",
+    answer: "You must register for VAT with SARS when your taxable supplies exceed R2,300,000 in any consecutive 12-month period. This threshold was increased from R1,000,000 effective 1 April 2026. You may also voluntarily register if your supplies exceed R50,000 per year. Failure to register on time attracts penalties.",
   },
   {
     question: "What is zero-rated VAT vs exempt?",
