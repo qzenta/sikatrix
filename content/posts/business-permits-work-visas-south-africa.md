@@ -26,6 +26,7 @@ relatedServices:
 relatedPosts:
   - "registering-a-company-cipc-guide"
   - "tax-clearance-certificate-south-africa"
+  - "dtic-business-visa-waiver-factual-findings-report"
 social:
   ogTitle: "Business Permits & Work Visas in South Africa | Sikatrix"
   ogDescription: "What financial documents does a work permit or business visa application actually need? A practising accountant explains what Home Affairs wants to see."
@@ -46,7 +47,7 @@ The short answer is almost everyone applying under the following categories:
 
 **Intra-Company Transfer Permit** — The South African entity must show that it is a functioning business with an established operating history. Management accounts, a CIPC-registered entity, and EMP201 records showing PAYE submissions are all relevant.
 
-**Business Visa (for self-employed foreign entrepreneurs)** — This is where the financial documentation requirement is most detailed. Home Affairs requires:
+**Business Visa (for self-employed foreign entrepreneurs)** — This is where the financial documentation requirement is most detailed. If your available capital falls short of the prescribed threshold, see our breakdown of the [DTIC capital waiver and Factual Findings Report process](/resources/dtic-business-visa-waiver-factual-findings-report). Home Affairs requires:
 
 - Proof of a minimum prescribed investment amount (currently R5 million for most activities, though sector-specific variations exist)
 - A business plan with realistic financial projections
