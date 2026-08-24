@@ -21,7 +21,7 @@ const SERVICE_ARTICLE_MAP: Record<string, string[]> = {
   "payroll":                     ["paye-uif-sdl-explained", "coida-return-of-earnings-guide-south-africa", "workmens-compensation-south-africa"],
   "cloud-accounting":            ["cloud-accounting-vs-desktop", "small-business-bookkeeping-mistakes"],
   "company-secretarial":         ["registering-a-company-cipc-guide", "tax-clearance-certificate-south-africa"],
-  "business-permit-support":     ["registering-a-company-cipc-guide"],
+  "business-permit-support":     ["registering-a-company-cipc-guide", "dtic-business-visa-waiver-factual-findings-report"],
   "import-export-license":       [],
 };
 
