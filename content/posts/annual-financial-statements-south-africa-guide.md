@@ -6,7 +6,7 @@ category: "Bookkeeping"
 tags:
   - compliance
   - sme
-featuredImage: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&auto=format&fit=crop&q=60"
+featuredImage: "/photos/blog/financial-documents-calculator.jpg"
 featuredImageAlt: "Financial documents and calculator on a desk representing annual financial statement preparation"
 author:
   name: "Daniel Amoah"

@@ -12,7 +12,7 @@ tags:
   - VAT
   - payroll
   - CIPC
-featuredImage: "https://images.pexels.com/photos/7821702/pexels-photo-7821702.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+featuredImage: "/photos/blog/tax-compliance-calendar-review.jpg"
 featuredImageAlt: "Black South African accountant reviewing tax compliance calendar and SARS deadlines"
 author:
   name: "Daniel Amoah"

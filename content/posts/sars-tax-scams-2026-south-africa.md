@@ -9,7 +9,7 @@ tags:
   - tax fraud
   - eFiling security
   - filing season 2026
-featuredImage: "https://images.pexels.com/photos/4559704/pexels-photo-4559704.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+featuredImage: "/photos/blog/sars-penalty-review.jpg"
 featuredImageAlt: "Black South African professional on a laptop reviewing a suspicious email message"
 author:
   name: "Daniel Amoah"
@@ -76,7 +76,7 @@ If you employ staff, brief them before filing season opens. A simple message rem
 
 Business owners who use eFiling directly should also enable two-factor authentication on their eFiling profile if they have not already done so. This adds an additional layer of protection even if credentials are compromised.
 
-[img]https://images.pexels.com/photos/7821702/pexels-photo-7821702.jpeg?auto=compress&cs=tinysrgb&w=800&q=80|Black South African business professional reviewing documents at his desk with a secure laptop|Always verify SARS communications directly at sars.gov.za, never through a link in an SMS or email
+[img]/photos/blog/tax-compliance-calendar-review.jpg|Black South African business professional reviewing documents at his desk with a secure laptop|Always verify SARS communications directly at sars.gov.za, never through a link in an SMS or email
 
 ## Sikatrix Can Verify Any SARS Notice on Your Behalf
 
