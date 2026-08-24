@@ -11,7 +11,7 @@ tags:
   - medical credits
   - budget 2026
   - employers
-featuredImage: "https://images.pexels.com/photos/7681091/pexels-photo-7681091.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+featuredImage: "/photos/blog/hr-payroll-laptop-review.jpg"
 featuredImageAlt: "South African Black male HR manager reviewing payroll updates and tax bracket changes on a laptop"
 author:
   name: "Daniel Amoah"
@@ -56,7 +56,7 @@ This credit reduces the PAYE withheld from each employee's salary directly. If y
 
 Update your payroll software to the 2026/27 rates immediately if you have not already done so.
 
-[img]https://images.pexels.com/photos/7682340/pexels-photo-7682340.jpeg?auto=compress&cs=tinysrgb&w=800&q=80|Black South African payroll manager reviewing updated tax tables and employee payslips at her desk|Payroll software must reflect updated 2026/27 brackets and medical credits from 1 March 2026
+[img]/photos/blog/payroll-tax-tables-review.jpg|Black South African payroll manager reviewing updated tax tables and employee payslips at her desk|Payroll software must reflect updated 2026/27 brackets and medical credits from 1 March 2026
 
 ## Your Monthly EMP201 Obligations
 

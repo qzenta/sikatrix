@@ -8,8 +8,8 @@ tags:
   - vat
   - compliance
   - sme
-featuredImage: ""
-featuredImageAlt: ""
+featuredImage: "/photos/blog/sars-vat-automatic-registration.jpg"
+featuredImageAlt: "South African SME owner and accountant reviewing a SARS VAT registration confirmation on a laptop"
 author:
   name: "Daniel Amoah"
   title: "SAIPA Professional Accountant (SA)"

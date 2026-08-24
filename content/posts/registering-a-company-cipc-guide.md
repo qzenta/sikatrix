@@ -9,7 +9,7 @@ tags:
   - Pty-Ltd
   - compliance
   - SME
-featuredImage: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1200&auto=format&fit=crop&q=60"
+featuredImage: "/photos/blog/company-registration-meeting.jpg"
 featuredImageAlt: "Diverse South African entrepreneurs completing company registration at a business meeting"
 author:
   name: "Daniel Amoah"
@@ -53,7 +53,7 @@ Every company is governed by a Memorandum of Incorporation. CIPC provides a stan
 
 The standard MOI allows for flexible share structures and is accepted immediately by CIPC without additional review.
 
-[img]https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&auto=format&fit=crop&q=60|Business owner signing company registration documents at a desk|Your Memorandum of Incorporation is a binding legal document. Understand what it permits before signing
+[img]/photos/blog/signing-registration-documents.jpg|Business owner signing company registration documents at a desk|Your Memorandum of Incorporation is a binding legal document. Understand what it permits before signing
 
 ## Step 3: Register on the CIPC Portal
 

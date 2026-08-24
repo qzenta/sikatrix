@@ -11,7 +11,7 @@ tags:
   - employer obligations
   - ROE
   - occupational health
-featuredImage: "https://images.pexels.com/photos/5668882/pexels-photo-5668882.jpeg?auto=compress&cs=tinysrgb&w=1200"
+featuredImage: "/photos/blog/workplace-safety-review.jpg"
 featuredImageAlt: "South African business owner reviewing workplace safety documentation in an office"
 author:
   name: "Daniel Amoah"
@@ -79,7 +79,7 @@ When an employee is diagnosed with an occupational disease listed under COIDA, y
 ### 4. Keep Records
 COIDA requires employers to maintain an accident register recording every workplace injury, regardless of severity. The register must be available for inspection by a labour inspector.
 
-[img]https://images.pexels.com/photos/5699479/pexels-photo-5699479.jpeg?auto=compress&cs=tinysrgb&w=800|South African employer completing workplace injury report documentation|Reporting a workplace injury within 7 days is a legal obligation under COIDA — delays result in penalty assessments and may jeopardise the employee's claim
+[img]/photos/blog/workplace-injury-report.jpg|South African employer completing workplace injury report documentation|Reporting a workplace injury within 7 days is a legal obligation under COIDA — delays result in penalty assessments and may jeopardise the employee's claim
 
 ---
 

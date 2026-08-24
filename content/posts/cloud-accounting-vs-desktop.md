@@ -10,7 +10,7 @@ tags:
   - Sage
   - software
   - SME
-featuredImage: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&auto=format&fit=crop&q=60"
+featuredImage: "/photos/blog/cloud-accounting-team.jpg"
 featuredImageAlt: "Diverse South African business team collaborating on cloud accounting software around a laptop"
 author:
   name: "Daniel Amoah"
@@ -58,7 +58,7 @@ Desktop software (like older versions of Sage Pastel or QuickBooks Desktop) is i
 
 **Scalability:** Add users, features, or integrations as your business grows.
 
-[img]https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&auto=format&fit=crop&q=60|Person working on a laptop with accounting software open|Cloud platforms like QuickBooks Online give your accountant and you simultaneous real-time access to the same data
+[img]/photos/blog/laptop-accounting-software.jpg|Person working on a laptop with accounting software open|Cloud platforms like QuickBooks Online give your accountant and you simultaneous real-time access to the same data
 
 ## Desktop Advantages
 

@@ -10,7 +10,7 @@ tags:
   - payroll
   - reconciliation
   - IRP5
-featuredImage: "https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+featuredImage: "/photos/blog/professional-reviewing-documents.jpg"
 featuredImageAlt: "Black South African payroll professional reviewing annual EMP501 reconciliation documents at a Johannesburg office"
 author:
   name: "Daniel Amoah"
@@ -56,7 +56,7 @@ Most EMP501 problems trace back to a small number of recurring causes:
 
 None of these are exotic. They are the ordinary noise of running payroll across a year, and they accumulate quietly until the reconciliation forces them into the open.
 
-[img]https://images.pexels.com/photos/7681918/pexels-photo-7681918.jpeg?auto=compress&cs=tinysrgb&w=800&q=80|African SME business owner discussing payroll compliance with an accountant in a modern Johannesburg office setting|Reconciliation errors caught before submission are corrections. Errors identified by SARS after submission become queries, assessments, and in some cases penalties
+[img]/photos/blog/payroll-compliance-discussion.jpg|African SME business owner discussing payroll compliance with an accountant in a modern Johannesburg office setting|Reconciliation errors caught before submission are corrections. Errors identified by SARS after submission become queries, assessments, and in some cases penalties
 
 ## What SARS Does With Your EMP501
 

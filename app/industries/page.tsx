@@ -67,7 +67,7 @@ export default function IndustriesPage() {
         title="Accounting Built Around Your Industry"
         subtitle="Every sector has its own compliance rules. We know yours and apply them directly — from healthcare billing to NGO donor reporting."
         crumbs={[{ label: "Industries" }]}
-        bgImage="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1600&auto=format&fit=crop&q=60"
+        bgImage="/photos/industries/industries-hero.jpg"
       />
 
       {/* Grid */}

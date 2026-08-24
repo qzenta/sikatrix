@@ -9,7 +9,7 @@ tags:
   - registration
   - compliance
   - tax
-featuredImage: "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=1200&auto=format&fit=crop&q=60"
+featuredImage: "/photos/blog/vat-registration-consultation.jpg"
 featuredImageAlt: "South African business owner discussing VAT registration requirements with a tax professional"
 author:
   name: "Daniel Amoah"
@@ -51,7 +51,7 @@ To qualify for voluntary registration, you must be able to demonstrate that you 
 
 Voluntary registration is not always beneficial. If most of your customers are end-consumers (not VAT vendors), adding 15% VAT to your prices makes you more expensive relative to non-registered competitors. Assess your customer base before registering voluntarily.
 
-[img]https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&auto=format&fit=crop&q=60|Business owner issuing a tax invoice to a client|Every VAT vendor must issue valid tax invoices showing their VAT registration number. SARS can disallow input claims without them
+[img]/photos/blog/tax-invoice-handover.jpg|Business owner issuing a tax invoice to a client|Every VAT vendor must issue valid tax invoices showing their VAT registration number. SARS can disallow input claims without them
 
 ## How to Register for VAT with SARS
 

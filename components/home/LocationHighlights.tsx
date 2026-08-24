@@ -4,14 +4,14 @@ import { MapPin, ArrowRight } from "lucide-react";
 import { LOCATIONS } from "@/lib/site";
 
 const LOCATION_IMAGES: Record<string, string> = {
-  alberton:      "https://images.pexels.com/photos/28426637/pexels-photo-28426637.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1",
-  johannesburg:  "https://images.pexels.com/photos/3760072/pexels-photo-3760072.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1",
-  sandton:       "https://images.pexels.com/photos/7821702/pexels-photo-7821702.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1",
-  randburg:      "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1",
-  vereeniging:   "https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1",
-  germiston:     "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1",
-  boksburg:      "https://images.pexels.com/photos/7821681/pexels-photo-7821681.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1",
-  midrand:       "https://images.pexels.com/photos/7679131/pexels-photo-7679131.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1",
+  alberton:      "/photos/blog/provisional-tax-review.jpg",
+  johannesburg:  "/photos/locations/johannesburg-highlight.jpg",
+  sandton:       "/photos/blog/tax-compliance-calendar-review.jpg",
+  randburg:      "/photos/locations/randburg-highlight.jpg",
+  vereeniging:   "/photos/blog/hr-compliance-review.jpg",
+  germiston:     "/photos/locations/germiston-highlight.jpg",
+  boksburg:      "/photos/blog/bookkeeping-review-meeting.jpg",
+  midrand:       "/photos/blog/sars-section-210-review.jpg",
 };
 
 export default function LocationHighlights() {
