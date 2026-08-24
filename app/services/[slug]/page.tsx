@@ -16,7 +16,7 @@ import { buildServiceSchema, buildBreadcrumbSchema } from "@/lib/metadata";
 // Deliberate backlinking: service pages link to their most relevant articles
 const SERVICE_ARTICLE_MAP: Record<string, string[]> = {
   "annual-financial-statements": ["registering-a-company-cipc-guide", "small-business-bookkeeping-mistakes", "sme-tax-compliance-calendar-2025-2026"],
-  "tax-services":                ["sars-provisional-tax-guide-2025", "vat-registration-when-and-how", "sars-penalties-objections-appeals"],
+  "tax-services":                ["sars-provisional-tax-guide-2025", "vat-registration-when-and-how", "sars-penalties-objections-appeals", "vat-registration-threshold-voluntary-growing-sme"],
   "bookkeeping":                 ["small-business-bookkeeping-mistakes", "cloud-accounting-vs-desktop", "bookkeeping-vs-accounting-sme-south-africa"],
   "payroll":                     ["paye-uif-sdl-explained", "coida-return-of-earnings-guide-south-africa", "workmens-compensation-south-africa"],
   "cloud-accounting":            ["cloud-accounting-vs-desktop", "small-business-bookkeeping-mistakes"],
