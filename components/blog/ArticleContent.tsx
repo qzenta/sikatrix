@@ -10,11 +10,11 @@ function slugify(text: string): string {
   return text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 }
 
-// Parse inline markdown: **bold**, [text](url)
+// Parse inline markdown: **bold**, [text](url) — url may be an absolute
+// http(s) link, a mailto:/tel: link, or an internal /path link.
 function parseInline(text: string): ReactNode {
   const parts: ReactNode[] = [];
-  // Regex: match **bold** or [text](url)
-  const regex = /\*\*([^*]+)\*\*|\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g;
+  const regex = /\*\*([^*]+)\*\*|\[([^\]]+)\]\(((?:https?:\/\/|mailto:|tel:|\/)[^)]+)\)/g;
   let last = 0;
   let match: RegExpExecArray | null;
   let key = 0;
@@ -23,19 +23,27 @@ function parseInline(text: string): ReactNode {
     if (match[1] !== undefined) {
       parts.push(<strong key={key++} className="text-neutral-900 font-semibold">{match[1]}</strong>);
     } else if (match[2] !== undefined && match[3] !== undefined) {
-      const isExternal = match[3].startsWith("http");
-      parts.push(
-        isExternal ? (
-          <a key={key++} href={match[3]} target="_blank" rel="noopener noreferrer"
-            className="text-brand underline underline-offset-2 hover:text-brand-dark transition-colors">
+      const url = match[3];
+      const linkClass = "text-brand underline underline-offset-2 hover:text-brand-dark transition-colors";
+      if (url.startsWith("http")) {
+        parts.push(
+          <a key={key++} href={url} target="_blank" rel="noopener noreferrer" className={linkClass}>
             {match[2]}
           </a>
-        ) : (
-          <Link key={key++} href={match[3]} className="text-brand underline underline-offset-2 hover:text-brand-dark transition-colors">
+        );
+      } else if (url.startsWith("mailto:") || url.startsWith("tel:")) {
+        parts.push(
+          <a key={key++} href={url} className={linkClass}>
+            {match[2]}
+          </a>
+        );
+      } else {
+        parts.push(
+          <Link key={key++} href={url} className={linkClass}>
             {match[2]}
           </Link>
-        )
-      );
+        );
+      }
     }
     last = match.index + match[0].length;
   }

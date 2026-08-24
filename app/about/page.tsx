@@ -126,6 +126,9 @@ export default function AboutPage() {
                   sizes="256px"
                   priority
                 />
+                {/* Soften the flat studio backdrop so it blends into the section instead of reading as a hard-edged cutout */}
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/70 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/25 via-transparent to-transparent" />
               </div>
             </div>
             <div>

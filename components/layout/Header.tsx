@@ -31,6 +31,7 @@ const NAV_ITEMS: NavItem[] = [
       href: `/services/${s.slug}`,
     })),
   },
+  { label: "About", href: "/about" },
   {
     label: "Industries",
     href: "/industries",
@@ -71,7 +72,6 @@ const NAV_ITEMS: NavItem[] = [
       { label: "All Tools →", href: "/tools" },
     ],
   },
-  { label: "About", href: "/about" },
   { label: "Contact", href: "/contact", isContact: true },
 ];
 
