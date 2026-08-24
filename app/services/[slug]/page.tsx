@@ -17,7 +17,7 @@ import { buildServiceSchema, buildBreadcrumbSchema } from "@/lib/metadata";
 const SERVICE_ARTICLE_MAP: Record<string, string[]> = {
   "annual-financial-statements": ["registering-a-company-cipc-guide", "small-business-bookkeeping-mistakes", "sme-tax-compliance-calendar-2025-2026"],
   "tax-services":                ["sars-provisional-tax-guide-2025", "vat-registration-when-and-how", "sars-penalties-objections-appeals"],
-  "bookkeeping":                 ["small-business-bookkeeping-mistakes", "cloud-accounting-vs-desktop"],
+  "bookkeeping":                 ["small-business-bookkeeping-mistakes", "cloud-accounting-vs-desktop", "bookkeeping-vs-accounting-sme-south-africa"],
   "payroll":                     ["paye-uif-sdl-explained", "coida-return-of-earnings-guide-south-africa", "workmens-compensation-south-africa"],
   "cloud-accounting":            ["cloud-accounting-vs-desktop", "small-business-bookkeeping-mistakes"],
   "company-secretarial":         ["registering-a-company-cipc-guide", "tax-clearance-certificate-south-africa"],
