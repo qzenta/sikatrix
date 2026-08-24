@@ -9,7 +9,7 @@ tags:
   - objection
   - compliance
   - taxadmin
-featuredImage: "https://images.pexels.com/photos/4559704/pexels-photo-4559704.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+featuredImage: "/photos/blog/sars-penalty-review.jpg"
 featuredImageAlt: "Black South African male professional reviewing SARS penalty assessment options"
 author:
   name: "Daniel Amoah"
@@ -69,7 +69,7 @@ The penalty is applied to the understated amount — the difference between what
 
 Interest at the prescribed rate (currently linked to the repo rate, approximately 11.25% per annum) accrues daily on outstanding tax debt from the date payment was due. Unlike penalties, interest cannot be remitted — it is a statutory charge and runs until the debt is paid.
 
-[img]https://images.pexels.com/photos/14660445/pexels-photo-14660445.jpeg?auto=compress&cs=tinysrgb&w=800&q=80|Professional reviewing a formal SARS assessment document|A valid assessment must specify the grounds for the penalty and cite the relevant legislative provision. If it does not, the assessment may be defective
+[img]/photos/locations/locations-hero.jpg|Professional reviewing a formal SARS assessment document|A valid assessment must specify the grounds for the penalty and cite the relevant legislative provision. If it does not, the assessment may be defective
 
 ## Requesting Remission of Administrative Penalties
 

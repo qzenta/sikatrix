@@ -26,7 +26,7 @@ export default function LocationsPage() {
         title="Local Expertise. Cloud Reach. Gauteng-Wide."
         subtitle="Headquartered in Alberton with clients across Greater Johannesburg and the Vaal Triangle. We're the accounting firm that's close to home — and even closer online."
         crumbs={[{ label: "Locations" }]}
-        bgImage="https://images.pexels.com/photos/14660445/pexels-photo-14660445.jpeg?auto=compress&cs=tinysrgb&w=1600&fit=crop"
+        bgImage="/photos/locations/locations-hero.jpg"
       />
 
       {/* Locations grid */}

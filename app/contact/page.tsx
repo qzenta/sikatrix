@@ -25,7 +25,7 @@ export default function ContactPage() {
         subtitle="Tell us about your business and we'll respond within one business day. No obligation, no jargon. Just a straight conversation about your accounting needs."
         crumbs={[{ label: "Contact" }]}
         size="sm"
-        bgImage="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1600&auto=format&fit=crop&q=60"
+        bgImage="/photos/blog/payroll-compliance-team.jpg"
       />
       <ContactForm />
     </>

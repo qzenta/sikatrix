@@ -9,7 +9,7 @@ tags:
   - eFiling
   - company-tax
   - SARS
-featuredImage: "https://images.pexels.com/photos/7567313/pexels-photo-7567313.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+featuredImage: "/photos/blog/efiling-tax-return.jpg"
 featuredImageAlt: "South African male accountant reviewing company tax return documents on eFiling"
 author:
   name: "Daniel Amoah"
@@ -52,7 +52,7 @@ Note that provisional tax payments (IRP6) are due before the final ITR14. The fi
 
 Prepare the following before opening the ITR14 on eFiling: your Annual Financial Statements (signed and finalised for the financial year), a tax computation showing the move from accounting profit to taxable income, a fixed asset register (for Section 12C, 11(e), or 12E wear-and-tear allowance claims), schedules for any assessed losses brought forward from prior years, details of any dividends received or paid, and records of any controlled foreign company (CFC) interests if applicable. The ITR14 cannot be accurately completed from bank statements alone. You need finalised, IFRS-compliant financial statements.
 
-[img]https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&auto=format&fit=crop&q=60|Accountant working through financial documents and a tax computation on a desk|Your signed Annual Financial Statements and a formal tax computation are the two non-negotiable inputs for an accurate ITR14
+[img]/photos/blog/tax-computation-documents.jpg|Accountant working through financial documents and a tax computation on a desk|Your signed Annual Financial Statements and a formal tax computation are the two non-negotiable inputs for an accurate ITR14
 
 ## Step 1: Access the ITR14 on eFiling
 

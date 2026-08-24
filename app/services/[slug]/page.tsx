@@ -17,7 +17,7 @@ import { buildServiceSchema, buildBreadcrumbSchema } from "@/lib/metadata";
 const SERVICE_ARTICLE_MAP: Record<string, string[]> = {
   "annual-financial-statements": ["registering-a-company-cipc-guide", "small-business-bookkeeping-mistakes", "sme-tax-compliance-calendar-2025-2026"],
   "tax-services":                ["sars-provisional-tax-guide-2025", "vat-registration-when-and-how", "sars-penalties-objections-appeals", "vat-registration-threshold-voluntary-growing-sme"],
-  "bookkeeping":                 ["small-business-bookkeeping-mistakes", "cloud-accounting-vs-desktop"],
+  "bookkeeping":                 ["small-business-bookkeeping-mistakes", "cloud-accounting-vs-desktop", "bookkeeping-vs-accounting-sme-south-africa"],
   "payroll":                     ["paye-uif-sdl-explained", "coida-return-of-earnings-guide-south-africa", "workmens-compensation-south-africa"],
   "cloud-accounting":            ["cloud-accounting-vs-desktop", "small-business-bookkeeping-mistakes"],
   "company-secretarial":         ["registering-a-company-cipc-guide", "tax-clearance-certificate-south-africa"],
@@ -125,26 +125,26 @@ const ICON_MAP: Record<string, React.ElementType> = {
 
 // Hero backgrounds — swap to local file once dropped in public/photos/services/
 const SERVICE_HERO_IMAGES: Record<string, string> = {
-  "annual-financial-statements": "https://images.pexels.com/photos/7821702/pexels-photo-7821702.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&dpr=1",
-  "tax-services":                "https://images.pexels.com/photos/7567313/pexels-photo-7567313.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&dpr=1",
+  "annual-financial-statements": "/photos/blog/tax-compliance-calendar-review.jpg",
+  "tax-services":                "/photos/blog/efiling-tax-return.jpg",
   "bookkeeping":                 "/photos/services/bookkeeping.jpg",
   "payroll":                     "/photos/services/payroll.jpg",
-  "cloud-accounting":            "https://images.pexels.com/photos/7679131/pexels-photo-7679131.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&dpr=1",
+  "cloud-accounting":            "/photos/blog/sars-section-210-review.jpg",
   "company-secretarial":         "/photos/services/company-sec.jpg",
   "business-permit-support":     "/photos/services/permit-support.jpg",
-  "import-export-license":       "https://images.pexels.com/photos/906494/pexels-photo-906494.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&dpr=1",
+  "import-export-license":       "/photos/services/import-export-hero.jpg",
 };
 
 // Content section images — drop matching file in public/photos/services/ to override
 const SERVICE_CONTENT_IMAGES: Record<string, { src: string; alt: string }> = {
-  "annual-financial-statements": { src: "https://images.pexels.com/photos/7821681/pexels-photo-7821681.jpeg?auto=compress&cs=tinysrgb&w=900&h=500&dpr=1", alt: "Black South African accountant preparing annual financial statements at his desk" },
-  "tax-services":                { src: "https://images.pexels.com/photos/6863183/pexels-photo-6863183.jpeg?auto=compress&cs=tinysrgb&w=900&h=500&dpr=1", alt: "Tax practitioner reviewing SARS returns on a laptop with documents" },
+  "annual-financial-statements": { src: "/photos/blog/bookkeeping-review-meeting.jpg", alt: "Black South African accountant preparing annual financial statements at his desk" },
+  "tax-services":                { src: "/photos/blog/sars-tax-documents-review.jpg", alt: "Tax practitioner reviewing SARS returns on a laptop with documents" },
   "bookkeeping":                 { src: "/photos/services/bookkeeping.jpg", alt: "Black South African male bookkeeper reviewing accounts and financial records on his desk" },
   "payroll":                     { src: "/photos/services/payroll.jpg", alt: "Black South African male business professional managing payroll on a laptop" },
-  "cloud-accounting":            { src: "https://images.pexels.com/photos/6963944/pexels-photo-6963944.jpeg?auto=compress&cs=tinysrgb&w=900&h=500&dpr=1", alt: "Business owner accessing real-time financial data on cloud accounting software" },
+  "cloud-accounting":            { src: "/photos/services/cloud-accounting-content.jpg", alt: "Business owner accessing real-time financial data on cloud accounting software" },
   "company-secretarial":         { src: "/photos/services/company-sec.jpg", alt: "Black South African male professional reviewing CIPC company registration documents at his desk" },
   "business-permit-support":     { src: "/photos/services/permit-support.jpg", alt: "Black South African professional preparing financial documentation for a work permit application" },
-  "import-export-license":       { src: "https://images.pexels.com/photos/1427107/pexels-photo-1427107.jpeg?auto=compress&cs=tinysrgb&w=900&h=500&dpr=1", alt: "Cargo containers at a South African port representing import and export trade" },
+  "import-export-license":       { src: "/photos/services/import-export-content.jpg", alt: "Cargo containers at a South African port representing import and export trade" },
 };
 
 const SERVICE_DETAILS: Record<string, { outcome: string; benefits: string[]; faqs: { q: string; a: string }[] }> = {
@@ -491,7 +491,7 @@ export default async function ServicePage({
           { label: service.shortTitle },
         ]}
         cta={{ label: "Book a Consultation", href: "/contact" }}
-        bgImage={SERVICE_HERO_IMAGES[slug] ?? "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1600&auto=format&fit=crop&q=60"}
+        bgImage={SERVICE_HERO_IMAGES[slug] ?? "/photos/services/service-default-hero.jpg"}
       />
 
       {/* Sidebar + Main content */}

@@ -9,7 +9,7 @@ tags:
   - company-registration
   - tax
   - compliance
-featuredImage: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=1200&auto=format&fit=crop&q=60"
+featuredImage: "/photos/blog/sars-efiling-laptop.jpg"
 featuredImageAlt: "Person completing SARS eFiling registration on a laptop at a desk"
 author:
   name: "Daniel Amoah"
@@ -56,7 +56,7 @@ On the 'Manage Tax Types' screen, select 'Register New' or 'Add Tax Type'. Enter
 
 If the company has multiple tax types (PAYE, VAT), repeat this step for each, entering the relevant reference number and selecting the correct tax type. Each type may require a separate activation step.
 
-[img]https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=800&auto=format&fit=crop&q=60|Person completing SARS eFiling registration on a laptop at a desk|Once you add your company's tax reference number to your eFiling profile, all returns and correspondence become accessible online
+[img]/photos/blog/sars-efiling-laptop.jpg|Person completing SARS eFiling registration on a laptop at a desk|Once you add your company's tax reference number to your eFiling profile, all returns and correspondence become accessible online
 
 ## Step 3: Activate the Correct Tax Types
 

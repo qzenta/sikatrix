@@ -9,7 +9,7 @@ tags:
   - SME
   - accounting
   - VAT
-featuredImage: "https://images.pexels.com/photos/7821681/pexels-photo-7821681.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+featuredImage: "/photos/blog/bookkeeping-review-meeting.jpg"
 featuredImageAlt: "South African male business owner reviewing bookkeeping records with his accountant"
 author:
   name: "Daniel Amoah"
@@ -60,7 +60,7 @@ Many small businesses don't track what's owed to them. Invoices go unreconciled,
 
 **Fix:** Run an aged debtors report monthly and follow up on anything over 30 days.
 
-[img]https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=60|Accountant reviewing financial data on a laptop with charts visible|Cloud accounting software automates bank reconciliation and flags anomalies before they become costly errors
+[img]/photos/blog/accountant-charts-laptop.jpg|Accountant reviewing financial data on a laptop with charts visible|Cloud accounting software automates bank reconciliation and flags anomalies before they become costly errors
 
 ## 5. Misclassifying Expenses
 

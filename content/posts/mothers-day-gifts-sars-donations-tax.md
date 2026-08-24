@@ -8,7 +8,7 @@ tags:
   - personal-finance
   - SARS
   - tax-planning
-featuredImage: "https://images.pexels.com/photos/6693661/pexels-photo-6693661.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+featuredImage: "/photos/blog/mothers-day-gifts.jpg"
 featuredImageAlt: "Colourful gift boxes and flowers arranged on a table for Mother's Day"
 author:
   name: "Daniel Amoah"
@@ -45,7 +45,7 @@ Here is the practical part every South African should know: each individual has 
 
 A bunch of flowers, a spa day, a dinner at her favourite restaurant, or even a piece of jewellery well within that threshold: none of these create any tax obligation for either of you. SARS is not watching these transactions.
 
-[img]https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&auto=format&fit=crop&q=60|Person handing a wrapped gift with a ribbon to someone|Personal gifts between family members are not subject to income tax for the recipient, and fall well within the annual donations tax exemption for most givers
+[img]/photos/blog/gift-giving-hands.jpg|Person handing a wrapped gift with a ribbon to someone|Personal gifts between family members are not subject to income tax for the recipient, and fall well within the annual donations tax exemption for most givers
 
 ## When Could a Gift Actually Attract Attention?
 

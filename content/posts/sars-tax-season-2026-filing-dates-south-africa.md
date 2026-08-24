@@ -10,7 +10,7 @@ tags:
   - provisional tax
   - auto assessment
   - filing dates
-featuredImage: "https://images.pexels.com/photos/6863183/pexels-photo-6863183.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+featuredImage: "/photos/blog/sars-tax-documents-review.jpg"
 featuredImageAlt: "South African Black male business owner reviewing SARS tax documents at his desk"
 author:
   name: "Daniel Amoah"
@@ -69,7 +69,7 @@ If you are registered as a provisional taxpayer, Tax Season is only one part of 
 
 Your annual ITR12 is submitted separately during Tax Season and reconciles what you actually earned against your provisional estimates. Getting the estimates right reduces the risk of underpayment penalties and top-up payments at year-end.
 
-[img]https://images.pexels.com/photos/7821568/pexels-photo-7821568.jpeg?auto=compress&cs=tinysrgb&w=800&q=80|Black South African accountant helping a business client with SARS eFiling submission|Provisional taxpayers must manage both their ITR12 and their IRP6 estimates across Tax Season
+[img]/photos/blog/efiling-client-assistance.jpg|Black South African accountant helping a business client with SARS eFiling submission|Provisional taxpayers must manage both their ITR12 and their IRP6 estimates across Tax Season
 
 ## Auto Assessments Are Not Always Correct
 

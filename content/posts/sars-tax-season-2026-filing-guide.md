@@ -10,7 +10,7 @@ tags:
   - eFiling
   - ITR12
   - filing guide
-featuredImage: "https://images.pexels.com/photos/7821568/pexels-photo-7821568.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+featuredImage: "/photos/blog/efiling-client-assistance.jpg"
 featuredImageAlt: "Black South African accountant helping a business client with SARS eFiling submission"
 author:
   name: "Daniel Amoah"

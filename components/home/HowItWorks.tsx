@@ -39,7 +39,7 @@ export default function HowItWorks() {
         {/* Context image */}
         <AnimateIn className="relative h-52 sm:h-64 rounded-2xl overflow-hidden mb-12">
           <Image
-            src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=600&dpr=1"
+            src="/photos/home/how-it-works-consultation.jpg"
             alt="Diverse South African team including a Black male professional in a cloud accounting consultation"
             fill
             className="object-cover object-center"

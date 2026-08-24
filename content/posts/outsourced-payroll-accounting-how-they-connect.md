@@ -10,7 +10,7 @@ tags:
   - SMEs
   - bookkeeping
   - integration
-featuredImage: "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+featuredImage: "/photos/blog/payroll-accounting-meeting.jpg"
 featuredImageAlt: "Diverse South African SME team including Black professionals in a business meeting discussing payroll and accounting integration"
 author:
   name: "Daniel Amoah"
@@ -57,7 +57,7 @@ Four failure modes show up again and again:
 
 **Bonuses posted to the wrong period:** A December bonus is processed in payroll in December but posted to the accounts in January when the bank statement arrives, splitting a single event across two periods.
 
-[img]https://images.pexels.com/photos/7681671/pexels-photo-7681671.jpeg?auto=compress&cs=tinysrgb&w=800&q=80|Black South African accountant reviewing payroll and bookkeeping reconciliation reports on dual screens in an Alberton office|The payroll journal is the bridge between your payroll provider and your accountant. If nobody owns that bridge, it becomes a gap
+[img]/photos/blog/payroll-reconciliation-dual-screens.jpg|Black South African accountant reviewing payroll and bookkeeping reconciliation reports on dual screens in an Alberton office|The payroll journal is the bridge between your payroll provider and your accountant. If nobody owns that bridge, it becomes a gap
 
 ## The Real Cost of Misalignment
 

@@ -10,7 +10,7 @@ tags:
   - compliance
   - employers
   - compensationfund
-featuredImage: "https://images.pexels.com/photos/7681091/pexels-photo-7681091.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+featuredImage: "/photos/blog/hr-payroll-laptop-review.jpg"
 featuredImageAlt: "South African Black male employer reviewing COIDA compliance paperwork at his office desk"
 author:
   name: "Daniel Amoah"
@@ -73,7 +73,7 @@ Exclude from the figure:
 
 Getting this figure right matters. Overstating it inflates your assessment. Understating it creates a discrepancy the Fund can later correct, with penalties.
 
-[img]https://images.pexels.com/photos/7682340/pexels-photo-7682340.jpeg?auto=compress&cs=tinysrgb&w=800&q=80|Black South African HR professional reviewing payroll records on a laptop in a Johannesburg office|Your ROE earnings figure comes directly from your payroll records for the period 1 March to 28 or 29 February
+[img]/photos/blog/payroll-tax-tables-review.jpg|Black South African HR professional reviewing payroll records on a laptop in a Johannesburg office|Your ROE earnings figure comes directly from your payroll records for the period 1 March to 28 or 29 February
 
 ## How to Submit the ROE
 

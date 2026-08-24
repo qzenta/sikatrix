@@ -10,7 +10,7 @@ tags:
   - payroll
   - employer
   - SARS
-featuredImage: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1200&auto=format&fit=crop&q=60"
+featuredImage: "/photos/blog/payroll-compliance-team.jpg"
 featuredImageAlt: "Diverse South African business team reviewing payroll and employer compliance obligations"
 author:
   name: "Daniel Amoah"
@@ -56,7 +56,7 @@ Contributions are capped at a monthly remuneration ceiling updated annually by t
 
 You must register your business with the Department of Employment and Labour (not SARS) for UIF purposes. However, UIF contributions are declared and paid alongside PAYE via your monthly EMP201 return on SARS eFiling. SARS collects UIF on behalf of the UIF Commissioner.
 
-[img]https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&auto=format&fit=crop&q=60|HR professional reviewing payroll documents on a desk|PAYE, UIF and SDL are all declared and paid together on the same monthly EMP201 return, due by the 7th of each month
+[img]/photos/blog/hr-payroll-documents-desk.jpg|HR professional reviewing payroll documents on a desk|PAYE, UIF and SDL are all declared and paid together on the same monthly EMP201 return, due by the 7th of each month
 
 ## SDL: Skills Development Levy
 

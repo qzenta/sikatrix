@@ -10,7 +10,7 @@ tags:
   - SARS
   - compliance
   - SME
-featuredImage: "https://images.pexels.com/photos/7821944/pexels-photo-7821944.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+featuredImage: "/photos/blog/vat-documents-review.jpg"
 featuredImageAlt: "South African Black male accountant reviewing VAT documents and financial records in an office"
 author:
   name: "Daniel Amoah"
@@ -61,7 +61,7 @@ If your turnover was approaching R1 million and you were bracing for compulsory 
 
 Nothing changes for you. You remain compulsorily registered and your VAT201 obligations continue as before.
 
-[img]https://images.pexels.com/photos/7681099/pexels-photo-7681099.jpeg?auto=compress&cs=tinysrgb&w=800&q=80|Black South African entrepreneur reviewing business tax documents on a tablet|The VAT threshold change affects businesses in different ways depending on where your turnover sits
+[img]/photos/blog/vat-threshold-tablet-review.jpg|Black South African entrepreneur reviewing business tax documents on a tablet|The VAT threshold change affects businesses in different ways depending on where your turnover sits
 
 ## Turnover Tax: A New Option for Some Businesses
 

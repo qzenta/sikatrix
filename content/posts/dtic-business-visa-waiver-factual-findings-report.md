@@ -10,7 +10,7 @@ tags:
   - waiver
   - foreignnationals
   - CIPC
-featuredImage: "https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+featuredImage: "/photos/blog/dtic-business-visa-waiver.jpg"
 featuredImageAlt: "Accountant reviewing a business visa waiver application in a South African office"
 author:
   name: "Daniel Amoah"
