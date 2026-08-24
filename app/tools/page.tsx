@@ -41,14 +41,18 @@ const LIVE_TOOLS = [
     statLabel: "Submission",
     accent: "bg-brand-dark",
   },
+  {
+    href: "/tools/sars-compliance-calendar",
+    icon: CalendarClock,
+    title: "SARS Compliance Calendar",
+    description: "An interactive timeline of every recurring SARS deadline — EMP201, VAT201, provisional tax, EMP501, and COIDA — filterable by category.",
+    stat: "2026/27",
+    statLabel: "Tax Year",
+    accent: "bg-accent",
+  },
 ];
 
 const COMING_SOON = [
-  {
-    icon: CalendarClock,
-    title: "SARS Compliance Calendar",
-    description: "An interactive annual timeline of every SARS deadline — PAYE, VAT, provisional tax, AFS, CIPC, and more.",
-  },
   {
     icon: FileCheck,
     title: "Business Startup Checklist",
