@@ -10,7 +10,7 @@ tags:
   - compliance
   - tax
   - SME
-featuredImage: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1260&auto=format&fit=crop&q=60"
+featuredImage: "/photos/blog/financial-documents-calculator.jpg"
 featuredImageAlt: "South African SME owner reviewing monthly revenue figures approaching the VAT registration threshold"
 author:
   name: "Daniel Amoah"
@@ -86,7 +86,7 @@ What to prepare:
 **Invoicing system:**
 - Once registered, every tax invoice you issue must include your VAT registration number, the VAT amount charged, and the tax period. Your invoicing system needs to be updated before your first VAT-registered invoice is issued — not after.
 
-[img]https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&auto=format&fit=crop&q=60|Business owner reviewing financial records to determine VAT registration timing|Monitoring your rolling 12-month taxable turnover every month is the simplest way to avoid a late registration penalty
+[img]/photos/blog/signing-registration-documents.jpg|Business owner reviewing financial records to determine VAT registration timing|Monitoring your rolling 12-month taxable turnover every month is the simplest way to avoid a late registration penalty
 
 ## How the Registration Works
 

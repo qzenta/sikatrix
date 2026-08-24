@@ -9,7 +9,7 @@ tags:
   - accounting
   - small-business
   - cash-flow
-featuredImage: "https://images.pexels.com/photos/7821681/pexels-photo-7821681.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+featuredImage: "/photos/blog/bookkeeping-review-meeting.jpg"
 featuredImageAlt: "South African small business owner reviewing financial records at a desk"
 author:
   name: "Daniel Amoah"

@@ -10,7 +10,7 @@ tags:
   - foreignnationals
   - SARS
   - CIPC
-featuredImage: "https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+featuredImage: "/photos/blog/professional-reviewing-documents.jpg"
 featuredImageAlt: "Professional reviewing official documents at a desk in a South African office"
 author:
   name: "Daniel Amoah"

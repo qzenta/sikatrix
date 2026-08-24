@@ -8,7 +8,7 @@ tags:
   - SARS
   - tax-planning
   - SME
-featuredImage: "https://images.pexels.com/photos/28426637/pexels-photo-28426637.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+featuredImage: "/photos/blog/provisional-tax-review.jpg"
 featuredImageAlt: "Black South African male professional reviewing provisional tax obligations"
 author:
   name: "Daniel Amoah"
@@ -48,7 +48,7 @@ Employed individuals who only earn a salary don't need to register, as their emp
 
 There's also an optional third period (September) that allows you to top up if you've underpaid, which can help avoid interest charges.
 
-[img]https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=800&auto=format&fit=crop&q=60|A calendar open on a desk beside a laptop, marking SARS provisional tax deadlines|Mark 31 August and 28 February in your calendar every year. These are the two IRP6 deadlines that cannot move
+[img]/photos/blog/tax-deadline-calendar.jpg|A calendar open on a desk beside a laptop, marking SARS provisional tax deadlines|Mark 31 August and 28 February in your calendar every year. These are the two IRP6 deadlines that cannot move
 
 ## How to Calculate Your Provisional Tax Estimate
 

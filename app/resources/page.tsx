@@ -48,7 +48,7 @@ export default function ResourcesPage() {
         title="Tax & Accounting Insights for South African Businesses"
         subtitle="Free, practical articles written by qualified accountants. No jargon, no filler. Just guidance you can act on."
         crumbs={[{ label: "Resources" }]}
-        bgImage="https://images.pexels.com/photos/7821702/pexels-photo-7821702.jpeg?auto=compress&cs=tinysrgb&w=1600&fit=crop"
+        bgImage="/photos/blog/tax-compliance-calendar-review.jpg"
       />
 
       {/* Tools pinned section — 2-column */}

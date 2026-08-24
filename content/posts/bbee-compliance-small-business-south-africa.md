@@ -6,7 +6,7 @@ category: "SME Growth"
 tags:
   - sme
   - compliance
-featuredImage: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&auto=format&fit=crop&q=60"
+featuredImage: "/photos/blog/bee-compliance-meeting.jpg"
 featuredImageAlt: "Diverse South African business team in a meeting room discussing compliance requirements"
 author:
   name: "Daniel Amoah"

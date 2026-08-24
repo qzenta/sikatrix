@@ -41,14 +41,18 @@ const LIVE_TOOLS = [
     statLabel: "Submission",
     accent: "bg-brand-dark",
   },
+  {
+    href: "/tools/sars-compliance-calendar",
+    icon: CalendarClock,
+    title: "SARS Compliance Calendar",
+    description: "An interactive timeline of every recurring SARS deadline — EMP201, VAT201, provisional tax, EMP501, and COIDA — filterable by category.",
+    stat: "2026/27",
+    statLabel: "Tax Year",
+    accent: "bg-accent",
+  },
 ];
 
 const COMING_SOON = [
-  {
-    icon: CalendarClock,
-    title: "SARS Compliance Calendar",
-    description: "An interactive annual timeline of every SARS deadline — PAYE, VAT, provisional tax, AFS, CIPC, and more.",
-  },
   {
     icon: FileCheck,
     title: "Business Startup Checklist",
@@ -69,7 +73,7 @@ export default function ToolsPage() {
         title="Tax & Accounting Calculators"
         subtitle="Practical tools to help South African business owners understand their tax obligations, estimate costs, and stay ahead of SARS deadlines."
         crumbs={[{ label: "Tools" }]}
-        bgImage="https://images.pexels.com/photos/6863183/pexels-photo-6863183.jpeg?auto=compress&cs=tinysrgb&w=1600&h=600&dpr=1"
+        bgImage="/photos/blog/sars-tax-documents-review.jpg"
         size="md"
       />
 

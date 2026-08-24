@@ -10,7 +10,7 @@ tags:
   - provisional tax
   - eFiling
   - business owners
-featuredImage: "https://images.pexels.com/photos/6863183/pexels-photo-6863183.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+featuredImage: "/photos/blog/sars-tax-documents-review.jpg"
 featuredImageAlt: "South African Black male business owner reviewing SARS tax documents at his desk"
 author:
   name: "Daniel Amoah"
@@ -80,7 +80,7 @@ Even taxpayers who receive an auto assessment can find themselves in difficulty 
 
 As the taxpayer, you remain legally responsible for the accuracy of your return. An incorrect auto assessment that you accepted is still your liability if SARS audits you later.
 
-[img]https://images.pexels.com/photos/7567313/pexels-photo-7567313.jpeg?auto=compress&cs=tinysrgb&w=800&q=80|Tax practitioner reviewing SARS ITR12 return with a South African business client|Business owners and provisional taxpayers must file manually from 13 July 2026
+[img]/photos/blog/efiling-tax-return.jpg|Tax practitioner reviewing SARS ITR12 return with a South African business client|Business owners and provisional taxpayers must file manually from 13 July 2026
 
 ## What to Do If You Are a Business Owner
 

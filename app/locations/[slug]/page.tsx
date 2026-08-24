@@ -11,14 +11,14 @@ import { getLatestPosts } from "@/lib/blog";
 import { buildBreadcrumbSchema } from "@/lib/metadata";
 
 const LOCATION_HERO_IMAGES: Record<string, string> = {
-  "alberton":    "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1600&auto=format&fit=crop&q=60",
-  "johannesburg":"https://images.pexels.com/photos/11313729/pexels-photo-11313729.jpeg?auto=compress&cs=tinysrgb&w=1600&fit=crop",
-  "sandton":     "https://images.pexels.com/photos/28426637/pexels-photo-28426637.jpeg?auto=compress&cs=tinysrgb&w=1600&fit=crop",
-  "randburg":    "https://images.pexels.com/photos/4559704/pexels-photo-4559704.jpeg?auto=compress&cs=tinysrgb&w=1600&fit=crop",
-  "vereeniging": "https://images.pexels.com/photos/7679131/pexels-photo-7679131.jpeg?auto=compress&cs=tinysrgb&w=1600&fit=crop",
-  "germiston":   "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1600&auto=format&fit=crop&q=60",
-  "boksburg":    "https://images.pexels.com/photos/7821702/pexels-photo-7821702.jpeg?auto=compress&cs=tinysrgb&w=1600&fit=crop",
-  "midrand":     "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1600&auto=format&fit=crop&q=60",
+  "alberton":    "/photos/blog/payroll-compliance-team.jpg",
+  "johannesburg":"/photos/blog/home-office-workspace.jpg",
+  "sandton":     "/photos/blog/provisional-tax-review.jpg",
+  "randburg":    "/photos/blog/sars-penalty-review.jpg",
+  "vereeniging": "/photos/blog/sars-section-210-review.jpg",
+  "germiston":   "/photos/blog/payroll-compliance-team.jpg",
+  "boksburg":    "/photos/blog/tax-compliance-calendar-review.jpg",
+  "midrand":     "/photos/industries/industries-hero.jpg",
 };
 
 export async function generateStaticParams() {
@@ -89,7 +89,7 @@ export default async function LocationPage({
           { label: loc.name },
         ]}
         cta={{ label: `Book a consultation in ${loc.name}`, href: "/contact" }}
-        bgImage={LOCATION_HERO_IMAGES[slug] ?? "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1600&auto=format&fit=crop&q=60"}
+        bgImage={LOCATION_HERO_IMAGES[slug] ?? "/photos/locations/location-default-hero.jpg"}
       />
 
       {/* Main content */}

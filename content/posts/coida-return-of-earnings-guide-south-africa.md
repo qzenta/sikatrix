@@ -11,7 +11,7 @@ tags:
   - employer compliance
   - workmen's compensation
   - payroll
-featuredImage: "https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=1200"
+featuredImage: "/photos/blog/hr-compliance-review.jpg"
 featuredImageAlt: "South African HR professional reviewing employer compliance documentation at a desk"
 author:
   name: "Daniel Amoah"
@@ -83,7 +83,7 @@ You can check your assigned class on your compensation fund registration certifi
 
 **Earnings caps:** The Compensation Fund imposes a maximum annual earnings ceiling per employee for ROE purposes. You declare actual earnings up to this ceiling. Earnings above the ceiling are excluded from your assessment calculation. As of recent assessments, this ceiling is updated annually.
 
-[img]https://images.pexels.com/photos/6863183/pexels-photo-6863183.jpeg?auto=compress&cs=tinysrgb&w=800|Accountant reviewing payroll records and compensation fund documents|The ROE is calculated from your payroll records — accurate bookkeeping is the foundation of a correct and defensible submission
+[img]/photos/blog/sars-tax-documents-review.jpg|Accountant reviewing payroll records and compensation fund documents|The ROE is calculated from your payroll records — accurate bookkeeping is the foundation of a correct and defensible submission
 
 ---
 

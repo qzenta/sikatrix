@@ -9,7 +9,7 @@ tags:
   - compliance
   - tenders
   - eFiling
-featuredImage: "https://images.pexels.com/photos/5312454/pexels-photo-5312454.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+featuredImage: "/photos/blog/tax-clearance-documents.jpg"
 featuredImageAlt: "South African professional reviewing compliance documents at a desk"
 author:
   name: "Daniel Amoah"
@@ -56,7 +56,7 @@ The most common requirements:
 - **Commercial property deals** — conveyancers request TCS confirmation on large transactions
 - **Private sector onboarding** — many larger corporates include tax compliance as a supplier requirement
 
-[img]https://images.pexels.com/photos/4559704/pexels-photo-4559704.jpeg?auto=compress&cs=tinysrgb&w=800&q=80|Black South African male professional reviewing tax clearance status on eFiling|The TCS PIN is verified in real time — compliance is checked at the moment of verification, not when the PIN was generated
+[img]/photos/blog/sars-penalty-review.jpg|Black South African male professional reviewing tax clearance status on eFiling|The TCS PIN is verified in real time — compliance is checked at the moment of verification, not when the PIN was generated
 
 ## How to Apply on SARS eFiling
 
