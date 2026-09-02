@@ -14,13 +14,33 @@
  *                              OR urn:li:person:XXXXXXXX     (personal profile)
  */
 
-import { readFileSync } from "fs";
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from "fs";
 import { resolve, dirname } from "path";
 import { fileURLToPath } from "url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
 const SITE_URL = "https://www.sikatrix.com";
+const POSTED_LOG_PATH = resolve(ROOT, "data", "linkedin-posted.json");
+
+function logPostedArticle(slug, postId) {
+  let log = [];
+  if (existsSync(POSTED_LOG_PATH)) {
+    try {
+      log = JSON.parse(readFileSync(POSTED_LOG_PATH, "utf8"));
+    } catch {
+      log = [];
+    }
+  }
+  log = log.filter((entry) => entry.slug !== slug);
+  log.push({
+    slug,
+    datePosted: new Date().toISOString().slice(0, 10),
+    postId,
+  });
+  mkdirSync(dirname(POSTED_LOG_PATH), { recursive: true });
+  writeFileSync(POSTED_LOG_PATH, JSON.stringify(log, null, 2) + "\n", "utf8");
+}
 
 // ── Load .env.local ───────────────────────────────────────────────────────────
 try {
@@ -68,10 +88,11 @@ try {
 }
 
 function parseFrontmatter(src) {
-  const match = src.match(/^---\n([\s\S]*?)\n---/);
+  const match = src.match(/^---\r?\n([\s\S]*?)\r?\n---/);
   if (!match) return {};
   const fm = {};
-  for (const line of match[1].split("\n")) {
+  for (const line of match[1].split(/\r?\n/)) {
+    if (/^\s/.test(line)) continue; // skip nested/indented YAML keys (e.g. author.title)
     const colonIdx = line.indexOf(":");
     if (colonIdx === -1) continue;
     const key = line.slice(0, colonIdx).trim();
@@ -146,6 +167,8 @@ if (res.ok || res.status === 201) {
   console.log(`    LinkedIn post ID: ${location}`);
   console.log("\n── Post copy preview ────────────────────────────────");
   console.log(commentary);
+  logPostedArticle(slug, location);
+  console.log(`\n📒  Logged to data/linkedin-posted.json`);
 } else {
   const body = await res.text();
   console.error(`❌  LinkedIn API error ${res.status}:`);
