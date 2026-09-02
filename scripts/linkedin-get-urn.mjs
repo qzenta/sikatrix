@@ -34,7 +34,7 @@ if (!token) {
 
 const headers = {
   Authorization: `Bearer ${token}`,
-  "LinkedIn-Version": "202501",
+  "LinkedIn-Version": "202607",
   "X-Restli-Protocol-Version": "2.0.0",
 };
 
