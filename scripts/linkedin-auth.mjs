@@ -45,16 +45,16 @@ if (!CLIENT_ID || !CLIENT_SECRET) {
 }
 
 // ── Build the authorization URL ───────────────────────────────────────────────
-// Requires the "Share on LinkedIn" (w_member_social) and, for posting as the
-// Sikatrix company page, "Community Management API" (w_organization_social,
-// rw_organization_admin) products to be approved for this app in the
-// LinkedIn Developer Portal — otherwise LinkedIn will reject these scopes.
+// Only "Share on LinkedIn" (w_member_social) is an approved product for this
+// app. w_organization_social/rw_organization_admin require the Community
+// Management API, which has not been requested/approved — add those scopes
+// back once that product is approved in the LinkedIn Developer Portal.
 const authUrl =
   `https://www.linkedin.com/oauth/v2/authorization` +
   `?response_type=code` +
   `&client_id=${CLIENT_ID}` +
   `&redirect_uri=${encodeURIComponent(REDIRECT_URI)}` +
-  `&scope=openid%20profile%20email%20w_member_social%20w_organization_social%20rw_organization_admin`;
+  `&scope=openid%20profile%20email%20w_member_social`;
 
 console.log("\n── LinkedIn OAuth Setup ─────────────────────────────────────────────────────");
 console.log("Step 1: Open this URL in your browser and authorize the app:\n");
