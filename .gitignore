@@ -33,3 +33,8 @@ next-env.d.ts
 
 .vercel
 .env*.local
+
+# Playwright session state - holds live LinkedIn login cookies, never commit
+.playwright-*.json
+playwright-report/
+test-results/
