@@ -1,39 +1,33 @@
 # NEXT_ACTIONS.md
 
 [HUMAN ACTION]
-Review `CONTENT_QA.md` and decide how to resolve the 4 material findings
-(automatic-registration framed as future not present fact; R120,000
-voluntary threshold missing; 1 April 2026 effective date missing; "21
-days" vs "21 business days"). Options are broadly: re-record/re-edit the
-episode, or accept some findings as acceptable simplification for audio —
-that judgement call belongs to Daniel.
+Regenerate the podcast audio to address the Content QA findings in
+`CONTENT_QA.md` (automatic-registration framed as future not present
+fact; R120,000 voluntary threshold missing; 1 April 2026 effective date
+missing; "21 days" vs "21 business days"). Hand the resulting file back.
 
 [BLOCKED — pending the above]
-Content QA sign-off. Publication-readiness cannot proceed until this is
-resolved (CC handoff Section 10 stop condition).
+Fresh technical audio QA (CC handoff Section 8) on the regenerated file.
+Run in full, independently of the original master's results — do not
+assume it's carried over clean.
 
-[HUMAN ACTION]
-Perform editorial/human listening QA of `audio/master/The_R2_podcast.m4a`
-— separate from, and not satisfied by, the automated Content QA above.
+[BLOCKED — pending the above]
+Fresh content QA (CC handoff Section 10) on the regenerated file, against
+the same two confirmed source articles. Treat as a new, unverified file —
+do not diff against the old findings and assume only those specific
+points were fixed; re-check the full checklist (factual/numerical
+consistency, SARS terminology, dates, omissions, hallucinations).
 
-[HUMAN ACTION]
-Confirm whether suitable podcast artwork already exists in Sikatrix brand
-assets, or approve creating new artwork.
+[BLOCKED — pending both QA passes above]
+Content QA sign-off / publication-readiness decision.
 
-[HUMAN ACTION]
-Review branch `media-001-podcast-activation` and decide whether to merge
-the governance bootstrap into `master`.
+[ON HOLD — do not action until Content QA passes]
+Branch `media-001-podcast-activation`: no merge to `master`.
 
-[BLOCKED — pending Content QA sign-off]
-Prepare podcast/episode identity (title, description, keywords, CTA,
-source-article links) — CC handoff Section 11.
+[ON HOLD — do not action until Content QA passes]
+Any distribution prep: Spotify/Apple/YouTube metadata, RSS, website
+episode page, artwork, podcast identity.
 
-[BLOCKED — pending Content QA sign-off]
-Prepare Spotify/Apple/YouTube distribution metadata.
-
-[READY — once artwork decision is made]
-Prepare or source podcast artwork per the human decision above.
-
-[READY — once site architecture decision is confirmed by Daniel]
-Design and build the `/resources/podcast` episode-page structure proposed
-in `ARCHITECTURE.md`, mirroring `content/posts/` + `lib/blog.ts`.
+[HUMAN ACTION — independent of the above, can happen any time]
+Perform editorial/human listening QA of whichever file becomes the final
+master — separate from, and not satisfied by, either automated QA pass.

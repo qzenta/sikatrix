@@ -57,10 +57,13 @@ See `NEXT_ACTIONS.md` — all items marked `[HUMAN ACTION]`.
 
 ## Next recommended action
 
-Daniel reviews `CONTENT_QA.md` and decides how to resolve the findings
-(re-record/edit vs. accept as editorial simplification). No further
-metadata, artwork, or distribution work should proceed until that
-decision is made.
+Daniel is regenerating the podcast audio to address the Content QA
+findings. When the new file arrives: run a full, independent technical
+audio QA (Section 8) and content QA (Section 10) pass against it — same
+two confirmed source articles — as if it were a brand-new, unverified
+master. Do not assume the regeneration fixed only the specific findings
+listed and skip re-checking the rest. Branch stays unmerged and no
+distribution prep happens until that fresh pass is clean.
 
 ## Prohibited actions
 

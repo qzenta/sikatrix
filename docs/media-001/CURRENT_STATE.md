@@ -4,10 +4,19 @@ _Last updated: 12 Sep 2026 — Content QA complete; STOP condition triggered._
 
 ## Where are we?
 
-Governance bootstrap complete. Technical audio QA: PASS. Source articles
-confirmed by Daniel. Content QA (CC handoff Section 10) complete —
-**result: material discrepancies found. Publication is blocked by a stop
-condition, not just a pending task.** See `CONTENT_QA.md` for full findings.
+Governance bootstrap complete. Technical audio QA: PASS (on the original
+master). Source articles confirmed. Content QA (CC handoff Section 10)
+found material discrepancies (see `CONTENT_QA.md`). **Daniel has decided
+to regenerate the podcast audio rather than accept the findings as
+editorial simplification.** Branch `media-001-podcast-activation` is
+held as-is — no merge, no distribution prep — pending the new audio file.
+
+**When the regenerated file arrives: do not assume the fix is clean.**
+Run a full fresh pass — technical audio QA (Section 8) AND content QA
+(Section 10) against the same two source articles — exactly as if it
+were a new, unverified master. Do not diff against the old findings and
+assume only those specific issues were addressed; treat it as a new file
+end to end.
 
 ## What has been completed?
 
@@ -69,24 +78,31 @@ See `DECISIONS.md`.
 
 ## What requires human action?
 
-- **Decide how to resolve the Content QA findings** — re-record/edit the
-  audio to fix findings #1–4, or make an editorial judgement call that
-  some are acceptable for the format (that call belongs to Daniel, not
-  this worker).
-- Editorial/human listening QA of the master (still separately pending —
-  technical QA and this automated Content QA don't substitute for it).
+- **Produce and hand back the regenerated podcast audio.** Decision on
+  the Content QA findings is made (regenerate, not accept as-is) — this
+  is now the blocking dependency for everything else.
+- Editorial/human listening QA of whichever file ends up as the final
+  master (still separately pending — technical + content QA don't
+  substitute for it).
 - Confirm/decide podcast artwork.
-- Review and merge (or reject) branch `media-001-podcast-activation`.
+- Review and merge (or reject) branch `media-001-podcast-activation` —
+  hold until the regenerated audio has passed a fresh QA pass.
 - Every account-boundary action in Sections 13–16 (Spotify, Apple,
   YouTube) when reached — still further downstream than the above.
 
 ## What must NOT be done?
 
-- Do not overwrite or destructively modify `audio/master/The_R2_podcast.m4a`.
-- **Do not publish this episode in its current form** — Content QA failed.
+- Do not overwrite or destructively modify `audio/master/The_R2_podcast.m4a`
+  (the original master stays as evidence even after a regenerated file
+  replaces it as the working master — see AGENTS.md's immutable master rule).
+- **Do not publish either version until the regenerated file has passed
+  its own fresh technical + content QA** — do not assume the regeneration
+  fixed the issues without re-running both.
+- Do not merge `media-001-podcast-activation` into `master` while this is
+  pending.
+- Do not touch distribution prep (Spotify/RSS/Apple/YouTube/website/
+  metadata) until Content QA passes on the regenerated file.
 - Do not create external accounts, accept terms, or enter payment info.
 - Do not treat the automated transcript as a substitute for human
   editorial listening QA.
-- Do not merge `media-001-podcast-activation` into `master` without human
-  review.
 - Do not expand scope beyond MEDIA-001 (CC handoff Section 32).
