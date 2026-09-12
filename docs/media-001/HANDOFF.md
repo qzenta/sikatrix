@@ -12,6 +12,11 @@ Commit: see `git log -1` on this branch — bootstrap commit, message
 
 ## Files changed
 
+- `content/podcast/vat-thresholds-2026-what-changed.md` (new — episode content)
+- `lib/podcast.ts` (new — dedicated loader, doesn't touch `lib/blog.ts`)
+- `components/podcast/PodcastPlayer.tsx` (new)
+- `app/resources/podcast/page.tsx` (new — index)
+- `app/resources/podcast/[slug]/page.tsx` (new — episode page, the Section 18 deliverable)
 - `docs/media-001/PODCAST_IDENTITY.md` (Section 11 — show name/email now confirmed)
 - `docs/media-001/ARTWORK_ASSESSMENT.md` (Section 12 — candidate produced,
   rejected as wrong brand style, removed; directory-art resolution now
@@ -42,13 +47,22 @@ No other files touched. No application code, no dependencies, no config.
 
 ## Tests run / results
 
-No automated test suite exists for this repo relevant to this change (it's
-documentation + a static asset addition). Verified instead by:
-- `git status` before and after — confirmed no other files were touched.
-- `ffprobe`/`ffmpeg` technical audio QA on the master file — PASS, full
-  results in `AUDIO_QA.md`.
-- Confirmed `audio/master/The_R2_podcast.m4a` is byte-identical to the
-  source file supplied (straight copy, not re-encoded).
+No automated test suite exists for this repo. Verified instead by:
+- `git status` before and after each pass — confirmed no unintended files
+  touched (the episode-page build added only new files, no existing file
+  was modified).
+- `ffprobe`/`ffmpeg` technical audio QA on both master files — PASS, full
+  results in `AUDIO_QA.md`/`AUDIO_QA_V2.md`.
+- `npx tsc --noEmit` — clean, no type errors from the new podcast code.
+- Local dev server (`npm run dev` via `.claude/launch.json`'s
+  `sikatrix-dev` config): navigated `/resources/podcast` and
+  `/resources/podcast/vat-thresholds-2026-what-changed`, screenshotted
+  every section, clicked through index→episode and episode→source-article
+  links, checked browser console (no errors attributable to this change).
+  Found and fixed one real bug (see DECISIONS.md — markdown list items
+  weren't getting inline-link-parsed by the shared `ArticleContent`
+  component; fixed by removing the redundant markdown section rather than
+  touching shared code).
 
 ## Unresolved issues
 
@@ -65,18 +79,14 @@ See `NEXT_ACTIONS.md` — all items marked `[HUMAN ACTION]`.
 
 ## Next recommended action
 
-Identity finalized. Website episode image resolved (existing 800×800
-bevel-style mark, used as-is — the website has no resolution minimum).
-Podcast-directory cover art deliberately deferred to actual-submission
-time (a decision, not a gap — see `DECISIONS.md`). **Daniel has confirmed
-editorial/human listening QA of v2 is done** (verbal, relayed in chat) —
-logged in `DECISIONS.md` as his assertion, not independently verified by
-this worker. This resolves the QA gate, but **does not by itself
-authorize any Spotify/Apple/YouTube account or submission action** —
-per Section 25, passing one gate never implies the next. **Explicitly
-not touched: Spotify/Apple/YouTube account-level actions or any
-submission/publish step** — cross that boundary only on a fresh,
-explicit instruction to do so.
+The `/resources/podcast` episode page is now real, working, locally
+verified code on this branch — not merged, not deployed. Daniel reviews
+it, then decides on branch merge. **Section 20 (repurposing plan) is
+explicitly not started** — sequenced after the episode page and audio
+are actually live, not before. **Explicitly not touched: Spotify/Apple/
+YouTube account-level actions or any submission/publish step** — cross
+that boundary only on a fresh, explicit instruction to do so. Podcast-
+directory artwork stays deferred per the earlier decision.
 
 ## Prohibited actions
 

@@ -24,22 +24,20 @@ payroll, B-BBEE, etc.) — see `content/posts/` for the full list.
 No podcast route, no audio player component, and no `AGENTS.md` or
 governance docs existed in this repo before this MEDIA-001 bootstrap.
 
-## Proposed podcast integration (not yet built)
-
-Preferred: extend the existing Resources architecture rather than a
-standalone microsite, e.g.:
+## Podcast integration — built (12 Sep 2026)
 
 ```
 /resources/podcast              — index of episodes
 /resources/podcast/[slug]        — individual episode page
 ```
 
-mirroring the existing `content/posts/` + `lib/blog.ts` pattern (a parallel
-`content/podcast/*.md` collection with its own small loader, or an
-extension of `blog-config.ts` if a unified content type is preferred).
-This is a design decision for the next implementation pass — not built in
-this bootstrap, per AGENTS.md scope discipline (governance file creation +
-audio master intake only).
+Implemented exactly as proposed: `content/podcast/*.md` (parallel
+collection to `content/posts/`, not merged into it), `lib/podcast.ts` (a
+small dedicated loader, `lib/blog.ts` untouched), and
+`components/podcast/PodcastPlayer.tsx`. See `HANDOFF.md` for the full
+file list and `CURRENT_STATE.md` for verification detail. Marked
+`noindex` with an internal "not published" banner — code exists on the
+isolated branch, not merged or deployed.
 
 ## Future media engine (documented only — not built in MEDIA-001)
 

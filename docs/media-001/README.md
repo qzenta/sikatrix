@@ -21,7 +21,9 @@ See:
 - `ARTWORK_ASSESSMENT.md` — brand asset review; first candidate turned out
   to be the wrong brand style and was removed; blocked again pending
   Daniel's direction (Section 12)
-- `EPISODE_PAGE_DRAFT.md` — website episode page content draft (Section 18)
+- `EPISODE_PAGE_DRAFT.md` — original content draft (Section 18); **now
+  built** as real code — see `app/resources/podcast/`, `lib/podcast.ts`,
+  `content/podcast/`, `components/podcast/`
 - `CC_HANDOFF_MEDIA-001.md` — the original full spec (12 Sep 2026)
 
 Master audio: `audio/master/The_R2_podcast.m4a` (v1, failed Content QA,

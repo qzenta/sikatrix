@@ -1,57 +1,77 @@
 # CURRENT_STATE.md
 
-_Last updated: 12 Sep 2026 — artwork deferred by decision (not blocked);
-website image resolved; listening QA recorded as confirmed by Daniel._
+_Last updated: 12 Sep 2026 — episode page built and locally verified._
 
 ## Where are we?
 
-v2 audio passed technical + content QA, and **Daniel has confirmed
-(verbally, relayed in chat) that he has completed editorial/human
-listening QA of v2.** Podcast identity is finalized. Website episode-page
-content is drafted and now has a real image (the existing bevel-style
-Sikatrix mark, used at its native 800×800 on the website, which has no
-resolution minimum). **Podcast-directory cover art (Spotify/Apple — the
-1400×1400 minimum) is deliberately deferred**, not blocked — a decision,
-not a gap, per `DECISIONS.md`. Distribution boundary (Spotify/Apple/
-YouTube accounts, any submission/publish step) has still not been
-touched and is not authorized by any of the above.
+The `/resources/podcast` episode page is now real, working code on branch
+`media-001-podcast-activation` — built, locally verified (dev server,
+screenshots, `tsc --noEmit`), one rendering bug found and fixed. **Not
+merged to master, not deployed, not published.** Marked with an internal
+"not published" banner and `noindex` as a safeguard. Repurposing plan
+(Section 20) has **not** been started, per instruction — that's explicitly
+gated on the episode page and audio actually being live, not before.
+Distribution boundary (Spotify/Apple/YouTube accounts, submission,
+publish) still untouched.
 
 ## What has been completed?
 
-- v1/v2 audio QA, content QA — v1 failed, v2 passed (prior history).
-- Podcast identity finalized (`PODCAST_IDENTITY.md`).
-- **Editorial/human listening QA of v2: confirmed by Daniel** (verbal,
-  relayed in this session — see `DECISIONS.md` for exactly how this is
-  logged and what it does/doesn't authorize).
-- Website episode-page content drafted and finalized on the image:
-  `sikatrix_profile_picture_800x800.png` copied to
-  `public/photos/podcast/vat-thresholds-2026-what-changed-cover.png`,
-  used as-is (`EPISODE_PAGE_DRAFT.md`).
-- Podcast-directory artwork: **deferred by explicit decision** (option 3
-  from `ARTWORK_ASSESSMENT.md`) — revisit before actual Spotify/Apple
-  submission, not now.
+- v1/v2 audio QA, content QA (v2 passed), podcast identity, website image
+  resolution, artwork deferral decision, editorial listening QA confirmed
+  by Daniel — all prior history, see git log / DECISIONS.md.
+- **`/resources/podcast` route built:**
+  - `content/podcast/vat-thresholds-2026-what-changed.md` — episode
+    content, following the `content/posts/` frontmatter pattern.
+  - `lib/podcast.ts` — small dedicated loader (parallel to `lib/blog.ts`,
+    not modifying it), `getAllEpisodes`/`getEpisodeBySlug`.
+  - `components/podcast/PodcastPlayer.tsx` — real audio player component
+    with a graceful "hosting pending" fallback state (no audio file is
+    wired in yet — that's still a placeholder, deliberately).
+  - `app/resources/podcast/page.tsx` — index/listing page.
+  - `app/resources/podcast/[slug]/page.tsx` — the episode page itself:
+    hero, player, "Listen on" platform placeholders, episode body,
+    source-article cross-links (pulled from real `Post` objects via
+    `lib/blog`, not hardcoded), related Sikatrix tools, related services,
+    CTA, author/publisher, PodcastEpisode + Breadcrumb schema.org JSON-LD,
+    SEO metadata, canonical URL.
+  - Both pages carry an "Internal preview — not published (MEDIA-001)"
+    banner and `robots: { index: false, follow: false }` on the episode
+    page metadata.
+- **Verified locally:** ran the dev server, navigated both pages,
+  screenshotted every section, clicked through index→episode and
+  episode→source-article links, checked console for errors (none
+  attributable to this change — only pre-existing site-wide Clarity/CSP
+  warnings also present on existing pages), ran `tsc --noEmit` clean.
+- **Found and fixed a real bug during verification:** the shared
+  `ArticleContent` component doesn't parse inline markdown links inside
+  bullet lists, so a `## Source Articles` list in the episode markdown
+  rendered as raw unparsed text. Removed that redundant section from the
+  markdown body (the properly-styled, working "Source articles" cards
+  section built directly into the page already covers this) rather than
+  touching the shared component used by all 36 existing blog posts.
+- `git status` confirms only new files added — no existing files
+  modified.
 
 ## What is currently being worked on?
 
-Nothing — stopping here. Distribution boundary still not crossed.
+Nothing — reporting this back for review, as instructed.
 
 ## What remains?
 
-- Podcast-directory cover art, when actual submission approaches
-  (deferred, not forgotten).
-- Building the actual `/resources/podcast` route/template in code (the
-  episode-page content is drafted; the route itself isn't built).
-- Review of branch `media-001-podcast-activation` for merge.
-- Every Spotify/Apple/YouTube account-boundary action — not started, and
-  listening QA being confirmed does not by itself authorize starting
-  them (Section 25: passing one gate never implies the next).
+- Daniel's review of the built page (locally, or via `npm run dev` on
+  this branch).
+- Repurposing plan (Section 20) — explicitly **not started**, per
+  instruction: comes after the episode page and audio are actually live.
+- Podcast-directory artwork — still deferred (see prior decision).
+- Every Spotify/Apple/YouTube account-boundary action — not started.
+- Branch review/merge decision.
 
 ## What is blocked?
 
-Nothing on the QA front anymore — technical, content, and editorial
-listening QA have all now passed/been confirmed for v2. What remains is
-account-level work that's explicitly out of scope until Daniel gives a
-fresh, specific instruction to cross that boundary.
+Nothing technically — QA, identity, and now the episode page are all
+done. What's left is account-level work that's out of scope until a
+fresh, explicit instruction to cross that boundary, and the repurposing
+plan which is explicitly sequenced after go-live.
 
 ## What decisions have been made?
 
@@ -59,21 +79,23 @@ See `DECISIONS.md`.
 
 ## What requires human action?
 
-- Explicit go-ahead (separate from listening QA) before any
-  Spotify/Apple/YouTube account or submission work starts.
+- Review the built episode page.
+- Decide when/whether to build the actual RSS-hosted audio file wiring
+  (the player component is ready, just has no `audioFile` value yet).
 - Review and merge (or reject) branch `media-001-podcast-activation`.
-- Revisit podcast-directory artwork when actual submission is imminent.
+- When ready: explicit instruction to start Spotify/Apple/YouTube work.
+- When the episode page + audio are live: green light to start the
+  Section 20 repurposing plan.
 
 ## What must NOT be done?
 
+- Do not start the Section 20 repurposing plan yet.
 - Do not proceed to any Spotify/Apple/YouTube account creation,
-  authentication, or submission step without a fresh, explicit
-  instruction — listening QA being confirmed is not that instruction.
-- Do not publish anything, anywhere.
+  authentication, or submission step.
+- Do not publish anything, anywhere — the `noindex`/preview-banner
+  safeguards on the new pages are not a substitute for actual
+  authorization.
 - Do not overwrite or destructively modify either master audio file.
-- Do not upscale the 800×800 asset for podcast-directory use — the
-  deferred decision means revisiting with real options at submission
-  time, not upscaling to force it through now.
 - Do not merge `media-001-podcast-activation` into `master` without human
   review.
 - Do not expand scope beyond MEDIA-001 (CC handoff Section 32).

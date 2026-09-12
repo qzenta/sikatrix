@@ -45,8 +45,11 @@
 
 ### Website
 - [x] Sikatrix location identified (proposed: `/resources/podcast`, see ARCHITECTURE.md)
-- [x] episode page prepared — content draft (`EPISODE_PAGE_DRAFT.md`);
-      route/template not yet built in code
+- [x] episode page prepared — **built and locally verified**:
+      `/resources/podcast` (index) and `/resources/podcast/[slug]`
+      (episode), following the `content/posts/` + `lib/blog.ts` pattern.
+      Marked `noindex`/"Internal preview" banner since publication isn't
+      authorized. Not merged to master, not deployed.
 - [x] source links included
 - [x] SEO metadata prepared
 - [x] CTA included
