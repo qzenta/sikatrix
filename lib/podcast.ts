@@ -20,10 +20,14 @@ export interface PodcastEpisode {
   episodeNumber: number;
   duration: string;
   audioFile: string;
+  audioFileSize: number;
+  audioFileType: string;
+  guid: string;
   featuredImage: string;
   featuredImageAlt: string;
   author: { name: string; title: string };
   publishDate: string | null;
+  rssGeneratedDate: string | null;
   status: "draft" | "published";
   sourceArticles: string[];
   relatedServices: string[];
@@ -56,6 +60,9 @@ function parseEpisode(slug: string): PodcastEpisode | null {
     episodeNumber: data.episodeNumber ?? 1,
     duration: data.duration ?? "",
     audioFile: data.audioFile ?? "",
+    audioFileSize: data.audioFileSize ?? 0,
+    audioFileType: data.audioFileType ?? "audio/mp4",
+    guid: data.guid ?? slug,
     featuredImage: data.featuredImage ?? "",
     featuredImageAlt: data.featuredImageAlt ?? "",
     author: data.author ?? {
@@ -63,6 +70,7 @@ function parseEpisode(slug: string): PodcastEpisode | null {
       title: "SAIPA Professional Accountant (SA)",
     },
     publishDate: data.publishDate ?? null,
+    rssGeneratedDate: data.rssGeneratedDate ?? null,
     status: data.status ?? "draft",
     sourceArticles: data.sourceArticles ?? [],
     relatedServices: data.relatedServices ?? [],

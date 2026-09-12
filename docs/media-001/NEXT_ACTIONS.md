@@ -1,29 +1,29 @@
 # NEXT_ACTIONS.md
 
 [COMPLETE]
-Editorial/human listening QA of v2 — confirmed by Daniel.
+PR #20 merged into `master` on Daniel's explicit authorization. Verified
+live in production at www.sikatrix.com.
 
 [COMPLETE]
-`/resources/podcast` episode page built, locally verified, one rendering
-bug found and fixed. Not merged, not deployed.
+Audio self-hosted, player wired to a real URL, RSS feed built and
+validated (`app/resources/podcast/feed.xml`). On branch
+`media-001-audio-rss`, not yet merged.
 
 [HUMAN ACTION]
-Review the built episode page (`npm run dev` on branch
-`media-001-podcast-activation`, visit `/resources/podcast` and
-`/resources/podcast/vat-thresholds-2026-what-changed`).
-
-[HUMAN ACTION]
-Review branch `media-001-podcast-activation` and decide whether to merge.
-
-[NOT STARTED — explicitly sequenced after go-live]
-Section 20 repurposing plan — do not start until the episode page and
-audio are actually live.
+Review `media-001-audio-rss` (open a PR for preview, or run locally) and
+authorize merge.
 
 [DEFERRED — not now, revisit before actual submission]
 Podcast-directory cover art (1400×1400 minimum).
 
-[HUMAN ACTION — when ready, requires a fresh explicit instruction]
-Cross the distribution boundary: Spotify account setup, Apple Podcasts
-submission prep, YouTube RSS ingestion, and deciding where the audio
-file itself gets hosted (the player component is built and ready to
-receive a real `audioFile` URL once that's decided).
+[HUMAN ACTION — Daniel's step alone, blocked on artwork]
+Spotify account setup and submission.
+
+[HUMAN ACTION — Daniel's step alone, blocked on artwork]
+Apple Podcasts submission.
+
+[HUMAN ACTION — Daniel's step alone, blocked on artwork]
+YouTube RSS ingestion / episode upload.
+
+[NOT STARTED — pending explicit confirmation of go-live]
+Section 20 repurposing plan.
