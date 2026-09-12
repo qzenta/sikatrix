@@ -1,39 +1,40 @@
 # NEXT_ACTIONS.md
 
 [HUMAN ACTION]
+Review `PODCAST_IDENTITY.md` — approve or edit the show name (placeholder:
+"Sikatrix Resources: Audio Briefings") and confirm the RSS owner email
+(placeholder: `info@sikatrix.com`).
+
+[HUMAN ACTION]
+Review `ARTWORK_ASSESSMENT.md` and choose one of the 3 proposed options
+(upscale existing "S" mark, recreate from a source file if one exists, or
+commission new artwork) — or reject all three and direct otherwise. No
+existing asset meets podcast cover-art requirements as-is.
+
+[HUMAN ACTION]
+Review `EPISODE_PAGE_DRAFT.md` copy and metadata.
+
+[HUMAN ACTION]
 Perform editorial/human listening QA of `audio/master/The_R2_podcast_v2.m4a`
-— separate from, and not satisfied by, the automated technical + content
-QA that just passed.
+— still the actual gate on anything publication-track, independent of
+everything drafted in this pass.
 
 [HUMAN ACTION]
-Confirm v2 as the adopted working master. (v1 remains in the repo as a
-historical record but failed Content QA and should not be used going
-forward.)
+Review branch `media-001-podcast-activation` and decide whether to merge.
 
-[HUMAN ACTION]
-Confirm whether suitable podcast artwork already exists in Sikatrix brand
-assets, or approve creating new artwork.
+[BLOCKED — explicitly out of scope until listening QA + approval]
+Spotify account setup and submission prep.
 
-[HUMAN ACTION]
-Review branch `media-001-podcast-activation` and decide whether to merge
-the governance bootstrap + QA history into `master`.
+[BLOCKED — explicitly out of scope until listening QA + approval]
+Apple Podcasts submission prep.
 
-[READY]
-Prepare podcast/episode identity (title, description, keywords, CTA,
-source-article links) — CC handoff Section 11. Content QA no longer
-blocks this.
+[BLOCKED — explicitly out of scope until listening QA + approval]
+YouTube RSS ingestion / episode upload.
 
-[READY — once artwork decision is made]
-Prepare or source podcast artwork per the human decision above.
+[READY — once artwork option is chosen]
+Produce the actual artwork file per the chosen option.
 
-[READY — once site architecture decision is confirmed by Daniel]
-Design and build the `/resources/podcast` episode-page structure proposed
-in `ARCHITECTURE.md`, mirroring `content/posts/` + `lib/blog.ts`.
-
-[READY]
-Prepare Spotify/Apple/YouTube distribution metadata (does not require
-account access) once episode identity exists.
-
-[HUMAN ACTION — when reached]
-Every account-boundary action for Spotify/Apple/YouTube (account
-authentication, ownership, terms, actual publication).
+[READY — once Daniel confirms the route structure in ARCHITECTURE.md]
+Build the `/resources/podcast` route/template in code and wire in the
+`EPISODE_PAGE_DRAFT.md` content — this is an implementation task, not
+done in this pass (content-only).

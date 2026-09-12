@@ -27,10 +27,11 @@
       (`CONTENT_QA_V2.md`). v2 is the current candidate master.
 
 ### Metadata
-- [ ] show identity prepared
-- [ ] episode identity prepared
-- [ ] description prepared
-- [ ] artwork decision recorded
+- [x] show identity prepared (`PODCAST_IDENTITY.md` — 2 items flagged for Daniel's sign-off)
+- [x] episode identity prepared (`PODCAST_IDENTITY.md`)
+- [x] description prepared (`PODCAST_IDENTITY.md`, `EPISODE_PAGE_DRAFT.md`)
+- [x] artwork decision recorded — as a documented gap + 3 options for
+      Daniel to choose from (`ARTWORK_ASSESSMENT.md`); no asset exists yet
 
 ### Distribution
 - [ ] Spotify path prepared
@@ -41,10 +42,11 @@
 
 ### Website
 - [x] Sikatrix location identified (proposed: `/resources/podcast`, see ARCHITECTURE.md)
-- [ ] episode page prepared
-- [ ] source links included
-- [ ] SEO metadata prepared
-- [ ] CTA included
+- [x] episode page prepared — content draft (`EPISODE_PAGE_DRAFT.md`);
+      route/template not yet built in code
+- [x] source links included
+- [x] SEO metadata prepared
+- [x] CTA included
 
 ### Repurposing
 - [ ] derivative-content plan documented

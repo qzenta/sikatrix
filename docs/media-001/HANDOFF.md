@@ -12,6 +12,9 @@ Commit: see `git log -1` on this branch — bootstrap commit, message
 
 ## Files changed
 
+- `docs/media-001/PODCAST_IDENTITY.md` (new — Section 11)
+- `docs/media-001/ARTWORK_ASSESSMENT.md` (new — Section 12)
+- `docs/media-001/EPISODE_PAGE_DRAFT.md` (new — Section 18, content only)
 - `AGENTS.md` (new, repo root)
 - `docs/media-001/README.md` (new)
 - `docs/media-001/GOVERNANCE.md` (new)
@@ -54,12 +57,14 @@ See `NEXT_ACTIONS.md` — all items marked `[HUMAN ACTION]`.
 
 ## Next recommended action
 
-v2 passed a fresh, independent technical + content QA pass (see
-`AUDIO_QA_V2.md`, `CONTENT_QA_V2.md`) — cleared to proceed toward Section
-33 metadata/artwork/distribution prep. Still needed before any of that
-work is publication-track rather than draft: human editorial/listening
-QA of v2, artwork decision, and branch review/merge. Do not publish
-anything — Content QA passing is not a publication authorization.
+Identity, artwork assessment, and episode-page content are drafted for
+review (`PODCAST_IDENTITY.md`, `ARTWORK_ASSESSMENT.md`,
+`EPISODE_PAGE_DRAFT.md`). Daniel reviews these and separately performs
+editorial/human listening QA of v2 — the actual gate on anything
+publication-track. **Explicitly not touched: Spotify/Apple/YouTube
+account-level actions or any submission/publish step** — Daniel's
+instruction was to stop at the distribution boundary this time. Do not
+cross it without a fresh, explicit instruction to do so.
 
 ## Prohibited actions
 
