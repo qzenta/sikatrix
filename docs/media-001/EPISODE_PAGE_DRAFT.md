@@ -22,6 +22,8 @@ title: "VAT Thresholds Just Changed: What R2.3 Million (and R120,000) Means for 
 description: "SARS raised both VAT registration thresholds on 1 April 2026 and is already auto-registering businesses that cross them. Sikatrix breaks down what changed and how to get ahead of it."
 slug: "vat-thresholds-2026-what-changed"
 type: "podcast"
+featuredImage: "/photos/podcast/vat-thresholds-2026-what-changed-cover.png"
+featuredImageAlt: "Sikatrix brand mark"
 category: "VAT"
 tags: [VAT, SARS, SME, podcast, taxplanning]
 author:
@@ -96,7 +98,7 @@ metaTitle: "VAT Thresholds 2026: R2.3M Compulsory, R120K Voluntary | Sikatrix"
 metaDescription: "SARS raised the VAT registration thresholds on 1 April 2026. Listen to Sikatrix break down what R2.3 million compulsory and R120,000 voluntary registration means for your SME."
 ogTitle: "VAT Thresholds Just Changed: What It Means for Your SME | Sikatrix"
 ogDescription: "New 2026 VAT thresholds, explained — and why SARS is already auto-registering businesses that cross them."
-ogImage: "{{ podcast cover art — see ARTWORK_ASSESSMENT.md; first candidate was the wrong brand style and was removed, awaiting Daniel's direction on how to proceed }}"
+ogImage: "/photos/podcast/vat-thresholds-2026-what-changed-cover.png"  # sikatrix_profile_picture_800x800.png, used as-is per Daniel — website has no 1400px minimum, podcast-directory resolution deferred (see ARTWORK_ASSESSMENT.md)
 twitterCard: "summary_large_image"
 canonical: "https://www.sikatrix.com/resources/podcast/vat-thresholds-2026-what-changed"
 structuredData: "PodcastEpisode schema (schema.org) — episode name, description, datePublished (once set), duration (PT20M18S), associatedMedia pointing at the hosted audio file, partOfSeries referencing the show"
@@ -107,8 +109,13 @@ structuredData: "PodcastEpisode schema (schema.org) — episode name, descriptio
 - Route/template doesn't exist yet — this is content only (ARCHITECTURE.md).
 - `audioFile` path is a placeholder — depends on where the RSS-hosted
   audio ends up living.
-- `ogImage` unresolved — see `ARTWORK_ASSESSMENT.md`, artwork is blocked
-  again after the first candidate was found to be the wrong brand style.
+- `ogImage`/`featuredImage` resolved for the website: using the existing
+  `sikatrix_profile_picture_800x800.png` as-is (copied to
+  `public/photos/podcast/vat-thresholds-2026-what-changed-cover.png`),
+  since the website has no 1400px minimum. **Podcast-directory cover art
+  (Spotify/Apple, which do enforce that minimum) remains deferred** — see
+  `ARTWORK_ASSESSMENT.md` and `DECISIONS.md`; that's a separate asset to
+  resolve before actual submission, not this one.
 - `publishDate` intentionally null — publication is not authorized.
 - Platform links are placeholders — none of Spotify/Apple/YouTube
   submission has happened, per the distribution boundary this pass isn't

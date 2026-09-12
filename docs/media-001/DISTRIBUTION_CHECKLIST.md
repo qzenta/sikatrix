@@ -12,7 +12,8 @@
 - [x] v2 master added (`audio/master/The_R2_podcast_v2.m4a`), v1 not overwritten
 - [x] technical characteristics documented (`AUDIO_QA.md`, `AUDIO_QA_V2.md`)
 - [x] technical QA completed — PASS (both v1 and v2)
-- [x] editorial listening status explicitly recorded — still PENDING (human), v2
+- [x] editorial listening status explicitly recorded — CONFIRMED by
+      Daniel (verbal, relayed in chat) for v2
 
 ### Source
 - [x] exact two source articles identified (confirmed by Daniel)
@@ -30,11 +31,10 @@
 - [x] show identity prepared (`PODCAST_IDENTITY.md` — 2 items flagged for Daniel's sign-off)
 - [x] episode identity prepared (`PODCAST_IDENTITY.md`)
 - [x] description prepared (`PODCAST_IDENTITY.md`, `EPISODE_PAGE_DRAFT.md`)
-- [ ] artwork decision recorded — **BLOCKED again.** First candidate
-      (from a vector source) was the wrong brand style, per Daniel;
-      removed. No higher-res/vector source exists anywhere for the
-      correct bevel style. 3 options reported back in
-      `ARTWORK_ASSESSMENT.md`; none actioned, awaiting Daniel's direction
+- [x] artwork decision recorded — **deferred by decision, not blocked.**
+      Website image resolved (`sikatrix_profile_picture_800x800.png`, used
+      as-is). Podcast-directory cover art (1400×1400 min) deliberately
+      deferred to actual-submission time — see `DECISIONS.md`
 
 ### Distribution
 - [ ] Spotify path prepared

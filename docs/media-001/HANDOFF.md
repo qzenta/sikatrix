@@ -14,11 +14,15 @@ Commit: see `git log -1` on this branch — bootstrap commit, message
 
 - `docs/media-001/PODCAST_IDENTITY.md` (Section 11 — show name/email now confirmed)
 - `docs/media-001/ARTWORK_ASSESSMENT.md` (Section 12 — candidate produced,
-  then rejected as wrong brand style, then removed; blocked again with 3
-  reported options)
-- `docs/media-001/artwork/podcast-cover-2000x2000.png` — **added then
-  removed** in this same pass, see git log for both commits
-- `docs/media-001/EPISODE_PAGE_DRAFT.md` (Section 18, content only)
+  rejected as wrong brand style, removed; directory-art resolution now
+  deferred by decision, not blocked)
+- `docs/media-001/artwork/podcast-cover-2000x2000.png` — added then
+  removed in a prior commit; see git log
+- `public/photos/podcast/vat-thresholds-2026-what-changed-cover.png` (new
+  — website episode image, `sikatrix_profile_picture_800x800.png` used
+  as-is)
+- `docs/media-001/EPISODE_PAGE_DRAFT.md` (Section 18, content only; image
+  now resolved)
 - `AGENTS.md` (new, repo root)
 - `docs/media-001/README.md` (new)
 - `docs/media-001/GOVERNANCE.md` (new)
@@ -61,18 +65,18 @@ See `NEXT_ACTIONS.md` — all items marked `[HUMAN ACTION]`.
 
 ## Next recommended action
 
-Identity is finalized (show name "Sikatrix Resources", email
-`info@sikatrix.com`, both confirmed). **Artwork is blocked again**: the
-vector-sourced candidate was the wrong brand style (Daniel confirmed the
-real mark is embossed/beveled with a curved gold ribbon); it's been
-removed, and a further search found no higher-res/vector source of the
-correct style anywhere. `ARTWORK_ASSESSMENT.md` has 3 reported options
-awaiting Daniel's direction — do not upscale the 800×800 reference
-unilaterally, that instruction stands. Daniel separately performs
-editorial/human listening QA of v2 — the actual gate on anything
-publication-track regardless of artwork status. **Explicitly not
-touched: Spotify/Apple/YouTube account-level actions or any submission/
-publish step.**
+Identity finalized. Website episode image resolved (existing 800×800
+bevel-style mark, used as-is — the website has no resolution minimum).
+Podcast-directory cover art deliberately deferred to actual-submission
+time (a decision, not a gap — see `DECISIONS.md`). **Daniel has confirmed
+editorial/human listening QA of v2 is done** (verbal, relayed in chat) —
+logged in `DECISIONS.md` as his assertion, not independently verified by
+this worker. This resolves the QA gate, but **does not by itself
+authorize any Spotify/Apple/YouTube account or submission action** —
+per Section 25, passing one gate never implies the next. **Explicitly
+not touched: Spotify/Apple/YouTube account-level actions or any
+submission/publish step** — cross that boundary only on a fresh,
+explicit instruction to do so.
 
 ## Prohibited actions
 
