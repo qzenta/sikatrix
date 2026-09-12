@@ -47,6 +47,55 @@ as editable vector paths — a 3D bevel effect like this typically isn't
 representable as a flat SVG in the first place, which is consistent with
 no SVG of it existing.
 
+## Update (12 Sep 2026): AI-regenerated candidate, color-corrected
+
+Per Daniel's follow-up, an AI-regenerated version of the mark
+(`Gemini_Generated_Image_29l3es29l3es29l3.jpg`, 1024×1024) was compared
+pixel-by-pixel against `sikatrix_profile_picture_800x800.png`:
+
+- **Gold ribbon shape:** matches — both curl upward at each end by a
+  proportionally similar amount (Gemini 14.0% of ribbon width, reference
+  13.1%).
+- **Bevel highlight/shadow direction:** matches visually; the reference
+  has a finer diagonal striated texture the regeneration doesn't fully
+  reproduce (a secondary, not directional, difference).
+- **Color:** same family, not exact. Sampled (not eyeballed): navy
+  mode/mean `#203854`/`#223954` vs reference `#193555`/`#1C3553`; gold
+  mean `#D9AB30` vs reference `#E0B12B`. Both files are beveled renders,
+  so even the reference itself doesn't hit the flat `#172846`/`#E8B53C`
+  hex exactly.
+
+**Color correction applied:** a targeted additive RGB shift on just the
+navy-classified and gold-classified pixels (not a global filter), moving
+each region's mean to match the reference's sampled mean exactly while
+leaving every pixel's relative shading untouched — the bevel
+gradient/highlight structure is mathematically unchanged, only shifted
+as a whole. Verified numerically: corrected navy mean `#1B3552`
+(target `#1C3553`), corrected gold mean `#DFB12B` (target `#E0B12B`).
+
+**Composited candidate:** `artwork/podcast-cover-2000x2000-corrected.png`
+— 2000×2000, RGB, no alpha. Glyph centered, scaled to 62% canvas height,
+margins 19% top/bottom and 31% left/right (well inside Spotify/Apple's
+~10% safe zone). No show-name text baked in.
+
+**Background: white, not navy** — the corrected glyph is navy-on-white
+(that's what was color-verified against the reference); a navy letter on
+a navy background would be invisible. This was flagged to Daniel rather
+than guessed through, and Daniel confirmed white is the right choice for
+this specific use: podcast platforms display cover art independent of
+any site context, so the website's navy-background convention (used for
+the app icon/favicon treatment) doesn't carry over to a podcast-directory
+listing — see `DECISIONS.md`.
+
+## ADOPTED (12 Sep 2026)
+
+`artwork/podcast-cover-2000x2000-corrected.png` is the adopted podcast
+cover-art candidate: color-corrected against the reference, correctly
+sized (2000×2000, within the 1400–3000px range both Spotify and Apple
+require), safe margins verified. Ready to use for Spotify/Apple/YouTube
+submission whenever Daniel takes those steps — still his alone, per the
+standing account-boundary rule.
+
 ## Per the existing stop condition: not upscaling, reporting back
 
 Per Daniel's standing instruction: do not attempt to upscale the 800×800

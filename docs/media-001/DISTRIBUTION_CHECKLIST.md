@@ -31,10 +31,12 @@
 - [x] show identity prepared (`PODCAST_IDENTITY.md` — 2 items flagged for Daniel's sign-off)
 - [x] episode identity prepared (`PODCAST_IDENTITY.md`)
 - [x] description prepared (`PODCAST_IDENTITY.md`, `EPISODE_PAGE_DRAFT.md`)
-- [x] artwork decision recorded — **deferred by decision, not blocked.**
-      Website image resolved (`sikatrix_profile_picture_800x800.png`, used
-      as-is). Podcast-directory cover art (1400×1400 min) deliberately
-      deferred to actual-submission time — see `DECISIONS.md`
+- [x] artwork decision recorded — **RESOLVED.** Website image:
+      `sikatrix_profile_picture_800x800.png` used as-is. Podcast-directory
+      cover art: `artwork/podcast-cover-2000x2000-corrected.png` — AI
+      regeneration, color-corrected and verified against the reference,
+      2000×2000 (within the 1400–3000px requirement), safe margins
+      checked. Adopted — see `ARTWORK_ASSESSMENT.md`/`DECISIONS.md`
 
 ### Distribution
 - [ ] Spotify path prepared — Daniel's step alone, blocked on artwork

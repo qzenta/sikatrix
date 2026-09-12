@@ -1,84 +1,61 @@
 # CURRENT_STATE.md
 
-_Last updated: 12 Sep 2026 — PR #20 merged and live in production; audio
-hosting + RSS feed built on a new branch, awaiting review._
+_Last updated: 12 Sep 2026 — podcast-directory artwork resolved and
+adopted. Episode page, audio, and RSS feed all live in production._
 
 ## Where are we?
 
-**PR #20 merged into `master` on Daniel's explicit authorization.** The
-`/resources/podcast` episode page is genuinely live at
-`https://www.sikatrix.com/resources/podcast/vat-thresholds-2026-what-changed`
-— verified directly against the production domain, not just a preview
-deployment. It still carries the "Internal preview — not published"
-banner and `noindex`.
-
-Following that, built audio hosting + a real RSS feed on a new branch
-(`media-001-audio-rss`, off the updated `master`) per the plan: self-hosted
-the QA'd v2 audio file, wired a real URL into the player, and built +
-validated a full podcast RSS 2.0 feed. **Not yet merged** — held for
-review the same way every other production-facing change in this project
-has been.
+Everything preparatory is now done: episode page, self-hosted audio with
+verified Range-request support, a validated RSS feed, and podcast-
+directory cover art are all live/resolved. **Nothing left on this
+worker's side blocks Spotify/Apple/YouTube submission** — that remains
+exclusively Daniel's step, by standing instruction, not because of any
+remaining technical gap.
 
 ## What has been completed?
 
-- PR #20 merged (`234cff0`). Confirmed via Vercel API that the resulting
-  deployment was `target: production` and live-verified at
-  `www.sikatrix.com`.
-- **Audio hosting:** self-hosted, not a third-party podcast host account.
-  `audio/master/The_R2_podcast_v2.m4a` copied to
-  `public/podcast/vat-thresholds-2026-what-changed.m4a` (39,204,565
-  bytes). No new account created — see `DECISIONS.md` for why this
-  reading of "audio hosting decision" was chosen over creating an
-  account with Buzzsprout/Transistor/etc.
-- **Player wired:** `content/podcast/vat-thresholds-2026-what-changed.md`'s
-  `audioFile` now points at the real path; `PodcastPlayer` renders an
-  actual `<audio>` element instead of the "hosting pending" fallback.
-  Verified real playback locally (`audio.paused === false`,
-  `currentTime` advancing, `duration` = 1218.1s matching the QA'd
-  20:18 runtime, no error).
-- **RSS feed built and validated:** `app/resources/podcast/feed.xml/route.ts`
-  — RSS 2.0 + iTunes namespace, channel + item metadata, enclosure
-  (real URL/length/type), GUID, pubDate, itunes:duration/episode/image/
-  category/owner. Linked from the index page (`<link rel="alternate">`
-  equivalent via Next.js `alternates.types`, plus a visible "Subscribe
-  via RSS" link). Validated: `Content-Type: application/rss+xml;
-  charset=utf-8` confirmed, XML parses cleanly (`xml.dom.minidom`),
-  UTF-8 encoding verified byte-for-byte (an em-dash that looked
-  corrupted in one terminal print was confirmed as correct `E2 80 94`
-  UTF-8 bytes, not a real encoding bug).
-- **Found and fixed a second real bug:** the episode markdown rendered
-  literal `## Heading` text instead of parsed headings locally. Root
-  cause: this machine's `core.autocrlf=true` re-materializes the
-  LF-only git blob as CRLF on checkout, and the shared `ArticleContent`
-  component's blank-line splitter doesn't match `\r\n\r\n`. Confirmed via
-  `git show` that the actual committed/deployed content is LF-only and
-  unaffected — a local-checkout artifact, not a production bug. Fixed
-  by normalizing the local working file, not by touching git config or
-  the shared component.
-- `npx tsc --noEmit` clean.
+- PR #20 and PR #21 merged into `master` on Daniel's explicit
+  authorization each time. Verified live at `www.sikatrix.com`:
+  the episode page, the RSS feed
+  (`/resources/podcast/feed.xml`), and the self-hosted audio file with
+  correct `206 Partial Content`/`Accept-Ranges`/`Content-Range` behavior
+  (Vercel's static CDN, no custom code needed).
+- **Podcast-directory artwork resolved:**
+  - AI-regenerated candidate compared pixel-by-pixel against
+    `sikatrix_profile_picture_800x800.png` (shape, bevel direction,
+    sampled color) — gold ribbon curvature and bevel highlight direction
+    matched; color was same-family but ~20 RGB units off in both
+    directions.
+  - Color-corrected with a targeted additive RGB shift on just the
+    navy- and gold-classified pixels (not a global filter) — moves the
+    mean to the reference's exactly while leaving the bevel
+    gradient/highlight structure mathematically unchanged. Verified:
+    navy `#1B3552` (target `#1C3553`), gold `#DFB12B` (target `#E0B12B`).
+  - Composited on a **white** full-bleed background (not navy as first
+    asked) — flagged rather than silently substituted, since the
+    corrected glyph is navy-on-white and would vanish on a navy
+    background. Daniel confirmed white is correct here: podcast
+    platforms display cover art independent of site context, so the
+    website's navy-background convention doesn't apply.
+  - Result: `docs/media-001/artwork/podcast-cover-2000x2000-corrected.png`
+    — 2000×2000, RGB, no alpha, safe margins 19%/31% (well over the
+    ~10% Spotify/Apple minimum). **Adopted.**
 
 ## What is currently being worked on?
 
-Nothing — reporting this back for review before merging, matching the
-pattern used for every prior change in this project.
+Nothing — all worker-side prep for MEDIA-001 distribution is complete.
 
 ## What remains?
 
-- Daniel's review of the audio/RSS work (preview or local).
-- Explicit merge authorization for `media-001-audio-rss`.
-- Podcast-directory artwork — still deferred.
-- Every Spotify/Apple/YouTube account-boundary action — explicitly
-  Daniel's step alone, still blocked on artwork resolution per his
-  instruction.
-- Section 20 repurposing plan — still not started; now that the episode
-  page and RSS/audio are close to fully live, this is close to being
-  unblocked, but hasn't been explicitly greenlit yet.
+- Every Spotify/Apple/YouTube account-boundary action — Daniel's step
+  alone, per standing instruction, regardless of technical readiness.
+- Section 20 repurposing plan — still not started; needs explicit
+  confirmation that "live" has been reached before starting.
 
 ## What is blocked?
 
-Only the human-only items: Spotify/Apple/YouTube (Daniel's step,
-blocked on artwork), and Section 20 (sequenced after full go-live,
-pending explicit confirmation that "live" has been reached).
+Nothing technically. Spotify/Apple/YouTube remain untouched by this
+worker as a matter of standing instruction, not a remaining gap.
 
 ## What decisions have been made?
 
@@ -86,18 +63,16 @@ See `DECISIONS.md`.
 
 ## What requires human action?
 
-- Review and merge (or request changes to) `media-001-audio-rss`.
-- Resolve podcast-directory artwork when ready to actually submit.
-- Take the Spotify/Apple/YouTube steps personally, once artwork is
-  resolved — this worker will not touch them.
-- Confirm when "live" is reached, to greenlight Section 20.
+- Take the Spotify/Apple/YouTube steps personally, using the adopted
+  cover art and validated RSS feed.
+- Confirm when "live" (in the full distribution sense) is reached, to
+  greenlight Section 20.
 
 ## What must NOT be done?
 
 - Do not touch Spotify/Apple/YouTube accounts — Daniel's step alone.
 - Do not start the Section 20 repurposing plan without explicit
   confirmation that go-live is reached.
-- Do not merge `media-001-audio-rss` without human review, same as
-  every prior production-facing change in this project.
-- Do not overwrite or destructively modify either master audio file.
+- Do not overwrite or destructively modify either master audio file, or
+  either artwork file's git history.
 - Do not expand scope beyond MEDIA-001 (CC handoff Section 32).

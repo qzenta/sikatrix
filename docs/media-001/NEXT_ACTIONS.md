@@ -5,25 +5,24 @@ PR #20 merged into `master` on Daniel's explicit authorization. Verified
 live in production at www.sikatrix.com.
 
 [COMPLETE]
-Audio self-hosted, player wired to a real URL, RSS feed built and
-validated (`app/resources/podcast/feed.xml`). On branch
-`media-001-audio-rss`, not yet merged.
+PR #21 merged: audio self-hosted, player wired to a real URL, RSS feed
+built and validated (`www.sikatrix.com/resources/podcast/feed.xml`).
+Range request support verified on production. Live.
 
-[HUMAN ACTION]
-Review `media-001-audio-rss` (open a PR for preview, or run locally) and
-authorize merge.
+[COMPLETE]
+Podcast-directory cover art resolved:
+`artwork/podcast-cover-2000x2000-corrected.png` — AI-regenerated,
+color-corrected against the reference, verified, correctly sized.
+Adopted.
 
-[DEFERRED — not now, revisit before actual submission]
-Podcast-directory cover art (1400×1400 minimum).
+[HUMAN ACTION — Daniel's step alone]
+Spotify account setup and submission — artwork is no longer the blocker.
 
-[HUMAN ACTION — Daniel's step alone, blocked on artwork]
-Spotify account setup and submission.
+[HUMAN ACTION — Daniel's step alone]
+Apple Podcasts submission — artwork is no longer the blocker.
 
-[HUMAN ACTION — Daniel's step alone, blocked on artwork]
-Apple Podcasts submission.
-
-[HUMAN ACTION — Daniel's step alone, blocked on artwork]
-YouTube RSS ingestion / episode upload.
+[HUMAN ACTION — Daniel's step alone]
+YouTube RSS ingestion / episode upload — artwork is no longer the blocker.
 
 [NOT STARTED — pending explicit confirmation of go-live]
 Section 20 repurposing plan.
