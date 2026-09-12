@@ -1,77 +1,84 @@
 # CURRENT_STATE.md
 
-_Last updated: 12 Sep 2026 — episode page built and locally verified._
+_Last updated: 12 Sep 2026 — PR #20 merged and live in production; audio
+hosting + RSS feed built on a new branch, awaiting review._
 
 ## Where are we?
 
-The `/resources/podcast` episode page is now real, working code on branch
-`media-001-podcast-activation` — built, locally verified (dev server,
-screenshots, `tsc --noEmit`), one rendering bug found and fixed. **Not
-merged to master, not deployed, not published.** Marked with an internal
-"not published" banner and `noindex` as a safeguard. Repurposing plan
-(Section 20) has **not** been started, per instruction — that's explicitly
-gated on the episode page and audio actually being live, not before.
-Distribution boundary (Spotify/Apple/YouTube accounts, submission,
-publish) still untouched.
+**PR #20 merged into `master` on Daniel's explicit authorization.** The
+`/resources/podcast` episode page is genuinely live at
+`https://www.sikatrix.com/resources/podcast/vat-thresholds-2026-what-changed`
+— verified directly against the production domain, not just a preview
+deployment. It still carries the "Internal preview — not published"
+banner and `noindex`.
+
+Following that, built audio hosting + a real RSS feed on a new branch
+(`media-001-audio-rss`, off the updated `master`) per the plan: self-hosted
+the QA'd v2 audio file, wired a real URL into the player, and built +
+validated a full podcast RSS 2.0 feed. **Not yet merged** — held for
+review the same way every other production-facing change in this project
+has been.
 
 ## What has been completed?
 
-- v1/v2 audio QA, content QA (v2 passed), podcast identity, website image
-  resolution, artwork deferral decision, editorial listening QA confirmed
-  by Daniel — all prior history, see git log / DECISIONS.md.
-- **`/resources/podcast` route built:**
-  - `content/podcast/vat-thresholds-2026-what-changed.md` — episode
-    content, following the `content/posts/` frontmatter pattern.
-  - `lib/podcast.ts` — small dedicated loader (parallel to `lib/blog.ts`,
-    not modifying it), `getAllEpisodes`/`getEpisodeBySlug`.
-  - `components/podcast/PodcastPlayer.tsx` — real audio player component
-    with a graceful "hosting pending" fallback state (no audio file is
-    wired in yet — that's still a placeholder, deliberately).
-  - `app/resources/podcast/page.tsx` — index/listing page.
-  - `app/resources/podcast/[slug]/page.tsx` — the episode page itself:
-    hero, player, "Listen on" platform placeholders, episode body,
-    source-article cross-links (pulled from real `Post` objects via
-    `lib/blog`, not hardcoded), related Sikatrix tools, related services,
-    CTA, author/publisher, PodcastEpisode + Breadcrumb schema.org JSON-LD,
-    SEO metadata, canonical URL.
-  - Both pages carry an "Internal preview — not published (MEDIA-001)"
-    banner and `robots: { index: false, follow: false }` on the episode
-    page metadata.
-- **Verified locally:** ran the dev server, navigated both pages,
-  screenshotted every section, clicked through index→episode and
-  episode→source-article links, checked console for errors (none
-  attributable to this change — only pre-existing site-wide Clarity/CSP
-  warnings also present on existing pages), ran `tsc --noEmit` clean.
-- **Found and fixed a real bug during verification:** the shared
-  `ArticleContent` component doesn't parse inline markdown links inside
-  bullet lists, so a `## Source Articles` list in the episode markdown
-  rendered as raw unparsed text. Removed that redundant section from the
-  markdown body (the properly-styled, working "Source articles" cards
-  section built directly into the page already covers this) rather than
-  touching the shared component used by all 36 existing blog posts.
-- `git status` confirms only new files added — no existing files
-  modified.
+- PR #20 merged (`234cff0`). Confirmed via Vercel API that the resulting
+  deployment was `target: production` and live-verified at
+  `www.sikatrix.com`.
+- **Audio hosting:** self-hosted, not a third-party podcast host account.
+  `audio/master/The_R2_podcast_v2.m4a` copied to
+  `public/podcast/vat-thresholds-2026-what-changed.m4a` (39,204,565
+  bytes). No new account created — see `DECISIONS.md` for why this
+  reading of "audio hosting decision" was chosen over creating an
+  account with Buzzsprout/Transistor/etc.
+- **Player wired:** `content/podcast/vat-thresholds-2026-what-changed.md`'s
+  `audioFile` now points at the real path; `PodcastPlayer` renders an
+  actual `<audio>` element instead of the "hosting pending" fallback.
+  Verified real playback locally (`audio.paused === false`,
+  `currentTime` advancing, `duration` = 1218.1s matching the QA'd
+  20:18 runtime, no error).
+- **RSS feed built and validated:** `app/resources/podcast/feed.xml/route.ts`
+  — RSS 2.0 + iTunes namespace, channel + item metadata, enclosure
+  (real URL/length/type), GUID, pubDate, itunes:duration/episode/image/
+  category/owner. Linked from the index page (`<link rel="alternate">`
+  equivalent via Next.js `alternates.types`, plus a visible "Subscribe
+  via RSS" link). Validated: `Content-Type: application/rss+xml;
+  charset=utf-8` confirmed, XML parses cleanly (`xml.dom.minidom`),
+  UTF-8 encoding verified byte-for-byte (an em-dash that looked
+  corrupted in one terminal print was confirmed as correct `E2 80 94`
+  UTF-8 bytes, not a real encoding bug).
+- **Found and fixed a second real bug:** the episode markdown rendered
+  literal `## Heading` text instead of parsed headings locally. Root
+  cause: this machine's `core.autocrlf=true` re-materializes the
+  LF-only git blob as CRLF on checkout, and the shared `ArticleContent`
+  component's blank-line splitter doesn't match `\r\n\r\n`. Confirmed via
+  `git show` that the actual committed/deployed content is LF-only and
+  unaffected — a local-checkout artifact, not a production bug. Fixed
+  by normalizing the local working file, not by touching git config or
+  the shared component.
+- `npx tsc --noEmit` clean.
 
 ## What is currently being worked on?
 
-Nothing — reporting this back for review, as instructed.
+Nothing — reporting this back for review before merging, matching the
+pattern used for every prior change in this project.
 
 ## What remains?
 
-- Daniel's review of the built page (locally, or via `npm run dev` on
-  this branch).
-- Repurposing plan (Section 20) — explicitly **not started**, per
-  instruction: comes after the episode page and audio are actually live.
-- Podcast-directory artwork — still deferred (see prior decision).
-- Every Spotify/Apple/YouTube account-boundary action — not started.
-- Branch review/merge decision.
+- Daniel's review of the audio/RSS work (preview or local).
+- Explicit merge authorization for `media-001-audio-rss`.
+- Podcast-directory artwork — still deferred.
+- Every Spotify/Apple/YouTube account-boundary action — explicitly
+  Daniel's step alone, still blocked on artwork resolution per his
+  instruction.
+- Section 20 repurposing plan — still not started; now that the episode
+  page and RSS/audio are close to fully live, this is close to being
+  unblocked, but hasn't been explicitly greenlit yet.
 
 ## What is blocked?
 
-Nothing technically — QA, identity, and now the episode page are all
-done. What's left is account-level work that's out of scope until a
-fresh, explicit instruction to cross that boundary, and the repurposing
-plan which is explicitly sequenced after go-live.
+Only the human-only items: Spotify/Apple/YouTube (Daniel's step,
+blocked on artwork), and Section 20 (sequenced after full go-live,
+pending explicit confirmation that "live" has been reached).
 
 ## What decisions have been made?
 
@@ -79,23 +86,18 @@ See `DECISIONS.md`.
 
 ## What requires human action?
 
-- Review the built episode page.
-- Decide when/whether to build the actual RSS-hosted audio file wiring
-  (the player component is ready, just has no `audioFile` value yet).
-- Review and merge (or reject) branch `media-001-podcast-activation`.
-- When ready: explicit instruction to start Spotify/Apple/YouTube work.
-- When the episode page + audio are live: green light to start the
-  Section 20 repurposing plan.
+- Review and merge (or request changes to) `media-001-audio-rss`.
+- Resolve podcast-directory artwork when ready to actually submit.
+- Take the Spotify/Apple/YouTube steps personally, once artwork is
+  resolved — this worker will not touch them.
+- Confirm when "live" is reached, to greenlight Section 20.
 
 ## What must NOT be done?
 
-- Do not start the Section 20 repurposing plan yet.
-- Do not proceed to any Spotify/Apple/YouTube account creation,
-  authentication, or submission step.
-- Do not publish anything, anywhere — the `noindex`/preview-banner
-  safeguards on the new pages are not a substitute for actual
-  authorization.
+- Do not touch Spotify/Apple/YouTube accounts — Daniel's step alone.
+- Do not start the Section 20 repurposing plan without explicit
+  confirmation that go-live is reached.
+- Do not merge `media-001-audio-rss` without human review, same as
+  every prior production-facing change in this project.
 - Do not overwrite or destructively modify either master audio file.
-- Do not merge `media-001-podcast-activation` into `master` without human
-  review.
 - Do not expand scope beyond MEDIA-001 (CC handoff Section 32).

@@ -42,6 +42,10 @@ existing Resources brand rather than inventing a new one.
 
 1. ~~Show name~~ — **resolved**: "Sikatrix Resources."
 2. ~~RSS/owner email~~ — **resolved**: `info@sikatrix.com` approved.
+3. **RSS feed URL (added 12 Sep 2026):**
+   `https://www.sikatrix.com/resources/podcast/feed.xml` — built and
+   validated on branch `media-001-audio-rss`, not yet merged. See
+   `DECISIONS.md` and `HANDOFF.md`.
 3. **Episode title/summary wording** — drafted for accuracy against the
    QA'd v2 audio and both source articles; edit freely, this isn't
    locked.

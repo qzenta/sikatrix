@@ -37,19 +37,20 @@
       deferred to actual-submission time — see `DECISIONS.md`
 
 ### Distribution
-- [ ] Spotify path prepared
-- [ ] RSS path documented
-- [ ] Apple submission prepared
-- [ ] YouTube RSS path prepared
+- [ ] Spotify path prepared — Daniel's step alone, blocked on artwork
+- [x] RSS path documented — built and validated:
+      `https://www.sikatrix.com/resources/podcast/feed.xml` once
+      `media-001-audio-rss` merges (currently on that branch)
+- [ ] Apple submission prepared — Daniel's step alone, blocked on artwork
+- [ ] YouTube RSS path prepared — Daniel's step alone, blocked on artwork
 - [ ] website implementation prepared
 
 ### Website
 - [x] Sikatrix location identified (proposed: `/resources/podcast`, see ARCHITECTURE.md)
-- [x] episode page prepared — **built and locally verified**:
-      `/resources/podcast` (index) and `/resources/podcast/[slug]`
-      (episode), following the `content/posts/` + `lib/blog.ts` pattern.
-      Marked `noindex`/"Internal preview" banner since publication isn't
-      authorized. Not merged to master, not deployed.
+- [x] episode page prepared — **built, verified, merged, and LIVE in
+      production** at www.sikatrix.com (PR #20, merged on Daniel's
+      explicit authorization). Still marked `noindex`/"Internal preview"
+      banner since publication isn't authorized.
 - [x] source links included
 - [x] SEO metadata prepared
 - [x] CTA included

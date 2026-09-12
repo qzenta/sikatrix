@@ -6,17 +6,24 @@
 
 ## Current branch / commit
 
-Branch: `media-001-podcast-activation` (not merged to `master`).
-Commit: see `git log -1` on this branch — bootstrap commit, message
-"MEDIA-001: governance bootstrap + audio master intake".
+`media-001-podcast-activation` was merged into `master` via PR #20 on
+Daniel's explicit authorization (merge commit `234cff0`) — genuinely
+live in production at www.sikatrix.com, verified.
+
+Current work is on a new branch off the updated master:
+`media-001-audio-rss` — not yet merged, awaiting review.
 
 ## Files changed
 
-- `content/podcast/vat-thresholds-2026-what-changed.md` (new — episode content)
-- `lib/podcast.ts` (new — dedicated loader, doesn't touch `lib/blog.ts`)
-- `components/podcast/PodcastPlayer.tsx` (new)
-- `app/resources/podcast/page.tsx` (new — index)
-- `app/resources/podcast/[slug]/page.tsx` (new — episode page, the Section 18 deliverable)
+- `content/podcast/vat-thresholds-2026-what-changed.md` (episode content;
+  now updated with real `audioFile`/`audioFileSize`/`audioFileType`/`guid`/
+  `rssGeneratedDate`)
+- `lib/podcast.ts` (dedicated loader; extended with the new fields above)
+- `components/podcast/PodcastPlayer.tsx`
+- `app/resources/podcast/page.tsx` (index; now links the RSS feed)
+- `app/resources/podcast/[slug]/page.tsx` (episode page, Section 18 deliverable)
+- `app/resources/podcast/feed.xml/route.ts` (new — RSS 2.0 + iTunes feed, Section 14)
+- `public/podcast/vat-thresholds-2026-what-changed.m4a` (new — self-hosted audio, 39,204,565 bytes)
 - `docs/media-001/PODCAST_IDENTITY.md` (Section 11 — show name/email now confirmed)
 - `docs/media-001/ARTWORK_ASSESSMENT.md` (Section 12 — candidate produced,
   rejected as wrong brand style, removed; directory-art resolution now
@@ -79,14 +86,13 @@ See `NEXT_ACTIONS.md` — all items marked `[HUMAN ACTION]`.
 
 ## Next recommended action
 
-The `/resources/podcast` episode page is now real, working, locally
-verified code on this branch — not merged, not deployed. Daniel reviews
-it, then decides on branch merge. **Section 20 (repurposing plan) is
-explicitly not started** — sequenced after the episode page and audio
-are actually live, not before. **Explicitly not touched: Spotify/Apple/
-YouTube account-level actions or any submission/publish step** — cross
-that boundary only on a fresh, explicit instruction to do so. Podcast-
-directory artwork stays deferred per the earlier decision.
+The episode page is live in production. Audio hosting + RSS feed are
+built, validated, and waiting on branch `media-001-audio-rss` for
+review/merge. **Section 20 (repurposing plan) is still explicitly not
+started** — get explicit confirmation that "live" has been reached
+before starting it. **Explicitly not touched: Spotify/Apple/YouTube
+account-level actions** — per Daniel, that remains his step alone,
+blocked on artwork resolution. Podcast-directory artwork stays deferred.
 
 ## Prohibited actions
 

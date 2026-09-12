@@ -11,7 +11,10 @@ export const metadata: Metadata = {
   title: { absolute: "Sikatrix Resources Podcast | Sikatrix Business Accountants" },
   description:
     "Audio briefings on SARS compliance, tax, and bookkeeping for South African SMEs — expanding on Sikatrix's written Resources articles.",
-  alternates: { canonical: `${SITE.url}/resources/podcast` },
+  alternates: {
+    canonical: `${SITE.url}/resources/podcast`,
+    types: { "application/rss+xml": `${SITE.url}/resources/podcast/feed.xml` },
+  },
 };
 
 export default function PodcastIndexPage() {
@@ -45,6 +48,17 @@ export default function PodcastIndexPage() {
 
       <section className="py-14">
         <div className="container-page max-w-3xl mx-auto">
+          <div className="flex justify-end mb-4">
+            <a
+              href="/resources/podcast/feed.xml"
+              className="inline-flex items-center gap-1.5 text-xs font-medium text-neutral-500 hover:text-brand transition-colors"
+            >
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27zm0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93z" />
+              </svg>
+              Subscribe via RSS
+            </a>
+          </div>
           {episodes.length === 0 ? (
             <p className="text-sm text-neutral-500">No episodes yet.</p>
           ) : (

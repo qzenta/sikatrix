@@ -4,13 +4,17 @@ description: "SARS raised both VAT registration thresholds on 1 April 2026 and i
 slug: "vat-thresholds-2026-what-changed"
 episodeNumber: 1
 duration: "20:18"
-audioFile: ""
+audioFile: "/podcast/vat-thresholds-2026-what-changed.m4a"
+audioFileSize: 39204565
+audioFileType: "audio/mp4"
+guid: "sikatrix-podcast-ep1-vat-thresholds-2026-what-changed"
 featuredImage: "/photos/podcast/vat-thresholds-2026-what-changed-cover.png"
 featuredImageAlt: "Sikatrix brand mark"
 author:
   name: "Sikatrix Business Accountants"
   title: "SAIPA Professional Accountants (SA)"
 publishDate: null
+rssGeneratedDate: "2026-09-12"
 status: "draft"
 sourceArticles:
   - "sars-automatic-vat-registration-2026"
