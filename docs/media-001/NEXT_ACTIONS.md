@@ -1,33 +1,39 @@
 # NEXT_ACTIONS.md
 
 [HUMAN ACTION]
-Regenerate the podcast audio to address the Content QA findings in
-`CONTENT_QA.md` (automatic-registration framed as future not present
-fact; R120,000 voluntary threshold missing; 1 April 2026 effective date
-missing; "21 days" vs "21 business days"). Hand the resulting file back.
+Perform editorial/human listening QA of `audio/master/The_R2_podcast_v2.m4a`
+— separate from, and not satisfied by, the automated technical + content
+QA that just passed.
 
-[BLOCKED — pending the above]
-Fresh technical audio QA (CC handoff Section 8) on the regenerated file.
-Run in full, independently of the original master's results — do not
-assume it's carried over clean.
+[HUMAN ACTION]
+Confirm v2 as the adopted working master. (v1 remains in the repo as a
+historical record but failed Content QA and should not be used going
+forward.)
 
-[BLOCKED — pending the above]
-Fresh content QA (CC handoff Section 10) on the regenerated file, against
-the same two confirmed source articles. Treat as a new, unverified file —
-do not diff against the old findings and assume only those specific
-points were fixed; re-check the full checklist (factual/numerical
-consistency, SARS terminology, dates, omissions, hallucinations).
+[HUMAN ACTION]
+Confirm whether suitable podcast artwork already exists in Sikatrix brand
+assets, or approve creating new artwork.
 
-[BLOCKED — pending both QA passes above]
-Content QA sign-off / publication-readiness decision.
+[HUMAN ACTION]
+Review branch `media-001-podcast-activation` and decide whether to merge
+the governance bootstrap + QA history into `master`.
 
-[ON HOLD — do not action until Content QA passes]
-Branch `media-001-podcast-activation`: no merge to `master`.
+[READY]
+Prepare podcast/episode identity (title, description, keywords, CTA,
+source-article links) — CC handoff Section 11. Content QA no longer
+blocks this.
 
-[ON HOLD — do not action until Content QA passes]
-Any distribution prep: Spotify/Apple/YouTube metadata, RSS, website
-episode page, artwork, podcast identity.
+[READY — once artwork decision is made]
+Prepare or source podcast artwork per the human decision above.
 
-[HUMAN ACTION — independent of the above, can happen any time]
-Perform editorial/human listening QA of whichever file becomes the final
-master — separate from, and not satisfied by, either automated QA pass.
+[READY — once site architecture decision is confirmed by Daniel]
+Design and build the `/resources/podcast` episode-page structure proposed
+in `ARCHITECTURE.md`, mirroring `content/posts/` + `lib/blog.ts`.
+
+[READY]
+Prepare Spotify/Apple/YouTube distribution metadata (does not require
+account access) once episode identity exists.
+
+[HUMAN ACTION — when reached]
+Every account-boundary action for Spotify/Apple/YouTube (account
+authentication, ownership, terms, actual publication).

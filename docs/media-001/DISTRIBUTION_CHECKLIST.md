@@ -9,9 +9,10 @@
 
 ### Audio
 - [x] original master preserved (`audio/master/The_R2_podcast.m4a`, untouched)
-- [x] technical characteristics documented (`AUDIO_QA.md`)
-- [x] technical QA completed — PASS
-- [x] editorial listening status explicitly recorded — PENDING (human)
+- [x] v2 master added (`audio/master/The_R2_podcast_v2.m4a`), v1 not overwritten
+- [x] technical characteristics documented (`AUDIO_QA.md`, `AUDIO_QA_V2.md`)
+- [x] technical QA completed — PASS (both v1 and v2)
+- [x] editorial listening status explicitly recorded — still PENDING (human), v2
 
 ### Source
 - [x] exact two source articles identified (confirmed by Daniel)
@@ -19,10 +20,11 @@
 - [x] source/content relationship documented (`CONTENT_QA.md`)
 
 ### Content QA
-- [x] transcript obtained (automated, `transcript-automated.srt`)
-- [x] compared against both source articles
-- [ ] **PASS — BLOCKED.** Material discrepancies found; see `CONTENT_QA.md`.
-      Publication may not proceed until Daniel resolves these.
+- [x] transcript obtained (v1: `transcript-automated.srt`, v2: `transcript-v2-automated.srt`)
+- [x] compared against both source articles (v1 and v2, independently)
+- [x] **PASS (v2).** v1 failed with 4 material findings (`CONTENT_QA.md`);
+      v2 resolved all of them, fresh pass found no new issues
+      (`CONTENT_QA_V2.md`). v2 is the current candidate master.
 
 ### Metadata
 - [ ] show identity prepared

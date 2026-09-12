@@ -12,8 +12,15 @@ See:
 - `DECISIONS.md` — decisions made and their basis
 - `ARCHITECTURE.md` — where this fits in the Sikatrix site/content structure
 - `DISTRIBUTION_CHECKLIST.md` — acceptance criteria
-- `AUDIO_QA.md` — technical audio QA results for the master file
+- `AUDIO_QA.md` / `AUDIO_QA_V2.md` — technical audio QA results (v1, v2)
+- `CONTENT_QA.md` / `CONTENT_QA_V2.md` — content fidelity QA vs. source
+  articles (v1 failed, v2 passed)
+- `transcript-automated.srt` / `transcript-v2-automated.srt` — machine
+  transcripts used for content QA (evidence only, not human-verified)
 - `CC_HANDOFF_MEDIA-001.md` — the original full spec (12 Sep 2026)
 
-Master audio: `audio/master/The_R2_podcast.m4a` (repo root, outside this
-docs directory — see AGENTS.md's immutable master rule).
+Master audio: `audio/master/The_R2_podcast.m4a` (v1, failed Content QA,
+kept as historical record) and `audio/master/The_R2_podcast_v2.m4a` (v2,
+current candidate master, passed technical + content QA) — repo root,
+outside this docs directory. See AGENTS.md's immutable master rule: never
+overwrite either file.

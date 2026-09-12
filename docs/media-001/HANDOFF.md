@@ -41,13 +41,10 @@ documentation + a static asset addition). Verified instead by:
 
 ## Unresolved issues
 
-- **Content QA found material discrepancies** — see `CONTENT_QA.md`.
-  Automatic VAT registration framed as a future hypothetical rather than
-  present fact (contradicts source article 2's premise); R120,000
-  voluntary threshold and 1 April 2026 effective date both absent from
-  the podcast; "21 days" stated where both sources say "21 business
-  days." This is a stop condition, not a routine pending item.
-- Editorial/human listening QA not performed (no listening facility used).
+- v1's Content QA findings are resolved by v2 — see `CONTENT_QA_V2.md`.
+  v1 itself remains a failed/historical record, not deleted.
+- Editorial/human listening QA not performed on v2 (no listening facility
+  used by this worker).
 - Podcast artwork decision not made.
 - Website episode-page structure is proposed but not built.
 
@@ -57,20 +54,21 @@ See `NEXT_ACTIONS.md` — all items marked `[HUMAN ACTION]`.
 
 ## Next recommended action
 
-Daniel is regenerating the podcast audio to address the Content QA
-findings. When the new file arrives: run a full, independent technical
-audio QA (Section 8) and content QA (Section 10) pass against it — same
-two confirmed source articles — as if it were a brand-new, unverified
-master. Do not assume the regeneration fixed only the specific findings
-listed and skip re-checking the rest. Branch stays unmerged and no
-distribution prep happens until that fresh pass is clean.
+v2 passed a fresh, independent technical + content QA pass (see
+`AUDIO_QA_V2.md`, `CONTENT_QA_V2.md`) — cleared to proceed toward Section
+33 metadata/artwork/distribution prep. Still needed before any of that
+work is publication-track rather than draft: human editorial/listening
+QA of v2, artwork decision, and branch review/merge. Do not publish
+anything — Content QA passing is not a publication authorization.
 
 ## Prohibited actions
 
-No regeneration of the podcast master. No publication anywhere — this
-episode failed Content QA in its current form. No account creation,
-payment, or credential handling. No unrelated refactoring. No merge to
-`master`/production without explicit human authorization.
+No regeneration/overwrite of either master file (v1 or v2). No
+publication anywhere — Content QA passing is not a publication
+authorization by itself; human editorial QA + explicit approval still
+required. No account creation, payment, or credential handling. No
+unrelated refactoring. No merge to `master`/production without explicit
+human authorization.
 
 ## Relevant URLs
 
