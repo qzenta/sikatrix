@@ -1,0 +1,2208 @@
+0
+00:00:00,000 --> 00:00:02,000
+picture this for a second, right?
+
+1
+00:00:02,994 --> 00:00:05,994
+If you're sitting at your desk, just going through the usual pie.
+
+2
+00:00:05,990 --> 00:00:07,430
+file of business mail.
+
+3
+00:00:07,430 --> 00:00:08,430
+Never a fun task.
+
+4
+00:00:08,430 --> 00:00:08,930
+No.
+
+5
+00:00:08,985 --> 00:00:09,985
+Oh, never.
+
+6
+00:00:09,985 --> 00:00:11,985
+But, you know, you open this official-looking up-
+
+7
+00:00:11,981 --> 00:00:14,901
+envelope or maybe you just click open an email and there is a formal
+
+8
+00:00:14,976 --> 00:00:17,976
+notice from SARS.
+
+9
+00:00:17,971 --> 00:00:20,971
+Exactly and it warmly welcomed
+
+10
+00:00:20,967 --> 00:00:23,967
+you as a registered VAT vendor.
+
+11
+00:00:23,962 --> 00:00:26,962
+- But here's the thing that makes your stomach just--
+
+12
+00:00:26,957 --> 00:00:29,597
+completely drop. You never applied for it.
+
+13
+00:00:29,597 --> 00:00:31,597
+Right.
+
+14
+00:00:29,953 --> 00:00:32,913
+you haven't filled out a single form so you immediately think okay this
+
+15
+00:00:32,948 --> 00:00:34,628
+has to be a fishing scam.
+
+16
+00:00:34,628 --> 00:00:35,628
+Or maybe like--
+
+17
+00:00:35,944 --> 00:00:38,944
+Some bizarre administrative glitch in the matrix.
+
+18
+00:00:38,939 --> 00:00:39,939
+tricks.
+
+19
+00:00:39,939 --> 00:00:40,939
+Which is what everyone assumes, right?
+
+20
+00:00:40,939 --> 00:00:41,939
+Totally.
+
+21
+00:00:41,934 --> 00:00:44,974
+And it isn't a scam, it's not a glitch.
+
+22
+00:00:44,930 --> 00:00:47,930
+certainly not some hypothetical future scenario.
+
+23
+00:00:47,925 --> 00:00:50,765
+that policy wonks are just debating in a boardroom.
+
+24
+00:00:50,920 --> 00:00:53,480
+This is automatically happening to real businesses right now.
+
+25
+00:00:53,916 --> 00:00:56,836
+is. I mean it is the absolute definition of a rude
+
+26
+00:00:56,911 --> 00:00:59,191
+awakening for a business owner.
+
+27
+00:00:59,191 --> 00:00:59,791
+I can imagine.
+
+28
+00:00:59,907 --> 00:01:02,947
+because it completely upends the way, you know, most of us do.
+
+29
+00:01:02,902 --> 00:01:04,222
+think about tax compliance.
+
+30
+00:01:04,222 --> 00:01:05,942
+We're so used to the idea
+
+31
+00:01:05,897 --> 00:01:08,897
+that taxation especially registering for something
+
+32
+00:01:08,893 --> 00:01:12,053
+as massive as value-added tax is an active process.
+
+33
+00:01:11,888 --> 00:01:14,848
+Right, like you cross the line, you raise your hand, you fill out the paperwork.
+
+34
+00:01:14,883 --> 00:01:17,843
+Exactly, but the reality of what is happening on the ground
+
+35
+00:01:17,879 --> 00:01:19,879
+has fundamentally shifted.
+
+36
+00:01:19,879 --> 00:01:20,879
+It's gone from a
+
+37
+00:01:20,874 --> 00:01:23,874
+system where you apply to a system that essentially
+
+38
+00:01:23,869 --> 00:01:25,869
+well, hunts you down.
+
+39
+00:01:25,869 --> 00:01:26,869
+Hunts you down. That is...
+
+40
+00:01:26,865 --> 00:01:29,825
+incredibly ominous. So how did that shift happen so
+
+41
+00:01:29,860 --> 00:01:32,900
+fast because that is exactly the guiding question.
+
+42
+00:01:32,856 --> 00:01:33,856
+for today's deep dive.
+
+43
+00:01:33,856 --> 00:01:34,856
+It's a big one.
+
+44
+00:01:34,856 --> 00:01:35,856
+It is.
+
+45
+00:01:35,851 --> 00:01:38,851
+looking at a couple of incredibly eye-opening recent articles.
+
+46
+00:01:38,846 --> 00:01:41,726
+calls by Daniel Amoa. He's a professional accountant.
+
+47
+00:01:41,842 --> 00:01:44,842
+with IPA, that he is, the South African Institute.
+
+48
+00:01:44,837 --> 00:01:45,837
+studio professional accountants.
+
+49
+00:01:45,837 --> 00:01:46,837
+Right.
+
+50
+00:01:46,837 --> 00:01:47,837
+And his writing paints
+
+51
+00:01:47,832 --> 00:01:50,712
+a very clear, honestly slightly terrifying,
+
+52
+00:01:50,828 --> 00:01:53,828
+picture of this invisible net that SARS-
+
+53
+00:01:53,823 --> 00:01:55,543
+has just cast over the whole economy.
+
+54
+00:01:55,543 --> 00:01:56,743
+- Yeah, the net is wide.
+
+55
+00:01:56,819 --> 00:01:59,819
+very wide. So to understand how you might get caught in it
+
+56
+00:01:59,814 --> 00:02:02,714
+We first have to look at what seems like a boring update
+
+57
+00:02:02,809 --> 00:02:05,089
+the 2026 budget. Okay, let's impact this.
+
+58
+00:02:05,805 --> 00:02:07,965
+you have to start with the concrete numbers here.
+
+59
+00:02:07,965 --> 00:02:09,805
+Because the change--
+
+60
+00:02:08,800 --> 00:02:10,800
+to these exact figures are
+
+61
+00:02:11,795 --> 00:02:14,755
+They're the primary catalysts for why businesses are suddenly getting
+
+62
+00:02:14,791 --> 00:02:16,451
+these surprise notices.
+
+63
+00:02:16,451 --> 00:02:17,791
+Follow the 2026 budget.
+
+64
+00:02:17,786 --> 00:02:20,786
+it, we have new thresholds, and these became strictly
+
+65
+00:02:20,782 --> 00:02:23,362
+effective on 1 April 2026.
+
+66
+00:02:23,777 --> 00:02:26,737
+Let's lay those numbers out super clearly because if you own a business
+
+67
+00:02:26,772 --> 00:02:28,452
+I mean these are basically the tripwires.
+
+68
+00:02:28,452 --> 00:02:28,952
+Absolutely.
+
+69
+00:02:28,952 --> 00:02:29,752
+So effective one-
+
+70
+00:02:29,768 --> 00:02:32,728
+April 2026. The compulsory VA
+
+71
+00:02:32,763 --> 00:02:35,763
+The AT registration threshold was raised to R2.
+
+72
+00:02:35,758 --> 00:02:37,758
+3.3 million in taxable supplies.
+
+73
+00:02:38,754 --> 00:02:41,754
+3 million. That's a jump from the old R1 million mark.
+
+74
+00:02:41,749 --> 00:02:44,789
+significant jump. Yeah. And alongside that, the Volleyball
+
+75
+00:02:44,745 --> 00:02:47,705
+voluntary registration threshold, which is the absolute
+
+76
+00:02:47,740 --> 00:02:50,600
+minimum amount you need to be making even be allowed to opt into the
+
+77
+00:02:50,735 --> 00:02:53,775
+system. That was raised to our 120,000
+
+78
+00:02:53,731 --> 00:02:54,731
+and taxable supplies.
+
+79
+00:02:56,726 --> 00:02:59,446
+Exactly. So our 2.3 million for compulsory.
+
+80
+00:02:59,721 --> 00:03:02,721
+and R120,000 for voluntary, both effective.
+
+81
+00:03:02,717 --> 00:03:05,597
+April 2026. Now here is the really
+
+82
+00:03:05,712 --> 00:03:08,632
+critical part regarding that R2.3 million.
+
+83
+00:03:08,708 --> 00:03:11,708
+compulsory threshold.
+
+84
+00:03:11,703 --> 00:03:14,663
+that mark, compulsory registration is
+
+85
+00:03:14,698 --> 00:03:18,698
+isn't merely like a suggestion.
+
+86
+00:03:17,694 --> 00:03:20,014
+It's not a get to it when you can't kind of thing.
+
+87
+00:03:20,014 --> 00:03:21,014
+Definitely not.
+
+88
+00:03:20,689 --> 00:03:23,689
+It's not something you get around to when your accountant has a...
+
+89
+00:03:23,684 --> 00:03:26,644
+Tuesday afternoon. You are legally required
+
+90
+00:03:26,680 --> 00:03:29,520
+to apply within exactly 21 business days of
+
+91
+00:03:29,675 --> 00:03:30,975
+crossing that threshold.
+
+92
+00:03:30,975 --> 00:03:33,275
+- Okay, wait, I really wanna underscore that.
+
+93
+00:03:32,671 --> 00:03:35,671
+phrase for you listening. 21 business days, not a
+
+94
+00:03:35,666 --> 00:03:38,666
+not just 30 days, 21 business days.
+
+95
+00:03:38,661 --> 00:03:39,661
+It's tight.
+
+96
+00:03:39,661 --> 00:03:40,661
+It is so tight.
+
+97
+00:03:40,661 --> 00:03:41,661
+When you factor out weekend
+
+98
+00:03:41,657 --> 00:03:44,657
+and public holidays, that clock is ticking in--
+
+99
+00:03:44,652 --> 00:03:47,612
+incredibly fast. You basically blink and you're
+
+100
+00:03:47,647 --> 00:03:50,647
+already in violation of the VA tech.
+
+101
+00:03:50,643 --> 00:03:52,643
+that deadline, it's a massive trap.
+
+102
+00:03:53,638 --> 00:03:56,638
+primarily because of how that R2.3 million is...
+
+103
+00:03:56,634 --> 00:03:58,194
+actually measured by SARS.
+
+104
+00:03:58,194 --> 00:04:00,194
+- Right, because it isn't based on a new...
+
+105
+00:03:59,629 --> 00:04:01,229
+neat and tidy financial calendar.
+
+106
+00:04:01,229 --> 00:04:02,029
+No, it's not.
+
+107
+00:04:02,029 --> 00:04:03,869
+This is the part--
+
+108
+00:04:02,624 --> 00:04:04,344
+from the sources that completely blew my mind.
+
+109
+00:04:04,344 --> 00:04:05,824
+The R2.3 million comp--
+
+110
+00:04:05,620 --> 00:04:08,620
+Pulsary threshold is measured over any rolling 12-month period.
+
+111
+00:04:08,615 --> 00:04:09,615
+period.
+
+112
+00:04:09,615 --> 00:04:10,615
+Yes.
+
+113
+00:04:10,615 --> 00:04:11,615
+Any rolling 12 months.
+
+114
+00:04:11,610 --> 00:04:14,610
+treadmill not a calendar year. You can't just cross your fingers.
+
+115
+00:04:14,606 --> 00:04:17,606
+you know make it to January 1st or the end of your
+
+116
+00:04:17,601 --> 00:04:20,601
+financial year in February and suddenly reset the clock.
+
+117
+00:04:20,597 --> 00:04:23,477
+back to zero. The treadmill never stops. The treadmill never stops.
+
+118
+00:04:23,592 --> 00:04:25,752
+the past 12 months are always chasing you.
+
+119
+00:04:26,587 --> 00:04:29,587
+Let's actually, let's walk through what this looks like for a real person.
+
+120
+00:04:29,583 --> 00:04:32,103
+person. Let's imagine a business owner.
+
+121
+00:04:32,578 --> 00:04:35,578
+just call her Sarah. Okay, so then let's say she runs a really
+
+122
+00:04:35,573 --> 00:04:38,493
+successful boutique selling custom
+
+123
+00:04:38,569 --> 00:04:39,569
+furniture.
+
+124
+00:04:39,569 --> 00:04:41,489
+A very common, very realistic scenario.
+
+125
+00:04:41,564 --> 00:04:44,484
+So let's say Sarah has this massive spike in...
+
+126
+00:04:44,560 --> 00:04:46,560
+sales in November and December.
+
+127
+00:04:46,560 --> 00:04:47,900
+It's the holiday rush.
+
+128
+00:04:47,555 --> 00:04:50,435
+Everyone is buying new dining tables for family gatherings.
+
+129
+00:04:50,550 --> 00:04:51,390
+Right.
+
+130
+00:04:51,390 --> 00:04:53,550
+She looks at her total revenue for the calendar year.
+
+131
+00:04:53,546 --> 00:04:56,546
+2026 and thinks, okay, I made R1.99.
+
+132
+00:04:56,541 --> 00:04:59,541
+million this year. I'm well under the R2.3 million.
+
+133
+00:04:59,536 --> 00:05:01,536
+million limit, I'm totally safe.
+
+134
+00:05:02,532 --> 00:05:03,372
+ignoring the treadmill.
+
+135
+00:05:03,372 --> 00:05:05,492
+She is because if she looks at the rolling.
+
+136
+00:05:05,527 --> 00:05:08,727
+12 months, say from last February to this January.
+
+137
+00:05:08,523 --> 00:05:11,483
+that massive holiday spike combined with
+
+138
+00:05:11,518 --> 00:05:14,398
+maybe a strong spring she had earlier, means her.
+
+139
+00:05:14,513 --> 00:05:16,993
+12 month total just hit our 2.4 million.
+
+140
+00:05:16,993 --> 00:05:17,493
+Oh wow.
+
+141
+00:05:17,509 --> 00:05:18,009
+Yeah.
+
+142
+00:05:18,009 --> 00:05:20,509
+And the exact moment she crossed that threshold...
+
+143
+00:05:20,504 --> 00:05:23,144
+hold on the treadmill. The 21 business days
+
+144
+00:05:23,499 --> 00:05:24,499
+block started ticking.
+
+145
+00:05:26,495 --> 00:05:29,375
+doing her books in March, she is already months late.
+
+146
+00:05:29,490 --> 00:05:32,490
+Exactly. Because she isn't tracking her revenue on-
+
+147
+00:05:32,486 --> 00:05:35,486
+on a rolling basis, she completely misses the deadline.
+
+148
+00:05:35,481 --> 00:05:38,481
+which leads directly to the core tension.
+
+149
+00:05:38,476 --> 00:05:40,476
+of our conversation today, right?
+
+150
+00:05:40,476 --> 00:05:41,476
+SARS stepping in and doing
+
+151
+00:05:41,472 --> 00:05:42,472
+the registration for her.
+
+152
+00:05:42,472 --> 00:05:44,472
+Which brings us back to that terror
+
+153
+00:05:44,467 --> 00:05:46,887
+letter in the mail we talked about at the start.
+
+154
+00:05:47,462 --> 00:05:48,462
+registration.
+
+155
+00:05:48,462 --> 00:05:49,462
+The dreaded surprise notice.
+
+156
+00:05:49,462 --> 00:05:50,462
+Yeah.
+
+157
+00:05:50,458 --> 00:05:53,338
+want to emphasize this again for you listening.
+
+158
+00:05:53,453 --> 00:05:56,453
+Automatic registration isn't just some vague threat of a...
+
+159
+00:05:56,449 --> 00:05:59,449
+new law that might get passed down the road, it is an existing
+
+160
+00:05:59,444 --> 00:06:02,404
+law that is being heavily and actively enforced right now to
+
+161
+00:06:02,439 --> 00:06:04,199
+real businesses across South Africa.
+
+162
+00:06:04,199 --> 00:06:05,199
+Yes, right, man.
+
+163
+00:06:05,199 --> 00:06:05,439
+The letter
+
+164
+00:06:05,435 --> 00:06:08,155
+are in the mail, the emails are in the inboxes, but I mean...
+
+165
+00:06:08,430 --> 00:06:11,430
+Why the sudden wave if this rule has been around?
+
+166
+00:06:11,425 --> 00:06:14,305
+why are people getting caught right this very second?
+
+167
+00:06:14,421 --> 00:06:17,321
+Well it really comes down to a collision of two
+
+168
+00:06:17,416 --> 00:06:18,416
+major events.
+
+169
+00:06:18,416 --> 00:06:20,296
+First, you have that one
+
+170
+00:06:20,412 --> 00:06:22,412
+April 2026th threshold shift.
+
+171
+00:06:22,412 --> 00:06:23,412
+Right, the move forward.
+
+172
+00:06:23,407 --> 00:06:26,127
+from R1 million to R2.3 million.
+
+173
+00:06:26,127 --> 00:06:26,967
+Exactly.
+
+174
+00:06:26,402 --> 00:06:29,422
+You had all these businesses that were perfectly comfortable flying
+
+175
+00:06:29,398 --> 00:06:32,198
+flying below the old R1 million radar,
+
+176
+00:06:32,198 --> 00:06:32,438
+whose
+
+177
+00:06:32,393 --> 00:06:35,393
+suddenly had to be assessed against this new R2.3.
+
+178
+00:06:35,388 --> 00:06:36,728
+3 million number.
+
+179
+00:06:36,728 --> 00:06:39,128
+They just kind of lost track of where the new.
+
+180
+00:06:38,384 --> 00:06:39,624
+line was on the treadmill.
+
+181
+00:06:39,624 --> 00:06:40,624
+That makes sense.
+
+182
+00:06:40,624 --> 00:06:41,124
+But second,
+
+183
+00:06:41,379 --> 00:06:43,979
+and arguably much more importantly,
+
+184
+00:06:43,979 --> 00:06:44,819
+SARA.
+
+185
+00:06:44,375 --> 00:06:49,375
+modernized its systems in December 2019.
+
+186
+00:06:47,370 --> 00:06:48,370
+2025.
+
+187
+00:06:48,370 --> 00:06:50,370
+OK, this is where it gets slightly
+
+188
+00:06:50,365 --> 00:06:53,245
+dystopian in the articles, but also you have to
+
+189
+00:06:53,361 --> 00:06:56,361
+admit incredibly impressive from a technological standpoint.
+
+190
+00:06:56,356 --> 00:06:57,676
+is brilliant technology.
+
+191
+00:06:59,351 --> 00:07:01,151
+someone like Sarah, the boutique owner.
+
+192
+00:07:01,151 --> 00:07:02,551
+- What's fascinating here?
+
+193
+00:07:02,347 --> 00:07:05,547
+is the here scale of the data integration.
+
+194
+00:07:05,342 --> 00:07:08,342
+SARS is aggressively pulling
+
+195
+00:07:08,338 --> 00:07:11,298
+third party data. They aren't sitting around waiting for you to
+
+196
+00:07:11,333 --> 00:07:14,373
+to declare your income on an annual return anymore.
+
+197
+00:07:14,328 --> 00:07:17,368
+waiting for Sarah's accountant to send a PDF.
+
+198
+00:07:17,324 --> 00:07:21,884
+directly at your bank accounts. They are tapping straight into
+
+199
+00:07:20,319 --> 00:07:23,219
+CIPC, you know, the National Companies and Intellectual
+
+200
+00:07:23,314 --> 00:07:24,154
+property commission.
+
+201
+00:07:24,154 --> 00:07:24,974
+- Right.
+
+202
+00:07:24,974 --> 00:07:26,314
+- And they use that to--
+
+203
+00:07:26,310 --> 00:07:29,510
+cross-reference your directorships, your business records.
+
+204
+00:07:29,305 --> 00:07:32,025
+They are basically laying your actual
+
+205
+00:07:32,301 --> 00:07:35,301
+real-time cash flow over your declared tax debt.
+
+206
+00:07:35,296 --> 00:07:36,296
+at us.
+
+207
+00:07:36,296 --> 00:07:37,296
+Wow.
+
+208
+00:07:37,296 --> 00:07:38,296
+So if the bank data feeds show
+
+209
+00:07:38,291 --> 00:07:41,291
+that Sarah's boutique processed R2.4.
+
+210
+00:07:41,287 --> 00:07:43,287
+5 million in the last rolling 12 months.
+
+211
+00:07:44,282 --> 00:07:48,762
+profile says she isn't a v8 vendor
+
+212
+00:07:47,277 --> 00:07:49,277
+The system just flags it.
+
+213
+00:07:50,273 --> 00:07:53,273
+It doesn't even need a human auditor to sit there with a calculator.
+
+214
+00:07:53,268 --> 00:07:56,328
+calculator, right? It just sees the data and says congratulations
+
+215
+00:07:56,264 --> 00:08:01,064
+Sarah you crossed the threshold three months ago here is your registration.
+
+216
+00:07:59,259 --> 00:08:00,259
+Precisely.
+
+217
+00:08:00,259 --> 00:08:02,259
+And that automatic flag leads to the...
+
+218
+00:08:02,254 --> 00:08:05,254
+financial nightmare of this whole situation, which is the back.
+
+219
+00:08:05,250 --> 00:08:06,250
+backdating.
+
+220
+00:08:06,250 --> 00:08:07,250
+Backdating.
+
+221
+00:08:07,250 --> 00:08:08,250
+Yeah.
+
+222
+00:08:08,245 --> 00:08:10,565
+registers you, they don't just register you from today.
+
+223
+00:08:11,240 --> 00:08:14,240
+can and they very often do set a backdated effective date.
+
+224
+00:08:14,236 --> 00:08:17,236
+to the exact moment their data shows you cross.
+
+225
+00:08:17,231 --> 00:08:20,191
+the threshold on the treadmill.
+
+226
+00:08:20,227 --> 00:08:23,227
+back dates my registration to say eight months ago.
+
+227
+00:08:23,222 --> 00:08:26,222
+I obviously didn't charge my customers 15% VAT back then.
+
+228
+00:08:26,217 --> 00:08:27,217
+you didn't.
+
+229
+00:08:27,217 --> 00:08:29,177
+I didn't even know I was a VED vendor, so I might just
+
+230
+00:08:29,213 --> 00:08:31,293
+on the hook for that money out of my own pocket.
+
+231
+00:08:31,293 --> 00:08:32,133
+- The short answer is...
+
+232
+00:08:32,208 --> 00:08:33,208
+Unfortunately, yes.
+
+233
+00:08:33,208 --> 00:08:34,208
+Are you serious?
+
+234
+00:08:34,208 --> 00:08:35,208
+The absence of
+
+235
+00:08:35,203 --> 00:08:37,683
+taxing voices does not cancel the liability.
+
+236
+00:08:38,199 --> 00:08:41,199
+This is the exact mechanism that genuinely bankrupts people.
+
+237
+00:08:41,194 --> 00:08:42,194
+people.
+
+238
+00:08:42,194 --> 00:08:44,194
+SARS expects you to calculate
+
+239
+00:08:44,189 --> 00:08:47,189
+the output VAT on your total taxable sale.
+
+240
+00:08:47,185 --> 00:08:49,185
+for that entire past period.
+
+241
+00:08:50,180 --> 00:08:53,180
+Right. But because you didn't explicitly add 50...
+
+242
+00:08:53,176 --> 00:08:55,176
+15% on top of your prices.
+
+243
+00:08:55,176 --> 00:08:56,176
+SARS just...
+
+244
+00:08:56,171 --> 00:08:59,211
+considers the money you did collect to be Viet Inclusive.
+
+245
+00:08:59,166 --> 00:09:02,166
+stop you right there because this math is crucial to understand.
+
+246
+00:09:02,162 --> 00:09:05,162
+They extract the VA from the revenue I already collected.
+
+247
+00:09:05,157 --> 00:09:07,157
+Honestly, probably already spent.
+
+248
+00:09:07,157 --> 00:09:09,157
+That is the harsh reality.
+
+249
+00:09:08,152 --> 00:09:11,152
+of it. You have to use what's called the 4115-TAS.
+
+250
+00:09:11,148 --> 00:09:14,148
+on whatever sales records you have for that.
+
+251
+00:09:14,143 --> 00:09:17,143
+period.
+
+252
+00:09:17,139 --> 00:09:20,139
+customer VA, why isn't it just a straight 15% calculation?
+
+253
+00:09:20,134 --> 00:09:23,174
+Because SARS views the total amount of money you receive
+
+254
+00:09:23,129 --> 00:09:26,129
+as the entire pie, which represents 150...
+
+255
+00:09:26,125 --> 00:09:27,565
+15% of the base price.
+
+256
+00:09:27,565 --> 00:09:28,565
+Oh, I see.
+
+257
+00:09:28,565 --> 00:09:29,165
+The 100% is your rate.
+
+258
+00:09:29,120 --> 00:09:32,120
+revenue. Yeah. And the 15% is the VHU should have set aside.
+
+259
+00:09:32,115 --> 00:09:34,955
+So to extract just the VAT portion from a
+
+260
+00:09:35,111 --> 00:09:38,111
+the total by 50.
+
+261
+00:09:38,106 --> 00:09:40,686
+and then divide by 115.
+
+262
+00:09:41,102 --> 00:09:43,102
+Let's apply this to Sarah.
+
+263
+00:09:43,102 --> 00:09:44,102
+Let's say, "Sar's back."
+
+264
+00:09:44,097 --> 00:09:47,097
+dates her registration by eight months, and during
+
+265
+00:09:47,092 --> 00:09:51,652
+those eight months she had R1 million in sales.
+
+266
+00:09:50,088 --> 00:09:53,088
+Okay, so she takes that R1 million, multiplies it by...
+
+267
+00:09:53,083 --> 00:09:55,083
+and divides by 115.
+
+268
+00:09:56,078 --> 00:09:59,078
+she now owes SARS just over R-130.
+
+269
+00:09:59,074 --> 00:10:01,074
+That is brutal.
+
+270
+00:10:02,069 --> 00:10:05,069
+in cash today.
+
+271
+00:10:05,065 --> 00:10:08,905
+penalties, and interest for late payment.
+
+272
+00:10:08,060 --> 00:10:11,060
+And she obviously can't go back to her customers from eight months ago and...
+
+273
+00:10:11,055 --> 00:10:14,055
+say hey I actually need an extra 15% for that dining.
+
+274
+00:10:14,051 --> 00:10:15,091
+table you bought last year.
+
+275
+00:10:15,091 --> 00:10:18,051
+No, that money is just totally white from her working--
+
+276
+00:10:17,046 --> 00:10:18,046
+Capitol.
+
+277
+00:10:18,046 --> 00:10:19,986
+To make matters worse, the administrative burden of fixing
+
+278
+00:10:20,041 --> 00:10:21,041
+it is heavy, right?
+
+279
+00:10:21,041 --> 00:10:23,041
+The source mentioned something about E5-
+
+280
+00:10:23,037 --> 00:10:26,037
+Yes, if SARS sets that value.
+
+281
+00:10:26,032 --> 00:10:28,992
+backdated effective date further back than six months.
+
+282
+00:10:29,028 --> 00:10:31,028
+You can't even sort it out online.
+
+283
+00:10:32,023 --> 00:10:35,023
+system only allows self-service backdating.
+
+284
+00:10:35,018 --> 00:10:39,618
+up to six months. If they go further back than that.
+
+285
+00:10:38,014 --> 00:10:41,014
+You are forced to physically walk into a SARS branch.
+
+286
+00:10:41,009 --> 00:10:44,049
+stand in line and present your supporting documentation.
+
+287
+00:10:44,004 --> 00:10:45,004
+person.
+
+288
+00:10:45,004 --> 00:10:47,004
+Just to try and reconstruct your financial timeline for the future.
+
+289
+00:10:47,000 --> 00:10:49,000
+Exactly. It's incredibly stressful.
+
+290
+00:10:49,000 --> 00:10:50,000
+Okay. If you're listening...
+
+291
+00:10:49,995 --> 00:10:53,035
+to this and you are checking your own accounting software in an absolute
+
+292
+00:10:52,991 --> 00:10:55,871
+panic right now. Take a breath.
+
+293
+00:10:55,986 --> 00:10:58,986
+Daniel Amoah lays out some very clear
+
+294
+00:10:58,981 --> 00:11:01,901
+immediate action steps if you happen to get one of these.
+
+295
+00:11:01,977 --> 00:11:02,977
+surprise notices.
+
+296
+00:11:02,977 --> 00:11:03,977
+Very important step.
+
+297
+00:11:03,977 --> 00:11:03,977
+First.
+
+298
+00:11:04,972 --> 00:11:06,972
+Do not ignore it.
+
+299
+00:11:07,967 --> 00:11:10,967
+On that notice is legally binding, whether you log into your portal.
+
+300
+00:11:10,963 --> 00:11:11,963
+or not.
+
+301
+00:11:11,963 --> 00:11:13,363
+Ignoring it just makes the penalties worse.
+
+302
+00:11:13,363 --> 00:11:14,363
+Right.
+
+303
+00:11:13,958 --> 00:11:16,958
+Check that effective date incredibly carefully.
+
+304
+00:11:16,954 --> 00:11:19,914
+Third, link your tax type on e-file
+
+305
+00:11:19,949 --> 00:11:22,829
+before your first return is actually due so you don't compound the
+
+306
+00:11:22,944 --> 00:11:24,744
+problem with late filing penalties.
+
+307
+00:11:24,744 --> 00:11:25,584
+- Yeah.
+
+308
+00:11:25,584 --> 00:11:26,424
+- And fourth.
+
+309
+00:11:25,940 --> 00:11:28,940
+And honestly, maybe most importantly, do not
+
+310
+00:11:28,935 --> 00:11:31,975
+blindly accept a backdated liability without challenging
+
+311
+00:11:31,930 --> 00:11:33,210
+the data SARS used.
+
+312
+00:11:34,926 --> 00:11:36,526
+really your best defense here.
+
+313
+00:11:36,526 --> 00:11:37,886
+You absolutely have the
+
+314
+00:11:37,921 --> 00:11:40,921
+right to ask SARS what specific data.
+
+315
+00:11:40,917 --> 00:11:42,357
+triggered that registration date.
+
+316
+00:11:42,357 --> 00:11:43,757
+- Because the machine could be wrong.
+
+317
+00:11:43,757 --> 00:11:44,597
+- Exactly.
+
+318
+00:11:43,912 --> 00:11:44,912
+Exactly.
+
+319
+00:11:44,912 --> 00:11:46,912
+Sometimes the automated feed from a bank might
+
+320
+00:11:46,907 --> 00:11:49,787
+incorrectly categorize a business loan or maybe
+
+321
+00:11:49,903 --> 00:11:52,583
+a personal capital injection as turnover.
+
+322
+00:11:52,898 --> 00:11:54,738
+Right, which isn't taxable revenue.
+
+323
+00:11:54,738 --> 00:11:55,658
+No, it's not.
+
+324
+00:11:55,893 --> 00:11:58,833
+So if the data is wrong, you need to fight the effective
+
+325
+00:11:58,889 --> 00:12:01,529
+date. But you need to act fast.
+
+326
+00:12:01,884 --> 00:12:04,964
+Wait, if the penalties are this brutal and the administration
+
+327
+00:12:04,880 --> 00:12:07,880
+burden is this heavy, it brings up a strategy from the
+
+328
+00:12:07,875 --> 00:12:10,875
+articles that seems, honestly, completely illogical.
+
+329
+00:12:10,870 --> 00:12:11,870
+at first glance.
+
+330
+00:12:11,870 --> 00:12:12,870
+voluntary registration
+
+331
+00:12:12,870 --> 00:12:13,870
+yeah why on
+
+332
+00:12:13,866 --> 00:12:16,746
+Earth do some businesses actually volunteer to register
+
+333
+00:12:16,861 --> 00:12:18,861
+It sounds totally crazy, I know.
+
+334
+00:12:18,861 --> 00:12:19,861
+But Volln-
+
+335
+00:12:19,856 --> 00:12:22,696
+voluntary registration is actually a very powerful tool.
+
+336
+00:12:22,852 --> 00:12:24,572
+remind ourselves of the new numbers here.
+
+337
+00:12:24,572 --> 00:12:25,852
+Effective 1 April.
+
+338
+00:12:25,847 --> 00:12:28,707
+2026. The voluntary threshold is
+
+339
+00:12:28,843 --> 00:12:31,843
+$120,000 over a rolling 12 months.
+
+340
+00:12:31,838 --> 00:12:34,838
+months. Right. So as long as you hit that relatively low bar, you can
+
+341
+00:12:34,833 --> 00:12:36,433
+raise your hand and opt in.
+
+342
+00:12:36,433 --> 00:12:38,273
+And they're incredibly strategic.
+
+343
+00:12:37,829 --> 00:12:38,829
+reasons to do so.
+
+344
+00:12:38,829 --> 00:12:39,829
+The biggest one being the ability to claim
+
+345
+00:12:40,824 --> 00:12:43,784
+input VAT right? Absolutely. This is a complete
+
+346
+00:12:43,819 --> 00:12:45,979
+lifeline for capital intensive startups.
+
+347
+00:12:46,815 --> 00:12:49,815
+you are opening a restaurant before you even sell a.
+
+348
+00:12:49,810 --> 00:12:52,810
+single meal to a customer, you are buying expensive
+
+349
+00:12:52,806 --> 00:12:55,806
+Commercial ovens paying a massive deposit on a commercial
+
+350
+00:12:55,801 --> 00:12:57,801
+police hiring lawyers and accountants.
+
+351
+00:12:58,796 --> 00:13:01,676
+costs likely include 15% VAT.
+
+352
+00:13:01,676 --> 00:13:02,676
+Right.
+
+353
+00:13:01,792 --> 00:13:04,792
+And if you are not registered, that 15% is just a sunk.
+
+354
+00:13:04,787 --> 00:13:06,747
+cost, it vanishes.
+
+355
+00:13:06,747 --> 00:13:08,787
+But if you register voluntarily--
+
+356
+00:13:07,782 --> 00:13:10,782
+you can claim all that input via e-mail.
+
+357
+00:13:10,778 --> 00:13:12,378
+Back from SARS.
+
+358
+00:13:12,378 --> 00:13:14,778
+Wow, so it is a massive--
+
+359
+00:13:13,773 --> 00:13:16,773
+cash flow injection exactly when a young business needs it most.
+
+360
+00:13:16,769 --> 00:13:17,769
+Exactly.
+
+361
+00:13:17,769 --> 00:13:18,769
+That makes total sense.
+
+362
+00:13:18,769 --> 00:13:19,769
+You're basically getting a 15-
+
+363
+00:13:19,764 --> 00:13:22,764
+discount on your startup costs.
+
+364
+00:13:22,759 --> 00:13:25,759
+I saw in the source material is unlocking clients.
+
+365
+00:13:25,755 --> 00:13:27,555
+Yes, the B2B aspect.
+
+366
+00:13:27,555 --> 00:13:28,715
+Right, like if you want to play--
+
+367
+00:13:28,750 --> 00:13:30,910
+in the big leagues selling to large corporates
+
+368
+00:13:30,910 --> 00:13:32,750
+or bidding on government.
+
+369
+00:13:31,745 --> 00:13:34,625
+tenders, they often outright refuse to work with
+
+370
+00:13:34,741 --> 00:13:36,741
+non-VAA-registered suppliers.
+
+371
+00:13:37,736 --> 00:13:39,836
+becomes a ceiling on your growth.
+
+372
+00:13:39,836 --> 00:13:40,336
+Wow.
+
+373
+00:13:40,732 --> 00:13:43,372
+Tied to that is the signaling of scale.
+
+374
+00:13:43,372 --> 00:13:44,212
+Rightly.
+
+375
+00:13:43,727 --> 00:13:46,727
+or wrongly when a corporate procurement officer...
+
+376
+00:13:46,722 --> 00:13:49,402
+sees a VAT number on your invoice.
+
+377
+00:13:49,718 --> 00:13:51,798
+It signals that you are an established entity.
+
+378
+00:13:51,798 --> 00:13:53,198
+- Right, you aren't just--
+
+379
+00:13:52,713 --> 00:13:54,713
+running a little side hustle out of your garage.
+
+380
+00:13:55,708 --> 00:13:58,708
+compliant economy.
+
+381
+00:13:58,704 --> 00:14:01,704
+that you completely avoid the auto trap we just spent the last
+
+382
+00:14:01,699 --> 00:14:02,899
+10 minutes talking about.
+
+383
+00:14:02,899 --> 00:14:03,899
+The peace of mind.
+
+384
+00:14:03,899 --> 00:14:04,399
+Exactly.
+
+385
+00:14:04,695 --> 00:14:07,695
+Registering on your own terms means you have clean
+
+386
+00:14:07,690 --> 00:14:10,690
+systems, your pricing is already built around V8.
+
+387
+00:14:10,685 --> 00:14:13,685
+and you have zero surprise backdated
+
+388
+00:14:13,681 --> 00:14:16,681
+You control the timeline, not...
+
+389
+00:14:16,676 --> 00:14:17,676
+some algorithm.
+
+390
+00:14:17,676 --> 00:14:19,676
+And that control cannot be overstated.
+
+391
+00:14:19,671 --> 00:14:22,671
+Thinking about all these pros and cons, voluntary registration
+
+392
+00:14:22,667 --> 00:14:25,667
+is really like joining an exclusive expensive
+
+393
+00:14:25,662 --> 00:14:27,662
+country club. Ooh, I like that.
+
+394
+00:14:28,658 --> 00:14:31,658
+Use the golf course and use the clubhouse to network with the wealthy.
+
+395
+00:14:31,653 --> 00:14:34,613
+corporate clients inside, the high membership fees.
+
+396
+00:14:34,648 --> 00:14:35,768
+totally pay for themselves.
+
+397
+00:14:35,768 --> 00:14:37,688
+You get your input VAT back, you land the big--
+
+398
+00:14:37,644 --> 00:14:44,644
+corporate contracts, but if you just want to sit back and say, "I'm going to get a
+
+399
+00:14:40,639 --> 00:14:43,599
+the pool eating a sandwich, meaning you're just
+
+400
+00:14:43,634 --> 00:14:46,554
+selling everyday items to everyday
+
+401
+00:14:46,630 --> 00:14:49,630
+consumers. You are essentially just paying a 15%
+
+402
+00:14:49,625 --> 00:14:51,625
+premium for no reason.
+
+403
+00:14:52,621 --> 00:14:57,261
+analogy. Because if you are just sitting by the pool...
+
+404
+00:14:55,616 --> 00:14:58,576
+The cons of voluntary registration are going to be
+
+405
+00:14:58,611 --> 00:15:01,611
+to absolutely crush your business.
+
+406
+00:15:01,607 --> 00:15:04,327
+Well, the biggest downside is that once you are in the club
+
+407
+00:15:04,602 --> 00:15:07,562
+you have to charge 15% on everything you sell.
+
+408
+00:15:07,597 --> 00:15:10,597
+If your customers are everyday consumers or other small
+
+409
+00:15:10,593 --> 00:15:12,953
+businesses who aren't VA registered.
+
+410
+00:15:13,588 --> 00:15:15,188
+can't claim that 15% back.
+
+411
+00:15:15,188 --> 00:15:15,888
+Oh, right.
+
+412
+00:15:15,888 --> 00:15:17,428
+So to them--
+
+413
+00:15:16,584 --> 00:15:19,584
+You just became 15% more expensive than your non-registered competitor.
+
+414
+00:15:19,579 --> 00:15:20,579
+down the street.
+
+415
+00:15:20,579 --> 00:15:22,579
+Which instantly destroys your competitor.
+
+416
+00:15:22,574 --> 00:15:25,574
+destroys it and then there's the compliance overhead. The moment you read
+
+417
+00:15:25,570 --> 00:15:28,570
+the administrative burden is immediate and it's not
+
+418
+00:15:28,565 --> 00:15:29,065
+negotiable.
+
+419
+00:15:29,065 --> 00:15:30,065
+Got that paperwork.
+
+420
+00:15:30,065 --> 00:15:31,065
+So much paperwork.
+
+421
+00:15:31,065 --> 00:15:31,565
+You have to file
+
+422
+00:15:31,560 --> 00:15:34,600
+VAT201 returns, as the standard
+
+423
+00:15:34,556 --> 00:15:37,456
+highly detailed form you must submit to SARS.
+
+424
+00:15:37,551 --> 00:15:40,551
+every two months. Your tax invoices must be forma-
+
+425
+00:15:40,547 --> 00:15:43,587
+added exactly to their specifications and your record keeps
+
+426
+00:15:43,542 --> 00:15:44,542
+has to be immaculate.
+
+427
+00:15:44,542 --> 00:15:46,542
+SARS doesn't care if you only
+
+428
+00:15:46,537 --> 00:15:48,777
+made our 150,000 that year.
+
+429
+00:15:49,533 --> 00:15:52,553
+your invoices are non-compliant, they will disallow
+
+430
+00:15:52,528 --> 00:15:55,528
+your input claims and they will penalize you.
+
+431
+00:15:55,523 --> 00:15:58,523
+Just like try it out for a few months and then quietly leave if it gets
+
+432
+00:15:58,519 --> 00:15:59,359
+It's too hard, Kenny.
+
+433
+00:15:59,359 --> 00:16:00,799
+Oh, definitely not.
+
+434
+00:16:00,799 --> 00:16:01,639
+Deregistering.
+
+435
+00:16:01,514 --> 00:16:04,514
+from VA is a highly scrutinized, incredibly
+
+436
+00:16:04,509 --> 00:16:05,509
+difficult process.
+
+437
+00:16:05,509 --> 00:16:05,509
+SARS wants to know exactly what you think.
+
+438
+00:16:07,505 --> 00:16:10,545
+Exactly why you are leaving they will likely audit
+
+439
+00:16:10,500 --> 00:16:13,500
+your final periods to ensure you aren't hiding assets.
+
+440
+00:16:13,496 --> 00:16:14,496
+Wow.
+
+441
+00:16:14,496 --> 00:16:16,496
+And honestly, it's incredibly awesome.
+
+442
+00:16:16,491 --> 00:16:21,131
+to try and reverse your pricing strategy with your existing company.
+
+443
+00:16:19,486 --> 00:16:20,486
+customers.
+
+444
+00:16:20,486 --> 00:16:23,486
+So once you opt in, you need to be deeply committed.
+
+445
+00:16:22,482 --> 00:16:25,442
+Okay, but let's be real here. Figuring out whether joining
+
+446
+00:16:25,477 --> 00:16:28,477
+this country club will bankrupt you or save you isn't something you can
+
+447
+00:16:28,472 --> 00:16:33,152
+just guess at. You can't just ask your buddy down the street what they did.
+
+448
+00:16:31,468 --> 00:16:32,268
+Definitely not.
+
+449
+00:16:34,463 --> 00:16:37,463
+the math to decide if they should join now at r12.
+
+450
+00:16:37,459 --> 00:16:40,399
+20,000 or sweat it out on the treadmill until they hit
+
+451
+00:16:40,454 --> 00:16:41,774
+are 2.3 million.
+
+452
+00:16:41,774 --> 00:16:43,334
+They shouldn't do it themselves.
+
+453
+00:16:43,449 --> 00:16:47,449
+This requires a hard mathematical analysis of--
+
+454
+00:16:46,445 --> 00:16:48,045
+your specific situation.
+
+455
+00:16:48,045 --> 00:16:50,045
+You have to ask very concrete questions.
+
+456
+00:16:49,440 --> 00:16:49,940
+Like what?
+
+457
+00:16:49,940 --> 00:16:52,440
+Like, who exactly are your customers?
+
+458
+00:16:52,435 --> 00:16:55,435
+If your customers are other VAT registered businesses,
+
+459
+00:16:55,431 --> 00:16:58,391
+A B2B model voluntary registration is
+
+460
+00:16:58,426 --> 00:17:01,466
+generally a safe bet. You add 15% to their invoice.
+
+461
+00:17:01,422 --> 00:17:04,302
+They claim it back from SARS. Your effective price to them.
+
+462
+00:17:04,417 --> 00:17:05,417
+hasn't changed.
+
+463
+00:17:05,417 --> 00:17:06,417
+Right, it's a wash for them.
+
+464
+00:17:06,417 --> 00:17:07,417
+Exactly.
+
+465
+00:17:07,412 --> 00:17:10,372
+But if you were B2C, selling to everyday consumers...
+
+466
+00:17:10,408 --> 00:17:12,408
+It's a completely different calculation.
+
+467
+00:17:13,403 --> 00:17:15,803
+map out a typical month's cash flow.
+
+468
+00:17:15,803 --> 00:17:16,303
+You do.
+
+469
+00:17:16,398 --> 00:17:19,398
+Like, are you carrying enough VIT inclusive coffee?
+
+470
+00:17:19,394 --> 00:17:22,314
+that the money you claim back actually outweighs the money
+
+471
+00:17:22,389 --> 00:17:25,389
+you will spend on accountant fees just to file.
+
+472
+00:17:25,385 --> 00:17:28,385
+those bi-monthly VA 2201 returns.
+
+473
+00:17:28,380 --> 00:17:30,880
+which is exactly why you bring in professionals.
+
+474
+00:17:31,375 --> 00:17:34,375
+For example, Daniel Elmoa's firm, Cicatrix, which is based in El--
+
+475
+00:17:34,371 --> 00:17:36,931
+Albert and Gotang, they specialize in this.
+
+476
+00:17:36,931 --> 00:17:37,931
+Right.
+
+477
+00:17:37,366 --> 00:17:38,366
+SIP folks.
+
+478
+00:17:38,366 --> 00:17:39,366
+Yes.
+
+479
+00:17:39,366 --> 00:17:40,366
+As APA registered professional.
+
+480
+00:17:40,361 --> 00:17:43,001
+accountants and SARS-registered tax practitioners.
+
+481
+00:17:43,357 --> 00:17:44,537
+they don't guess.
+
+482
+00:17:44,537 --> 00:17:46,337
+They use a business as real numbers.
+
+483
+00:17:46,352 --> 00:17:49,312
+model the actual cash flow impact of registering.
+
+484
+00:17:49,348 --> 00:17:52,108
+figure out if the Country Club membership is actually worth it for you.
+
+485
+00:17:52,343 --> 00:17:55,303
+Exactly. They look at your customer base, they handle the actual registration.
+
+486
+00:17:55,338 --> 00:17:58,298
+in the invoicing setup so you are compliant from day one.
+
+487
+00:17:58,334 --> 00:17:59,334
+That's huge.
+
+488
+00:17:59,334 --> 00:18:00,334
+It is.
+
+489
+00:18:00,334 --> 00:18:01,134
+And crucially.
+
+490
+00:18:01,329 --> 00:18:04,329
+If the math says you should not register voluntarily.
+
+491
+00:18:04,324 --> 00:18:07,324
+They monitor your turnover against that.
+
+492
+00:18:07,320 --> 00:18:10,040
+2.3 million compulsory threshold.
+
+493
+00:18:10,315 --> 00:18:11,635
+they watch the treadmill for you.
+
+494
+00:18:11,635 --> 00:18:12,835
+- Ah, that's smart.
+
+495
+00:18:13,311 --> 00:18:16,351
+you do cross it, you apply within your 21 business days.
+
+496
+00:18:16,306 --> 00:18:19,186
+on your own terms and you never receive
+
+497
+00:18:19,186 --> 00:18:21,046
+the
+
+498
+00:18:19,301 --> 00:18:21,301
+that terrifying surprise notice.
+
+499
+00:18:21,301 --> 00:18:23,301
+- Okay, let's bring this all to you.
+
+500
+00:18:22,297 --> 00:18:23,617
+together for everyone listening.
+
+501
+00:18:25,292 --> 00:18:27,912
+deep dive, lock these essentials into your brain, okay?
+
+502
+00:18:28,287 --> 00:18:29,447
+New numbers are very real.
+
+503
+00:18:29,447 --> 00:18:31,327
+The compulsory threshold is R2.2.
+
+504
+00:18:31,283 --> 00:18:34,283
+million. The voluntary threshold is R
+
+505
+00:18:34,278 --> 00:18:37,318
+120,000. Both of those became effective
+
+506
+00:18:37,274 --> 00:18:39,274
+on 1 April 2026.
+
+507
+00:18:40,269 --> 00:18:43,309
+compulsory mark that 21 business day rule is incredibly
+
+508
+00:18:43,264 --> 00:18:44,264
+strict.
+
+509
+00:18:44,264 --> 00:18:45,264
+Very strict.
+
+510
+00:18:45,264 --> 00:18:46,264
+And above all, you are being watched.
+
+511
+00:18:46,260 --> 00:18:49,120
+right now. SARS' automatic data matching system is
+
+512
+00:18:49,255 --> 00:18:51,975
+already integrated, it is already pulling your banking and
+
+513
+00:18:51,975 --> 00:18:52,475
+CIP.
+
+514
+00:18:52,250 --> 00:18:55,250
+PC data and it is actively catching businesses on that.
+
+515
+00:18:55,246 --> 00:18:57,406
+that rolling 12 month treadmill today.
+
+516
+00:18:57,406 --> 00:18:58,246
+- It is.
+
+517
+00:18:58,241 --> 00:19:01,161
+And, you know, if we connect this to the bigger picture, even if you aren't
+
+518
+00:19:01,237 --> 00:19:04,237
+currently running a business that is anywhere near that R2.3.
+
+519
+00:19:04,232 --> 00:19:07,032
+million mark. Understanding these mechanics
+
+520
+00:19:07,227 --> 00:19:08,227
+is still vital.
+
+521
+00:19:08,227 --> 00:19:09,227
+Definitely.
+
+522
+00:19:09,227 --> 00:19:10,067
+It provides this massive
+
+523
+00:19:10,223 --> 00:19:13,223
+moment about how our entire economy functions.
+
+524
+00:19:13,218 --> 00:19:16,218
+It explains why businesses price things
+
+525
+00:19:16,213 --> 00:19:19,213
+things the exact way they do, why they choose
+
+526
+00:19:19,209 --> 00:19:21,109
+certain suppliers over others.
+
+527
+00:19:21,109 --> 00:19:22,109
+Yeah, it's all connected.
+
+528
+00:19:22,204 --> 00:19:25,084
+It really is. And most importantly, it highlights how
+
+529
+00:19:25,200 --> 00:19:28,200
+digital data is entirely reshaping the landscape.
+
+530
+00:19:28,195 --> 00:19:31,115
+of taxation. We are moving from an era of
+
+531
+00:19:31,190 --> 00:19:34,070
+trust-based self-declaration to an era of
+
+532
+00:19:34,186 --> 00:19:35,626
+algorithmic verification.
+
+533
+00:19:35,626 --> 00:19:36,826
+So what does this all mean?
+
+534
+00:19:36,826 --> 00:19:37,106
+Well,
+
+535
+00:19:37,181 --> 00:19:39,341
+it leaves us with a pretty wild thought to chew on.
+
+536
+00:19:39,341 --> 00:19:40,181
+Let's hear it.
+
+537
+00:19:40,176 --> 00:19:43,176
+If SARS' third-party data integration is already so incr-
+
+538
+00:19:43,172 --> 00:19:46,172
+incredibly advanced today-like, if they can automatically
+
+539
+00:19:46,167 --> 00:19:49,167
+register businesses, track rolling 12-month term.
+
+540
+00:19:49,163 --> 00:19:52,163
+turnovers across different bank accounts and calculate back.
+
+541
+00:19:52,158 --> 00:19:55,118
+dated VAT liabilities without a single application ever being
+
+542
+00:19:55,153 --> 00:19:58,233
+submitted. Yeah. How long will it be before the government's digital system
+
+543
+00:19:58,149 --> 00:20:00,989
+eliminate the need for tax returns entirely.
+
+544
+00:20:01,144 --> 00:20:02,144
+Great.
+
+545
+00:20:02,144 --> 00:20:04,064
+Are we looking at a future where business
+
+546
+00:20:04,139 --> 00:20:07,099
+Taxation just becomes a real time completely
+
+547
+00:20:07,135 --> 00:20:10,095
+invisible deduction on every single swipe of a bank.
+
+548
+00:20:10,130 --> 00:20:13,050
+That is a fascinating and slightly scary
+
+549
+00:20:13,126 --> 00:20:14,126
+question.
+
+550
+00:20:14,126 --> 00:20:16,086
+Something to think about the next time you open your mail and
+
+551
+00:20:16,121 --> 00:20:17,961
+see an envelope from the revenue service.
+
