@@ -15,13 +15,15 @@ Commit: see `git log -1` on this branch — bootstrap commit, message
 - `AGENTS.md` (new, repo root)
 - `docs/media-001/README.md` (new)
 - `docs/media-001/GOVERNANCE.md` (new)
-- `docs/media-001/CURRENT_STATE.md` (new)
-- `docs/media-001/NEXT_ACTIONS.md` (new)
+- `docs/media-001/CURRENT_STATE.md` (new, updated after Content QA)
+- `docs/media-001/NEXT_ACTIONS.md` (new, updated after Content QA)
 - `docs/media-001/HANDOFF.md` (new, this file)
 - `docs/media-001/DECISIONS.md` (new)
 - `docs/media-001/ARCHITECTURE.md` (new)
 - `docs/media-001/DISTRIBUTION_CHECKLIST.md` (new)
 - `docs/media-001/AUDIO_QA.md` (new)
+- `docs/media-001/CONTENT_QA.md` (new — Section 10 findings)
+- `docs/media-001/transcript-automated.srt` (new — machine transcript, evidence only)
 - `docs/media-001/CC_HANDOFF_MEDIA-001.md` (new — original spec, copied for reference)
 - `audio/master/The_R2_podcast.m4a` (new — copy of supplied master)
 
@@ -39,8 +41,12 @@ documentation + a static asset addition). Verified instead by:
 
 ## Unresolved issues
 
-- Exact two source articles behind the podcast are **not identified** —
-  see CURRENT_STATE.md. This blocks Content QA and everything downstream.
+- **Content QA found material discrepancies** — see `CONTENT_QA.md`.
+  Automatic VAT registration framed as a future hypothetical rather than
+  present fact (contradicts source article 2's premise); R120,000
+  voluntary threshold and 1 April 2026 effective date both absent from
+  the podcast; "21 days" stated where both sources say "21 business
+  days." This is a stop condition, not a routine pending item.
 - Editorial/human listening QA not performed (no listening facility used).
 - Podcast artwork decision not made.
 - Website episode-page structure is proposed but not built.
@@ -51,16 +57,17 @@ See `NEXT_ACTIONS.md` — all items marked `[HUMAN ACTION]`.
 
 ## Next recommended action
 
-Daniel identifies the two source articles (or approves transcription
-tooling), then the next worker runs Content QA (CC handoff Section 10)
-before any metadata or distribution prep proceeds.
+Daniel reviews `CONTENT_QA.md` and decides how to resolve the findings
+(re-record/edit vs. accept as editorial simplification). No further
+metadata, artwork, or distribution work should proceed until that
+decision is made.
 
 ## Prohibited actions
 
-No regeneration of the podcast master. No publication anywhere. No account
-creation, payment, or credential handling. No unrelated refactoring. No
-merge to `master`/production without explicit human authorization. No
-guessing the source articles.
+No regeneration of the podcast master. No publication anywhere — this
+episode failed Content QA in its current form. No account creation,
+payment, or credential handling. No unrelated refactoring. No merge to
+`master`/production without explicit human authorization.
 
 ## Relevant URLs
 

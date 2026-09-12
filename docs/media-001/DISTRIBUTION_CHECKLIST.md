@@ -14,9 +14,15 @@
 - [x] editorial listening status explicitly recorded — PENDING (human)
 
 ### Source
-- [ ] exact two source articles identified — **BLOCKED, human action required**
-- [ ] URLs documented
-- [ ] source/content relationship documented
+- [x] exact two source articles identified (confirmed by Daniel)
+- [x] URLs documented
+- [x] source/content relationship documented (`CONTENT_QA.md`)
+
+### Content QA
+- [x] transcript obtained (automated, `transcript-automated.srt`)
+- [x] compared against both source articles
+- [ ] **PASS — BLOCKED.** Material discrepancies found; see `CONTENT_QA.md`.
+      Publication may not proceed until Daniel resolves these.
 
 ### Metadata
 - [ ] show identity prepared
