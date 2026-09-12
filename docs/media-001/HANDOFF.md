@@ -1,0 +1,81 @@
+# HANDOFF.md
+
+**From:** Claude Code (bootstrap pass)
+**To:** next implementation worker (any of Claude Code / Codex / Hermes)
+**Date:** 12 September 2026
+
+## Current branch / commit
+
+Branch: `media-001-podcast-activation` (not merged to `master`).
+Commit: see `git log -1` on this branch — bootstrap commit, message
+"MEDIA-001: governance bootstrap + audio master intake".
+
+## Files changed
+
+- `AGENTS.md` (new, repo root)
+- `docs/media-001/README.md` (new)
+- `docs/media-001/GOVERNANCE.md` (new)
+- `docs/media-001/CURRENT_STATE.md` (new)
+- `docs/media-001/NEXT_ACTIONS.md` (new)
+- `docs/media-001/HANDOFF.md` (new, this file)
+- `docs/media-001/DECISIONS.md` (new)
+- `docs/media-001/ARCHITECTURE.md` (new)
+- `docs/media-001/DISTRIBUTION_CHECKLIST.md` (new)
+- `docs/media-001/AUDIO_QA.md` (new)
+- `docs/media-001/CC_HANDOFF_MEDIA-001.md` (new — original spec, copied for reference)
+- `audio/master/The_R2_podcast.m4a` (new — copy of supplied master)
+
+No other files touched. No application code, no dependencies, no config.
+
+## Tests run / results
+
+No automated test suite exists for this repo relevant to this change (it's
+documentation + a static asset addition). Verified instead by:
+- `git status` before and after — confirmed no other files were touched.
+- `ffprobe`/`ffmpeg` technical audio QA on the master file — PASS, full
+  results in `AUDIO_QA.md`.
+- Confirmed `audio/master/The_R2_podcast.m4a` is byte-identical to the
+  source file supplied (straight copy, not re-encoded).
+
+## Unresolved issues
+
+- Exact two source articles behind the podcast are **not identified** —
+  see CURRENT_STATE.md. This blocks Content QA and everything downstream.
+- Editorial/human listening QA not performed (no listening facility used).
+- Podcast artwork decision not made.
+- Website episode-page structure is proposed but not built.
+
+## Pending human actions
+
+See `NEXT_ACTIONS.md` — all items marked `[HUMAN ACTION]`.
+
+## Next recommended action
+
+Daniel identifies the two source articles (or approves transcription
+tooling), then the next worker runs Content QA (CC handoff Section 10)
+before any metadata or distribution prep proceeds.
+
+## Prohibited actions
+
+No regeneration of the podcast master. No publication anywhere. No account
+creation, payment, or credential handling. No unrelated refactoring. No
+merge to `master`/production without explicit human authorization. No
+guessing the source articles.
+
+## Relevant URLs
+
+- Repo: https://github.com/qzenta/sikatrix
+- Site: https://www.sikatrix.com (per `reference-sikatrix-domain` — not
+  `sikatrix.co.za`)
+
+## Relevant source documents
+
+- `docs/media-001/CC_HANDOFF_MEDIA-001.md` — full originating spec
+  (12 Sep 2026).
+
+## Environment assumptions
+
+`audio/master/The_R2_podcast.m4a` is now present in-repo on this branch;
+no need to re-source it from elsewhere. ffmpeg/ffprobe 8.1.1 available in
+the environment used for QA (not necessarily every future environment —
+re-verify tooling availability before relying on it again).
