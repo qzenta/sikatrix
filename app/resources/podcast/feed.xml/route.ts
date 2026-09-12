@@ -16,6 +16,11 @@ import { SITE } from "@/lib/site";
 
 export const dynamic = "force-static";
 
+// Scoped to this feed only — deliberately not SITE.email, which is the
+// site-wide contact address used elsewhere (forms, schema.org, header).
+// The podcast owner contact is its own address per Daniel's instruction.
+const PODCAST_OWNER_EMAIL = "social@sikatrix.com";
+
 function escapeXml(value: string): string {
   return value
     .replace(/&/g, "&amp;")
@@ -82,7 +87,7 @@ export async function GET() {
     <itunes:type>episodic</itunes:type>
     <itunes:owner>
       <itunes:name>Sikatrix Business Accountants</itunes:name>
-      <itunes:email>${SITE.email}</itunes:email>
+      <itunes:email>${PODCAST_OWNER_EMAIL}</itunes:email>
     </itunes:owner>
     <itunes:image href="${image}" />
     <itunes:category text="Business">
