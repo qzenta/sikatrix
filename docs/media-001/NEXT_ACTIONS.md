@@ -1,8 +1,13 @@
 # NEXT_ACTIONS.md
 
 [HUMAN ACTION]
-Review and sign off on `artwork/podcast-cover-2000x2000.png` (or request
-changes — e.g. adding show-name text, a different color treatment).
+Choose an artwork path from `ARTWORK_ASSESSMENT.md`'s 3 options
+(recreate the bevel style via a design tool at native high-res —
+possibly check whether the original designer holds a working source
+file; approximate it programmatically for review; or defer the
+resolution decision). The first candidate was the wrong brand style and
+has been removed — no higher-res/vector source of the correct style
+exists anywhere accessible to this worker.
 
 [HUMAN ACTION]
 Perform editorial/human listening QA of `audio/master/The_R2_podcast_v2.m4a`

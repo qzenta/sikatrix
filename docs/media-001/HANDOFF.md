@@ -13,8 +13,11 @@ Commit: see `git log -1` on this branch — bootstrap commit, message
 ## Files changed
 
 - `docs/media-001/PODCAST_IDENTITY.md` (Section 11 — show name/email now confirmed)
-- `docs/media-001/ARTWORK_ASSESSMENT.md` (Section 12 — vector source found, candidate produced)
-- `docs/media-001/artwork/podcast-cover-2000x2000.png` (new — candidate cover art)
+- `docs/media-001/ARTWORK_ASSESSMENT.md` (Section 12 — candidate produced,
+  then rejected as wrong brand style, then removed; blocked again with 3
+  reported options)
+- `docs/media-001/artwork/podcast-cover-2000x2000.png` — **added then
+  removed** in this same pass, see git log for both commits
 - `docs/media-001/EPISODE_PAGE_DRAFT.md` (Section 18, content only)
 - `AGENTS.md` (new, repo root)
 - `docs/media-001/README.md` (new)
@@ -59,14 +62,17 @@ See `NEXT_ACTIONS.md` — all items marked `[HUMAN ACTION]`.
 ## Next recommended action
 
 Identity is finalized (show name "Sikatrix Resources", email
-`info@sikatrix.com`, both confirmed). Artwork gap resolved: a genuine
-vector source was found in the Sikatrix Design System stationery exports
-and a compliant 2000×2000 candidate cover was composited from it — awaits
-Daniel's sign-off, same as the episode-page draft. Daniel separately
-performs editorial/human listening QA of v2 — the actual gate on anything
-publication-track. **Explicitly not touched: Spotify/Apple/YouTube
-account-level actions or any submission/publish step** — do not cross
-that boundary without a fresh, explicit instruction to do so.
+`info@sikatrix.com`, both confirmed). **Artwork is blocked again**: the
+vector-sourced candidate was the wrong brand style (Daniel confirmed the
+real mark is embossed/beveled with a curved gold ribbon); it's been
+removed, and a further search found no higher-res/vector source of the
+correct style anywhere. `ARTWORK_ASSESSMENT.md` has 3 reported options
+awaiting Daniel's direction — do not upscale the 800×800 reference
+unilaterally, that instruction stands. Daniel separately performs
+editorial/human listening QA of v2 — the actual gate on anything
+publication-track regardless of artwork status. **Explicitly not
+touched: Spotify/Apple/YouTube account-level actions or any submission/
+publish step.**
 
 ## Prohibited actions
 
