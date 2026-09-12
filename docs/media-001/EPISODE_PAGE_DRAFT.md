@@ -96,7 +96,7 @@ metaTitle: "VAT Thresholds 2026: R2.3M Compulsory, R120K Voluntary | Sikatrix"
 metaDescription: "SARS raised the VAT registration thresholds on 1 April 2026. Listen to Sikatrix break down what R2.3 million compulsory and R120,000 voluntary registration means for your SME."
 ogTitle: "VAT Thresholds Just Changed: What It Means for Your SME | Sikatrix"
 ogDescription: "New 2026 VAT thresholds, explained — and why SARS is already auto-registering businesses that cross them."
-ogImage: "{{ podcast cover art — see ARTWORK_ASSESSMENT.md, not yet finalized }}"
+ogImage: "artwork/podcast-cover-2000x2000.png (see ARTWORK_ASSESSMENT.md — candidate, pending Daniel's sign-off)"
 twitterCard: "summary_large_image"
 canonical: "https://www.sikatrix.com/resources/podcast/vat-thresholds-2026-what-changed"
 structuredData: "PodcastEpisode schema (schema.org) — episode name, description, datePublished (once set), duration (PT20M18S), associatedMedia pointing at the hosted audio file, partOfSeries referencing the show"
@@ -107,7 +107,8 @@ structuredData: "PodcastEpisode schema (schema.org) — episode name, descriptio
 - Route/template doesn't exist yet — this is content only (ARCHITECTURE.md).
 - `audioFile` path is a placeholder — depends on where the RSS-hosted
   audio ends up living.
-- `ogImage` depends on the artwork decision in `ARTWORK_ASSESSMENT.md`.
+- `ogImage` candidate exists (`artwork/podcast-cover-2000x2000.png`) but
+  awaits Daniel's sign-off per `ARTWORK_ASSESSMENT.md`.
 - `publishDate` intentionally null — publication is not authorized.
 - Platform links are placeholders — none of Spotify/Apple/YouTube
   submission has happened, per the distribution boundary this pass isn't

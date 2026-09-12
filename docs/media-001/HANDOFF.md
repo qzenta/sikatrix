@@ -12,9 +12,10 @@ Commit: see `git log -1` on this branch — bootstrap commit, message
 
 ## Files changed
 
-- `docs/media-001/PODCAST_IDENTITY.md` (new — Section 11)
-- `docs/media-001/ARTWORK_ASSESSMENT.md` (new — Section 12)
-- `docs/media-001/EPISODE_PAGE_DRAFT.md` (new — Section 18, content only)
+- `docs/media-001/PODCAST_IDENTITY.md` (Section 11 — show name/email now confirmed)
+- `docs/media-001/ARTWORK_ASSESSMENT.md` (Section 12 — vector source found, candidate produced)
+- `docs/media-001/artwork/podcast-cover-2000x2000.png` (new — candidate cover art)
+- `docs/media-001/EPISODE_PAGE_DRAFT.md` (Section 18, content only)
 - `AGENTS.md` (new, repo root)
 - `docs/media-001/README.md` (new)
 - `docs/media-001/GOVERNANCE.md` (new)
@@ -57,14 +58,15 @@ See `NEXT_ACTIONS.md` — all items marked `[HUMAN ACTION]`.
 
 ## Next recommended action
 
-Identity, artwork assessment, and episode-page content are drafted for
-review (`PODCAST_IDENTITY.md`, `ARTWORK_ASSESSMENT.md`,
-`EPISODE_PAGE_DRAFT.md`). Daniel reviews these and separately performs
-editorial/human listening QA of v2 — the actual gate on anything
+Identity is finalized (show name "Sikatrix Resources", email
+`info@sikatrix.com`, both confirmed). Artwork gap resolved: a genuine
+vector source was found in the Sikatrix Design System stationery exports
+and a compliant 2000×2000 candidate cover was composited from it — awaits
+Daniel's sign-off, same as the episode-page draft. Daniel separately
+performs editorial/human listening QA of v2 — the actual gate on anything
 publication-track. **Explicitly not touched: Spotify/Apple/YouTube
-account-level actions or any submission/publish step** — Daniel's
-instruction was to stop at the distribution boundary this time. Do not
-cross it without a fresh, explicit instruction to do so.
+account-level actions or any submission/publish step** — do not cross
+that boundary without a fresh, explicit instruction to do so.
 
 ## Prohibited actions
 

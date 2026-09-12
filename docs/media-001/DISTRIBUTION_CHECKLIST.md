@@ -30,8 +30,10 @@
 - [x] show identity prepared (`PODCAST_IDENTITY.md` — 2 items flagged for Daniel's sign-off)
 - [x] episode identity prepared (`PODCAST_IDENTITY.md`)
 - [x] description prepared (`PODCAST_IDENTITY.md`, `EPISODE_PAGE_DRAFT.md`)
-- [x] artwork decision recorded — as a documented gap + 3 options for
-      Daniel to choose from (`ARTWORK_ASSESSMENT.md`); no asset exists yet
+- [x] artwork decision recorded — vector source found (Sikatrix Design
+      System stationery exports), compliant 2000×2000 cover composited
+      from it (`ARTWORK_ASSESSMENT.md`, `artwork/podcast-cover-2000x2000.png`);
+      pending Daniel's final sign-off as a candidate, not yet adopted
 
 ### Distribution
 - [ ] Spotify path prepared

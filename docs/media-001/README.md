@@ -18,7 +18,10 @@ See:
 - `transcript-automated.srt` / `transcript-v2-automated.srt` — machine
   transcripts used for content QA (evidence only, not human-verified)
 - `PODCAST_IDENTITY.md` — show/episode identity draft (Section 11)
-- `ARTWORK_ASSESSMENT.md` — existing brand asset review + gap (Section 12)
+- `ARTWORK_ASSESSMENT.md` — brand asset review; vector source found and a
+  candidate 2000×2000 cover produced from it (Section 12)
+- `artwork/podcast-cover-2000x2000.png` — candidate cover art, pending
+  Daniel's sign-off
 - `EPISODE_PAGE_DRAFT.md` — website episode page content draft (Section 18)
 - `CC_HANDOFF_MEDIA-001.md` — the original full spec (12 Sep 2026)
 

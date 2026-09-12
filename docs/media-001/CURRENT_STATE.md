@@ -1,62 +1,67 @@
 # CURRENT_STATE.md
 
-_Last updated: 12 Sep 2026 — identity/artwork/page-draft work ready for
-review; distribution boundary not crossed._
+_Last updated: 12 Sep 2026 — identity finalized, compliant artwork
+candidate produced from a genuine vector source._
 
 ## Where are we?
 
-v2 audio passed technical + content QA (accepted by Daniel). Per Daniel's
-explicit scope for this pass, three more Section 33 items are now
-drafted and ready for review: podcast identity (Section 11), artwork
-assessment (Section 12), and a website episode-page content draft
-(Section 18). **Spotify/Apple/YouTube account-level actions and any
-submission/publish step were explicitly excluded from this pass and have
-not been touched** — those remain blocked on Daniel's editorial listening
-QA of v2, which is still outstanding.
+v2 audio passed technical + content QA. Podcast identity, artwork, and
+the website episode-page draft (Sections 11/12/18) are drafted.
+**Show name and RSS owner email are now confirmed** ("Sikatrix
+Resources", `info@sikatrix.com`). **Artwork gap resolved**: a genuine
+vector source for the "S" mark was found beyond the files already
+checked, and a compliant 2000×2000 cover was composited directly from it
+— no upscaling. Distribution boundary (Spotify/Apple/YouTube accounts,
+any submission/publish step) has still not been touched.
 
 ## What has been completed?
 
-- Governance bootstrap, technical QA, content QA (v1 fail, v2 pass) — see
-  prior history in this file's git log.
-- **Podcast identity drafted** (`PODCAST_IDENTITY.md`): show identity,
-  episode identity, title/description/keywords/CTA, source-article links.
-  Reuses existing Sikatrix brand identity; no new podcast brand invented.
-  Two open naming/email decisions flagged for Daniel.
-- **Artwork assessed** (`ARTWORK_ASSESSMENT.md`): inspected all existing
-  Sikatrix visual assets (site logo, footer logo, OG image, app icon, and
-  the `sikatrix_profile_picture_800x800.png` brand mark). **No existing
-  asset meets podcast cover-art requirements** (square, ≥1400×1400px) —
-  documented as a gap with 3 proposed options, none actioned. No new
-  artwork created.
-- **Website episode-page content drafted** (`EPISODE_PAGE_DRAFT.md`):
-  full copy, metadata, SEO/OG fields, source links, related-tools links,
-  CTA — matching the existing `content/posts/` + `lib/blog.ts` pattern.
-  **Route/template not built** — this is content only, per the
-  already-documented scope boundary in `ARCHITECTURE.md`.
+- v1/v2 audio QA, content QA — v1 failed, v2 passed (prior history).
+- Podcast identity drafted and finalized on the two open items
+  (`PODCAST_IDENTITY.md`): show name "Sikatrix Resources", owner email
+  `info@sikatrix.com`, both confirmed by Daniel.
+- Website episode-page content drafted (`EPISODE_PAGE_DRAFT.md`) — route
+  not built, content only.
+- **Artwork resolved from a genuine source, not upscaling:**
+  - Searched beyond `public/` and Downloads per Daniel's instruction.
+  - Found real vector SVGs (`avatar-1024-transparent.svg`,
+    `avatar-1024-rounded.svg`) in
+    `OneDrive - Ghana Diaspora SA/Desk_1/Sikatrix Design System (4)/stationery/exports/`
+    — the "S" is genuine rendered text (Manrope 800), not an embedded
+    raster.
+  - Manrope font wasn't installed locally; downloaded the official
+    open-source variable font (Google Fonts/GitHub, ~165KB) with
+    Daniel's explicit approval, rather than accept a silent generic-font
+    substitution.
+  - Composited a self-contained SVG (navy `#172846` full-bleed square,
+    white "S", gold `#E8B53C` bar — matching `avatar-1024-rounded.svg`'s
+    palette, no rounded corners baked in), rendered it at 2000×2000 via
+    canvas in a headless browser context, flattened to RGB (no alpha).
+  - Result: `docs/media-001/artwork/podcast-cover-2000x2000.png` — within
+    the 1400–3000px compliant range, safe margins inherited proportionally
+    from the source design. **This is a candidate for Daniel's sign-off,
+    not an adopted final asset.**
 
 ## What is currently being worked on?
 
-Nothing — stopping here for review, as instructed. Not proceeding to
-Spotify/Apple/YouTube account actions or any publish step.
+Nothing — stopping here for review, as instructed. Distribution boundary
+still not crossed.
 
 ## What remains?
 
-- Daniel's review/approval of identity, artwork options, and the page
-  draft.
-- Daniel's editorial/human listening QA of v2 (separately outstanding,
-  unrelated to this pass, still the actual gate on publication-track work).
-- Artwork production itself (once an option is chosen).
-- Building the actual `/resources/podcast` route/template in code (a
-  separate implementation task from the content draft delivered here).
-- Every Spotify/Apple/YouTube account-boundary action — explicitly not
-  touched in this pass.
+- Daniel's sign-off on the artwork candidate (or a request to iterate).
+- Daniel's editorial/human listening QA of v2 audio — still the actual
+  gate on anything publication-track, unrelated to and not satisfied by
+  any of the identity/artwork/page-draft work.
+- Building the actual `/resources/podcast` route/template in code.
+- Every Spotify/Apple/YouTube account-boundary action — not started.
 
 ## What is blocked?
 
 - Publication of any kind — still requires editorial listening QA +
-  explicit approval, neither of which has happened.
-- All Spotify/Apple/YouTube submission work — explicitly out of scope
-  for this pass per Daniel's instruction, pending the listening QA above.
+  explicit approval.
+- Spotify/Apple/YouTube submission work — explicitly out of scope until
+  that approval happens.
 
 ## What decisions have been made?
 
@@ -64,13 +69,9 @@ See `DECISIONS.md`.
 
 ## What requires human action?
 
-- Review and approve/edit `PODCAST_IDENTITY.md` (especially the two
-  flagged open items: show name, RSS owner email).
-- Choose an artwork option from `ARTWORK_ASSESSMENT.md` (or reject all
-  three and propose another).
-- Review `EPISODE_PAGE_DRAFT.md` copy.
+- Sign off on `artwork/podcast-cover-2000x2000.png`, or request changes.
 - Perform editorial/human listening QA of `audio/master/The_R2_podcast_v2.m4a`.
-- Review and merge (or reject) branch `media-001-podcast-activation`.
+- Review branch `media-001-podcast-activation` and decide whether to merge.
 - When ready to cross the distribution boundary: every account-level
   action for Spotify/Apple/YouTube.
 
@@ -78,13 +79,10 @@ See `DECISIONS.md`.
 
 - Do not proceed to any Spotify/Apple/YouTube account creation,
   authentication, or submission step.
-- Do not publish anything, anywhere — none of this pass's output changes
-  that gate.
+- Do not publish anything, anywhere.
 - Do not overwrite or destructively modify either master audio file.
-- Do not treat this identity/artwork/page-draft work as implicitly
-  approved — it's drafted for review, not adopted.
-- Do not create the podcast artwork unilaterally — it's a documented gap
-  awaiting a human decision on which option to take.
+- Do not treat the artwork candidate as finally adopted — it needs
+  explicit sign-off, same as the identity/page-draft work.
 - Do not merge `media-001-podcast-activation` into `master` without human
   review.
 - Do not expand scope beyond MEDIA-001 (CC handoff Section 32).

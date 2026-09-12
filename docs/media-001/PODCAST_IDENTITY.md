@@ -9,24 +9,19 @@ explicitly authorized."
 
 | Field | Value |
 |---|---|
-| Show title | **Sikatrix Resources: Audio Briefings** |
+| Show title | **Sikatrix Resources** (confirmed by Daniel) |
 | Author/Publisher | Sikatrix Business Accountants |
 | Category (Apple/Spotify) | Business → Management; secondary: Education |
 | Language | English (South Africa) |
 | Explicit | No |
 | Website | https://www.sikatrix.com/resources |
-| Owner email | Needs a brand-controlled address — see the RSS/privacy
-note under Open decisions below. **Not** `info@sikatrix.com` on its own
-until Daniel confirms that's acceptable to expose publicly in an RSS
-feed (per CC handoff Section 13's explicit privacy note). |
+| Owner email | `info@sikatrix.com` (confirmed by Daniel — already public on the site, not a personal address) |
 | Show description | Short, practical audio briefings from Sikatrix Business Accountants — SAIPA-registered Professional Accountants and SARS-registered Tax Practitioners based in Alberton, Gauteng — on SARS compliance, tax, and bookkeeping for South African SMEs. Each episode expands on Sikatrix's written Resources articles at sikatrix.com/resources. |
 
 **Naming note:** "Deep Dive" (used inside the audio itself, a NotebookLM
-convention) is not proposed as the show name — it's not a Sikatrix brand
-term and Section 11 says to prefer the existing brand identity. "Audio
-Briefings" is a placeholder descriptor, not a strong brand name; if
-Daniel wants something with more identity, that's a naming decision for
-him, not this worker to invent unilaterally.
+convention) was not proposed as the show name — not a Sikatrix brand
+term. Daniel confirmed "Sikatrix Resources" instead, directly reusing the
+existing Resources brand rather than inventing a new one.
 
 ## Episode identity (this episode)
 
@@ -45,13 +40,8 @@ him, not this worker to invent unilaterally.
 
 ## Open decisions for Daniel
 
-1. **Show name** — "Sikatrix Resources: Audio Briefings" is a
-   placeholder descriptor, not proposed as final. Approve, or supply a
-   preferred name.
-2. **RSS/owner email** — per Section 13, this shouldn't be a personal
-   address exposed in a public feed. Confirm `info@sikatrix.com` is
-   acceptable (it's already the public business contact, so likely fine,
-   but flagging per the explicit instruction rather than assuming).
+1. ~~Show name~~ — **resolved**: "Sikatrix Resources."
+2. ~~RSS/owner email~~ — **resolved**: `info@sikatrix.com` approved.
 3. **Episode title/summary wording** — drafted for accuracy against the
    QA'd v2 audio and both source articles; edit freely, this isn't
    locked.
