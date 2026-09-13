@@ -28,7 +28,6 @@ export interface PodcastEpisode {
   author: { name: string; title: string };
   publishDate: string | null;
   rssGeneratedDate: string | null;
-  status: "draft" | "published";
   sourceArticles: string[];
   relatedServices: string[];
   relatedTools: PodcastRelatedTool[];
@@ -71,7 +70,6 @@ function parseEpisode(slug: string): PodcastEpisode | null {
     },
     publishDate: data.publishDate ?? null,
     rssGeneratedDate: data.rssGeneratedDate ?? null,
-    status: data.status ?? "draft",
     sourceArticles: data.sourceArticles ?? [],
     relatedServices: data.relatedServices ?? [],
     relatedTools: data.relatedTools ?? [],
@@ -80,9 +78,8 @@ function parseEpisode(slug: string): PodcastEpisode | null {
   };
 }
 
-// NOTE: getAllEpisodes intentionally includes drafts — MEDIA-001 has not
-// been authorized for publication, so there is no "published" episode to
-// filter down to yet. Revisit this the moment publication is authorized.
+// getAllEpisodes returns every episode regardless of publish state — the
+// index page decides what to show/hide using isEpisodePublished below.
 export function getAllEpisodes(): PodcastEpisode[] {
   return getSlugsFromDir()
     .map((slug) => parseEpisode(slug))
@@ -92,4 +89,14 @@ export function getAllEpisodes(): PodcastEpisode[] {
 
 export function getEpisodeBySlug(slug: string): PodcastEpisode | null {
   return parseEpisode(slug);
+}
+
+// publishDate is the single source of truth for an episode's published
+// state — present and not in the future means published. There is
+// deliberately no separate status/draft flag: a second field here could
+// drift out of sync with publishDate the same way social.ogTitle once
+// drifted out of sync with the real title.
+export function isEpisodePublished(episode: PodcastEpisode): boolean {
+  if (!episode.publishDate) return false;
+  return new Date(`${episode.publishDate}T00:00:00Z`).getTime() <= Date.now();
 }

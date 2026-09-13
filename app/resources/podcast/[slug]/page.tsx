@@ -7,7 +7,7 @@ import CTABlock from "@/components/shared/CTABlock";
 import ArticleContent from "@/components/blog/ArticleContent";
 import SocialShare from "@/components/blog/SocialShare";
 import PodcastPlayer from "@/components/podcast/PodcastPlayer";
-import { getAllEpisodes, getEpisodeBySlug } from "@/lib/podcast";
+import { getAllEpisodes, getEpisodeBySlug, isEpisodePublished } from "@/lib/podcast";
 import { getPostBySlug } from "@/lib/blog";
 import { SERVICES, SITE } from "@/lib/site";
 import { buildBreadcrumbSchema } from "@/lib/metadata";
@@ -28,12 +28,14 @@ export async function generateMetadata({
   const ogTitle = episode.social?.ogTitle ?? episode.title;
   const ogDescription = episode.social?.ogDescription ?? episode.description;
   const canonicalUrl = `${SITE.url}/resources/podcast/${slug}`;
+  const published = isEpisodePublished(episode);
 
   return {
     title: { absolute: `${episode.title} | Sikatrix` },
     description: episode.description,
-    // Draft/unpublished — do not let this get indexed while MEDIA-001 is unresolved.
-    robots: { index: false, follow: false },
+    // Derived from publishDate — the single source of truth for whether
+    // this episode is public. See lib/podcast.ts's isEpisodePublished.
+    ...(published ? {} : { robots: { index: false, follow: false } }),
     alternates: { canonical: canonicalUrl },
     openGraph: {
       title: ogTitle,
@@ -64,6 +66,7 @@ export default async function PodcastEpisodePage({
   if (!episode) notFound();
 
   const episodeUrl = `${SITE.url}/resources/podcast/${slug}`;
+  const published = isEpisodePublished(episode);
 
   const sourceArticles = episode.sourceArticles
     .map((s) => getPostBySlug(s))
@@ -81,7 +84,6 @@ export default async function PodcastEpisodePage({
   ]);
 
   // PodcastEpisode schema — https://schema.org/PodcastEpisode
-  // datePublished intentionally omitted: publication is not authorized yet.
   const podcastEpisodeSchema = {
     "@context": "https://schema.org",
     "@type": "PodcastEpisode",
@@ -90,6 +92,7 @@ export default async function PodcastEpisodePage({
     url: episodeUrl,
     episodeNumber: episode.episodeNumber,
     timeRequired: episode.duration,
+    datePublished: published ? episode.publishDate : undefined,
     associatedMedia: episode.audioFile
       ? { "@type": "MediaObject", contentUrl: episode.audioFile }
       : undefined,
@@ -120,12 +123,14 @@ export default async function PodcastEpisodePage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(podcastEpisodeSchema) }}
       />
 
-      {/* MEDIA-001: internal preview only — publication not authorized (AGENTS.md) */}
-      <div className="bg-amber-50 border-b border-amber-200 py-2">
-        <div className="container-page text-center text-2xs font-semibold text-amber-800 uppercase tracking-wide">
-          Internal preview — not published (MEDIA-001)
+      {/* MEDIA-001: banner derives from publishDate — see isEpisodePublished */}
+      {!published && (
+        <div className="bg-amber-50 border-b border-amber-200 py-2">
+          <div className="container-page text-center text-2xs font-semibold text-amber-800 uppercase tracking-wide">
+            Internal preview — not published (MEDIA-001)
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Hero */}
       <section className="relative bg-brand-dark py-12 md:py-16 overflow-hidden">
