@@ -191,15 +191,33 @@ export default async function PodcastEpisodePage({
                   Listen on
                 </h3>
                 <div className="flex flex-wrap gap-2">
-                  {["Spotify", "Apple Podcasts", "YouTube"].map((platform) => (
-                    <span
-                      key={platform}
-                      className="text-xs text-neutral-400 bg-neutral-100 px-3 py-1.5 rounded-full cursor-not-allowed"
-                      title="Not yet submitted — MEDIA-001 distribution boundary not crossed"
-                    >
-                      {platform} (coming soon)
-                    </span>
-                  ))}
+                  {(
+                    [
+                      { name: "Spotify", url: episode.platformLinks.spotify },
+                      { name: "Apple Podcasts", url: episode.platformLinks.apple },
+                      { name: "YouTube", url: episode.platformLinks.youtube },
+                    ] as const
+                  ).map((platform) =>
+                    platform.url ? (
+                      <a
+                        key={platform.name}
+                        href={platform.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs font-medium text-brand bg-brand-50 hover:bg-brand hover:text-white transition-colors px-3 py-1.5 rounded-full"
+                      >
+                        {platform.name}
+                      </a>
+                    ) : (
+                      <span
+                        key={platform.name}
+                        className="text-xs text-neutral-400 bg-neutral-100 px-3 py-1.5 rounded-full cursor-not-allowed"
+                        title="Not yet submitted — MEDIA-001 distribution boundary not crossed"
+                      >
+                        {platform.name} (coming soon)
+                      </span>
+                    )
+                  )}
                 </div>
               </div>
 

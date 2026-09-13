@@ -13,6 +13,16 @@ export interface PodcastSocialMeta {
   twitterCard?: "summary" | "summary_large_image";
 }
 
+// URLs are per-episode where the platform supports it (e.g. a direct
+// episode link); Spotify's show and episode IDs are separate namespaces,
+// so until a specific episode ID exists, `spotify` here is a show-level
+// link — see the "Listen on" section's rendering for how that's surfaced.
+export interface PodcastPlatformLinks {
+  spotify?: string;
+  apple?: string;
+  youtube?: string;
+}
+
 export interface PodcastEpisode {
   slug: string;
   title: string;
@@ -31,6 +41,7 @@ export interface PodcastEpisode {
   sourceArticles: string[];
   relatedServices: string[];
   relatedTools: PodcastRelatedTool[];
+  platformLinks: PodcastPlatformLinks;
   social: PodcastSocialMeta;
   content: string;
 }
@@ -73,6 +84,7 @@ function parseEpisode(slug: string): PodcastEpisode | null {
     sourceArticles: data.sourceArticles ?? [],
     relatedServices: data.relatedServices ?? [],
     relatedTools: data.relatedTools ?? [],
+    platformLinks: data.platformLinks ?? {},
     social: data.social ?? {},
     content: content.trim(),
   };

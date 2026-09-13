@@ -26,6 +26,8 @@ relatedTools:
     label: "VAT Calculator"
   - slug: "sars-compliance-calendar"
     label: "SARS Compliance Calendar"
+platformLinks:
+  spotify: "https://open.spotify.com/show/0gFgHQ3Dzhg2cOS5Qj1luv"
 social:
   twitterCard: "summary_large_image"
 ---
