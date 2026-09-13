@@ -9,10 +9,11 @@ import { SITE } from "@/lib/site";
 // complete and valid is not the same event as authorizing public
 // distribution — see docs/media-001/DECISIONS.md.
 //
-// NOTE ON STATUS: this feed currently includes every episode returned by
-// getAllEpisodes(), which does not filter out drafts (see the comment in
-// lib/podcast.ts) — there is nothing published yet to filter down to.
-// Revisit both together the moment publication is authorized.
+// NOTE ON STATUS: this feed includes every episode returned by
+// getAllEpisodes() regardless of isEpisodePublished (lib/podcast.ts) —
+// the website's noindex/banner gating and this feed's contents are two
+// separate decisions. Revisit if the feed itself should only list
+// published episodes once more than one exists.
 
 export const dynamic = "force-static";
 

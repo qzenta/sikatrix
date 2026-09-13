@@ -13,9 +13,8 @@ featuredImageAlt: "Sikatrix brand mark"
 author:
   name: "Sikatrix Business Accountants"
   title: "SAIPA Professional Accountants (SA)"
-publishDate: null
+publishDate: "2026-09-13"
 rssGeneratedDate: "2026-09-12"
-status: "draft"
 sourceArticles:
   - "sars-automatic-vat-registration-2026"
   - "vat-registration-threshold-voluntary-growing-sme"

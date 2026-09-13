@@ -49,8 +49,11 @@
 - [x] Sikatrix location identified (proposed: `/resources/podcast`, see ARCHITECTURE.md)
 - [x] episode page prepared — **built, verified, merged, and LIVE in
       production** at www.sikatrix.com (PR #20, merged on Daniel's
-      explicit authorization). Still marked `noindex`/"Internal preview"
-      banner since publication isn't authorized.
+      explicit authorization). **Published 13 Sep 2026**: `publishDate`
+      set, "Internal preview" banner and `noindex` both removed (derived
+      from `publishDate` via `isEpisodePublished`, not hardcoded anymore)
+      — this was its own distinct authorization from the code merge,
+      per AGENTS.md. Verified live against production, not just locally.
 - [x] source links included
 - [x] SEO metadata prepared
 - [x] CTA included
@@ -61,7 +64,10 @@
 
 ### Governance (close-out)
 - [x] human approval gates identified
-- [x] publication remains unauthorized until approved
+- [x] publication: **website episode page publication explicitly
+      authorized and executed 13 Sep 2026** (see DECISIONS.md). Spotify/
+      Apple/YouTube submission remains separately unauthorized — Daniel's
+      step alone.
 - [x] final CURRENT_STATE.md / NEXT_ACTIONS.md / HANDOFF.md updated
 
 Content QA, metadata, artwork, and all distribution-platform prep remain
