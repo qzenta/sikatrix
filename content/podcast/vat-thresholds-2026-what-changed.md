@@ -27,8 +27,6 @@ relatedTools:
   - slug: "sars-compliance-calendar"
     label: "SARS Compliance Calendar"
 social:
-  ogTitle: "VAT Thresholds Just Changed: What It Means for Your SME | Sikatrix"
-  ogDescription: "New 2026 VAT thresholds, explained — and why SARS is already auto-registering businesses that cross them."
   twitterCard: "summary_large_image"
 ---
 
