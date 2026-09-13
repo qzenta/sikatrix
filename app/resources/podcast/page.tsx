@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Headphones, Clock } from "lucide-react";
 import PageHero from "@/components/shared/PageHero";
-import { getAllEpisodes } from "@/lib/podcast";
+import { getAllEpisodes, isEpisodePublished } from "@/lib/podcast";
 import { SITE } from "@/lib/site";
 import { buildBreadcrumbSchema } from "@/lib/metadata";
 
@@ -19,6 +19,7 @@ export const metadata: Metadata = {
 
 export default function PodcastIndexPage() {
   const episodes = getAllEpisodes();
+  const anyUnpublished = episodes.some((ep) => !isEpisodePublished(ep));
   const breadcrumbSchema = buildBreadcrumbSchema([
     { name: "Home", url: SITE.url },
     { name: "Resources", url: `${SITE.url}/resources` },
@@ -32,12 +33,14 @@ export default function PodcastIndexPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      {/* MEDIA-001: internal preview only — publication not authorized (AGENTS.md) */}
-      <div className="bg-amber-50 border-b border-amber-200 py-2">
-        <div className="container-page text-center text-2xs font-semibold text-amber-800 uppercase tracking-wide">
-          Internal preview — not published (MEDIA-001)
+      {/* MEDIA-001: banner derives from publishDate — see isEpisodePublished */}
+      {anyUnpublished && (
+        <div className="bg-amber-50 border-b border-amber-200 py-2">
+          <div className="container-page text-center text-2xs font-semibold text-amber-800 uppercase tracking-wide">
+            Internal preview — not published (MEDIA-001)
+          </div>
         </div>
-      </div>
+      )}
 
       <PageHero
         label="Podcast"
