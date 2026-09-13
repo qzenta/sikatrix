@@ -185,15 +185,40 @@ export default async function PodcastEpisodePage({
                 />
               </div>
 
-              {/* Listen on platforms */}
+              {/* Listen on platforms.
+                  Spotify uses their official, unmodified brand badge
+                  (public/podcast/badges/spotify-listen-badge.svg — the
+                  official white full logo from developer.spotify.com's
+                  Design & Branding Guidelines, composited onto a black
+                  pill per their own "white logo on dark background" rule,
+                  with clear space around it). Apple/YouTube get the same
+                  h-9 row height so the badges line up once each platform
+                  supplies its own official badge — do not swap in a
+                  hand-drawn icon for either; source them from
+                  podcastsconnect.apple.com / YouTube's brand resources
+                  the same way this one came from Spotify's own site. */}
               <div className="mb-8">
                 <h3 className="text-xs font-semibold uppercase tracking-widest text-neutral-500 mb-3">
                   Listen on
                 </h3>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap items-center gap-3">
+                  {episode.platformLinks.spotify && (
+                    <a
+                      href={episode.platformLinks.spotify}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block h-9 hover:opacity-90 transition-opacity"
+                    >
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src="/podcast/badges/spotify-listen-badge.svg"
+                        alt="Listen on Spotify"
+                        className="h-9 w-auto"
+                      />
+                    </a>
+                  )}
                   {(
                     [
-                      { name: "Spotify", url: episode.platformLinks.spotify },
                       { name: "Apple Podcasts", url: episode.platformLinks.apple },
                       { name: "YouTube", url: episode.platformLinks.youtube },
                     ] as const
@@ -204,14 +229,14 @@ export default async function PodcastEpisodePage({
                         href={platform.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-xs font-medium text-brand bg-brand-50 hover:bg-brand hover:text-white transition-colors px-3 py-1.5 rounded-full"
+                        className="inline-flex items-center h-9 text-xs font-medium text-brand bg-brand-50 hover:bg-brand hover:text-white transition-colors px-4 rounded-full"
                       >
                         {platform.name}
                       </a>
                     ) : (
                       <span
                         key={platform.name}
-                        className="text-xs text-neutral-400 bg-neutral-100 px-3 py-1.5 rounded-full cursor-not-allowed"
+                        className="inline-flex items-center h-9 text-xs text-neutral-400 bg-neutral-100 px-4 rounded-full cursor-not-allowed"
                         title="Not yet submitted — MEDIA-001 distribution boundary not crossed"
                       >
                         {platform.name} (coming soon)
