@@ -135,7 +135,7 @@ export default function TaxCalculatorPage() {
                     { label: "Primary rebate", value: "R17,820", sub: "all taxpayers" },
                     { label: "Top marginal rate", value: "45%", sub: "above R1,878,600" },
                     { label: "UIF rate", value: "1%", sub: "capped at R177/month" },
-                    { label: "RA deduction cap", value: "R350,000", sub: "or 27.5% of income" },
+                    { label: "RA deduction cap", value: "R430,000", sub: "or 27.5% of income" },
                     { label: "Company tax rate", value: "27%", sub: "flat — corporates only" },
                   ].map((item) => (
                     <li key={item.label} className="flex justify-between items-start gap-3 pb-3 border-b border-white/10 last:border-0 last:pb-0">
@@ -304,9 +304,9 @@ export default function TaxCalculatorPage() {
               </thead>
               <tbody>
                 {[
-                  { label: "Main member (taxpayer)", monthly: "R364", annual: "R4,368" },
-                  { label: "First additional dependant", monthly: "R364", annual: "R4,368" },
-                  { label: "Each further dependant", monthly: "R246", annual: "R2,952" },
+                  { label: "Main member (taxpayer)", monthly: "R376", annual: "R4,512" },
+                  { label: "First additional dependant", monthly: "R376", annual: "R4,512" },
+                  { label: "Each further dependant", monthly: "R254", annual: "R3,048" },
                 ].map((r, i) => (
                   <tr key={r.label} className={i % 2 === 0 ? "bg-white" : "bg-neutral-50"}>
                     <td className="px-4 py-2.5 text-neutral-700">{r.label}</td>
@@ -336,7 +336,7 @@ export default function TaxCalculatorPage() {
                 },
                 {
                   q: "How does a retirement annuity (RA) reduce my tax?",
-                  a: "Contributions to an approved RA or pension fund are deducted from your taxable income before tax is calculated. The deduction is limited to 27.5% of the greater of your remuneration or taxable income, capped at R350,000 per year. This means every rand you contribute to your RA could save you up to 45 cents in tax (at the top marginal rate).",
+                  a: "Contributions to an approved RA or pension fund are deducted from your taxable income before tax is calculated. The deduction is limited to 27.5% of the greater of your remuneration or taxable income, capped at R430,000 per year for 2026/27 (R350,000 in earlier years). This means every rand you contribute to your RA could save you up to 45 cents in tax (at the top marginal rate).",
                 },
                 {
                   q: "What is UIF and how is it calculated?",

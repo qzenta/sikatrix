@@ -63,7 +63,7 @@ The registration fee for a standard Private Company is R175. Payment is made thr
 
 ## First Compliance Steps After Incorporation
 
-Registration is just the beginning. Within the first 60 days you should: open a dedicated business bank account in the company name, register for Income Tax with SARS (CIPC shares incorporation data with SARS, but you must still complete the IT77C registration or confirm via eFiling), apply for a tax clearance certificate once your tax profile is active, register for PAYE with SARS if you intend to pay any salaries, and register for VAT once your projected or actual taxable turnover exceeds R1 million.
+Registration is just the beginning. Within the first 60 days you should: open a dedicated business bank account in the company name, register for Income Tax with SARS (CIPC shares incorporation data with SARS, but you must still complete the IT77C registration or confirm via eFiling), apply for a tax clearance certificate once your tax profile is active, register for PAYE with SARS if you intend to pay any salaries, and register for VAT once your projected or actual taxable turnover exceeds R2.3 million (the threshold from 1 April 2026).
 
 CIPC also requires annual returns, due within 30 business days of your company's anniversary date each year. The fee scales with your turnover and ranges from R100 to R450.
 

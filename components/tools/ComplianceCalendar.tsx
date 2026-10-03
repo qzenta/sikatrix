@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { CalendarClock, Info } from "lucide-react";
+import { FILING_DATES_2026 } from "@/lib/rules/deadlines";
 
 type Category = "PAYE" | "VAT" | "Provisional Tax" | "Income Tax" | "CIPC" | "COIDA";
 
@@ -31,11 +32,13 @@ const CATEGORIES: Category[] = ["PAYE", "VAT", "Provisional Tax", "Income Tax", 
 // business day; if it falls on a weekend/public holiday, SARS moves it to the
 // preceding business day.
 function buildDeadlines(): Deadline[] {
+  // [due month, month the payroll relates to]. EMP201 is due the 7th of the
+  // month AFTER the payroll month (7 Oct 2026 is the September payroll).
   const months = [
-    ["2026-03", "Mar 2026"], ["2026-04", "Apr 2026"], ["2026-05", "May 2026"],
-    ["2026-06", "Jun 2026"], ["2026-07", "Jul 2026"], ["2026-08", "Aug 2026"],
-    ["2026-09", "Sep 2026"], ["2026-10", "Oct 2026"], ["2026-11", "Nov 2026"],
-    ["2026-12", "Dec 2026"], ["2027-01", "Jan 2027"], ["2027-02", "Feb 2027"],
+    ["2026-03", "Feb 2026"], ["2026-04", "Mar 2026"], ["2026-05", "Apr 2026"],
+    ["2026-06", "May 2026"], ["2026-07", "Jun 2026"], ["2026-08", "Jul 2026"],
+    ["2026-09", "Aug 2026"], ["2026-10", "Sep 2026"], ["2026-11", "Oct 2026"],
+    ["2026-12", "Nov 2026"], ["2027-01", "Dec 2026"], ["2027-02", "Jan 2027"],
   ] as const;
 
   const recurring: Deadline[] = months.flatMap(([iso, label]) => [
@@ -55,10 +58,10 @@ function buildDeadlines(): Deadline[] {
 
   const onceOff: Deadline[] = [
     {
-      date: "2026-05-31",
+      date: "2026-06-30",
       title: "COIDA Return of Earnings (ROE)",
       category: "COIDA",
-      description: "Annual Return of Earnings to the Compensation Fund, covering the period 1 March 2025 – 28 February 2026.",
+      description: "Annual Return of Earnings to the Compensation Fund, covering 1 March 2025 – 28 February 2026. The Act's text refers to 31 March; the gazetted window (to 30 June) applies in practice.",
     },
     {
       date: "2026-05-31",
@@ -73,24 +76,28 @@ function buildDeadlines(): Deadline[] {
       description: "First provisional tax payment for the 2026/27 tax year — 50% of your estimated annual liability.",
     },
     {
-      date: "2026-10-15",
+      date: FILING_DATES_2026.nonProvisionalDeadline,
       title: "Individual filing season deadline (non-provisional)",
       category: "Income Tax",
-      description: "Estimated eFiling/branch deadline for non-provisional individual taxpayers for the 2026 tax year. SARS confirms the exact date annually.",
-      approx: true,
+      description: "SARS-published deadline for non-provisional individual taxpayers for the 2026 tax year (Notice No. 7422, Government Gazette 54598).",
     },
     {
-      date: "2026-10-31",
+      date: FILING_DATES_2026.trustsOpen,
+      title: "Trust filing season opens",
+      category: "Income Tax",
+      description: "Trust returns can be filed from 19 September 2026 until 22 January 2027.",
+    },
+    {
+      date: FILING_DATES_2026.emp501InterimDeadline,
       title: "EMP501 Interim Reconciliation",
       category: "PAYE",
-      description: "Interim employer reconciliation covering 1 March – 31 August 2026.",
+      description: "Interim employer reconciliation covering 1 March – 31 August 2026. The submission window opened on 21 September 2026.",
     },
     {
-      date: "2027-01-31",
-      title: "Individual filing season deadline (provisional, eFiling)",
+      date: FILING_DATES_2026.provisionalDeadline,
+      title: "Filing deadline: provisional taxpayers and trusts",
       category: "Income Tax",
-      description: "Estimated eFiling deadline for provisional taxpayers for the 2026 tax year. SARS confirms the exact date annually.",
-      approx: true,
+      description: "SARS-published deadline for provisional taxpayers and trusts for the 2026 tax year (Notice No. 7422, Government Gazette 54598).",
     },
     {
       date: "2027-02-28",

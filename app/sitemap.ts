@@ -56,6 +56,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${base}/tools/vat-calculator`,
+      lastModified: now,
+      changeFrequency: "yearly",
+      priority: 0.8,
+    },
+    {
+      url: `${base}/tools/provisional-tax-estimator`,
+      lastModified: now,
+      changeFrequency: "yearly",
+      priority: 0.8,
+    },
+    {
+      url: `${base}/tools/sars-compliance-calendar`,
+      lastModified: now,
+      changeFrequency: "yearly",
+      priority: 0.8,
+    },
+    {
       url: `${base}/contact`,
       lastModified: now,
       changeFrequency: "yearly",
