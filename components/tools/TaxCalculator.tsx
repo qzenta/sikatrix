@@ -41,7 +41,7 @@ export default function TaxCalculator() {
     : null;
 
   return (
-    <div className="bg-neutral-100 rounded-2xl border border-neutral-200 p-5 md:p-7">
+    <div data-clarity-mask="True" className="bg-neutral-100 rounded-2xl border border-neutral-200 p-5 md:p-7">
 
       {/* ── Year selector ── */}
       <div className="flex flex-wrap items-center gap-2 mb-6">
@@ -49,6 +49,7 @@ export default function TaxCalculator() {
         {(Object.keys(ALL_TAX_DATA) as TaxYear[]).map((y) => (
           <button
             key={y}
+            data-clarity-mask="True"
             onClick={() => setTaxYear(y)}
             className={`px-3 py-1.5 rounded-lg text-xs font-semibold border transition-colors ${
               taxYear === y
@@ -82,7 +83,7 @@ export default function TaxCalculator() {
                 <input
                   type="text"
                   inputMode="numeric"
-                  data-clarity-mask="true"
+                  data-clarity-mask="True"
                   value={income}
                   onChange={(e) => setIncome(e.target.value)}
                   placeholder="500 000"
@@ -98,6 +99,7 @@ export default function TaxCalculator() {
                 {(["under65", "65-74", "75+"] as AgeGroup[]).map((a) => (
                   <button
                     key={a}
+                    data-clarity-mask="True"
                     onClick={() => setAge(a)}
                     className={`py-2 rounded-lg text-xs font-medium border transition-colors ${
                       age === a
@@ -117,6 +119,7 @@ export default function TaxCalculator() {
                 Medical aid members (including yourself)
               </label>
               <select
+                data-clarity-mask="True"
                 value={medMembers}
                 onChange={(e) => setMedMembers(Number(e.target.value))}
                 className="w-full border border-neutral-200 rounded-lg text-sm px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-colors bg-white"
@@ -142,7 +145,7 @@ export default function TaxCalculator() {
                 <input
                   type="text"
                   inputMode="numeric"
-                  data-clarity-mask="true"
+                  data-clarity-mask="True"
                   value={raContrib}
                   onChange={(e) => setRaContrib(e.target.value)}
                   placeholder="0"
@@ -164,7 +167,7 @@ export default function TaxCalculator() {
         </div>
 
         {/* ── RESULTS ── */}
-        <div className="lg:col-span-3" data-clarity-mask="true">
+        <div className="lg:col-span-3" data-clarity-mask="True">
           {!hasIncome ? (
             <div className="bg-white rounded-xl border border-neutral-200 shadow-sm p-10 text-center text-neutral-400 flex flex-col items-center gap-3">
               <Calculator size={36} className="opacity-20" />
