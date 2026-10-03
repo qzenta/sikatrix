@@ -86,6 +86,10 @@ describe("fixed rules", () => {
   it("COIDA ROE keeps the 30 June window and the Act note", () => {
     expect(byId("coida-roe-2026").date).toBe("2026-06-30");
     expect(byId("coida-roe-2026").description).toContain("31 March");
+    expect(byId("coida-roe-2026").description).toContain("1 March 2025 to 28 February 2026");
+    expect(byId("coida-roe-2026").description).toContain("10% penalty");
+    expect(byId("coida-roe-2026").source.gazette).toContain("54524");
+    expect(byId("coida-roe-2026").source.url).toContain("n3894");
   });
   it("next year's EMP501 annual window is marked indicative", () => {
     expect(byId("emp501-annual-2027").indicative).toBe(true);

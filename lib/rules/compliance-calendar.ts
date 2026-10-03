@@ -63,9 +63,10 @@ const SARS_EMP_RECON: RuleSource = {
   title: "SARS: Guide to the employer reconciliation process",
   url: "https://www.sars.gov.za/guide-to-the-employer-reconciliation-process/",
 };
-const SIKATRIX_COIDA: RuleSource = {
-  title: "Sikatrix: COIDA Return of Earnings guide (gazetted 30 June window, owner decision)",
-  url: "https://www.sikatrix.com/resources/coida-return-of-earnings-guide-south-africa",
+const COMPENSATION_FUND_ROE_2026: RuleSource = {
+  title: "Compensation Fund: Notice No. 3894 of 2026, Return of Earnings submission window",
+  url: "https://api.acts.co.za/compensation-for-occupational-injuries-and-diseases-act-1993/n3894_notice_no__3894_of_2026.php",
+  gazette: "Notice No. 3894 of 2026, Government Gazette 54524 (15 April 2026)",
 };
 
 export interface WindowRange {
@@ -95,8 +96,6 @@ export interface FixedRule {
   note: string;
   /** True when the date is modelled from SARS's pattern and depends on SARS's annual notice. */
   indicative?: boolean;
-  /** Set when the date could not be verified from an official source. */
-  unverified?: boolean;
 }
 
 export const FIXED_RULES: FixedRule[] = [
@@ -105,16 +104,15 @@ export const FIXED_RULES: FixedRule[] = [
     obligation: "COIDA Return of Earnings",
     category: "COIDA",
     taxpayer: "Employers registered with the Compensation Fund",
-    period: "Annual",
-    dueRule: "30 June (gazetted window)",
+    period: "2025 assessment period (1 March 2025 to 28 February 2026)",
+    dueRule: "Submission window 1 April to 30 June 2026 (Notice No. 3894 of 2026)",
     nominal: "2026-06-30",
     adjustment: "none",
-    effectiveFrom: "2026-03-01",
-    source: SIKATRIX_COIDA,
+    effectiveFrom: "2026-04-01",
+    source: COMPENSATION_FUND_ROE_2026,
     reviewedOn: REVIEWED_ON,
     label: "COIDA Return of Earnings (ROE)",
-    note: "Annual Return of Earnings to the Compensation Fund. The Act's text refers to 31 March; the gazetted window (to 30 June) governs in practice.",
-    unverified: true,
+    note: "Annual Return of Earnings to the Compensation Fund. Declares actual earnings for 1 March 2025 to 28 February 2026 and provisional earnings for 1 March 2026 to 28 February 2027. A 10% penalty applies to late submission. The Act's text refers to 31 March; the gazetted window (1 April to 30 June 2026) governs in practice.",
   },
   {
     id: "emp501-annual-2026",
@@ -409,7 +407,6 @@ export interface Deadline {
   category: Category;
   description: string;
   indicative: boolean;
-  unverified: boolean;
   source: RuleSource;
   rule: string;
 }
@@ -465,7 +462,6 @@ export function generateEmp201(window: WindowRange = CALENDAR_WINDOW): Deadline[
       category: r.category,
       description: `${r.note} For the ${monthLabel(payroll)} payroll month.`,
       indicative: false,
-      unverified: false,
       source: r.source,
       rule: r.dueRule,
     };
@@ -504,7 +500,6 @@ export function generateVat(
       category: "VAT",
       description: `Return and payment for the tax period ending ${lastDayOf(periodEnd).slice(8)} ${monthLabel(periodEnd)} (${def.name}, ${method === "efiling" ? "eFiling" : "manual"}).`,
       indicative: false,
-      unverified: false,
       source: def.source === SARS_SMALL_BUSINESS_VAT ? SARS_SMALL_BUSINESS_VAT : SARS_VAT201,
       rule: VAT_METHODS.find((m) => m.id === method)!.dueRule,
     });
@@ -526,7 +521,6 @@ export function generateFixed(window: WindowRange = CALENDAR_WINDOW): Deadline[]
       category: r.category,
       description: r.note,
       indicative: !!r.indicative,
-      unverified: !!r.unverified,
       source: r.source,
       rule: r.dueRule,
     };

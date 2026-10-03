@@ -63,11 +63,11 @@ If you employ anyone — full-time, part-time, casual, or on a fixed-term contra
 
 ## What is the Return of Earnings (ROE)?
 
-The **Return of Earnings (CF-2)** is an annual declaration submitted to the Compensation Fund. You declare your employees' total earnings for the preceding calendar year (1 January to 31 December), and the Compensation Fund uses this to calculate your annual assessment — the premium you owe.
+The **Return of Earnings (CF-2)** is an annual declaration submitted to the Compensation Fund. You declare your employees' total earnings for the preceding assessment year (1 March to the end of February), and the Compensation Fund uses this to calculate your annual assessment — the premium you owe.
 
 Think of the ROE the same way you think of the EMP501 payroll reconciliation for SARS, or the VAT201 for SARS. It is a statutory return that triggers a financial obligation. The difference is that this one goes to the Compensation Fund, not SARS.
 
-**The ROE is due by 30 June every year** for the prior calendar year's earnings. The 2025 ROE (covering earnings from 1 January 2025 to 31 December 2025) was due by 30 June 2026. If you have not yet filed, you are already late and penalties are accruing.
+**The ROE is due by 30 June every year** for the prior assessment year's earnings. The 2025 ROE (covering actual earnings from 1 March 2025 to 28 February 2026) was due by 30 June 2026. If you have not yet filed, you are already late and penalties are accruing.
 
 ---
 
@@ -179,7 +179,7 @@ Most of our clients in Alberton, Johannesburg, Germiston, and across Gauteng com
 
 | Event | Deadline |
 |---|---|
-| ROE filing (prior calendar year earnings) | **30 June annually** |
+| ROE filing (prior assessment year earnings) | **30 June annually** |
 | Assessment payment | Within 30 days of assessment notice |
 | Letter of Good Standing renewal | Annual (triggered by ROE + payment) |
 
