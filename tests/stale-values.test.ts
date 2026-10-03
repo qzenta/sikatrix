@@ -10,11 +10,13 @@ import path from "node:path";
 const ROOT = path.resolve(__dirname, "..");
 const DIRS = ["app", "components", "content"];
 const EXT = /\.(tsx?|md)$/;
-const HISTORICAL = /(increased from|up from|raised from|was R|were R|previous|from R1 million|from R50,000|bracing for|before 1 April 2026|old R|old threshold|earlier years|2025\/26|2024\/25|Threshold update|April 2026 update)/i;
+// A line is historical only when it carries an explicit date ("1 April 2026",
+// "April 2026") or a "before 1 April 2026" style qualifier. A bare "2025/26",
+// "previous" or "was R" no longer exempts a line.
+const HISTORICAL = /\b(\d{1,2} )?(January|February|March|April|May|June|July|August|September|October|November|December) 20\d{2}\b/i;
 // Files that are deliberately historical in whole or in part.
 const FILE_ALLOWLIST = [
   "content/posts/vat-registration-mandatory-threshold-south-africa.md",
-  "content/posts/sme-tax-compliance-calendar-2025-2026.md",
 ];
 
 function walk(dir: string, out: string[] = []): string[] {

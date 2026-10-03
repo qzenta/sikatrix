@@ -3,6 +3,8 @@ import Link from "next/link";
 import ComplianceCalendar from "@/components/tools/ComplianceCalendar";
 import CTABlock from "@/components/shared/CTABlock";
 import { buildFAQSchema } from "@/lib/metadata";
+import { DEPENDS_ON_YOU, REVIEWED_ON, VAT_CATEGORIES, VAT_METHODS } from "@/lib/rules/compliance-calendar";
+import { HOLIDAYS_SOURCE, PUBLIC_HOLIDAYS } from "@/lib/rules/public-holidays";
 
 export const metadata: Metadata = {
   title: { absolute: "SARS Compliance Calendar 2026/27 | Sikatrix" },
@@ -32,7 +34,7 @@ const appSchema = {
 const FAQS = [
   {
     question: "What deadlines does this calendar cover?",
-    answer: "EMP201 (PAYE/UIF/SDL, due the 7th of every month), VAT201 (due the 25th of the month following each VAT period), IRP6 provisional tax (1st, 2nd, and voluntary 3rd period), EMP501 interim and annual reconciliations, individual income tax filing season deadlines, and the annual COIDA Return of Earnings.",
+    answer: "EMP201 (PAYE/UIF/SDL, due the 7th of the month after the payroll month), VAT201 (by VAT category and filing method), IRP6 provisional tax (1st, 2nd, and voluntary 3rd period), EMP501 interim and annual reconciliations, individual income tax filing season deadlines, and the annual COIDA Return of Earnings.",
   },
   {
     question: "Why isn't my CIPC Annual Return deadline on this calendar?",
@@ -40,11 +42,11 @@ const FAQS = [
   },
   {
     question: "What happens if a deadline falls on a weekend or public holiday?",
-    answer: "SARS moves the deadline to the preceding business day, not the following one. This calendar shows the standard calendar date — always confirm the exact date on eFiling closer to the time, especially around public holidays.",
+    answer: "For EMP201, VAT201 and provisional tax, SARS moves the deadline to the last business day before the weekend or public holiday, not the following one. This calendar applies that rule and shows the adjusted date, with the original date noted. SARS-published filing-season windows (such as 23 October 2026) are shown as published. Always confirm the exact date on eFiling.",
   },
   {
     question: "Does my VAT201 really fall due every month?",
-    answer: "It depends on your VAT category. Most vendors (Category A or B) file bi-monthly, so only 6 of the 12 monthly VAT201 dates shown will apply to you. Vendors on Category C file monthly. Check your specific VAT registration category on eFiling if you're not sure.",
+    answer: "It depends on your VAT category. Category A and B vendors file every two months, Category C monthly, Category D every six months, and registered micro businesses can elect four-monthly periods. Manual filers pay by the 25th; eFiling vendors by the last business day of the month. Choose your category and method above. Check your category on eFiling if you are not sure.",
   },
   {
     question: "Is this calendar specific to my business, or generic?",
@@ -96,10 +98,10 @@ export default function SarsComplianceCalendarPage() {
                 <p className="text-2xs font-semibold uppercase tracking-widest text-accent-light mb-4">Quick Reference</p>
                 <ul className="space-y-3">
                   {[
-                    { label: "EMP201", sub: "Due the 7th of every month" },
-                    { label: "VAT201", sub: "Due the 25th of the month after each period" },
-                    { label: "IRP6 (Provisional Tax)", sub: "31 Aug and 28 Feb, plus optional 30 Sep top-up" },
-                    { label: "COIDA Return of Earnings", sub: "31 May annually" },
+                    { label: "EMP201", sub: "Due the 7th of the month after the payroll month, or the business day before" },
+                    { label: "VAT201", sub: "Manual: 25th. eFiling: last business day of the month after the period" },
+                    { label: "IRP6 (Provisional Tax)", sub: "31 Aug and 28 Feb (26 Feb 2027, as 28 Feb is a Sunday), plus optional 30 Sep top-up" },
+                    { label: "COIDA Return of Earnings", sub: "30 June (gazetted window)" },
                   ].map((item) => (
                     <li key={item.label} className="flex gap-3 items-start pb-3 border-b border-white/10 last:border-0 last:pb-0">
                       <div>
@@ -132,6 +134,73 @@ export default function SarsComplianceCalendarPage() {
                 </Link>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* Server-rendered reference: visible without JavaScript */}
+      <section className="py-12 bg-white border-t border-neutral-200">
+        <div className="container-page max-w-4xl space-y-10">
+          <div>
+            <h2 className="text-lg font-semibold text-neutral-900 mb-3">How the dates are worked out</h2>
+            <p className="text-sm text-neutral-600 leading-relaxed mb-4">
+              Dates are generated from rules, each tied to a SARS source and reviewed on {REVIEWED_ON}.
+              Where a due date falls on a weekend or public holiday, SARS moves EMP201, VAT201 and
+              provisional tax to the last business day before it. SARS-published filing-season windows
+              are shown as published.
+            </p>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm border-collapse">
+                <thead>
+                  <tr className="bg-neutral-800 text-white text-xs">
+                    <th className="text-left px-4 py-2.5">VAT category</th>
+                    <th className="text-left px-4 py-2.5">Tax period</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {VAT_CATEGORIES.map((c, i) => (
+                    <tr key={c.id} className={i % 2 === 0 ? "bg-white" : "bg-neutral-50"}>
+                      <td className="px-4 py-2.5 font-medium text-neutral-800">{c.name}</td>
+                      <td className="px-4 py-2.5 text-neutral-600">{c.description}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <ul className="mt-3 text-xs text-neutral-500 space-y-1">
+              {VAT_METHODS.map((m) => (
+                <li key={m.id}><strong>{m.name}:</strong> {m.dueRule}.</li>
+              ))}
+              <li>Category F (four-monthly) was removed in 2015; those vendors moved to Category B.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 className="text-lg font-semibold text-neutral-900 mb-3">Dates that depend on you</h2>
+            <ul className="space-y-3">
+              {DEPENDS_ON_YOU.map((d) => (
+                <li key={d.id} className="text-sm text-neutral-600 leading-relaxed">
+                  <strong className="text-neutral-800">{d.title}.</strong> {d.text}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h2 className="text-lg font-semibold text-neutral-900 mb-3">Public holidays used for adjustments</h2>
+            <p className="text-xs text-neutral-500 mb-3">
+              Source:{" "}
+              <a href={HOLIDAYS_SOURCE.url} className="underline" rel="noopener noreferrer">{HOLIDAYS_SOURCE.title}</a>
+              ; 4 November 2026 per Proclamation Notice 346 of 2026, Government Gazette 55352. A holiday on a Sunday moves to the Monday (Public Holidays Act).
+            </p>
+            <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-1 text-xs text-neutral-600">
+              {PUBLIC_HOLIDAYS.map((h) => (
+                <li key={h.date + h.name}>
+                  {h.date}: {h.name}{h.status === "unconfirmed" ? " (derived from the Act, not yet confirmed on the official list)" : ""}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
