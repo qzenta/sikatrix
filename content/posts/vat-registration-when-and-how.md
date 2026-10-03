@@ -1,6 +1,6 @@
 ---
 title: "VAT Registration in South Africa: When You Must Register and How"
-description: "The R1 million threshold, voluntary registration benefits, and a step-by-step guide to registering for VAT with SARS eFiling."
+description: "The R2.3 million threshold, voluntary registration benefits, and a step-by-step guide to registering for VAT with SARS eFiling."
 slug: "vat-registration-when-and-how"
 category: "SARS Compliance"
 tags:
@@ -28,7 +28,7 @@ relatedPosts:
   - "sars-provisional-tax-guide-2025"
 social:
   ogTitle: "VAT Registration South Africa: When & How | Sikatrix"
-  ogDescription: "The R1 million threshold, voluntary registration, and a step-by-step SARS eFiling guide to VAT registration."
+  ogDescription: "The R2.3 million threshold, voluntary registration, and a step-by-step SARS eFiling guide to VAT registration."
   twitterCard: "summary_large_image"
 newsletterSegment: "vat"
 ---
@@ -45,7 +45,7 @@ You must apply for VAT registration within 21 days of the date your turnover fir
 
 ## Voluntary VAT Registration
 
-Businesses with taxable turnover between R50,000 and R2.3 million per year may apply for voluntary VAT registration. This can be advantageous if you supply other VAT-registered businesses, as they can claim the VAT you charge as an input tax credit, making your pricing more competitive.
+Businesses with taxable turnover between R120,000 and R2.3 million per year (the voluntary threshold was R50,000 before 1 April 2026) may apply for voluntary VAT registration. This can be advantageous if you supply other VAT-registered businesses, as they can claim the VAT you charge as an input tax credit, making your pricing more competitive.
 
 To qualify for voluntary registration, you must be able to demonstrate that you are making or intend to make taxable supplies. SARS may request supporting documentation such as signed contracts, invoices, or a business plan.
 
