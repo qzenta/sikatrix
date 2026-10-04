@@ -43,6 +43,8 @@ const browser = await chromium.launch();
   check("No passed dates shown (nothing before 2026-10-03)", r.every((x) => x.date >= "2026-10-03"));
   check("No 'estimated' wording", !r.some((x) => /estimated/i.test(x.text)));
 
+  check("Provisional tax 2nd period 28 Feb 2027 shown as 26 Feb", has("provisional-p2-2027", "2027-02-26") && r.some((x) => x.date === "2027-02-26" && x.text.includes("Moved from")));
+
   // VAT Category C, manual: 25 Dec 2026 -> 24 Dec; 25 Oct 2026 (Sunday) -> 23 Oct
   await page.selectOption("#vat-category", "C");
   await page.selectOption("#vat-method", "manual");
@@ -52,6 +54,21 @@ const browser = await chromium.launch();
   await page.selectOption("#vat-method", "efiling");
   r = await rows(page);
   check("VAT201 eFiling Oct 2026 is last business day (30 Oct)", r.some((x) => x.id.startsWith("vat201-C-efiling") && x.date === "2026-10-30"));
+  await ctx.close();
+}
+
+// 1b. COIDA entry (30 June 2026 has passed on the real clock, so use an earlier fixed clock)
+{
+  const ctx = await browser.newContext();
+  const page = await ctx.newPage();
+  await page.clock.install({ time: new Date("2026-05-01T08:00:00+02:00") });
+  await page.goto(url, { waitUntil: "load" });
+  const r = await rows(page);
+  const c = r.find((x) => x.id === "coida-roe-2026");
+  check("COIDA ROE row present on 30 June 2026", !!c && c.date === "2026-06-30");
+  check("COIDA period 1 March 2025 to 28 February 2026", !!c && c.text.includes("1 March 2025 to 28 February 2026"));
+  check("COIDA 10% penalty stated", !!c && c.text.includes("10% penalty"));
+  check("COIDA source cites GG 54524 and Notice 3894", !!c && c.text.includes("Government Gazette 54524") && c.text.includes("3894"));
   await ctx.close();
 }
 
@@ -77,6 +94,8 @@ const browser = await chromium.launch();
   );
   check("No-JS render lists deadlines", r.length > 20, `(${r.length} rows)`);
   check("No-JS render includes 23 Oct 2026 and 22 Jan 2027", r.includes("2026-10-23") && r.includes("2027-01-22"));
+  const body = await page.innerText("body");
+  check("No-JS render names the default VAT category and filing method", body.includes("VAT dates shown for Category A, eFiling filing"));
   await ctx.close();
 }
 

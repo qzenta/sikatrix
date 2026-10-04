@@ -242,6 +242,11 @@ export default function ComplianceCalendar() {
                             </p>
                           )}
                           <p className="text-xs text-neutral-600 mt-1 leading-relaxed">{d.description}</p>
+                          <p className="text-2xs text-neutral-400 mt-1" data-source>
+                            Source:{" "}
+                            <a href={d.source.url} className="underline" rel="noopener noreferrer">{d.source.title}</a>
+                            {d.source.gazette ? `, ${d.source.gazette}` : ""}
+                          </p>
                         </div>
                       </li>
                     );
