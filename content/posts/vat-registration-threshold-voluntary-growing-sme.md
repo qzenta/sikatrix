@@ -38,8 +38,8 @@ This article sets out the current thresholds, how voluntary registration actuall
 
 Following the 2026 Budget, the VAT registration thresholds changed effective 1 April 2026:
 
-- **Compulsory registration threshold:** R2.3 million in taxable supplies over any rolling 12-month period (up from R1 million)
-- **Voluntary registration threshold:** R120,000 in taxable supplies over any rolling 12-month period (up from R50,000)
+- **Compulsory registration threshold:** R2.3 million in taxable supplies over any rolling 12-month period (up from R1 million before 1 April 2026)
+- **Voluntary registration threshold:** R120,000 in taxable supplies over any rolling 12-month period (up from R50,000 before 1 April 2026)
 
 Compulsory registration is not optional once you cross R2.3 million — you're legally required to apply within 21 business days of crossing the threshold, and SARS can and does register businesses automatically if you don't. Voluntary registration, by contrast, is available to any business with taxable supplies above R120,000 that chooses to register before being forced to.
 

@@ -129,6 +129,7 @@ export default function TaxCalculatorPage() {
                 <p className="text-2xs font-semibold uppercase tracking-widest text-accent-light mb-4">
                   2026/27 Key Numbers
                 </p>
+                <p className="text-2xs text-brand-100 -mt-3 mb-4">Fixed 2026/27 values. The calculator follows the tax year you select.</p>
                 <ul className="space-y-3">
                   {[
                     { label: "Tax-free threshold", value: "R99,000", sub: "under age 65" },
@@ -208,7 +209,7 @@ export default function TaxCalculatorPage() {
 
           {/* Brackets */}
           <div className="mb-10">
-            <h3 className="text-sm font-semibold text-neutral-900 mb-4">Income Tax Brackets — Individuals</h3>
+            <h3 className="text-sm font-semibold text-neutral-900 mb-4">Income Tax Brackets, Individuals, 2026/27</h3>
             <div className="overflow-x-auto">
               <table className="w-full text-sm border-collapse">
                 <thead>
@@ -242,7 +243,7 @@ export default function TaxCalculatorPage() {
           <div className="grid sm:grid-cols-2 gap-6 mb-10">
             {/* Rebates */}
             <div>
-              <h3 className="text-sm font-semibold text-neutral-900 mb-4">Tax Rebates</h3>
+              <h3 className="text-sm font-semibold text-neutral-900 mb-4">Tax Rebates, 2026/27</h3>
               <table className="w-full text-sm border-collapse">
                 <thead>
                   <tr className="bg-neutral-800 text-white text-xs">
@@ -267,7 +268,7 @@ export default function TaxCalculatorPage() {
 
             {/* Thresholds */}
             <div>
-              <h3 className="text-sm font-semibold text-neutral-900 mb-4">Tax Thresholds</h3>
+              <h3 className="text-sm font-semibold text-neutral-900 mb-4">Tax Thresholds, 2026/27</h3>
               <table className="w-full text-sm border-collapse">
                 <thead>
                   <tr className="bg-neutral-800 text-white text-xs">
@@ -293,7 +294,7 @@ export default function TaxCalculatorPage() {
 
           {/* Medical credits */}
           <div className="mb-10">
-            <h3 className="text-sm font-semibold text-neutral-900 mb-4">Medical Scheme Fees Tax Credit (per month)</h3>
+            <h3 className="text-sm font-semibold text-neutral-900 mb-4">Medical Scheme Fees Tax Credit, 2026/27 (per month)</h3>
             <table className="w-full text-sm border-collapse">
               <thead>
                 <tr className="bg-neutral-800 text-white text-xs">
@@ -321,6 +322,23 @@ export default function TaxCalculatorPage() {
             </p>
           </div>
 
+          {/* Assumptions and exclusions */}
+          <div className="mb-10 rounded-xl border border-neutral-200 bg-neutral-50 p-5">
+            <h3 className="text-sm font-semibold text-neutral-900 mb-2">Assumptions and exclusions</h3>
+            <ul className="list-disc pl-5 space-y-1.5 text-xs text-neutral-600 leading-relaxed">
+              <li>
+                The retirement deduction applies 27.5% to your gross annual income. This is a simplification of
+                SARS&apos;s base, which is the greater of remuneration or taxable income, so the result can differ
+                where those two amounts differ.
+              </li>
+              <li>
+                Not included: the additional medical expenses credit for age 65 and over and for disability,
+                capital gains tax, fringe benefits, other deductions and credits.
+              </li>
+              <li>The figures are an estimate for general information, not tax advice.</li>
+            </ul>
+          </div>
+
           {/* FAQ section */}
           <div className="pt-8 border-t border-neutral-100">
             <h2 className="text-lg font-semibold text-neutral-900 mb-6">Frequently asked questions</h2>
@@ -336,7 +354,7 @@ export default function TaxCalculatorPage() {
                 },
                 {
                   q: "How does a retirement annuity (RA) reduce my tax?",
-                  a: "Contributions to an approved RA or pension fund are deducted from your taxable income before tax is calculated. The deduction is limited to 27.5% of the greater of your remuneration or taxable income, capped at R430,000 per year for 2026/27 (R350,000 in earlier years). This means every rand you contribute to your RA could save you up to 45 cents in tax (at the top marginal rate).",
+                  a: "Contributions to an approved RA or pension fund are deducted from your taxable income before tax is calculated. The deduction is limited to 27.5% of the greater of your remuneration or taxable income, capped at R430,000 per year for 2026/27 (R350,000 up to the year ending 28 February 2026). This means every rand you contribute to your RA could save you up to 45 cents in tax (at the top marginal rate).",
                 },
                 {
                   q: "What is UIF and how is it calculated?",

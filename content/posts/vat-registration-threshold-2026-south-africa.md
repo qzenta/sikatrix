@@ -41,7 +41,7 @@ Budget 2026 made a significant change to the VAT registration threshold in South
 
 From 1 April 2026, a business is only legally required to register for VAT once its annual taxable turnover exceeds R2.3 million. Before this date, the trigger was R1 million.
 
-The voluntary registration threshold also changed. Voluntary VAT registration is now available from R120,000 in annual turnover, up from the previous R50,000 level. This brings more micro-businesses into the voluntary registration option if they choose it.
+The voluntary registration threshold also changed. Voluntary VAT registration is now available from R120,000 in annual turnover, up from R50,000 before 1 April 2026. This brings more micro-businesses into the voluntary registration option if they choose it.
 
 The VAT rate itself remains at 15%.
 
@@ -55,7 +55,7 @@ You can apply to deregister from VAT. However, deregistration is not automatical
 
 **Businesses approaching the old R1 million threshold**
 
-If your turnover was approaching R1 million and you were bracing for compulsory registration, you now have more time and more room to grow before the obligation kicks in. The threshold increase gives many SMEs a window to build turnover and systems before taking on VAT compliance.
+If your turnover was approaching the old R1 million threshold (the limit before 1 April 2026) and you were bracing for compulsory registration, you now have more time and more room to grow before the obligation kicks in. The threshold increase gives many SMEs a window to build turnover and systems before taking on VAT compliance.
 
 **Businesses above R2.3 million**
 
