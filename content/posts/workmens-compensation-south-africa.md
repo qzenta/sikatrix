@@ -66,17 +66,21 @@ COIDA does **not** cover injuries that arise from an employee's own serious and 
 When a workplace accident happens, the employer's obligations under COIDA are time-sensitive:
 
 ### 1. Provide First Aid and Medical Assistance
+
 You must ensure the injured employee receives immediate medical treatment. The Compensation Fund covers the cost of medical treatment for compensable injuries — but you may need to cover costs upfront and claim reimbursement.
 
 ### 2. Report the Accident — Within 7 Days
+
 You must report any occupational accident to the **Compensation Fund within 7 days** using the **W.Cl.2 (Employer's Report of Accident)** form. This is submitted via the [Compensation Fund online portal](https://www.labour.gov.za).
 
 For **first aid injuries** (minor, not requiring more than 3 days off work and not requiring specialist treatment), you only need to record the incident in your accident book. W.Cl.2 is required for more serious injuries.
 
 ### 3. Report Occupational Diseases — Within 14 Days
+
 When an employee is diagnosed with an occupational disease listed under COIDA, you must submit the **W.Cl.1 (Employer's Report of Occupational Disease)** within 14 days of becoming aware of the diagnosis.
 
 ### 4. Keep Records
+
 COIDA requires employers to maintain an accident register recording every workplace injury, regardless of severity. The register must be available for inspection by a labour inspector.
 
 [img]/photos/blog/workplace-injury-report.jpg|South African employer completing workplace injury report documentation|Reporting a workplace injury within 7 days is a legal obligation under COIDA — delays result in penalty assessments and may jeopardise the employee's claim
@@ -99,15 +103,19 @@ As the employer, you do not pay compensation to the employee out of pocket. Your
 ## Types of Compensation Available to Injured Employees
 
 ### Temporary Total Disablement (TTD)
+
 If an employee cannot work for more than 3 days following a compensable injury, the Fund pays **75% of their monthly earnings** for the period of disablement, up to a maximum of 24 months.
 
 ### Permanent Disablement
+
 If the injury results in permanent partial or total disablement (e.g., loss of a limb or permanent hearing loss), the Fund calculates a **lump sum or monthly pension** based on the degree of disablement and the employee's earnings at the time of injury.
 
 ### Medical Expenses
+
 All reasonable medical costs arising from the compensable injury are paid by the Fund — doctor consultations, hospitalization, physiotherapy, specialist treatment, and prosthetics.
 
 ### Death Benefits
+
 If an employee dies from a compensable injury or disease, the Fund pays:
 - Funeral expenses (up to a prescribed maximum)
 - A monthly pension to the surviving spouse
