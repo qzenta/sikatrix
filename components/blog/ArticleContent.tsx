@@ -209,14 +209,34 @@ function renderBlock(block: string, i: number): ReactNode {
   );
 }
 
+// Remove <!-- ... --> spans with indexOf (an unclosed "<!--" drops to the end),
+// re-scanning until no "<!--" remains so removals can't splice a new one together.
+function stripHtmlComments(src: string): string {
+  let out = src;
+  while (out.includes("<!--")) {
+    let result = "";
+    let pos = 0;
+    while (pos < out.length) {
+      const start = out.indexOf("<!--", pos);
+      if (start === -1) {
+        result += out.slice(pos);
+        break;
+      }
+      result += out.slice(pos, start);
+      const end = out.indexOf("-->", start + 4);
+      if (end === -1) break;
+      pos = end + 3;
+    }
+    out = result;
+  }
+  return out;
+}
+
 export default function ArticleContent({ content }: ArticleContentProps) {
   // Split on blank lines (double newline) to get logical blocks
   // HTML comments hold editor source notes; strip them so they never render as text
   // Normalise CRLF so Windows checkouts split into the same blocks as LF
-  const blocks = content
-    .replace(/\r\n?/g, "\n")
-    .replace(/<!--[\s\S]*?-->/g, "")
-    .split(/\n{2,}/);
+  const blocks = stripHtmlComments(content.replace(/\r\n?/g, "\n")).split(/\n{2,}/);
 
   return (
     <article className="prose-sm max-w-none">
