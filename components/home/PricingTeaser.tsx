@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import Reveal from "@/components/Reveal";
 
 const TEASERS = [
   {
@@ -42,15 +43,15 @@ export default function PricingTeaser() {
         </div>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-          {TEASERS.map((t) => (
-            <div key={t.service} className="rounded-xl border border-white/10 bg-white/5 p-5">
+          {TEASERS.map((t, i) => (
+            <Reveal key={t.service} delay={i} className="rounded-xl border border-white/10 bg-white/5 p-5">
               <p className="text-xs text-neutral-400 mb-3 leading-snug">{t.service}</p>
               <div className="flex items-baseline gap-1">
                 <span className="text-2xs text-neutral-500">from</span>
                 <span className="text-lg font-bold text-accent-light">{t.from}</span>
               </div>
               <p className="text-2xs text-neutral-500 mt-0.5">{t.period}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
 

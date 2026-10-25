@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { CheckCircle, Download, Loader2 } from "lucide-react";
+import Reveal from "@/components/Reveal";
 
 const CHECKLIST_ITEMS = [
   "Income Tax Return (ITR12 / ITR14)",
@@ -45,7 +46,7 @@ export default function LeadMagnet() {
   return (
     <section className="py-14 md:py-20 bg-brand-dark">
       <div className="container-page">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <Reveal className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left: checklist */}
           <div>
             <span className="inline-block text-accent-light text-xs font-semibold uppercase tracking-widest border-b-2 border-accent-light pb-0.5 mb-4">
@@ -144,7 +145,7 @@ export default function LeadMagnet() {
               </>
             )}
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

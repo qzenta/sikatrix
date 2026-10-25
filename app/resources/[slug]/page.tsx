@@ -325,7 +325,7 @@ export default async function BlogPostPage({
                   <p className="text-sm font-semibold text-neutral-900 mb-0.5">Daniel Amoah</p>
                   <p className="text-xs text-brand font-medium mb-2">SAIPA Professional Accountant (SA) · SARS Tax Practitioner · IBASA Member</p>
                   <p className="text-xs text-neutral-500 leading-relaxed">
-                    Daniel founded Sikatrix Business Accountants to give Gauteng&apos;s growing businesses access to SAIPA-registered accounting. With over 10 years in practice, he specialises in tax compliance, annual financial statements, and cloud accounting for SMEs across Alberton and Johannesburg.
+                    Daniel founded Sikatrix Business Accountants to give Gauteng&apos;s growing businesses access to SAIPA-registered accounting. In practice since 2017, he specialises in tax compliance, annual financial statements, and cloud accounting for SMEs across Alberton and Johannesburg.
                   </p>
                   <Link href="/about" className="inline-flex items-center gap-1 text-xs text-brand hover:underline mt-2 font-medium">
                     About the author <ArrowRight size={10} />

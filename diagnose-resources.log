@@ -1,0 +1,529 @@
+
+diagnose-resources.log
+generated (local): 2026-10-14 15:47:58 +02:00
+curl: curl 8.21.0 (Windows) libcurl/8.21.0 Schannel zlib/1.3.2 WinIDN WinLDAP
+feed path: /resources/podcast/feed.xml
+enclosure path: /podcast/vat-thresholds-2026-what-changed.m4a
+
+### FEED ua=browser | HEAD http://sikatrix.com/resources/podcast/feed.xml
+  HTTP/1.1 308 Permanent Redirect
+  Content-Type: text/plain
+  Location: https://sikatrix.com/resources/podcast/feed.xml
+  server: cloudflare
+  HTTP/1.1 307 Temporary Redirect
+  Content-Type: text/plain
+  Cache-Control: public, max-age=0, must-revalidate
+  location: https://www.sikatrix.com/resources/podcast/feed.xml
+  Server: cloudflare
+  strict-transport-security: max-age=63072000
+  x-vercel-id: cpt1::hlmjd-1791985680976-2337834d3a8a
+  HTTP/1.1 200 OK
+  Content-Type: application/rss+xml; charset=utf-8
+  Content-Length: 3085
+  Accept-Ranges: bytes
+  Age: 860769
+  Cache-Control: public, max-age=0, must-revalidate
+  Server: cloudflare
+  strict-transport-security: max-age=63072000; includeSubDomains; preload
+  x-vercel-cache: HIT
+  x-vercel-id: cpt1::ts9gp-1791985682353-87109e37378a
+  [final_url=https://www.sikatrix.com/resources/podcast/feed.xml http_code=200 redirects=2 content_type=application/rss+xml; charset=utf-8 size_download=0 remote_ip=172.67.195.22 time_total=4.188090]
+  curl_exit=0
+
+### FEED ua=browser | GET http://sikatrix.com/resources/podcast/feed.xml
+  HTTP/1.1 308 Permanent Redirect
+  Content-Type: text/plain
+  Location: https://sikatrix.com/resources/podcast/feed.xml
+  server: cloudflare
+  HTTP/1.1 307 Temporary Redirect
+  Content-Type: text/plain
+  Cache-Control: public, max-age=0, must-revalidate
+  location: https://www.sikatrix.com/resources/podcast/feed.xml
+  Server: cloudflare
+  strict-transport-security: max-age=63072000
+  x-vercel-id: cpt1::hlmjd-1791985684260-ee62fa2f20e4
+  HTTP/1.1 200 OK
+  Content-Type: application/rss+xml; charset=utf-8
+  Age: 860770
+  Cache-Control: public, max-age=0, must-revalidate
+  Server: cloudflare
+  strict-transport-security: max-age=63072000; includeSubDomains; preload
+  x-vercel-cache: HIT
+  x-vercel-id: cpt1::xc9zs-1791985684379-d4c0fc28768c
+  [final_url=https://www.sikatrix.com/resources/podcast/feed.xml http_code=200 redirects=2 content_type=application/rss+xml; charset=utf-8 size_download=3085 remote_ip=172.67.195.22 time_total=0.574612]
+  curl_exit=0
+
+### FEED ua=Googlebot | HEAD http://sikatrix.com/resources/podcast/feed.xml
+  HTTP/1.1 308 Permanent Redirect
+  Content-Type: text/plain
+  Location: https://sikatrix.com/resources/podcast/feed.xml
+  server: cloudflare
+  HTTP/1.1 307 Temporary Redirect
+  Content-Type: text/plain
+  Cache-Control: public, max-age=0, must-revalidate
+  location: https://www.sikatrix.com/resources/podcast/feed.xml
+  Server: cloudflare
+  strict-transport-security: max-age=63072000
+  x-vercel-id: cpt1::hlmjd-1791985685525-47cbca7b9767
+  HTTP/1.1 200 OK
+  Content-Type: application/rss+xml; charset=utf-8
+  Content-Length: 3085
+  Accept-Ranges: bytes
+  Age: 860772
+  Cache-Control: public, max-age=0, must-revalidate
+  Server: cloudflare
+  strict-transport-security: max-age=63072000; includeSubDomains; preload
+  x-vercel-cache: HIT
+  x-vercel-id: cpt1::rddvm-1791985685678-96449bb47305
+  [final_url=https://www.sikatrix.com/resources/podcast/feed.xml http_code=200 redirects=2 content_type=application/rss+xml; charset=utf-8 size_download=0 remote_ip=172.67.195.22 time_total=0.666223]
+  curl_exit=0
+
+### FEED ua=Googlebot | GET http://sikatrix.com/resources/podcast/feed.xml
+  HTTP/1.1 308 Permanent Redirect
+  Content-Type: text/plain
+  Location: https://sikatrix.com/resources/podcast/feed.xml
+  server: cloudflare
+  HTTP/1.1 307 Temporary Redirect
+  Content-Type: text/plain
+  Cache-Control: public, max-age=0, must-revalidate
+  location: https://www.sikatrix.com/resources/podcast/feed.xml
+  Server: cloudflare
+  strict-transport-security: max-age=63072000
+  x-vercel-id: cpt1::hlmjd-1791985686860-dc9e46b3e525
+  HTTP/1.1 200 OK
+  Content-Type: application/rss+xml; charset=utf-8
+  Age: 860773
+  Cache-Control: public, max-age=0, must-revalidate
+  Server: cloudflare
+  strict-transport-security: max-age=63072000; includeSubDomains; preload
+  x-vercel-cache: HIT
+  x-vercel-id: cpt1::txlxq-1791985686976-a6f040b241f1
+  [final_url=https://www.sikatrix.com/resources/podcast/feed.xml http_code=200 redirects=2 content_type=application/rss+xml; charset=utf-8 size_download=3085 remote_ip=172.67.195.22 time_total=0.514167]
+  curl_exit=0
+
+### FEED ua=browser | HEAD https://sikatrix.com/resources/podcast/feed.xml
+  HTTP/1.1 307 Temporary Redirect
+  Content-Type: text/plain
+  Cache-Control: public, max-age=0, must-revalidate
+  location: https://www.sikatrix.com/resources/podcast/feed.xml
+  Server: cloudflare
+  strict-transport-security: max-age=63072000
+  x-vercel-id: cpt1::bwrbt-1791985688116-fe48c5c6adc4
+  HTTP/1.1 200 OK
+  Content-Type: application/rss+xml; charset=utf-8
+  Content-Length: 3085
+  Accept-Ranges: bytes
+  Age: 860774
+  Cache-Control: public, max-age=0, must-revalidate
+  Server: cloudflare
+  strict-transport-security: max-age=63072000; includeSubDomains; preload
+  x-vercel-cache: HIT
+  x-vercel-id: cpt1::6t89h-1791985688258-95ea87bd5b9c
+  [final_url=https://www.sikatrix.com/resources/podcast/feed.xml http_code=200 redirects=1 content_type=application/rss+xml; charset=utf-8 size_download=0 remote_ip=172.67.195.22 time_total=0.449110]
+  curl_exit=0
+
+### FEED ua=browser | GET https://sikatrix.com/resources/podcast/feed.xml
+  HTTP/1.1 307 Temporary Redirect
+  Content-Type: text/plain
+  Cache-Control: public, max-age=0, must-revalidate
+  location: https://www.sikatrix.com/resources/podcast/feed.xml
+  Server: cloudflare
+  strict-transport-security: max-age=63072000
+  x-vercel-id: cpt1::hlmjd-1791985689293-2b6d89307092
+  HTTP/1.1 200 OK
+  Content-Type: application/rss+xml; charset=utf-8
+  Age: 860775
+  Cache-Control: public, max-age=0, must-revalidate
+  Server: cloudflare
+  strict-transport-security: max-age=63072000; includeSubDomains; preload
+  x-vercel-cache: HIT
+  x-vercel-id: cpt1::jsmbx-1791985689393-0dbfcbc65bb3
+  [final_url=https://www.sikatrix.com/resources/podcast/feed.xml http_code=200 redirects=1 content_type=application/rss+xml; charset=utf-8 size_download=3085 remote_ip=172.67.195.22 time_total=0.422321]
+  curl_exit=0
+
+### FEED ua=Googlebot | HEAD https://sikatrix.com/resources/podcast/feed.xml
+  HTTP/1.1 307 Temporary Redirect
+  Content-Type: text/plain
+  Cache-Control: public, max-age=0, must-revalidate
+  location: https://www.sikatrix.com/resources/podcast/feed.xml
+  Server: cloudflare
+  strict-transport-security: max-age=63072000
+  x-vercel-id: cpt1::4hsr7-1791985690314-bfb4ddc9eaed
+  HTTP/1.1 200 OK
+  Content-Type: application/rss+xml; charset=utf-8
+  Content-Length: 3085
+  Accept-Ranges: bytes
+  Age: 860776
+  Cache-Control: public, max-age=0, must-revalidate
+  Server: cloudflare
+  strict-transport-security: max-age=63072000; includeSubDomains; preload
+  x-vercel-cache: HIT
+  x-vercel-id: cpt1::txlxq-1791985690457-200947731731
+  [final_url=https://www.sikatrix.com/resources/podcast/feed.xml http_code=200 redirects=1 content_type=application/rss+xml; charset=utf-8 size_download=0 remote_ip=172.67.195.22 time_total=0.438813]
+  curl_exit=0
+
+### FEED ua=Googlebot | GET https://sikatrix.com/resources/podcast/feed.xml
+  HTTP/1.1 307 Temporary Redirect
+  Content-Type: text/plain
+  Cache-Control: public, max-age=0, must-revalidate
+  location: https://www.sikatrix.com/resources/podcast/feed.xml
+  Server: cloudflare
+  strict-transport-security: max-age=63072000
+  x-vercel-id: cpt1::hlmjd-1791985691416-79abca45311f
+  HTTP/1.1 200 OK
+  Content-Type: application/rss+xml; charset=utf-8
+  Age: 860778
+  Cache-Control: public, max-age=0, must-revalidate
+  Server: cloudflare
+  strict-transport-security: max-age=63072000; includeSubDomains; preload
+  x-vercel-cache: HIT
+  x-vercel-id: cpt1::6t89h-1791985691559-d3d7435a1f47
+  [final_url=https://www.sikatrix.com/resources/podcast/feed.xml http_code=200 redirects=1 content_type=application/rss+xml; charset=utf-8 size_download=3085 remote_ip=172.67.195.22 time_total=0.506585]
+  curl_exit=0
+
+### FEED ua=browser | HEAD http://www.sikatrix.com/resources/podcast/feed.xml
+  HTTP/1.1 308 Permanent Redirect
+  Content-Type: text/plain
+  Location: https://www.sikatrix.com/resources/podcast/feed.xml
+  server: cloudflare
+  HTTP/1.1 200 OK
+  Content-Type: application/rss+xml; charset=utf-8
+  Content-Length: 3085
+  Accept-Ranges: bytes
+  Age: 860779
+  Cache-Control: public, max-age=0, must-revalidate
+  Server: cloudflare
+  strict-transport-security: max-age=63072000; includeSubDomains; preload
+  x-vercel-cache: HIT
+  x-vercel-id: cpt1::jsmbx-1791985692737-ebebdb654dc7
+  [final_url=https://www.sikatrix.com/resources/podcast/feed.xml http_code=200 redirects=1 content_type=application/rss+xml; charset=utf-8 size_download=0 remote_ip=172.67.195.22 time_total=0.409326]
+  curl_exit=0
+
+### FEED ua=browser | GET http://www.sikatrix.com/resources/podcast/feed.xml
+  HTTP/1.1 308 Permanent Redirect
+  Content-Type: text/plain
+  Location: https://www.sikatrix.com/resources/podcast/feed.xml
+  server: cloudflare
+  HTTP/1.1 200 OK
+  Content-Type: application/rss+xml; charset=utf-8
+  Age: 860780
+  Cache-Control: public, max-age=0, must-revalidate
+  Server: cloudflare
+  strict-transport-security: max-age=63072000; includeSubDomains; preload
+  x-vercel-cache: HIT
+  x-vercel-id: cpt1::q29vf-1791985693834-a294f4527392
+  [final_url=https://www.sikatrix.com/resources/podcast/feed.xml http_code=200 redirects=1 content_type=application/rss+xml; charset=utf-8 size_download=3085 remote_ip=172.67.195.22 time_total=0.434582]
+  curl_exit=0
+
+### FEED ua=Googlebot | HEAD http://www.sikatrix.com/resources/podcast/feed.xml
+  HTTP/1.1 308 Permanent Redirect
+  Content-Type: text/plain
+  Location: https://www.sikatrix.com/resources/podcast/feed.xml
+  server: cloudflare
+  HTTP/1.1 200 OK
+  Content-Type: application/rss+xml; charset=utf-8
+  Content-Length: 3085
+  Accept-Ranges: bytes
+  Age: 860781
+  Cache-Control: public, max-age=0, must-revalidate
+  Server: cloudflare
+  strict-transport-security: max-age=63072000; includeSubDomains; preload
+  x-vercel-cache: HIT
+  x-vercel-id: cpt1::jsmbx-1791985694754-b13e1062a532
+  [final_url=https://www.sikatrix.com/resources/podcast/feed.xml http_code=200 redirects=1 content_type=application/rss+xml; charset=utf-8 size_download=0 remote_ip=172.67.195.22 time_total=0.393310]
+  curl_exit=0
+
+### FEED ua=Googlebot | GET http://www.sikatrix.com/resources/podcast/feed.xml
+  HTTP/1.1 308 Permanent Redirect
+  Content-Type: text/plain
+  Location: https://www.sikatrix.com/resources/podcast/feed.xml
+  server: cloudflare
+  HTTP/1.1 200 OK
+  Content-Type: application/rss+xml; charset=utf-8
+  Age: 860782
+  Cache-Control: public, max-age=0, must-revalidate
+  Server: cloudflare
+  strict-transport-security: max-age=63072000; includeSubDomains; preload
+  x-vercel-cache: HIT
+  x-vercel-id: cpt1::bwrbt-1791985695856-015d87022fc4
+  [final_url=https://www.sikatrix.com/resources/podcast/feed.xml http_code=200 redirects=1 content_type=application/rss+xml; charset=utf-8 size_download=3085 remote_ip=172.67.195.22 time_total=0.440427]
+  curl_exit=0
+
+### FEED ua=browser | HEAD https://www.sikatrix.com/resources/podcast/feed.xml
+  HTTP/1.1 200 OK
+  Content-Type: application/rss+xml; charset=utf-8
+  Content-Length: 3085
+  Accept-Ranges: bytes
+  Age: 860783
+  Cache-Control: public, max-age=0, must-revalidate
+  Server: cloudflare
+  strict-transport-security: max-age=63072000; includeSubDomains; preload
+  x-vercel-cache: HIT
+  x-vercel-id: cpt1::rddvm-1791985696819-28f8fdbaba01
+  [final_url=https://www.sikatrix.com/resources/podcast/feed.xml http_code=200 redirects=0 content_type=application/rss+xml; charset=utf-8 size_download=0 remote_ip=172.67.195.22 time_total=0.350751]
+  curl_exit=0
+
+### FEED ua=browser | GET https://www.sikatrix.com/resources/podcast/feed.xml
+  HTTP/1.1 200 OK
+  Content-Type: application/rss+xml; charset=utf-8
+  Age: 860784
+  Cache-Control: public, max-age=0, must-revalidate
+  Server: cloudflare
+  strict-transport-security: max-age=63072000; includeSubDomains; preload
+  x-vercel-cache: HIT
+  x-vercel-id: cpt1::rddvm-1791985697634-e04db7250b61
+  [final_url=https://www.sikatrix.com/resources/podcast/feed.xml http_code=200 redirects=0 content_type=application/rss+xml; charset=utf-8 size_download=3085 remote_ip=172.67.195.22 time_total=0.286388]
+  curl_exit=0
+
+### FEED ua=Googlebot | HEAD https://www.sikatrix.com/resources/podcast/feed.xml
+  HTTP/1.1 200 OK
+  Content-Type: application/rss+xml; charset=utf-8
+  Content-Length: 3085
+  Accept-Ranges: bytes
+  Age: 860784
+  Cache-Control: public, max-age=0, must-revalidate
+  Server: cloudflare
+  strict-transport-security: max-age=63072000; includeSubDomains; preload
+  x-vercel-cache: HIT
+  x-vercel-id: cpt1::rddvm-1791985698379-cf5da9f1c52d
+  [final_url=https://www.sikatrix.com/resources/podcast/feed.xml http_code=200 redirects=0 content_type=application/rss+xml; charset=utf-8 size_download=0 remote_ip=172.67.195.22 time_total=0.303525]
+  curl_exit=0
+
+### FEED ua=Googlebot | GET https://www.sikatrix.com/resources/podcast/feed.xml
+  HTTP/1.1 200 OK
+  Content-Type: application/rss+xml; charset=utf-8
+  Age: 860785
+  Cache-Control: public, max-age=0, must-revalidate
+  Server: cloudflare
+  strict-transport-security: max-age=63072000; includeSubDomains; preload
+  x-vercel-cache: HIT
+  x-vercel-id: cpt1::bwrbt-1791985699257-d563af62eea5
+  [final_url=https://www.sikatrix.com/resources/podcast/feed.xml http_code=200 redirects=0 content_type=application/rss+xml; charset=utf-8 size_download=3085 remote_ip=172.67.195.22 time_total=0.317126]
+  curl_exit=0
+
+### ENCLOSURE ua=browser | HEAD http://sikatrix.com/podcast/vat-thresholds-2026-what-changed.m4a
+  HTTP/1.1 308 Permanent Redirect
+  Content-Type: text/plain
+  Location: https://sikatrix.com/podcast/vat-thresholds-2026-what-changed.m4a
+  server: cloudflare
+  HTTP/1.1 307 Temporary Redirect
+  Content-Type: text/plain
+  Cache-Control: public, max-age=0, must-revalidate
+  location: https://www.sikatrix.com/podcast/vat-thresholds-2026-what-changed.m4a
+  Server: cloudflare
+  strict-transport-security: max-age=63072000
+  x-vercel-id: cpt1::xc9zs-1791985700153-2f11cd8c8119
+  HTTP/1.1 200 OK
+  Content-Type: audio/mp4
+  Content-Length: 39204565
+  Accept-Ranges: bytes
+  Age: 0
+  Cache-Control: public, max-age=0, must-revalidate
+  Server: cloudflare
+  strict-transport-security: max-age=63072000; includeSubDomains; preload
+  x-vercel-cache: MISS
+  x-vercel-id: cpt1::bwrbt-1791985700299-1f0ddd1fb4d5
+  [final_url=https://www.sikatrix.com/podcast/vat-thresholds-2026-what-changed.m4a http_code=200 redirects=2 content_type=audio/mp4 size_download=0 remote_ip=172.67.195.22 time_total=3.389811]
+  curl_exit=0
+
+### ENCLOSURE ua=browser | GET http://sikatrix.com/podcast/vat-thresholds-2026-what-changed.m4a
+  HTTP/1.1 308 Permanent Redirect
+  Content-Type: text/plain
+  Location: https://sikatrix.com/podcast/vat-thresholds-2026-what-changed.m4a
+  server: cloudflare
+  HTTP/1.1 307 Temporary Redirect
+  Content-Type: text/plain
+  Cache-Control: public, max-age=0, must-revalidate
+  location: https://www.sikatrix.com/podcast/vat-thresholds-2026-what-changed.m4a
+  Server: cloudflare
+  strict-transport-security: max-age=63072000
+  x-vercel-id: cpt1::k6fhr-1791985704498-8ecb227cab53
+  HTTP/1.1 206 Partial Content
+  Content-Type: audio/mp4
+  Content-Length: 1024
+  Accept-Ranges: bytes
+  Age: 1
+  Cache-Control: public, max-age=0, must-revalidate
+  content-range: bytes 0-1023/39204565
+  Server: cloudflare
+  strict-transport-security: max-age=63072000; includeSubDomains; preload
+  x-vercel-cache: HIT
+  x-vercel-id: cpt1::xc9zs-1791985704641-85bb63999920
+  [final_url=https://www.sikatrix.com/podcast/vat-thresholds-2026-what-changed.m4a http_code=206 redirects=2 content_type=audio/mp4 size_download=1024 remote_ip=172.67.195.22 time_total=0.588301]
+  curl_exit=0
+
+### ENCLOSURE ua=Googlebot | HEAD http://sikatrix.com/podcast/vat-thresholds-2026-what-changed.m4a
+  HTTP/1.1 308 Permanent Redirect
+  Content-Type: text/plain
+  Location: https://sikatrix.com/podcast/vat-thresholds-2026-what-changed.m4a
+  server: cloudflare
+  HTTP/1.1 307 Temporary Redirect
+  Content-Type: text/plain
+  Cache-Control: public, max-age=0, must-revalidate
+  location: https://www.sikatrix.com/podcast/vat-thresholds-2026-what-changed.m4a
+  Server: cloudflare
+  strict-transport-security: max-age=63072000
+  x-vercel-id: cpt1::k6fhr-1791985706079-03fee74540a3
+  HTTP/1.1 200 OK
+  Content-Type: audio/mp4
+  Content-Length: 39204565
+  Accept-Ranges: bytes
+  Age: 3
+  Cache-Control: public, max-age=0, must-revalidate
+  Server: cloudflare
+  strict-transport-security: max-age=63072000; includeSubDomains; preload
+  x-vercel-cache: HIT
+  x-vercel-id: cpt1::xc9zs-1791985706218-7b63567450c4
+  [final_url=https://www.sikatrix.com/podcast/vat-thresholds-2026-what-changed.m4a http_code=200 redirects=2 content_type=audio/mp4 size_download=0 remote_ip=172.67.195.22 time_total=0.554596]
+  curl_exit=0
+
+### ENCLOSURE ua=Googlebot | GET http://sikatrix.com/podcast/vat-thresholds-2026-what-changed.m4a
+  HTTP/1.1 308 Permanent Redirect
+  Content-Type: text/plain
+  Location: https://sikatrix.com/podcast/vat-thresholds-2026-what-changed.m4a
+  server: cloudflare
+  HTTP/1.1 307 Temporary Redirect
+  Content-Type: text/plain
+  Cache-Control: public, max-age=0, must-revalidate
+  location: https://www.sikatrix.com/podcast/vat-thresholds-2026-what-changed.m4a
+  Server: cloudflare
+  strict-transport-security: max-age=63072000
+  x-vercel-id: cpt1::k6fhr-1791985707536-92b54f461ab6
+  HTTP/1.1 206 Partial Content
+  Content-Type: audio/mp4
+  Content-Length: 1024
+  Accept-Ranges: bytes
+  Age: 4
+  Cache-Control: public, max-age=0, must-revalidate
+  content-range: bytes 0-1023/39204565
+  Server: cloudflare
+  strict-transport-security: max-age=63072000; includeSubDomains; preload
+  x-vercel-cache: HIT
+  x-vercel-id: cpt1::k6fhr-1791985707674-0ca9fd92f83d
+  [final_url=https://www.sikatrix.com/podcast/vat-thresholds-2026-what-changed.m4a http_code=206 redirects=2 content_type=audio/mp4 size_download=1024 remote_ip=172.67.195.22 time_total=0.541086]
+  curl_exit=0
+
+### ENCLOSURE ua=browser | HEAD https://sikatrix.com/podcast/vat-thresholds-2026-what-changed.m4a
+  HTTP/1.1 307 Temporary Redirect
+  Content-Type: text/plain
+  Cache-Control: public, max-age=0, must-revalidate
+  location: https://www.sikatrix.com/podcast/vat-thresholds-2026-what-changed.m4a
+  Server: cloudflare
+  strict-transport-security: max-age=63072000
+  x-vercel-id: cpt1::rddvm-1791985708973-863de9edf7ed
+  HTTP/1.1 200 OK
+  Content-Type: audio/mp4
+  Content-Length: 39204565
+  Accept-Ranges: bytes
+  Age: 6
+  Cache-Control: public, max-age=0, must-revalidate
+  Server: cloudflare
+  strict-transport-security: max-age=63072000; includeSubDomains; preload
+  x-vercel-cache: HIT
+  x-vercel-id: cpt1::txkps-1791985709114-c2f7b5378af7
+  [final_url=https://www.sikatrix.com/podcast/vat-thresholds-2026-what-changed.m4a http_code=200 redirects=1 content_type=audio/mp4 size_download=0 remote_ip=172.67.195.22 time_total=0.463712]
+  curl_exit=0
+
+### ENCLOSURE ua=browser | GET https://sikatrix.com/podcast/vat-thresholds-2026-what-changed.m4a
+  HTTP/1.1 307 Temporary Redirect
+  Content-Type: text/plain
+  Cache-Control: public, max-age=0, must-revalidate
+  location: https://www.sikatrix.com/podcast/vat-thresholds-2026-what-changed.m4a
+  Server: cloudflare
+  strict-transport-security: max-age=63072000
+  x-vercel-id: cpt1::k6fhr-1791985710347-4eeebc2ed443
+  HTTP/1.1 206 Partial Content
+  Content-Type: audio/mp4
+  Content-Length: 1024
+  Accept-Ranges: bytes
+  Age: 7
+  Cache-Control: public, max-age=0, must-revalidate
+  content-range: bytes 0-1023/39204565
+  Server: cloudflare
+  strict-transport-security: max-age=63072000; includeSubDomains; preload
+  x-vercel-cache: HIT
+  x-vercel-id: cpt1::txlxq-1791985710483-36c0dcede0c8
+  [final_url=https://www.sikatrix.com/podcast/vat-thresholds-2026-what-changed.m4a http_code=206 redirects=1 content_type=audio/mp4 size_download=1024 remote_ip=172.67.195.22 time_total=0.575285]
+  curl_exit=0
+
+### ENCLOSURE ua=Googlebot | HEAD https://sikatrix.com/podcast/vat-thresholds-2026-what-changed.m4a
+  HTTP/1.1 307 Temporary Redirect
+  Content-Type: text/plain
+  Cache-Control: public, max-age=0, must-revalidate
+  location: https://www.sikatrix.com/podcast/vat-thresholds-2026-what-changed.m4a
+  Server: cloudflare
+  strict-transport-security: max-age=63072000
+  x-vercel-id: cpt1::z8tqj-1791985711618-1f8dcc70e86d
+  HTTP/1.1 200 OK
+  Content-Type: audio/mp4
+  Content-Length: 39204565
+  Accept-Ranges: bytes
+  Age: 8
+  Cache-Control: public, max-age=0, must-revalidate
+  Server: cloudflare
+  strict-transport-security: max-age=63072000; includeSubDomains; preload
+  x-vercel-cache: HIT
+  x-vercel-id: cpt1::k6fhr-1791985711738-e43fa2ea3721
+  [final_url=https://www.sikatrix.com/podcast/vat-thresholds-2026-what-changed.m4a http_code=200 redirects=1 content_type=audio/mp4 size_download=0 remote_ip=172.67.195.22 time_total=0.424423]
+  curl_exit=0
+
+### ENCLOSURE ua=Googlebot | GET https://sikatrix.com/podcast/vat-thresholds-2026-what-changed.m4a
+  HTTP/1.1 307 Temporary Redirect
+  Content-Type: text/plain
+  Cache-Control: public, max-age=0, must-revalidate
+  location: https://www.sikatrix.com/podcast/vat-thresholds-2026-what-changed.m4a
+  Server: cloudflare
+  strict-transport-security: max-age=63072000
+  x-vercel-id: cpt1::txlxq-1791985712855-ba6fadef51a5
+  HTTP/1.1 206 Partial Content
+  Content-Type: audio/mp4
+  Content-Length: 1024
+  Accept-Ranges: bytes
+  Age: 9
+  Cache-Control: public, max-age=0, must-revalidate
+  content-range: bytes 0-1023/39204565
+  Server: cloudflare
+  strict-transport-security: max-age=63072000; includeSubDomains; preload
+  x-vercel-cache: HIT
+  x-vercel-id: cpt1::4hsr7-1791985712993-4eac4edad286
+  [final_url=https://www.sikatrix.com/podcast/vat-thresholds-2026-what-changed.m4a http_code=206 redirects=1 content_type=audio/mp4 size_download=1024 remote_ip=172.67.195.22 time_total=0.450740]
+  curl_exit=0
+
+### ENCLOSURE ua=browser | HEAD http://www.sikatrix.com/podcast/vat-thresholds-2026-what-changed.m4a
+  HTTP/1.1 308 Permanent Redirect
+  Content-Type: text/plain
+  Location: https://www.sikatrix.com/podcast/vat-thresholds-2026-what-changed.m4a
+  server: cloudflare
+  HTTP/1.1 200 OK
+  Content-Type: audio/mp4
+  Content-Length: 39204565
+  Accept-Ranges: bytes
+  Age: 11
+  Cache-Control: public, max-age=0, must-revalidate
+  Server: cloudflare
+  strict-transport-security: max-age=63072000; includeSubDomains; preload
+  x-vercel-cache: HIT
+  x-vercel-id: cpt1::zqg2h-1791985714253-f9204803c9c0
+  [final_url=https://www.sikatrix.com/podcast/vat-thresholds-2026-what-changed.m4a http_code=200 redirects=1 content_type=audio/mp4 size_download=0 remote_ip=172.67.195.22 time_total=0.465389]
+  curl_exit=0
+
+### ENCLOSURE ua=browser | GET http://www.sikatrix.com/podcast/vat-thresholds-2026-what-changed.m4a
+  HTTP/1.1 308 Permanent Redirect
+  Content-Type: text/plain
+  Location: https://www.sikatrix.com/podcast/vat-thresholds-2026-what-changed.m4a
+  server: cloudflare
+  HTTP/1.1 206 Partial Content
+  Content-Type: audio/mp4
+  Content-Length: 1024
+  Accept-Ranges: bytes
+  Age: 12
+  Cache-Control: public, max-age=0, must-revalidate
+  content-range: bytes 0-1023/39204565
+  Server: cloudflare
+  strict-transport-security: max-age=63072000; includeSubDomains; preload
+  x-vercel-cache: HIT
+  x-vercel-id: cpt1::4hsr7-1791985715383-4563414c46ea
+  [final_url=https://www.sikatrix.com/podcast/vat-thresholds-2026-what-changed.m4a http_code=206 redirects=1 content_type=audio/mp4 size_download=1024 remote_ip=172.67.195.22 time_total=0.477489]
+  curl_exit=0
+
+### ENCLOSURE ua=Googlebot | HEAD http://www.sikatrix.com/podcast/vat-thresholds-2026-what-changed.m4a

@@ -6,6 +6,7 @@ import PricingTeaser from "@/components/home/PricingTeaser";
 import LeadMagnet from "@/components/home/LeadMagnet";
 import TestimonialsGrid from "@/components/shared/TestimonialsGrid";
 import ProofModules from "@/components/home/ProofModules";
+import Reveal from "@/components/Reveal";
 import { getLatestPosts } from "@/lib/blog";
 import Link from "next/link";
 import Image from "next/image";
@@ -51,7 +52,7 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="grid sm:grid-cols-2 gap-5 mb-8">
+          <Reveal className="grid sm:grid-cols-2 gap-5 mb-8">
             {latestPosts.map((post) => (
               <Link key={post.slug} href={`/resources/${post.slug}`} className="card overflow-hidden group">
                 {post.featuredImage && (
@@ -88,7 +89,7 @@ export default function HomePage() {
                 </div>
               </Link>
             ))}
-          </div>
+          </Reveal>
 
           {/* Tools teaser */}
           <div className="rounded-xl border border-brand/15 bg-white p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">

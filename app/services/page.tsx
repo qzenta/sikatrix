@@ -6,6 +6,7 @@ import {
 } from "lucide-react";
 import PageHero from "@/components/shared/PageHero";
 import CTABlock from "@/components/shared/CTABlock";
+import Reveal from "@/components/Reveal";
 import { SERVICES, SITE } from "@/lib/site";
 import { buildBreadcrumbSchema } from "@/lib/metadata";
 
@@ -45,7 +46,7 @@ export default function ServicesPage() {
             <h2 className="text-2xl sm:text-3xl font-bold text-white leading-snug">Fixed-fee services, no surprises</h2>
             <p className="text-sm text-brand-100 mt-3 max-w-xl mx-auto">Every engagement starts with a written quote. You know the cost before we touch a single transaction.</p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <Reveal className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {SERVICES.map((service) => {
               const Icon = ICON_MAP[service.icon] ?? FileText;
               return (
@@ -74,7 +75,7 @@ export default function ServicesPage() {
                 </Link>
               );
             })}
-          </div>
+          </Reveal>
         </div>
       </section>
 

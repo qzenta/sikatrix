@@ -32,7 +32,7 @@ export const SITE = {
   partners: ["QuickBooks", "Xero", "Sage", "Draftworx", "SimplePay", "Syft"],
   stats: {
     clients: "148+",
-    experience: "10+",
+    since: "2017",
     services: "8+",
   },
 };
@@ -136,7 +136,7 @@ export const LOCATIONS = [
     isHQ: false,
     headline: "Cloud-Based Accounting for Johannesburg Businesses",
     intro:
-      "Serving SMEs and entrepreneurs across greater Johannesburg — from Soweto to Rosebank — with professional accounting, tax, and compliance services backed by a decade of experience.",
+      "Serving SMEs and entrepreneurs across greater Johannesburg, from Soweto to Rosebank, with professional accounting, tax, and compliance services since 2017.",
     keywords: ["accountants in Johannesburg", "tax practitioner Johannesburg", "SME accounting Joburg"],
   },
   {

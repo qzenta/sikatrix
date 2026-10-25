@@ -31,7 +31,7 @@ export const LOCATION_DETAILS: LocationDetail[] = [
       "Sikatrix Business Accountants is based in Alberton, Gauteng. SAIPA-registered accountants and SARS Tax Practitioners serving Alberton SMEs, sole proprietors, NGOs and professionals. Call (011) 867-2550.",
     headline: "Your Trusted Accountants in Alberton — Based Right Here",
     intro:
-      "Sikatrix Business Accountants is headquartered at 42 Hennie Alberts Street, Brackenhurst, Alberton. We're not a remote firm operating from another province — we're your neighbours, and we've been part of the Alberton business community for over ten years.",
+      "Sikatrix Business Accountants is headquartered at 42 Hennie Alberts Street, Brackenhurst, Alberton. We're not a remote firm operating from another province. We're your neighbours, and we've been part of the Alberton business community since 2017.",
     bodyParagraphs: [
       "Alberton is home to a diverse and growing business community — from established manufacturers in New Redruth and Alrode to professional practices in Eden Glen and retailers across Brackendowns. We've served them all, and we understand the financial pressures and opportunities unique to this area.",
       "As SAIPA-registered Professional Accountants and SARS Tax Practitioners, we provide Alberton businesses with the same quality of financial services you'd expect from a Sandton firm — without the Sandton rates or the impersonal service.",
@@ -60,7 +60,7 @@ export const LOCATION_DETAILS: LocationDetail[] = [
     faqs: [
       {
         q: "Are you physically based in Alberton?",
-        a: "Yes — Sikatrix Business Accountants is headquartered at 42 Hennie Alberts Street, Brackenhurst, Alberton 1448. We're not a remote-only firm; we're genuinely local to Alberton and have served businesses in this community for over ten years.",
+        a: "Yes. Sikatrix Business Accountants is headquartered at 42 Hennie Alberts Street, Brackenhurst, Alberton 1448. We're not a remote-only firm; we're genuinely local to Alberton and have served businesses in this community since 2017.",
       },
       {
         q: "Do you help Alberton businesses with SARS tax returns and compliance?",

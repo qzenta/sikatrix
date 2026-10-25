@@ -36,6 +36,8 @@ export default function TaxCalculator() {
   );
 
   const hasIncome    = incomeNum > 0;
+  // Remount key: result cards replay a short fade-and-rise (CSS) when values change.
+  const resultKey    = `${result.monthlyTakeHome}|${result.netTax}|${result.uifAnnual}|${taxYear}`;
   const activeBracket = hasIncome
     ? d.brackets.find((b) => result.taxableIncome >= b.min && result.taxableIncome <= b.max)
     : null;
@@ -176,7 +178,7 @@ export default function TaxCalculator() {
           ) : (
             <div className="space-y-4">
               {/* Take-home hero */}
-              <div className="rounded-xl bg-brand-dark text-white p-6">
+              <div key={`home-${resultKey}`} className="result-rise rounded-xl bg-brand-dark text-white p-6">
                 <p className="text-xs font-semibold uppercase tracking-widest text-brand-100 mb-1">
                   Estimated monthly take-home
                 </p>
@@ -203,7 +205,7 @@ export default function TaxCalculator() {
                   { label: "Effective tax rate", value: pct(result.effectiveRate), sub: "of gross income" },
                   { label: "UIF contribution",   value: fmt(result.uifAnnual),    sub: fmt(result.uifMonthly) + "/month" },
                 ].map((item) => (
-                  <div key={item.label} className="bg-white rounded-xl border border-neutral-200 shadow-sm p-4">
+                  <div key={`${item.label}-${resultKey}`} className="result-rise bg-white rounded-xl border border-neutral-200 shadow-sm p-4">
                     <p className="text-2xs text-neutral-400 mb-1">{item.label}</p>
                     <p className="text-lg font-bold text-neutral-900">{item.value}</p>
                     <p className="text-2xs text-neutral-400">{item.sub}</p>

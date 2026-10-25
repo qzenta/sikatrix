@@ -37,6 +37,8 @@ social:
 newsletterSegment: "sars"
 ---
 
+Looking for the current tax year? See the [SME Tax and Compliance Calendar 2026/27](/resources/sme-tax-compliance-calendar-2026-2027). This page covers the 2025/26 tax year and is kept for reference.
+
 Running a business in South Africa means managing a steady stream of tax and compliance deadlines throughout the year. Miss one, and you're looking at SARS penalties, interest, or — in serious cases — prosecution. Stay on top of them, and you keep your cash flow predictable, your records clean, and your business in good standing.
 
 This calendar covers every deadline that matters for South African SMEs in the 2025/2026 tax year — from monthly EMP201 payroll submissions to annual financial statement requirements, provisional tax, VAT returns, and CIPC annual returns.

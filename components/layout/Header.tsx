@@ -79,6 +79,8 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  // Set after a dropdown link is clicked so CSS :hover/:focus-within cannot hold it open.
+  const [suppressed, setSuppressed] = useState<string | null>(null);
   const [expandedMobile, setExpandedMobile] = useState<Set<string>>(new Set());
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -106,6 +108,11 @@ export default function Header() {
   };
   const cancelClose = () => {
     if (closeTimer.current) clearTimeout(closeTimer.current);
+  };
+  const closeAfterClick = (label: string) => {
+    setActiveDropdown(null);
+    setSuppressed(label);
+    if (document.activeElement instanceof HTMLElement) document.activeElement.blur();
   };
 
   return (
@@ -162,9 +169,13 @@ export default function Header() {
               item.children ? (
                 <div
                   key={item.label}
-                  className="relative"
+                  className="nav-item relative"
+                  data-suppressed={suppressed === item.label ? "true" : undefined}
                   onMouseEnter={() => openDropdown(item.label)}
-                  onMouseLeave={closeDropdown}
+                  onMouseLeave={() => {
+                    closeDropdown();
+                    setSuppressed(null);
+                  }}
                 >
                   <Link
                     href={item.href}
@@ -172,9 +183,9 @@ export default function Header() {
                   >
                     {item.label}
                   </Link>
-                  {activeDropdown === item.label && (
-                    <div
-                      className="absolute top-full left-0 mt-1 min-w-[190px] bg-white rounded-xl shadow-lg border border-neutral-100 py-1.5 z-50"
+                  <div
+                      className="nav-dropdown absolute top-full left-0 mt-1 min-w-[190px] bg-white rounded-xl shadow-lg border border-neutral-100 py-1.5 z-50"
+                      data-open={activeDropdown === item.label ? "true" : undefined}
                       onMouseEnter={cancelClose}
                       onMouseLeave={closeDropdown}
                     >
@@ -182,7 +193,7 @@ export default function Header() {
                         <Link
                           key={child.href}
                           href={child.href}
-                          onClick={() => setActiveDropdown(null)}
+                          onClick={() => closeAfterClick(item.label)}
                           className="block px-4 py-2 text-sm text-neutral-700 hover:text-brand hover:bg-neutral-50 transition-colors"
                         >
                           {child.label}
@@ -192,15 +203,14 @@ export default function Header() {
                         <div className="border-t border-neutral-100 mt-1 pt-1">
                           <Link
                             href={item.href}
-                            onClick={() => setActiveDropdown(null)}
+                            onClick={() => closeAfterClick(item.label)}
                             className="block px-4 py-2 text-xs font-semibold text-brand hover:bg-neutral-50 transition-colors"
                           >
                             {item.footerLabel}
                           </Link>
                         </div>
                       )}
-                    </div>
-                  )}
+                  </div>
                 </div>
               ) : (
                 <Link

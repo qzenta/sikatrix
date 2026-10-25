@@ -74,7 +74,7 @@ export default function Footer() {
               <li key={s.slug}>
                 <Link
                   href={`/services/${s.slug}`}
-                  className="text-sm text-neutral-300 hover:text-white transition-colors"
+                  className="link-slide text-sm text-neutral-300 hover:text-white"
                 >
                   {s.shortTitle}
                 </Link>
@@ -97,7 +97,7 @@ export default function Footer() {
               { label: "Contact", href: "/contact" },
             ].map((l) => (
               <li key={l.href}>
-                <Link href={l.href} className="text-sm text-neutral-300 hover:text-white transition-colors">
+                <Link href={l.href} className="link-slide text-sm text-neutral-300 hover:text-white">
                   {l.label}
                 </Link>
               </li>
@@ -113,7 +113,7 @@ export default function Footer() {
               <li key={l.slug}>
                 <Link
                   href={`/locations/${l.slug}`}
-                  className="text-sm text-neutral-300 hover:text-white transition-colors"
+                  className="link-slide text-sm text-neutral-300 hover:text-white"
                 >
                   {l.name} {l.isHQ && <span className="text-2xs text-accent ml-1">(HQ)</span>}
                 </Link>
