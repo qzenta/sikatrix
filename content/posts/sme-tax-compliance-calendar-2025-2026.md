@@ -74,13 +74,13 @@ Missing an EMP201 attracts a 10% penalty on the outstanding amount, plus interes
 
 Your VAT submission frequency depends on your annual turnover:
 
-- **Monthly filers (turnover above R30 million):** due the **25th of the following month** via eFiling.
-- **Two-monthly filers (most SMEs):** due the **25th of the month** following the end of your two-month period.
+- **Monthly filers (turnover above R30 million):** due by the **25th of the following month** if filing manually, or the **last business day of that month** if using eFiling.
+- **Two-monthly filers (most SMEs):** due by the **25th of the month** following the end of your two-month period if filing manually, or the **last business day of that month** if using eFiling.
 - **Six-monthly filers (very small vendors under R1.5 million):** discuss with your accountant.
 
 Most SMEs file VAT every two months. Common two-monthly periods and their due dates:
 
-| Period | eFiling Due Date |
+| Period | Manual Due Date (25th) |
 |---|---|
 | March – April 2025 | 25 May 2025 |
 | May – June 2025 | 25 July 2025 |
@@ -89,7 +89,9 @@ Most SMEs file VAT every two months. Common two-monthly periods and their due da
 | November – December 2025 | 25 January 2026 |
 | January – February 2026 | 25 March 2026 |
 
-Always use eFiling — the 25th deadline only applies to eFilers. Branch submissions are due on the last day of the month, which gives you less time.
+Dates shown are the manual 25th deadline; eFilers have until the last business day of that month.
+
+If you file and pay on eFiling, the VAT201 and payment are due by the last business day of the month after your tax period ends. Manual returns are due by the 25th.
 
 ---
 

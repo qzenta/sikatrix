@@ -278,7 +278,7 @@ export default async function BlogPostPage({
         <div className="container-page">
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Main column */}
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-2 min-w-0">
               {/* Excerpt card */}
               <div className="card p-5 mb-8 border-l-4 border-brand bg-brand-50">
                 <p className="text-sm text-neutral-700 leading-relaxed font-medium">
