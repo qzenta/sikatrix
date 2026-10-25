@@ -162,7 +162,8 @@ function renderBlock(block: string, i: number): ReactNode {
 
 export default function ArticleContent({ content }: ArticleContentProps) {
   // Split on blank lines (double newline) to get logical blocks
-  const blocks = content.split(/\n{2,}/);
+  // HTML comments hold editor source notes; strip them so they never render as text
+  const blocks = content.replace(/<!--[\s\S]*?-->/g, "").split(/\n{2,}/);
 
   return (
     <article className="prose-sm max-w-none">

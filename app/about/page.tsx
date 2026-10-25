@@ -6,6 +6,7 @@ import PageHero from "@/components/shared/PageHero";
 import CTABlock from "@/components/shared/CTABlock";
 import TrustBar from "@/components/home/TrustBar";
 import CredentialsGrid from "@/components/about/CredentialsGrid";
+import Reveal from "@/components/Reveal";
 import ProofModules from "@/components/home/ProofModules";
 import { SITE } from "@/lib/site";
 import { buildPersonSchema, buildBreadcrumbSchema } from "@/lib/metadata";
@@ -13,7 +14,7 @@ import { buildPersonSchema, buildBreadcrumbSchema } from "@/lib/metadata";
 export const metadata: Metadata = {
   title: { absolute: "About Sikatrix Business Accountants | SAIPA-Registered, Alberton" },
   description:
-    "Learn about Sikatrix Business Accountants — SAIPA-registered professionals with 10+ years serving SMEs, startups, and NGOs across Gauteng.",
+    "Learn about Sikatrix Business Accountants — SAIPA-registered professionals serving SMEs, startups, and NGOs across Gauteng since 2017.",
   alternates: { canonical: "https://www.sikatrix.com/about" },
 };
 
@@ -53,7 +54,7 @@ export default function AboutPage() {
       <PageHero
         label="About Us"
         title="Qualified. Local. Personally Accountable."
-        subtitle="10+ years in practice, 148+ businesses served across Gauteng. One accountant who knows your file — not a rotating team."
+        subtitle="In practice since 2017, with 148+ businesses served across Gauteng. One accountant who knows your file, not a rotating team."
         bgImage="/photos/blog/sars-section-210-review.jpg"
         crumbs={[{ label: "About" }]}
         goldLabel
@@ -66,7 +67,7 @@ export default function AboutPage() {
             <div>
               <span className="section-label">Our Story</span>
               <h2 className="section-title mt-2 mb-5">
-                A decade of serving South African businesses
+                Serving South African businesses since 2017
               </h2>
               <div className="space-y-4 text-sm text-neutral-600 leading-relaxed">
                 <p>
@@ -75,9 +76,9 @@ export default function AboutPage() {
                   accounting services.
                 </p>
                 <p>
-                  Based in Brackenhurst, Alberton, we've spent over ten years working with sole
-                  proprietors, SMEs, NGOs, professional practices, and property investors — helping
-                  them stay SARS-compliant, manage their cash flow, and grow with confidence.
+                  Based in Brackenhurst, Alberton, we have worked with sole proprietors, SMEs, NGOs,
+                  professional practices, and property investors since 2017, helping them stay
+                  SARS-compliant, manage their cash flow, and grow with confidence.
                 </p>
                 <p>
                   As a SAIPA-registered Professional Accountant (SA) and SARS-registered Tax
@@ -93,10 +94,10 @@ export default function AboutPage() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 gap-5">
+            <Reveal className="grid grid-cols-2 gap-5">
               {[
                 { value: "148+", label: "Clients Served", sub: "Across Gauteng & beyond" },
-                { value: "10+", label: "Years Experience", sub: "In public practice" },
+                { value: "2017", label: "Serving Clients Since", sub: "In public practice" },
                 { value: "8", label: "Core Services", sub: "Under one roof" },
                 { value: "6", label: "Cloud Platforms", sub: "QuickBooks, Xero, Sage & more" },
               ].map((stat) => (
@@ -106,7 +107,7 @@ export default function AboutPage() {
                   <div className="text-xs text-neutral-400 mt-0.5">{stat.sub}</div>
                 </div>
               ))}
-            </div>
+            </Reveal>
           </div>
         </div>
       </section>
@@ -148,9 +149,9 @@ export default function AboutPage() {
               </div>
               <div className="space-y-4 text-sm text-brand-100 leading-relaxed">
                 <p>
-                  With over 10 years in public practice, Daniel founded Sikatrix Business Accountants
-                  on a straightforward belief: South African SMEs deserve qualified advice, delivered
-                  directly — not filtered through juniors or outsourced offshore.
+                  Daniel has been in public practice since 2017. He founded Sikatrix Business
+                  Accountants on a straightforward belief: South African SMEs deserve qualified
+                  advice, delivered directly, not filtered through juniors or outsourced offshore.
                 </p>
                 <p>
                   Every client engagement is personally overseen. When you work with Sikatrix, you

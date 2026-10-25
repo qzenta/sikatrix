@@ -7,11 +7,6 @@ export function buildWebSiteSchema() {
     "@type": "WebSite",
     name: SITE.name,
     url: SITE.url,
-    potentialAction: {
-      "@type": "SearchAction",
-      target: { "@type": "EntryPoint", urlTemplate: `${SITE.url}/resources?q={search_term_string}` },
-      "query-input": "required name=search_term_string",
-    },
   };
 }
 
@@ -37,7 +32,7 @@ export function buildOrganizationSchema() {
       SITE.social.linkedin,
       SITE.social.twitter,
     ],
-    foundingDate: "2014",
+    foundingDate: "2017",
     numberOfEmployees: { "@type": "QuantitativeValue", value: 5 },
   };
 }

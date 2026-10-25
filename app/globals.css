@@ -5,6 +5,14 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    /* Motion tokens (Cycle 3). Only opacity and transform are animated. */
+    --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    --dur-hover: 200ms;
+    --dur-reveal: 450ms;
+    --dur-hero: 700ms;
+  }
+
   html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
@@ -28,13 +36,31 @@
   .btn-primary {
     @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-md
            bg-accent text-white font-semibold text-sm
-           hover:bg-accent-dark transition-colors duration-150 shadow-sm;
+           hover:bg-accent-dark shadow-sm;
   }
 
   .btn-secondary {
     @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-md
            bg-brand text-white font-semibold text-sm
-           hover:bg-brand-dark transition-colors duration-150 shadow-sm;
+           hover:bg-brand-dark shadow-sm;
+  }
+
+  /* Buttons lift 1px on hover and press down to 0.98 */
+  .btn-primary,
+  .btn-secondary,
+  .btn-motion {
+    transition: background-color 150ms, color 150ms, box-shadow var(--dur-hover) var(--ease-out),
+      transform var(--dur-hover) var(--ease-out);
+  }
+  .btn-primary:hover,
+  .btn-secondary:hover,
+  .btn-motion:hover {
+    transform: translateY(-1px);
+  }
+  .btn-primary:active,
+  .btn-secondary:active,
+  .btn-motion:active {
+    transform: translateY(0) scale(0.98);
   }
 
   .btn-outline {
@@ -64,8 +90,25 @@
 
   .card {
     @apply bg-white rounded-xl border border-neutral-200 shadow-card
-           hover:shadow-card-hover hover:ring-1 hover:ring-brand/10
-           transition-all duration-200;
+           hover:shadow-card-hover hover:ring-1 hover:ring-brand/10;
+    transition: box-shadow var(--dur-hover) var(--ease-out), transform var(--dur-hover) var(--ease-out),
+      border-color var(--dur-hover);
+  }
+  .card:hover {
+    transform: translateY(-2px);
+  }
+
+  /* Underline that slides in from the left on hover and keyboard focus */
+  .link-slide {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 1px;
+    transition: background-size var(--dur-hover) var(--ease-out), color 150ms;
+  }
+  .link-slide:hover,
+  .link-slide:focus-visible {
+    background-size: 100% 1px;
   }
 
   .container-page {
@@ -101,6 +144,106 @@
 
 .animate-slide-up {
   animation: slide-up 0.35s ease-out forwards;
+}
+
+/* ── Cycle 3 motion ─────────────────────────────────────────── */
+
+/* Scroll reveal (components/Reveal.tsx). The attribute is only ever set by JS
+   on elements below the fold, so server HTML is never hidden. */
+[data-reveal="pending"] {
+  opacity: 0;
+  transform: translate3d(0, 16px, 0);
+}
+[data-reveal="shown"] {
+  opacity: 1;
+  transform: none;
+  transition: opacity var(--dur-reveal) var(--ease-out), transform var(--dur-reveal) var(--ease-out);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+/* Hero entrance on load: CSS only, staggered 80ms */
+@keyframes hero-enter {
+  from { opacity: 0; transform: translate3d(0, 12px, 0); }
+  to   { opacity: 1; transform: none; }
+}
+.hero-enter {
+  animation: hero-enter var(--dur-hero) var(--ease-out) both;
+  animation-delay: calc(var(--hero-step, 0) * 80ms);
+}
+
+/* Nav dropdowns: fade and slide 6px; open on hover, keyboard focus or JS state */
+.nav-dropdown {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate3d(0, -6px, 0);
+  transition: opacity var(--dur-hover) var(--ease-out), transform var(--dur-hover) var(--ease-out),
+    visibility 0s linear var(--dur-hover);
+}
+.nav-item:hover > .nav-dropdown,
+.nav-item:focus-within > .nav-dropdown,
+.nav-dropdown[data-open="true"] {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition-delay: 0s;
+}
+.nav-item[data-suppressed="true"] > .nav-dropdown {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Marquee strips: pause on hover and focus */
+.marquee-track {
+  animation: marquee-scroll 35s linear infinite;
+}
+.marquee:hover .marquee-track,
+.marquee:focus-within .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Tax calculator results: fade and rise 8px when values change */
+@keyframes result-rise {
+  from { opacity: 0; transform: translate3d(0, 8px, 0); }
+  to   { opacity: 1; transform: none; }
+}
+.result-rise {
+  animation: result-rise 250ms var(--ease-out) both;
+}
+
+/* Reduced motion: no transitions, animations or motion transforms, marquee static */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+  }
+  .marquee-track {
+    animation: none !important;
+  }
+  .hero-enter,
+  .result-rise,
+  [data-reveal] {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .card:hover,
+  .btn-primary:hover,
+  .btn-primary:active,
+  .btn-secondary:hover,
+  .btn-secondary:active,
+  .btn-motion:hover,
+  .btn-motion:active,
+  .nav-dropdown {
+    transform: none !important;
+  }
 }
 
 .scrollbar-hide {

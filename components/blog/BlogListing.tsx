@@ -34,12 +34,24 @@ interface BlogListingProps {
 }
 
 export default function BlogListing({ posts }: BlogListingProps) {
-  const router = useRouter();
   const searchParams = useSearchParams();
-  const [activeCategory, setActiveCategory] = useState<string>("All");
-
   const pageParam = parseInt(searchParams.get("page") ?? "1", 10);
   const currentPage = isNaN(pageParam) || pageParam < 1 ? 1 : pageParam;
+  return <BlogListingView posts={posts} currentPage={currentPage} query={searchParams.toString()} />;
+}
+
+/*
+ * The listing itself, without useSearchParams. The resources page renders it
+ * (page 1) as the Suspense fallback, so the static HTML contains every article
+ * title and link, and the hydrated listing for page 1 has identical markup.
+ */
+export function BlogListingView({
+  posts,
+  currentPage = 1,
+  query = "",
+}: BlogListingProps & { currentPage?: number; query?: string }) {
+  const router = useRouter();
+  const [activeCategory, setActiveCategory] = useState<string>("All");
 
   // Reset to page 1 when category changes
   const [page, setPage] = useState(currentPage);
@@ -53,7 +65,7 @@ export default function BlogListing({ posts }: BlogListingProps) {
 
   const handlePageChange = (p: number) => {
     setPage(p);
-    const params = new URLSearchParams(searchParams.toString());
+    const params = new URLSearchParams(query);
     if (p === 1) params.delete("page");
     else params.set("page", String(p));
     router.push(`/resources?${params.toString()}`, { scroll: true });

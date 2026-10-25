@@ -1,6 +1,4 @@
-"use client";
-
-import { motion } from "framer-motion";
+import Reveal from "@/components/Reveal";
 
 const CREDENTIALS = [
   {
@@ -29,42 +27,20 @@ const CREDENTIALS = [
   },
 ];
 
-const container = {
-  hidden: {},
-  show: {
-    transition: { staggerChildren: 0.12, delayChildren: 0.1 },
-  },
-};
-
-const card = {
-  hidden: { opacity: 0, y: 28 },
-  show:   { opacity: 1, y: 0, transition: { type: "spring" as const, stiffness: 260, damping: 22 } },
-};
-
 export default function CredentialsGrid() {
   return (
-    <motion.div
-      variants={container}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, margin: "-60px" }}
-      className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto"
-    >
-      {CREDENTIALS.map((c) => (
-        <motion.div
-          key={c.badge}
-          variants={card}
-          whileHover={{ y: -4, boxShadow: "0 10px 28px 0 rgba(15,35,71,0.10)" }}
-          transition={{ type: "spring", stiffness: 300, damping: 20 }}
-          className="card p-6"
-        >
+    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto">
+      {CREDENTIALS.map((c, i) => (
+        <Reveal key={c.badge} delay={i * 2}>
+          <div className="card p-6 h-full">
           <div className={`inline-block px-2.5 py-1 rounded ${c.color} text-white text-xs font-bold mb-3`}>
             {c.badge}
           </div>
           <h3 className="text-sm font-semibold text-neutral-900 mb-2">{c.title}</h3>
           <p className="text-xs text-neutral-500 leading-relaxed">{c.desc}</p>
-        </motion.div>
+          </div>
+        </Reveal>
       ))}
-    </motion.div>
+    </div>
   );
 }

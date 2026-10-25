@@ -3,12 +3,12 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { ArrowRight, Phone, ChevronLeft, ChevronRight, CheckCircle } from "lucide-react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, MotionConfig, motion } from "framer-motion";
 import { SITE } from "@/lib/site";
 
 const STAT_BACKS = [
   "Sole traders to growing SMEs across Gauteng",
-  "A decade of SAIPA-registered professional practice",
+  "Serving clients since 2017",
   "Tax · Payroll · Cloud Accounting · Compliance",
   "QuickBooks · Xero · Sage — anytime, anywhere",
 ];
@@ -45,7 +45,7 @@ const SLIDES = [
     tag: "Alberton · Johannesburg · Gauteng",
     heading: "The accountant",
     highlight: "Alberton calls first",
-    body: "SAIPA-registered accountants and SARS Tax Practitioners with 10+ years in practice. Fixed-fee quotes. Same-day responses. No year-end surprises.",
+    body: "SAIPA-registered accountants and SARS Tax Practitioners in practice since 2017. Fixed-fee quotes. Same-day responses. No year-end surprises.",
     points: [
       "SAIPA Registered Professional Accountant",
       "SARS Registered Tax Practitioner",
@@ -81,13 +81,17 @@ const SLIDES = [
 
 const STATS = [
   { value: "148+", label: "Happy Clients" },
-  { value: "10+", label: "Years Experience" },
+  { value: "2017", label: "Serving Clients Since" },
   { value: "8+",  label: "Core Services" },
   { value: "100%", label: "Cloud-Based" },
 ];
 
 export default function Hero() {
   const [current, setCurrent] = useState(0);
+  // CSS entrance plays on the first slide's initial render only (no JS needed for it).
+  const [intro, setIntro] = useState(true);
+  const enter = (step: number) =>
+    intro ? { className: "hero-enter", style: { "--hero-step": step } as React.CSSProperties } : {};
 
   const goTo = (index: number) => setCurrent(index);
   const next = () => setCurrent((c) => (c + 1) % SLIDES.length);
@@ -95,6 +99,7 @@ export default function Hero() {
 
   // Auto-advance — resets whenever slide changes
   useEffect(() => {
+    if (current !== 0) setIntro(false);
     const t = setTimeout(next, 6000);
     return () => clearTimeout(t);
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -103,11 +108,13 @@ export default function Hero() {
   const slide = SLIDES[current];
 
   return (
+    // reducedMotion="user": framer skips transform animations when the OS asks for reduced motion
+    <MotionConfig reducedMotion="user">
     <div className="px-3 sm:px-4 pt-3 md:pt-4">
     <section className="relative bg-brand-dark overflow-hidden rounded-2xl">
 
-      {/* ── Background image (AnimatePresence crossfade) ── */}
-      <AnimatePresence mode="wait">
+      {/* ── Background image (AnimatePresence crossfade; initial={false} keeps SSR fully visible) ── */}
+      <AnimatePresence mode="wait" initial={false}>
         <motion.div
           key={slide.bgImage}
           className="absolute inset-0 bg-cover"
@@ -131,7 +138,7 @@ export default function Hero() {
 
       <div className="container-page relative py-4 md:py-5 lg:py-6">
         {/* Slide content */}
-        <AnimatePresence mode="wait">
+        <AnimatePresence mode="wait" initial={false}>
         <motion.div
           key={current}
           className="max-w-2xl"
@@ -140,6 +147,7 @@ export default function Hero() {
           exit={{ opacity: 0, y: -12 }}
           transition={{ duration: 0.45, ease: "easeOut" }}
         >
+          <div {...enter(0)}>
           <span className="inline-block text-accent-light text-xs font-semibold uppercase tracking-widest mb-4">
             {slide.tag}
           </span>
@@ -148,7 +156,9 @@ export default function Hero() {
             {slide.heading}{" "}
             <span className="text-accent-light">{slide.highlight}</span>
           </h1>
+          </div>
 
+          <div {...enter(1)}>
           <p className="text-base md:text-lg text-brand-100 leading-relaxed mb-7 max-w-xl">
             {slide.body}
           </p>
@@ -161,8 +171,9 @@ export default function Hero() {
               </li>
             ))}
           </ul>
+          </div>
 
-          <div className="flex flex-col sm:flex-row gap-3">
+          <div className={`flex flex-col sm:flex-row gap-3 ${intro ? "hero-enter" : ""}`} style={intro ? ({ "--hero-step": 2 } as React.CSSProperties) : undefined}>
             <Link href="/contact" className="btn-primary text-sm px-6 py-3">
               Book Free Consultation
               <ArrowRight size={14} />
@@ -170,14 +181,14 @@ export default function Hero() {
             {current === 0 ? (
               <Link
                 href="/pricing"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md border border-white/25 text-white font-semibold text-sm hover:bg-white/10 transition-colors"
+                className="btn-motion inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md border border-white/25 text-white font-semibold text-sm hover:bg-white/10"
               >
                 View pricing <ArrowRight size={14} />
               </Link>
             ) : (
               <a
                 href={`tel:${SITE.phoneRaw}`}
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md border border-white/25 text-white font-semibold text-sm hover:bg-white/10 transition-colors"
+                className="btn-motion inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md border border-white/25 text-white font-semibold text-sm hover:bg-white/10"
               >
                 <Phone size={14} />
                 {SITE.phone}
@@ -240,5 +251,6 @@ export default function Hero() {
       </div>
     </section>
     </div>
+    </MotionConfig>
   );
 }

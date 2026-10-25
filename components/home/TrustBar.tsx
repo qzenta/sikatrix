@@ -24,15 +24,15 @@ export default function TrustBar() {
         </span>
       </div>
 
-      <div className="relative overflow-hidden">
+      <div className="marquee relative overflow-hidden">
         {/* Fade edges */}
         <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-neutral-50 to-transparent z-10" />
         <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-neutral-50 to-transparent z-10" />
 
+        {/* Animation lives in .marquee-track (globals.css): pauses on hover/focus, static under reduced motion */}
         <div
-          className="flex items-center"
+          className="marquee-track flex items-center"
           style={{
-            animation: "marquee-scroll 35s linear infinite",
             willChange: "transform",
             backfaceVisibility: "hidden",
           }}

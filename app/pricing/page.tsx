@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Check, Phone } from "lucide-react";
 import PageHero from "@/components/shared/PageHero";
 import CTABlock from "@/components/shared/CTABlock";
+import Reveal from "@/components/Reveal";
 import { SITE } from "@/lib/site";
 import { buildBreadcrumbSchema } from "@/lib/metadata";
 
@@ -178,7 +179,7 @@ export default function PricingPage() {
       {/* Service pricing cards */}
       <section className="py-16 md:py-20 bg-neutral-50">
         <div className="container-page">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <Reveal className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {SERVICES.map((svc) => (
               <div key={svc.name} className="card p-7 flex flex-col">
                 <div className="mb-4">
@@ -210,7 +211,7 @@ export default function PricingPage() {
                 )}
               </div>
             ))}
-          </div>
+          </Reveal>
 
           {/* Quote CTA */}
           <div className="mt-12 rounded-xl bg-brand/5 border border-brand/10 p-8 text-center">

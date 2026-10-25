@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, TrendingUp, ShieldCheck, Clock, FileText, Cloud, Building2 } from "lucide-react";
+import Reveal from "@/components/Reveal";
 
 
 const CASES = [
@@ -89,7 +90,7 @@ export default function ProofModules({ limit, variant = "full" }: { limit?: numb
             </Link>
           </div>
 
-          <div className="grid sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-white/10 rounded-2xl border border-white/10 overflow-hidden">
+          <Reveal className="grid sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-white/10 rounded-2xl border border-white/10 overflow-hidden">
             {CASES.slice(0, 3).map((c) => {
               const Icon = c.icon;
               return (
@@ -111,7 +112,7 @@ export default function ProofModules({ limit, variant = "full" }: { limit?: numb
                 </div>
               );
             })}
-          </div>
+          </Reveal>
 
           <div className="mt-6 flex flex-col sm:flex-row items-start sm:items-center gap-3">
             <Link href="/contact" className="btn-primary text-sm">Book Free Consultation</Link>
@@ -141,7 +142,7 @@ export default function ProofModules({ limit, variant = "full" }: { limit?: numb
           </Link>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <Reveal className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {visibleCases.map((c) => {
             const Icon = c.icon;
             return (
@@ -185,7 +186,7 @@ export default function ProofModules({ limit, variant = "full" }: { limit?: numb
               </div>
             );
           })}
-        </div>
+        </Reveal>
 
         {limit && CASES.length > limit && (
           <div className="mt-8 text-center">

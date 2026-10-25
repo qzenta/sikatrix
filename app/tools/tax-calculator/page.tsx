@@ -3,6 +3,10 @@ import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 import TaxCalculator from "@/components/tools/TaxCalculator";
 import CTABlock from "@/components/shared/CTABlock";
+import SarsDeadlinesCard from "@/components/tools/SarsDeadlinesCard";
+
+// Static page: evaluated at build time and used for the no-JS deadline list.
+const BUILD_DATE = new Date().toISOString().slice(0, 10);
 
 export const metadata: Metadata = {
   title: { absolute: "SARS Income Tax Calculator 2026/27 | Free Tool | Sikatrix" },
@@ -150,27 +154,8 @@ export default function TaxCalculatorPage() {
                 </ul>
               </div>
 
-              {/* SARS key dates */}
-              <div className="card p-5">
-                <p className="text-2xs font-semibold uppercase tracking-widest text-accent mb-4">
-                  SARS Deadlines 2026
-                </p>
-                <ul className="space-y-3">
-                  {[
-                    { date: "31 May 2026", event: "EMP501 annual reconciliation" },
-                    { date: "25 Jun 2026", event: "VAT201 (Apr–May vendors)" },
-                    { date: "1 Jul 2026", event: "Tax season opens" },
-                    { date: "31 Aug 2026", event: "Provisional tax — 1st period" },
-                    { date: "20 Oct 2026", event: "Tax season closes (non-provisional)" },
-                    { date: "28 Feb 2027", event: "Provisional tax — 2nd period" },
-                  ].map((item) => (
-                    <li key={item.date} className="flex gap-3 items-start pb-3 border-b border-neutral-100 last:border-0 last:pb-0">
-                      <span className="text-2xs font-semibold text-brand bg-brand-50 px-2 py-0.5 rounded flex-shrink-0 mt-0.5">{item.date}</span>
-                      <span className="text-xs text-neutral-600">{item.event}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              {/* SARS key dates: next upcoming, from the compliance calendar engine */}
+              <SarsDeadlinesCard buildDate={BUILD_DATE} />
 
               {/* Consultation CTA */}
               <div className="rounded-xl bg-accent p-5 text-white">

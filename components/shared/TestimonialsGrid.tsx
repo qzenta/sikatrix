@@ -40,12 +40,15 @@ export default function TestimonialsGrid({
     const container = carouselRef.current;
     if (!container) return;
     const card = container.children[index] as HTMLElement;
-    if (card) container.scrollTo({ left: card.offsetLeft, behavior: "smooth" });
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (card) container.scrollTo({ left: card.offsetLeft, behavior: reduce ? "auto" : "smooth" });
     setCurrent(index);
   };
 
   useEffect(() => {
     if (paused) return;
+    // Reduced motion: no auto-advance; dots still work.
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const id = setInterval(() => {
       setCurrent(prev => {
         const next = (prev + 1) % items.length;
@@ -77,6 +80,10 @@ export default function TestimonialsGrid({
             className="relative flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 scrollbar-hide"
             onTouchStart={() => setPaused(true)}
             onTouchEnd={() => setPaused(false)}
+            onMouseEnter={() => setPaused(true)}
+            onMouseLeave={() => setPaused(false)}
+            onFocus={() => setPaused(true)}
+            onBlur={() => setPaused(false)}
           >
             {items.map((t, i) => (
               <div key={i} className="snap-center shrink-0 w-[85vw]">

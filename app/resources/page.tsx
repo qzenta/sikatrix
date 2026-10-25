@@ -5,7 +5,7 @@ import { Calculator, ArrowRight, Download, FileText, BookOpen, ExternalLink } fr
 import PageHero from "@/components/shared/PageHero";
 import CTABlock from "@/components/shared/CTABlock";
 import NewsletterForm from "@/components/shared/NewsletterForm";
-import BlogListing from "@/components/blog/BlogListing";
+import BlogListing, { BlogListingView } from "@/components/blog/BlogListing";
 import AuthorityLinks from "@/components/shared/AuthorityLinks";
 import { getAllPosts } from "@/lib/blog";
 import { SITE } from "@/lib/site";
@@ -160,7 +160,7 @@ export default function ResourcesPage() {
       <section className="py-16 md:py-20 bg-neutral-200">
         <div className="container-page">
           <div className="max-w-5xl mx-auto">
-            <Suspense fallback={<div className="text-sm text-neutral-400 py-10 text-center">Loading articles...</div>}>
+            <Suspense fallback={<BlogListingView posts={posts} />}>
             <BlogListing posts={posts} />
           </Suspense>
           </div>
