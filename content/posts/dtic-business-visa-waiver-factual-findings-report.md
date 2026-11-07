@@ -31,6 +31,16 @@ social:
   twitterCard: "summary_large_image"
 ---
 
+<!--
+Verification log (acceptance check 7)
+Last verified: 2026-11-04
+Checked against:
+- R5m capital threshold: DHA business-visa page; DTIC application form Section 4 (GN 560, GG 37837); parliamentary reply NW3072E/RNW2959 (22 May 2026)
+- Waiver route and ISRS 4400 / AUP distinction: thedtic.gov.za/business-facilitation; Immigration Regulations 2014 reg 14(1)(a)
+- Renewal two-year financials requirement: DTIC VRS extension/PR document list
+- Submission channel: VRS portal (vrs.thedtic.gov.za), live since 10 Mar 2025
+-->
+
 South Africa's Business Visa requires a minimum capital investment of R5 million. Most applicants who don't meet that threshold assume they're out of options. They're not — but the route to a lower figure runs through a specific, document-heavy process at the Department of Trade, Industry and Competition (DTIC), and the paperwork has to be exactly right the first time.
 
 This article breaks down what the DTIC waiver actually is, what a Factual Findings Report involves, and — a question we get often and one that catches people out — what changes if you're renewing rather than applying for the first time.
@@ -43,7 +53,7 @@ If your available capital is below the standard R5 million threshold, you don't 
 
 The waiver application itself goes to the Department of Home Affairs, supported by the DTIC's recommendation. It is scrutinised more heavily than a standard application — the absence of capital has to be offset by a clear, well-evidenced case for the business's economic value. This is not a box-ticking exercise; it's an application that lives or dies on the quality of the financial documentation behind it.
 
-**A timing note worth planning around:** the waiver step alone can take up to 12 months to process. If your capital sits close to R5 million, it is often faster in practice to structure the investment to clear the threshold outright rather than go through the waiver route. We discuss this trade-off with clients during the initial consultation.
+**A timing note worth planning around:** DHA has not published a standard processing time for the waiver step, and applicants should expect it to extend if the department requests additional information. If your capital sits close to R5 million, it is often faster in practice to structure the investment to clear the threshold outright rather than go through the waiver route. We discuss this trade-off with clients during the initial consultation.
 
 ## The Four Documents DTIC Requires
 
